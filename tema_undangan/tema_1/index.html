@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>Tema 1</title>
+</head>
+
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <!-- Page 1 -->
+        <div class="page1">
+          <v-container fluid class="bg-page1">
+            <v-row align="center" justify="center" class="mr-16">
+              <v-img src="/tema_undangan/tema_1/img/img_page1.png" max-width="410" class="mr-16"></v-img>
+            </v-row>
+            <div class="mt-4" align="center" justify="center">
+              <p class="body-2 text-center font-weight-light text-color">Kepada Bapak/Ibu/Saudara/i</p>
+              <p class="text-center font-weight-bold text-color title">namatamu</p>
+              <v-btn elevation="8" rounded class="font-weight-medium body-2" @mouseover="arrow = true"
+                @mouseleave="arrow = false" @click="scrollPlay" href="#two">
+                Open Invitation <v-icon v-show="arrow">mdi-menu-right</v-icon>
+              </v-btn>
+            </div>
+          </v-container>
+        </div>
+        <!-- Page 2 -->
+        <div id="two">
+          <v-container fluid class="bg-page2 pl-16">
+            <v-row align="center" justify="center" class="ml-16">
+              <v-col cols="4" class="ml-16 mt-16">
+                <v-card elevation="11" width="500" class="ml-16 rounded-xl" style="border: 3px solid #8D6E63;">
+                  <v-img src="./img/img_page2.jpg"></v-img>
+                </v-card>
+                <v-img src="./img/kupu.gif" width="500" class="kupu"></v-img>
+              </v-col>
+              <v-col cols="6">
+                <div class="ml-16 mt-16">
+                  <h1 class="titlePage2">We Found Love</h1>
+                  <v-row>
+                    <v-col cols="7">
+                      <p class="font-weight-light title text-color text-indent">“Dan diantara tanda-tanda kekuasaan-Nya
+                        ialah diciptakan Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapat ketenangan
+                        hati dan dijadikan-Nya kasih sayang diantara kamu. Sesungguhnya yang demikian menjadi
+                        tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir.”</p>
+                      <p class="font-weight-light title text-color text-indent">(Ar-Rum: 21)</p>
+                    </v-col>
+                  </v-row>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </div>
+        <!-- Page 3 -->
+        <v-container fluid>
+          <v-row align="center" justify="center">
+            <v-col cols="5">
+              <h5 class="titlePage3 text-center text-color2">Yang Mempelai</h5>
+              <p class="font-weight-light title text-color text-center my-5">Atas Puji Tuhan Yang Maha Esa kami
+                bermaksud
+                menyelenggarakan acara pernikahan putra dan putri kami</p>
+            </v-col>
+          </v-row>
+        </v-container>
+
+        <!-- Page 4 -->
+        <v-container fluid class="bg-page4 fill-height">
+          <v-row align="right" justify="right">
+            <v-col>
+              <v-row>
+                <v-col class="mr-6 mt-16">
+                  <h5 class="fontName text-end">Dimas</h5>
+                  <p class="text-end text-color font-weight-light">Putra dari pasangan Bapak Rupadi & Ibu Endah
+                    Widyantuksih</p>
+                  <p class="text-end text-color font-weight-light">Klaling Krajan Rt 05/ Rw 01 No. 66,</p>
+                  <p class="text-end text-color font-weight-light">Jekulo, Kudus</p>
+                  <div class="d-flex flex-row-reverse">
+                    <v-btn small fab dark color="brown darken-2">
+                      <v-icon>mdi-instagram</v-icon>
+                    </v-btn>
+                  </div>
+                </v-col>
+                <v-col>
+                  <v-card width="300" elevation="12" style="border: 3px solid #8D6E63;">
+                    <v-img src="./img/img_page4.jpg"></v-img>
+                  </v-card>
+                </v-col>
+              </v-row>
+              <v-img src="./img/kupu.gif" width="500" class="kupu2"></v-img>
+            </v-col>
+          </v-row>
+        </v-container>
+        <!-- Page 5 -->
+        <v-container fluid class="bg-page5 fill-height">
+          <v-row align="center" justify="center">
+            <v-col>
+              <v-row>
+                <v-col class="d-flex flex-row-reverse">
+                  <v-card width="300" elevation="12" style="border: 3px solid #8D6E63;">
+                    <v-img src="./img/img_page4.jpg"></v-img>
+                  </v-card>
+                </v-col>
+                <v-col class="ml-6">
+                  <h5 class="fontName text-start">Dimas</h5>
+                  <p class="text-start text-color font-weight-light">Putra dari pasangan Bapak Rupadi & Ibu Endah
+                    Widyantuksih</p>
+                  <p class="text-start text-color font-weight-light">Klaling Krajan Rt 05/ Rw 01 No. 66,</p>
+                  <p class="text-start text-color font-weight-light">Jekulo, Kudus</p>
+                  <div class="d-flex flex-row">
+                    <v-btn small fab dark color="brown darken-2">
+                      <v-icon>mdi-instagram</v-icon>
+                    </v-btn>
+                  </div>
+                </v-col>
+              </v-row>
+              <v-img src="./img/kupu.gif" width="500" class="kupu3"></v-img>
+            </v-col>
+          </v-row>
+        </v-container>
+        <!-- Page 6 -->
+        <v-container fluid class="bg-page6 pt-16">
+          <v-row align="center" justify="center">
+            <v-card color="brown darken-1">
+              <v-card-text class="text-center">
+                <h1 class="text-color2 font-weight-medium">00</h1>
+              </v-card-text>
+              <v-card-actions>
+                <span class="ml-1 text-caption text-center text-color2">Days(s)</span>
+              </v-card-actions>
+            </v-card>
+
+            <v-card color="brown darken-1" class="ml-1">
+              <v-card-text class="text-center">
+                <h1 class="text-color2 font-weight-medium">00</h1>
+              </v-card-text>
+              <v-card-actions>
+                <span class="ml-1 text-caption text-center text-color2">Days(s)</span>
+              </v-card-actions>
+            </v-card>
+
+            <v-card color="brown darken-1" class="ml-1">
+              <v-card-text class="text-center">
+                <h1 class="text-color2 font-weight-medium">00</h1>
+              </v-card-text>
+              <v-card-actions>
+                <span class="ml-1 text-caption text-center text-color2">Days(s)</span>
+              </v-card-actions>
+            </v-card>
+
+            <v-card color="brown darken-1" class="ml-1">
+              <v-card-text class="text-center">
+                <h1 class="text-color2 font-weight-medium">00</h1>
+              </v-card-text>
+              <v-card-actions>
+                <span class="ml-1 text-caption text-center text-color2">Days(s)</span>
+              </v-card-actions>
+            </v-card>
+          </v-row>
+        </v-container>
+        <!-- Page 7 -->
+        <v-container fluid class="bg-page7 pt-16">
+          <v-row align="center" justify="center">
+            <v-col md="6">
+              <h5 class="titlePage7 text-center">Assalamu'alaikum Warahmatullahi Wabarakatuh</h5>
+              <hr class="my-10 hr1">
+              <p class="font-weight-light title text-color text-center my-5">Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang akan dilaksanakan pada:</p>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <div class="d-flex flex-row-reverse">
+                <v-card width="500" class="rounded-xl" dark>
+                  <v-img src="./img/img_page5.jpg">
+                    <v-card-text class="fill-height cardAkad">
+                      <v-row justify="center">
+                      <v-img max-width="150" src="./img/cincin.png"></v-img>
+                      </v-row>
+                      <v-row justify="center" class="pt-15">
+                        <p class="text-center titlePage7 white--text">Akad Nikah</p>
+                        </v-row>
+                        <v-row justify="center"  class="pt-10">
+                          <hr class="hr3">
+                        </v-row>
+                        <v-row justify="center"  class="pt-10">
+                          <p class="text-center body-1 white--text">Minggu, 12 September 2022</p>
+                        </v-row>
+                        <v-row justify="center" class="">
+                          <p class="text-center body-1 white--text">Pukul : 09.00 Wib s/d Selesai</p>
+                        </v-row>
+                        <v-row justify="center" class="">
+                          <v-col md="6">
+                          <p class="text-center font-weight-bold font-italic body-1 white--text">Hanya dihadiri oleh keluarga mempelai</p>
+                          </v-col>
+                        </v-row>
+                        <v-row>
+                          <hr class="hr2">
+                          <v-icon>mdi-home</v-icon>
+                          <hr class="hr2">
+                        </v-row>
+                        <v-row justify="center">
+                          <v-col md="6">
+                          <p class="text-center font-weight-bold font-italic body-1 white--text">Jalan Sugriwa No.89, Ubud, Gianyar,Ubud, Kecamatan Ubud</p>
+                          </v-col>
+                        </v-row>
+                        <v-row justify="center pb-5">
+                          <hr class="hr3">
+                        </v-row>
+                        <v-row justify="center" class="mb-10">
+                            <v-btn dark><v-icon left>mdi-map-marker-outline</v-icon>View Map</v-btn>
+                        </v-row>
+                    </v-card-text>
+                  </v-img>
+                </v-card>
+              </div>
+            </v-col>
+            <v-col>
+              <v-card width="500" class="rounded-xl" dark>
+                <v-img src="./img/img_page5.jpg">
+                  <v-card-text class="fill-height cardAkad">
+                    <v-row justify="center">
+                    <v-img max-width="150" src="./img/cincin.png"></v-img>
+                    </v-row>
+                    <v-row justify="center" class="pt-15">
+                      <p class="text-center titlePage7 white--text">Resepsi</p>
+                      </v-row>
+                      <v-row justify="center"  class="pt-10">
+                        <hr class="hr3">
+                      </v-row>
+                      <v-row justify="center"  class="pt-10">
+                        <p class="text-center body-1 white--text">Minggu, 12 September 2022</p>
+                      </v-row>
+                      <v-row justify="center" class="">
+                        <p class="text-center body-1 white--text">Pukul : 09.00 Wib s/d Selesai</p>
+                      </v-row>
+                      <v-row justify="center" class="">
+                        <v-col md="6">
+                        <p class="text-center font-weight-bold font-italic body-1 white--text">Hanya dihadiri oleh keluarga mempelai</p>
+                        </v-col>
+                      </v-row>
+                      <v-row>
+                        <hr class="hr2">
+                        <v-icon>mdi-home</v-icon>
+                        <hr class="hr2">
+                      </v-row>
+                      <v-row justify="center">
+                        <v-col md="6">
+                        <p class="text-center font-weight-bold font-italic body-1 white--text">Jalan Sugriwa No.89, Ubud, Gianyar,Ubud, Kecamatan Ubud</p>
+                        </v-col>
+                      </v-row>
+                      <v-row justify="center pb-5">
+                        <hr class="hr3">
+                      </v-row>
+                      <v-row justify="center" class="mb-10">
+                          <v-btn dark><v-icon left>mdi-map-marker-outline</v-icon>View Map</v-btn>
+                      </v-row>
+                  </v-card-text>
+                </v-img>
+              </v-card>
+            </v-col>
+          </v-row>
+          <v-img src="./img/kupu.gif" width="500" class="kupu4"></v-img>
+        </v-container>
+        <v-container fluid class="bg-page1 pt-16">
+          <v-row>
+            <v-col>
+              <div class="d-flex flex-row-reverse">
+                <v-card width="500" class="rounded-xl py-15" color="brown lighten-1" dark>
+                  <v-card-title class="justify-center">
+                    <h2 class="font-weight-medium">
+                      RSVP
+                    </h2>
+                  </v-card-title>
+                  <v-card-text class="text-center white--text px-16">
+                    <p>Bantu kami mempersiapkan jamuan yang hangat untuk anda semua dengan mengirimkan konfirmasi kehadiran melalui form berikut ini</p>
+                    <v-text-field label="Nama"></v-text-field>
+                    <p class="text-start">Apakah Kamu Akan Hadir ?</p>
+                    <v-radio-group v-model="radio">
+                      <v-radio label="Hadir"></v-radio>
+                      <v-radio label="Tidak Hadir"></v-radio>
+                    </v-radio-group>
+                    <v-select></v-select>
+                    <v-btn block rounded color="brown darken-3">Submit</v-btn>
+                  </v-card-text>
+                </v-card>
+              </div>
+            </v-col>
+            <v-col>
+              <v-card width="500" class="rounded-xl py-15" color="brown lighten-1" dark>
+                <v-card-title class="justify-center">
+                  <h2 class="titlePage3">
+                    Wedding Gift
+                  </h2>
+                </v-card-title>
+                <v-card-text class="text-center white--text px-16 pt-10">
+                  <p>Bagi Keluarga dan Sahabat yang ingin mengirimkan hadiah, silahkan mengirimkannya melalui :</p>
+                  <v-btn rounded color="brown darken-3"><v-icon left>mdi-card-account-details</v-icon>Transfer</v-btn>
+                  <v-btn rounded color="brown darken-3"><v-icon left>mdi-card-account-details</v-icon>Kirim</v-btn>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+        <audio id="audio"
+          src="https://cdn.undanganweb.com/link/2022/03/Nuca-Mahalini-Janji-Kita-Lirik-Lagu-Indonesia.mp3"
+          ref="audioElm"></audio>
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./js/vue.js"></script>
+  <script src="./js/jquery.js"></script>
+</body>
+
+</html>

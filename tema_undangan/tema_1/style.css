@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+.bg-page1{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page2{
+    background-image: url('/tema_undangan/tema_1/img/page2.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page4{
+    background-image: url('/tema_undangan/tema_1/img/page4.png');
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page5{
+    background-image: url('/tema_undangan/tema_1/img/page4.png');
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page6{
+    background-image: url('/tema_undangan/tema_1/img/page6.jpg');
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page7{
+    background-image: url('/tema_undangan/tema_1/img/page2.png');
+    height: 130vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text-color{
+    color: #8D6E63;
+}
+
+.text-color2{
+    color: #BCAAA4;
+}
+
+.text-color2{
+    color: #3E2723;
+}
+.kupu{
+    margin-top: -85vh;
+    margin-left: -10vh;
+}
+
+.kupu2{
+    margin-top: -50vh;
+    margin-left: 50vh;
+}
+
+.kupu3{
+    margin-top: -50vh;
+    margin-left: 90vh;
+}
+
+.kupu4{
+    margin-top: -90vh;
+    margin-left: 100vh;
+}
+.titlePage2{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 60px;
+}
+
+.titlePage3{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 40px;
+}
+
+.titlePage7{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 40px;
+    color: #8D6E63;
+}
+
+
+.fontName{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 50px;
+    color: #5D4037;
+}
+
+.text-indent{
+    line-height: 50px;
+}
+
+.hr1{
+    border: 2px solid #8D6E63;
+    width: 10%;
+    margin: auto;
+}
+
+.hr2{
+    border: 1px solid #ffffff;
+    width: 40%;
+    margin: auto;
+}
+
+.hr3{
+    border-left: 1px solid #ffffff;
+    height: 5vh;
+}
+
+.verticalline{
+    border-left: 1px solid #ffffff;
+}
+
+.cardAkad{
+    background-image: url('./img/black_image.png');
+}
