@@ -52,6 +52,9 @@ new Vue({
   computed: {
     totalUcapan() {
       return this.ucapan.length;
+    },
+    displayMobile() {
+      return window.innerWidth < 768;
     }
   }
   })

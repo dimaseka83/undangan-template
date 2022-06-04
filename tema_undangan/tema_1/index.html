@@ -32,6 +32,7 @@
         </div>
 
         <!-- Page 2 -->
+        <div v-show="openInvitation">
         <div id="two">
           <v-container fluid class="bg-page2 pl-16">
             <v-row align="center" justify="center">
@@ -39,7 +40,7 @@
                 <v-card elevation="11" width="500" class="ml-16 rounded-xl" style="border: 3px solid #8D6E63;">
                   <v-img src="./img/img_page2.jpg"></v-img>
                 </v-card>
-                <v-img src="./img/kupu.gif" width="500" class="kupu"></v-img>
+                <v-img src="./img/kupu.gif" width="500" class="kupu" v-show="openInvitation"></v-img>
               </v-col>
               <v-col cols="6">
                 <div class="pl-16 mt-16">
@@ -132,37 +133,37 @@
           <v-row align="center" justify="center">
             <v-card color="brown darken-1">
               <v-card-text class="text-center">
-                <h1 class="text-color2 font-weight-medium">00</h1>
+                <h1 class="text-color3 font-weight-medium">00</h1>
               </v-card-text>
               <v-card-actions>
-                <span class="ml-1 text-caption text-center text-color2">Days(s)</span>
+                <span class="ml-1 text-caption text-center text-color3">Days(s)</span>
               </v-card-actions>
             </v-card>
 
             <v-card color="brown darken-1" class="ml-1">
               <v-card-text class="text-center">
-                <h1 class="text-color2 font-weight-medium">00</h1>
+                <h1 class="text-color3 font-weight-medium">00</h1>
               </v-card-text>
               <v-card-actions>
-                <span class="ml-1 text-caption text-center text-color2">Days(s)</span>
+                <span class="ml-1 text-caption text-center text-color3">Days(s)</span>
               </v-card-actions>
             </v-card>
 
             <v-card color="brown darken-1" class="ml-1">
               <v-card-text class="text-center">
-                <h1 class="text-color2 font-weight-medium">00</h1>
+                <h1 class="text-color3 font-weight-medium">00</h1>
               </v-card-text>
               <v-card-actions>
-                <span class="ml-1 text-caption text-center text-color2">Days(s)</span>
+                <span class="ml-1 text-caption text-center text-color3">Days(s)</span>
               </v-card-actions>
             </v-card>
 
             <v-card color="brown darken-1" class="ml-1">
               <v-card-text class="text-center">
-                <h1 class="text-color2 font-weight-medium">00</h1>
+                <h1 class="text-color3 font-weight-medium">00</h1>
               </v-card-text>
               <v-card-actions>
-                <span class="ml-1 text-caption text-center text-color2">Days(s)</span>
+                <span class="ml-1 text-caption text-center text-color3">Days(s)</span>
               </v-card-actions>
             </v-card>
           </v-row>
@@ -624,6 +625,7 @@
             <v-btn color="brown lighten-1" dark class="ml-5"><v-icon>mdi-instagram</v-icon></v-btn>
           </v-row>
         </v-container>
+        </div>
         <audio id="audio"
           src="https://cdn.undanganweb.com/link/2022/03/Nuca-Mahalini-Janji-Kita-Lirik-Lagu-Indonesia.mp3"
           ref="audioElm"></audio>
