@@ -10,7 +10,7 @@
 
 .bg-page2{
     background-image: url('/tema_undangan/tema_1/img/page2.png');
-    height: 100vh;
+    height: 120vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@
 
 .bg-page4{
     background-image: url('/tema_undangan/tema_1/img/page4.png');
-    height: 60vh;
+    height: 90vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 
 .bg-page5{
     background-image: url('/tema_undangan/tema_1/img/page4.png');
-    height: 60vh;
+    height: 98vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@
 
 .bg-page6{
     background-image: url('/tema_undangan/tema_1/img/page6.jpg');
-    height: 90vh;
+    height: 140vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,10 +42,54 @@
 
 .bg-page7{
     background-image: url('/tema_undangan/tema_1/img/page2.png');
-    height: 130vh;
+    height: 180vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.bg-page8{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page12{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page13{
+    background-image: url('/tema_undangan/tema_1/img/page6.jpg');
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.bg-page14{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 140vh;
+    margin-top: -50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-modif{
+    height: 70vh;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+.logo-web{
+    margin-top: 40vh;
 }
 
 .text-color{
@@ -90,9 +134,16 @@
 
 .titlePage7{
     font-family: 'Pinyon Script', cursive;
-    font-size: 40px;
+    font-size: 30px;
     color: #8D6E63;
 }
+
+.titlePage8{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 50px;
+    color: #8D6E63;
+}
+
 
 
 .fontName{
@@ -120,6 +171,11 @@
 .hr3{
     border-left: 1px solid #ffffff;
     height: 5vh;
+}
+
+.hr4{
+    width: 60%;
+    margin: auto;
 }
 
 .verticalline{
