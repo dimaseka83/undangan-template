@@ -1,5 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
+/* Mobile */
+@media screen and (max-width: 500px){
+    .kupu{
+        margin-top: -50vh;
+    margin-left: -10vh;
+    
+}
+.kupu2{
+    margin-bottom: -30vh;
+}
+
+.kupu3{
+    margin-top: -50vh;
+}
+
+.titlePage2{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 35px;
+    }
+
+    .titlePage3{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 40px;
+    }
+
+    .bg-page6{
+    background-image: url('/tema_undangan/tema_1/img/page6.jpg');
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page7{
+    background-image: url('/tema_undangan/tema_1/img/page2.png');
+    height: 250vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page8{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page12{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page14{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 60vh;
+    margin-top: -20vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+iframe{
+    width: 100%;
+    height: 200%;
+}
+
+.hr4{
+    margin: auto;
+}
+
+.image-modif{
+    height: 40vh;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+}
+
+.logo-web{
+    margin-top: 20vh;
+    max-width: 100px;
+}
+    
+}
+
+/* Desktop */
+@media screen and (min-width: 501px){
+    .kupu{
+        margin-top: -85vh;
+    margin-left: -10vh;    
+    }
+
+    .kupu2{
+    margin-top: -50vh;
+    margin-left: 50vh;
+}
+
+.kupu3{
+    margin-top: -50vh;
+    margin-left: 90vh;
+}
+
+    .titlePage2{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 60px;
+    }
+    .text-indent{
+        line-height: 50px;
+    }
+
+    .titlePage3{
+    font-family: 'Pinyon Script', cursive;
+    font-size: 40px;
+    }
+
+    .bg-page6{
+    background-image: url('/tema_undangan/tema_1/img/page6.jpg');
+    height: 120vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page7{
+    background-image: url('/tema_undangan/tema_1/img/page2.png');
+    height: 180vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page8{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page12{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page14{
+    background-image: url('/tema_undangan/tema_1/img/page1.png');
+    height: 140vh;
+    margin-top: -50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+iframe{
+    width: 1360px;
+    height: 400px;
+}
+
+.hr4{
+    width: 60%;
+    margin: auto;
+}
+
+.image-modif{
+    height: 70vh;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+.logo-web{
+    margin-top: 40vh;
+    max-width: 400px;
+}
+}
+
 .bg-page1{
     background-image: url('/tema_undangan/tema_1/img/page1.png');
     height: 100vh;
@@ -32,37 +213,7 @@
     background-repeat: no-repeat;
 }
 
-.bg-page6{
-    background-image: url('/tema_undangan/tema_1/img/page6.jpg');
-    height: 140vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
-.bg-page7{
-    background-image: url('/tema_undangan/tema_1/img/page2.png');
-    height: 180vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bg-page8{
-    background-image: url('/tema_undangan/tema_1/img/page1.png');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bg-page12{
-    background-image: url('/tema_undangan/tema_1/img/page1.png');
-    height: 150vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 .bg-page13{
     background-image: url('/tema_undangan/tema_1/img/page6.jpg');
@@ -72,24 +223,6 @@
     background-repeat: no-repeat;
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
-}
-
-.bg-page14{
-    background-image: url('/tema_undangan/tema_1/img/page1.png');
-    height: 140vh;
-    margin-top: -50vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.image-modif{
-    height: 70vh;
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 100%;
-}
-.logo-web{
-    margin-top: 40vh;
 }
 
 .text-color{
@@ -103,34 +236,13 @@
 .text-color3{
     color: #BCAAA4;
 }
-.kupu{
-    margin-top: -85vh;
-    margin-left: -10vh;
-}
 
-.kupu2{
-    margin-top: -50vh;
-    margin-left: 50vh;
-}
-
-.kupu3{
-    margin-top: -50vh;
-    margin-left: 90vh;
-}
 
 .kupu4{
     margin-top: -90vh;
     margin-left: 100vh;
 }
-.titlePage2{
-    font-family: 'Pinyon Script', cursive;
-    font-size: 60px;
-}
 
-.titlePage3{
-    font-family: 'Pinyon Script', cursive;
-    font-size: 40px;
-}
 
 .titlePage7{
     font-family: 'Pinyon Script', cursive;
@@ -152,9 +264,7 @@
     color: #5D4037;
 }
 
-.text-indent{
-    line-height: 50px;
-}
+
 
 .hr1{
     border: 2px solid #8D6E63;
@@ -173,10 +283,6 @@
     height: 5vh;
 }
 
-.hr4{
-    width: 60%;
-    margin: auto;
-}
 
 .verticalline{
     border-left: 1px solid #ffffff;
