@@ -38,7 +38,7 @@
             <v-row align="center" justify="center" v-if="displayDesktop">
               <v-col cols="4" class="mt-16">
                 <v-card elevation="11" width="500" class="ml-16 rounded-xl" style="border: 3px solid #8D6E63;">
-                  <v-img src="./img/img_page2.jpg"></v-img>
+                  <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_1" ></v-img>
                 </v-card>
                 <v-img src="./img/kupu.gif" width="500" class="kupu" v-show="openInvitation"></v-img>
               </v-col>
@@ -47,11 +47,7 @@
                   <h1 class="titlePage2">We Found Love</h1>
                   <v-row>
                     <v-col cols="7">
-                      <p class="font-weight-light title text-color text-indent">“Dan diantara tanda-tanda kekuasaan-Nya
-                        ialah diciptakan Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapat ketenangan
-                        hati dan dijadikan-Nya kasih sayang diantara kamu. Sesungguhnya yang demikian menjadi
-                        tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir.”</p>
-                      <p class="font-weight-light title text-color text-indent">(Ar-Rum: 21)</p>
+                      <p class="font-weight-light title text-color text-indent">{{ dataApi.wedding.kata_mutiara }}</p>
                     </v-col>
                   </v-row>
                 </div>
@@ -59,7 +55,7 @@
             </v-row>
             <div v-else>
                 <v-card elevation="11" width="250" class="rounded-xl ml-n10 mt-10" style="border: 3px solid #8D6E63;">
-                  <v-img src="./img/img_page2.jpg"></v-img>
+                  <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_1"></v-img>
                 </v-card>
                 <v-img src="./img/kupu.gif" width="300" class="kupu" v-show="openInvitation"></v-img>
                 <v-row class="mt-16">
@@ -67,11 +63,7 @@
                   <h1 class="titlePage2 mt-16">We Found Love</h1>
                   <v-row>
                     <v-col cols="10">
-                      <p class="font-weight-light subtitle text-color">“Dan diantara tanda-tanda kekuasaan-Nya
-                        ialah diciptakan Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapat ketenangan
-                        hati dan dijadikan-Nya kasih sayang diantara kamu. Sesungguhnya yang demikian menjadi
-                        tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir.”</p>
-                      <p class="font-weight-light subtitle text-color">(Ar-Rum: 21)</p>
+                      <p class="font-weight-light subtitle text-color">{{ dataApi.wedding.kata_mutiara }}</p>
                     </v-col>
                   </v-row>
                 </div>
@@ -108,9 +100,8 @@
             <v-col>
               <v-row>
                 <v-col class="mr-6 mt-16">
-                  <h5 class="fontName text-end">Dimas</h5>
-                  <p class="text-end text-color font-weight-light">Putra dari pasangan Bapak Rupadi & Ibu Endah
-                    Widyantuksih</p>
+                  <h5 class="fontName text-end">{{ dataApi.wedding.nama_panggilan_pria }}</h5>
+                  <p class="text-end text-color font-weight-light">{{ dataApi.wedding.profil_pria }}</p>
                   <p class="text-end text-color font-weight-light">Klaling Krajan Rt 05/ Rw 01 No. 66,</p>
                   <p class="text-end text-color font-weight-light">Jekulo, Kudus</p>
                   <div class="d-flex flex-row-reverse">
@@ -121,7 +112,7 @@
                 </v-col>
                 <v-col>
                   <v-card width="300" elevation="12" style="border: 3px solid #8D6E63;">
-                    <v-img src="./img/img_page4.jpg"></v-img>
+                    <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
                   </v-card>
                 </v-col>
               </v-row>
@@ -132,9 +123,8 @@
               <v-img src="./img/kupu.gif" max-width="300" class="kupu2"></v-img>
               <v-row>
                 <v-col cols="8">
-                  <h5 class="fontName text-left">Dimas</h5>
-                  <p class="text-left font-weight-light">Putra dari pasangan Bapak Rupadi & Ibu Endah
-                    Widyantuksih</p>
+                  <h5 class="fontName text-left">{{ dataApi.wedding.nama_panggilan_pria }}</h5>
+                  <p class="text-left font-weight-light">{{ dataApi.wedding.profil_pria }}</p>
                   <p class="text-left font-weight-light">Klaling Krajan Rt 05/ Rw 01 No. 66,</p>
                   <p class="text-left font-weight-light">Jekulo, Kudus</p>
                   <div class="d-flex flex-row">
@@ -145,7 +135,7 @@
                 </v-col>
                 <v-col>
                   <v-card width="250" elevation="12" style="border: 3px solid #8D6E63;">
-                    <v-img src="./img/img_page4.jpg"></v-img>
+                    <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
                   </v-card>
                 </v-col>
               </v-row>
@@ -159,13 +149,12 @@
               <v-row>
                 <v-col class="d-flex flex-row-reverse">
                   <v-card width="300" elevation="12" style="border: 3px solid #8D6E63;">
-                    <v-img src="./img/img_page4.jpg"></v-img>
+                    <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_2"></v-img>
                   </v-card>
                 </v-col>
                 <v-col class="ml-6">
-                  <h5 class="fontName text-start">Dimas</h5>
-                  <p class="text-start text-color font-weight-light">Putra dari pasangan Bapak Rupadi & Ibu Endah
-                    Widyantuksih</p>
+                  <h5 class="fontName text-start">{{ dataApi.wedding.nama_panggilan_wanita }}</h5>
+                  <p class="text-start text-color font-weight-light">{{ dataApi.wedding.profil_wanita }}</p>
                   <p class="text-start text-color font-weight-light">Klaling Krajan Rt 05/ Rw 01 No. 66,</p>
                   <p class="text-start text-color font-weight-light">Jekulo, Kudus</p>
                   <div class="d-flex flex-row">
@@ -182,13 +171,12 @@
               <v-row>
                 <v-col class="d-flex flex-row-reverse">
                   <v-card width="250" elevation="12" style="border: 3px solid #8D6E63;" class="mr-5">
-                    <v-img src="./img/img_page4.jpg"></v-img>
+                    <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_2"></v-img>
                   </v-card>
                 </v-col>
                 <v-col class="mr-6">
-                  <h5 class="fontName text-end">Dimas</h5>
-                  <p class="text-end text-color font-weight-light">Putra dari pasangan Bapak Rupadi & Ibu Endah
-                    Widyantuksih</p>
+                  <h5 class="fontName text-end">{{ dataApi.wedding.nama_panggilan_wanita }}</h5>
+                  <p class="text-end text-color font-weight-light">{{ dataApi.wedding.profil_wanita }}</p>
                   <p class="text-end text-color font-weight-light">Klaling Krajan Rt 05/ Rw 01 No. 66,</p>
                   <p class="text-end text-color font-weight-light">Jekulo, Kudus</p>
                   <div class="d-flex flex-row-reverse">
@@ -257,23 +245,23 @@
           <v-row>
             <v-col>
               <div class="d-flex flex-row-reverse">
-                <v-card width="500" class="rounded-xl" dark>
-                  <v-img src="./img/img_page5.jpg">
+                <v-card width="600" class="rounded-xl" dark>
+                  <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
                     <v-card-text class="fill-height cardAkad">
                       <v-row justify="center">
                         <v-img max-width="150" src="./img/cincin.png"></v-img>
                       </v-row>
                       <v-row justify="center" class="pt-15">
-                        <p class="text-center titlePage7 white--text">Akad Nikah</p>
+                        <p class="text-center titlePage7 white--text">{{ dataApi.wedding.judul_akad }}</p>
                       </v-row>
                       <v-row justify="center" class="pt-10">
                         <hr class="hr3">
                       </v-row>
                       <v-row justify="center" class="pt-10">
-                        <p class="text-center body-1 white--text">Minggu, 12 September 2022</p>
+                        <p class="text-center body-1 white--text">{{ dataApi.wedding.tanggal_akad }}</p>
                       </v-row>
                       <v-row justify="center" class="">
-                        <p class="text-center body-1 white--text">Pukul : 09.00 Wib s/d Selesai</p>
+                        <p class="text-center body-1 white--text">Pukul : {{ dataApi.wedding.waktu_akad }}</p>
                       </v-row>
                       <v-row justify="center" class="">
                         <v-col md="6">
@@ -288,8 +276,7 @@
                       </v-row>
                       <v-row justify="center">
                         <v-col md="6">
-                          <p class="text-center font-weight-bold font-italic body-1 white--text">Jalan Sugriwa No.89,
-                            Ubud, Gianyar,Ubud, Kecamatan Ubud</p>
+                          <p class="text-center font-weight-bold font-italic body-1 white--text">{{ dataApi.wedding.lokasi_akad }}</p>
                         </v-col>
                       </v-row>
                       <v-row justify="center pb-5">
@@ -306,23 +293,23 @@
               </div>
             </v-col>
             <v-col>
-              <v-card width="500" class="rounded-xl" dark>
-                <v-img src="./img/img_page5.jpg">
+              <v-card width="600" class="rounded-xl" dark>
+                <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
                   <v-card-text class="fill-height cardAkad">
                     <v-row justify="center">
                       <v-img max-width="150" src="./img/cincin.png"></v-img>
                     </v-row>
                     <v-row justify="center" class="pt-15">
-                      <p class="text-center titlePage7 white--text">Resepsi</p>
+                      <p class="text-center titlePage7 white--text">{{ dataApi.wedding.judul_resepsi }}</p>
                     </v-row>
                     <v-row justify="center" class="pt-10">
                       <hr class="hr3">
                     </v-row>
                     <v-row justify="center" class="pt-10">
-                      <p class="text-center body-1 white--text">Minggu, 12 September 2022</p>
+                      <p class="text-center body-1 white--text">{{ dataApi.wedding.tanggal_resepsi }}</p>
                     </v-row>
                     <v-row justify="center" class="">
-                      <p class="text-center body-1 white--text">Pukul : 09.00 Wib s/d Selesai</p>
+                      <p class="text-center body-1 white--text">Pukul : {{ dataApi.wedding.waktu_resepsi }}</p>
                     </v-row>
                     <v-row justify="center" class="">
                       <v-col md="6">
@@ -337,15 +324,14 @@
                     </v-row>
                     <v-row justify="center">
                       <v-col md="6">
-                        <p class="text-center font-weight-bold font-italic body-1 white--text">Jalan Sugriwa No.89,
-                          Ubud, Gianyar,Ubud, Kecamatan Ubud</p>
+                        <p class="text-center font-weight-bold font-italic body-1 white--text">{{ dataApi.wedding.lokasi_resepsi }}</p>
                       </v-col>
                     </v-row>
                     <v-row justify="center pb-5">
                       <hr class="hr3">
                     </v-row>
                     <v-row justify="center" class="mb-10">
-                      <v-btn dark>
+                      <v-btn dark :href="dataApi.wedding.short_url">
                         <v-icon left>mdi-map-marker-outline</v-icon>View Map
                       </v-btn>
                     </v-row>
@@ -418,29 +404,23 @@
           <v-row>
             <v-col>
               <div class="d-flex flex-row-reverse">
-                <v-card width="500" height="600" class="rounded-xl" color="brown lighten-1" dark>
-                  <v-img src="https://link.undanganweb.com/wp-content/uploads/2021/11/putra-rani-14.jpg"></v-img>
+                <v-card width="500" class="rounded-xl" color="brown lighten-1" dark>
+                  <v-img :src="dataApi.stories[0].photo"></v-img>
                   <v-card-text class="white--text px-5">
-                    <h5 class="title">Pertemuan</h5>
-                    <p class="text-caption py-2">November 2020</p>
-                    <p class="text-caption">Kami pertama kali bertemu pada saat event kampus festival, pada saat itu di
-                      acara tersebut kami yang baru pertama kali bertemu menyaksikan pertunjukan musik yang ada di
-                      festival , dan setelah itu kami saling bertukar ID Instagram, dan semakin lama hubungan kami
-                      semakin dekat dan lebih sering berpergian bersama pada saat weekend</p>
+                    <h5 class="title">{{ dataApi.stories[0].judul }}</h5>
+                    <p class="text-caption py-2">{{ dataApi.stories[0].tanggal }}</p>
+                    <p class="text-caption">{{ dataApi.stories[0].cerita }}</p>
                   </v-card-text>
                 </v-card>
               </div>
             </v-col>
             <v-col>
-              <v-card width="500" height="600" class="rounded-xl" color="brown lighten-1" dark>
-                <v-img src="https://link.undanganweb.com/wp-content/uploads/2021/11/putra-rani-14.jpg"></v-img>
+              <v-card width="500" class="rounded-xl" color="brown lighten-1" dark>
+                <v-img :src="dataApi.stories[1].photo"></v-img>
                 <v-card-text class="white--text px-5">
-                  <h5 class="title">Ungkapan Perasaan</h5>
-                  <p class="text-caption py-2">November 2020</p>
-                  <p class="text-caption">Kami pertama kali bertemu pada saat event kampus festival, pada saat itu di
-                    acara tersebut kami yang baru pertama kali bertemu menyaksikan pertunjukan musik yang ada di
-                    festival , dan setelah itu kami saling bertukar ID Instagram, dan semakin lama hubungan kami semakin
-                    dekat dan lebih sering berpergian bersama pada saat weekend</p>
+                  <h5 class="title">{{ dataApi.stories[1].judul }}</h5>
+                  <p class="text-caption py-2">{{ dataApi.stories[1].tanggal }}</p>
+                  <p class="text-caption">{{ dataApi.stories[1].cerita }}</p>
                 </v-card-text>
               </v-card>
             </v-col>
@@ -465,13 +445,13 @@
 
           <v-row align="center" justify="center" class="">
             <v-card width="300" class="mx-2">
-              <v-img src="./img/img_page5.jpg"></v-img>
+              <v-img max-height="350" :src="'https://merestui.com/'+ dataApi.wedding.gallery_3"></v-img>
             </v-card>
             <v-card width="300" class="mx-2">
-              <v-img src="https://cdn.undanganweb.com/hi/2022/03/coba-6.jpg"></v-img>
+              <v-img max-height="350" :src="'https://merestui.com/'+ dataApi.wedding.gallery_4"></v-img>
             </v-card>
             <v-card width="300" class="mx-2">
-              <v-img src="./img/img_page5.jpg"></v-img>
+              <v-img max-height="350" :src="'https://merestui.com/'+ dataApi.wedding.gallery_5"></v-img>
             </v-card>
           </v-row>
         </v-container>
@@ -573,13 +553,13 @@
                 dengan hashtag berikut:
               </p>
             </v-card-text>
-            <v-card-action>
+            <v-card-text>
               <div class="d-flex justify-center">
                 <v-btn color="brown darken-3" class="px-16 font-weight-light" rounded dark>
                   <v-icon>mdi-folder-upload</v-icon>#monicharavi
                 </v-btn>
               </div>
-            </v-card-action>
+            </v-card-text>
           </v-card>
           </div>
           <div v-else>
@@ -656,13 +636,13 @@
                 dengan hashtag berikut:
               </p>
             </v-card-text>
-            <v-card-action>
+            <v-card-text>
               <div class="d-flex justify-center">
                 <v-btn color="brown darken-3" class="px-5 font-weight-light" rounded dark>
                   <v-icon>mdi-folder-upload</v-icon>#monicharavi
                 </v-btn>
               </div>
-            </v-card-action>
+            </v-card-text>
           </v-card>
           </div>
         </v-container>
@@ -804,6 +784,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./js/vue.js"></script>
   <script src="./js/jquery.js"></script>
 </body>

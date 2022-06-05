@@ -26,7 +26,7 @@
     }
 
     .bg-page6{
-    background-image: url('/tema_undangan/tema_1/img/page6.jpg');
+    background-image: url('https://via.placeholder.com/512');
     height: 40vh;
     background-size: cover;
     background-position: center;
@@ -119,7 +119,7 @@ iframe{
     }
 
     .bg-page6{
-    background-image: url('/tema_undangan/tema_1/img/page6.jpg');
+    background-image: url('https://via.placeholder.com/512');
     height: 120vh;
     background-size: cover;
     background-position: center;
