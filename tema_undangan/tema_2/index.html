@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <title>Tema 2</title>
+</head>
+
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <!-- <v-img src="https://cdn.undanganweb.com/hi/2022/03/IMG_5869.jpg" class="image1 MyClass">
+        </v-img> -->
+    
+      <!-- Page Cover -->
+    <v-container fluid class="bg-page-cover">
+      <div align="center" justify="center">
+        <p class="body-1 font-weight-light white--text mt-14">The Wedding Of</p>
+        <p class="white--text pasangan">Monicha & Ravi</p>
+        <p class="headline amber--text mt-n5">Untuk</p>
+        <p class="white--text font-weight-medium headline">namatamu</p>
+        <div class="d-flex justify-center">
+          <v-btn elevation="8" rounded class="font-weight-medium body-2" @mouseover="arrow = true"
+          @mouseleave="arrow = false" @click="scrollPlay" href="#two">
+          Open Invitation <v-icon v-show="arrow">mdi-menu-right</v-icon>
+        </v-btn>
+        </div>
+      </div>
+    </v-container>
+
+      <!-- Page 1 -->
+      <v-container fluid class="bg-page1">
+        <div align="center" justify="center">
+          <p class="white--text pasangan mt-10">Monicha & Ravi</p>
+          <p class="text-caption font-weight-light white--text">The Wedding |11.03.2021 |Kudus</p>
+        </div>
+      </v-container>
+
+      <!-- Page 2 -->
+      <v-container fluid class="bg-page2">
+        <v-card color="grey darken-3" class="my-10 mx-5 rounded-xl">
+          <div class="d-flex justify-center">
+            <v-img max-width="70" src="https://cdn.undanganweb.com/hi/2022/03/Asset-1-1.png" class="mt-16"></v-img>
+          </div>
+          <h1 class="white--text text-center font-weight-medium mt-5">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+          <p class="white--text text-center font-weight-light body-1 mx-5 mt-10 pb-10">“Dan diantara tanda-tanda kekuasaan-Nya ialah diciptakan Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu mendapat ketenangan hati dan dijadikan-Nya kasih sayang diantara kamu. Sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir.”</p>
+          <p class="white--text text-center font-weight-light body-1 pb-16">(Ar-Rum: 21)</p>
+        </v-card>
+      </v-container>
+
+      <!-- Page 3 -->
+      <v-container fluid class="bg-page3">
+        <p class="white--text text-center mempelai mt-10">Sang Mempelai</p>
+        <v-img src="https://cdn.undanganweb.com/hi/2022/03/Untitled-1-7.png"></v-img>
+        <p class="white--text text-center mempelai2 mx-12">Monicha Rossalia Adigita, S.H., M.Kn.</p>
+        <p  class="white--text text-center subtitle mx-12 font-weight-light">Putri dari Bapak Rupadi & Ibu Endah Widyantuksih</p>
+        <p class="white--text text-center subtitle mx-12 font-weight-light">Alamat : Klaling Krajan Rt 05/ Rw 01 No. 66, Jekulo, Kudus</p>
+        <div class="d-flex justify-center">
+          <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab><v-icon>mdi-instagram</v-icon></v-btn>
+        </div>
+
+        <v-img src="https://cdn.undanganweb.com/hi/2022/03/122.png"></v-img>
+        <p class="white--text text-center mempelai2 mx-12">Ravi, S.E.</p>
+        <p  class="white--text text-center subtitle mx-12 font-weight-light">Putra dari Bapak Kiswanto (Alm) & Ibu Rubiatun</p>
+        <p class="white--text text-center subtitle mx-12 font-weight-light">Perumahan Kudus Permai 1-16 Rt.4/Rw.4, Desa garung lor, kaliwungu, kudus.</p>
+        <div class="d-flex justify-center">
+          <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab><v-icon>mdi-instagram</v-icon></v-btn>
+        </div>
+      </v-container>
+
+      <!-- Page 4 & 5 -->
+      <div class="bg-page4"></div>
+      <v-container class="bg-page5">
+        <p class="white--text text-center font-weight-light mx-12 mt-5">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+        <p class="white--text text-center font-weight-light mx-8 mt-5">Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang akan dilaksanakan pada:</p>
+        <v-card color="blue-grey lighten-5" class="mt-10 mx-10 rounded-xl">
+          <div class="d-flex justify-center">
+            <v-img max-width="100" src="https://cdn.undanganweb.com/hi/2022/03/shyshsd-1.png" class="mt-10"></v-img>
+          </div>
+        <p class="brown--text text-center mempelai3 mx-12 font-weight-light">Akad</p>
+        <p class="brown--text text-center mx-12">Kamis, 11 Maret 2021</p>
+        <p class="brown--text text-center mx-12 mt-5 pb-5">09.00 WIB</p>
+        </v-card>
+
+        <v-card color="blue-grey lighten-5" class="mt-10 mx-10 rounded-xl">
+          <div class="d-flex justify-center">
+            <v-img max-width="100" src="https://cdn.undanganweb.com/hi/2022/03/13.png" class="mt-10"></v-img>
+          </div>
+        <p class="brown--text text-center mempelai3 mx-12 font-weight-light">Resepsi</p>
+        <p class="brown--text text-center mx-12">Kamis, 11 Maret 2021</p>
+        <p class="brown--text text-center mx-12 mt-5 pb-5">12.00 – 13.30 WIB</p>
+        </v-card>
+
+        <v-card color="blue-grey lighten-5" class="mt-10 mx-10 rounded-xl">
+          <div class="d-flex justify-center">
+            <v-img max-width="100" src="https://cdn.undanganweb.com/hi/2022/03/578-5782294_map-gps-pin-outdoor-outside-comments-icon-lokasi-1-1.png" class="mt-10"></v-img>
+          </div>
+        <p class="brown--text text-center mempelai3 mx-12 font-weight-light">Lokasi</p>
+        <p class="brown--text text-center mx-8 subtitle font-weight-medium">Resto Sri Tanjung Kudus</p>
+        <p class="brown--text text-center mx-4 mt-5 pb-5">Desa Tanjungrejo RT 5 RW 5, Beji Lor, Tanjungrejo, Kec. Jekulo, Kabupaten Kudus, Jawa Tengah 59382</p>
+        <div class="d-flex justify-center">
+          <v-btn @mouseover="arrow = true" color="brown lighten-1" dark
+          @mouseleave="arrow = false" class="mb-10">
+          View Map <v-icon v-show="arrow">mdi-menu-right</v-icon></v-btn>
+        </div>
+        </v-card>
+      </v-container>
+
+      <!-- Page 6 -->
+      <v-container class="bg-page6" >
+        <v-card class="mx-8 mt-5 rounded-xl">
+          <v-img src="https://cdn.undanganweb.com/hi/2022/03/IMG_5868.jpg"></v-img>
+          <v-card-title>
+            <p class="brown--text text-center menuju mx-12 font-weight-light">Menuju Hari Bahagia</p>
+          </v-card-title>
+          <v-card-text>
+        <p class="brown--text text-center mx-6 subtitle font-weight-light">Siang dan malam berganti begitu cepat, di antara saat-saat mendebarkan yang belum pernah kami rasakan sebelumnya. Kami nantikan kehadiran para keluarga dan sahabat, untuk menjadi saksi ikrar janji suci kami di hari yang bahagia.</p>
+          </v-card-text>
+          <v-card-text>
+          <v-row class="title brown--text font-weight-medium mx-5 text-center">
+            <v-col>0000</v-col>
+            <v-col>00</v-col>
+            <v-col>00</v-col>
+            <v-col>00</v-col>
+          </v-row>  
+          <v-row class="text-caption brown--text font-weight-light mx-5 text-center mt-n2">
+            <v-col>Day</v-col>
+            <v-col>Hrs</v-col>
+            <v-col>Min</v-col>
+            <v-col>Sec</v-col>
+          </v-row>  
+          </v-card-text>
+        </v-card>
+
+        <v-card class="mx-8 mt-5 rounded-xl">
+          <v-card-title>
+            <p class="brown--text text-center menuju mx-12 font-weight-light">Virtual Wedding</p>
+          </v-card-title>
+          <v-card-text>
+        <p class="brown--text text-center mx-6 subtitle font-weight-light">Mengingat pandemi covid-19, kami tidak dapat mengundang seluruh sahabat tercinta kami secara langsung, karena penting bagi kami untuk menjaga semuanya agar tetap aman, jadi selain acara secara langsung, kami juga berencana untuk mempublikasikan pernikahan kami secara virtual melalui zoom dan live instagram yang bisa kamu ikuti melalui link berikut</p>
+          </v-card-text>
+          <v-card-text class="d-flex justify-center">
+            <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark><v-icon left>mdi-instagram</v-icon>Instagram</v-btn>
+          </v-card-text>
+          <v-card-text class="d-flex justify-center">
+            <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark><v-icon left>mdi-play-circle</v-icon>Zoom Live Event</v-btn>
+          </v-card-text>
+        </v-card>
+      </v-container>
+    <audio id="myAudio" ref="audioElm">
+      <source src="https://undanganweb.com/wp-content/uploads/2021/02/Mariah-Carey-Thank-God-I-Found-You-Saxophone-Cover-By-Dori-Wirawan.mp3">
+              Your browser does not support the audio element.
+      </audio>
+  </v-main>
+</v-app>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./js/vue.js"></script>
+</body>
+</html>
+

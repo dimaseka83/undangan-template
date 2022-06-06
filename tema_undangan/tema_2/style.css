@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.image1{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation-name: fadeInOpacity;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    
+}
+
+.bg-page-cover{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* animation: 1s ease-out 0s 1 slideInFromTop; */
+}
+
+.bg-page1{
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* animation: 1s ease-out 0s 1 slideInFromTop; */
+}
+
+.bg-page2{
+  background-image: url('https://cdn.undanganweb.com/hi/2022/03/IMG_5871.png');
+  height: 120vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.bg-page3{
+  background-color: #9b9893;
+  height: 210vh;
+  margin-top: -20vh;
+  border-radius: 90%/100px 100px 0 0;
+}
+
+.bg-page4{
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-page5{
+  height: 200vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-page6{
+  background-color: #9b9893;
+  height: 120vh;
+}
+
+.text-indent{
+  word-spacing: 5px;
+}
+
+.pasangan{
+  font-family: 'Island Moments', cursive;
+  font-size: 50px;
+}
+
+.mempelai{
+  font-family: 'Island Moments', cursive;
+  font-size: 40px;
+}
+
+.mempelai2{
+  font-family: 'Island Moments', cursive;
+  font-size: 30px;
+}
+
+.mempelai3{
+  font-family: 'Island Moments', cursive;
+  font-size: 50px;
+}
+
+.menuju{
+  font-family: 'Island Moments', cursive;
+  font-size: 28px;
+}
