@@ -43,7 +43,7 @@
 
 .bg-page8{
     background-image: url('/tema_undangan/tema_1/img/page1.png');
-    height: 150vh;
+    height: 160vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,7 +51,7 @@
 
 .bg-page12{
     background-image: url('/tema_undangan/tema_1/img/page1.png');
-    height: 150vh;
+    height: 160vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@ iframe{
 }
 
 .image-modif{
-    height: 40vh;
+    height: 20vh;
     border-bottom-left-radius: 80%;
     border-bottom-right-radius: 80%;
 }

@@ -15,14 +15,10 @@ new Vue({
       ucapan: '',
     }],
     dialog: false,
-    daysCountdown: [
-      {
-        day: '',
-        hour: '',
-        minute: '',
-        second: '',
-      }
-    ],
+    displayDays: 0,
+    displayHours: 0,
+    displayMinutes: 0,
+    displaySeconds: 0,
   },
   methods: {
     loadData() {
@@ -56,6 +52,32 @@ new Vue({
         nama: '',
         ucapan: '',
       }];
+    },
+
+    showRemaining() {
+      const timer = setInterval(() => {
+        const now = new Date();
+        const tanggal = new Date(this.dataApi.wedding.countdown_readable).toString('yyyy-MM-dd');
+        const end = new Date(tanggal);
+        const distance = end.getTime() - now.getTime();
+
+        console.log(tanggal);
+        console.log(end)
+
+        if (distance < 0) {
+          clearInterval(timer);
+          return;
+        }
+        
+        const days = Math.floor(distance / this._days);
+        const hours = Math.floor((distance % this._days) / this._hours);
+        const minutes = Math.floor((distance % this._hours) / this._minutes);
+        const seconds = Math.floor((distance % this._minutes) / this._seconds);
+        this.displayMinutes = minutes < 10 ? '0' + minutes : minutes;
+        this.displaySeconds = seconds < 10 ? '0' + seconds : seconds;
+        this.displayHours = hours < 10 ? '0' + hours : hours;
+        this.displayDays = days < 10 ? '0' + days : days;
+      }, 1000);
     }
   },
 
@@ -64,7 +86,7 @@ new Vue({
   },
 
   mounted() {
-    this.countdown();
+    this.showRemaining();
   },
 
   computed: {
@@ -88,22 +110,17 @@ new Vue({
         return 'mt-10';
       }
     },
-        countdown() {
-      
-          setTimeout(() => {
-        var date = new Date();
-      var time = date.getTime();
-      var countDownDate = new Date(this.dataApi.wedding.countdown_readable).getTime();
-      var distance = countDownDate - time;
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      this.daysCountdown.day = days;
-      this.daysCountdown.hour = hours;
-      this.daysCountdown.minute = minutes;
-          this.daysCountdown.second = seconds;        
-      }, 1000);
+
+    _seconds: () => 1000,
+    _minutes(){
+      return this._seconds * 60;
+    },
+    _hours(){
+      return this._minutes * 60;
+    },
+    _days(){
+      return this._hours * 24;
     }
+    
   },
 });
