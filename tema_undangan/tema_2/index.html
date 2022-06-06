@@ -140,7 +140,7 @@
         <v-card class="mx-8 mt-5 rounded-xl">
           <v-card-title>
             <p class="brown--text text-center menuju mx-12 font-weight-light">Virtual Wedding</p>
-          </v-card-title>
+          </v-card-title> 
           <v-card-text>
         <p class="brown--text text-center mx-6 subtitle font-weight-light">Mengingat pandemi covid-19, kami tidak dapat mengundang seluruh sahabat tercinta kami secara langsung, karena penting bagi kami untuk menjaga semuanya agar tetap aman, jadi selain acara secara langsung, kami juga berencana untuk mempublikasikan pernikahan kami secara virtual melalui zoom dan live instagram yang bisa kamu ikuti melalui link berikut</p>
           </v-card-text>
@@ -152,6 +152,155 @@
           </v-card-text>
         </v-card>
       </v-container>
+
+      <!-- Page 7 -->
+      <v-container class="bg-page7">
+         <v-carousel
+    cycle
+    height="400"
+    hide-delimiter-background
+    show-arrows-on-hover
+  >
+   <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+      :src="item.src"
+      reverse-transition="fade-transition"
+      transition="fade-transition"
+    ></v-carousel-item>
+  </v-carousel>
+        <p class="white--text text-center mx-6 mt-16 subtitle font-weight-light">“And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought.”</p>
+        <p class="white--text text-center mx-6 mx-16 subtitle font-weight-light">Ar-Rum: 21</p>
+        <p class="white--text text-center mx-6 mt-16 title font-weight-light">Perjalanan Cinta Kami</p>
+        <p class="white--text text-center mx-6 subtitle font-weight-light">“Datangnya cinta adalah takdir, dia datang tak pernah terduga”</p>
+        <div class="d-flex justify-center">
+        <v-img max-width="300" src="https://cdn.undanganweb.com/hi/2022/03/IMG_5843.jpg"></v-img>
+        </div>
+         <v-timeline
+        align-top
+        :dense="$vuetify.breakpoint.smAndDown"
+      >
+        <v-timeline-item
+           color="brown"
+          fill-dot
+          large
+          icon="mdi-heart-outline"
+          v-for="(item,i) in timeline"
+          :key="i"
+        >
+          <v-row class="pt-4">
+            <v-col>
+              <p class="pink--text subtitle font-weight-bold">{{ item.tahun }}</p>
+              <p class="subtitle font-weight-bold pt-10">{{ item.judul }}</p>
+              <p class="white--text subtitle font-weight-light ">{{ item.subtitle }}</p>
+            </v-col>
+          </v-row>
+        </v-timeline-item>
+      </v-timeline>
+      </v-container>
+
+      <!-- Page 8 -->
+      <v-container>
+        <v-card dark color="grey" class="rounded-xl mt-10">
+          <v-card-title class="justify-center">
+            <p class="font-weight-medium cardTitleFont heading">Covid19</p>
+          </v-card-title>
+          <v-card-text>
+            <p class="font-weight-light body-1 text-center">Untuk menjaga acara pernikahan ini aman dari resiko penularan Covid-19, mohon simak anjuran berikut sebelum anda hadir ke lokasi:</p>
+            <div class="d-flex justify-center">
+              <v-btn class="rounded-xl" elevation="" color="grey darken-1"><v-icon left>mdi-folder-upload</v-icon> anjuran terkait covid-19</v-btn>
+            </div>
+          </v-card-text>
+        </v-card>
+
+        <v-card dark color="grey" class="rounded-xl mt-10">
+          <v-card-title class="justify-center">
+            <p class="font-weight-medium cardTitleFont heading">Wedding Gift</p>
+          </v-card-title>
+          <v-card-text>
+            <p class="font-weight-light body-1 text-center">Bagi Keluarga dan Sahabat
+yang ingin mengirimkan hadiah,
+silahkan mengirimkannya melalui :</p>
+            <div class="d-flex justify-center mx-16 mb-5">
+              <v-btn large block elevation="" color="grey darken-1">Transfer</v-btn>
+            </div>
+            <div class="d-flex justify-center mx-16">
+              <v-btn large block elevation="" color="grey darken-1">Kirim</v-btn>
+            </div>
+          </v-card-text>
+        </v-card>
+
+        <v-card dark color="grey" class="rounded-xl mt-10">
+          <v-card-title class="justify-center">
+            <p class="font-weight-medium cardTitleFont heading">Life Moment</p>
+          </v-card-title>
+          <v-card-text>
+            <p class="font-weight-light body-1 text-center">Bantu kami mengabadikan momen-momen bahagia di acara pernikahan kami dengan menandai postingan anda dengan hashtag berikut:</p>
+                        <div class="d-flex justify-center">
+              <v-btn class="rounded-xl font-weight-light" elevation="" color="grey darken-1"><v-icon left>mdi-folder-upload</v-icon> #monicharavi</v-btn>
+            </div>
+          </v-card-text>
+        </v-card>
+
+        <p class="mempelai3 font-weight-light my-16 text-center">Best Wishes</p>
+                      <v-textarea label="Tulis Ucapan" v-model="form.ucapan" outlined dense rows="2"></v-textarea>
+              <v-text-field label="Nama Lengkap" v-model="form.nama" outlined prepend-inner-icon="mdi-account"></v-text-field>
+              <div class="d-flex flex-row-reverse">
+              <v-btn class="mt-5" @click="kirimUcapan">Kirim</v-btn>
+              </div>
+
+                          <v-row class="fill-height" justify="start">
+            <v-col>
+              <div v-for="(uc, id) in ucapan" :key="id">
+                <p class="font-weight-bold mt-5">{{ uc.nama }}</p>
+                <p class="font-weight-light">{{ uc.ucapan }}</p>
+                <v-dialog v-model="dialog" width="500">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn text v-bind="attrs" v-on="on">
+                      <v-icon left>mdi-reply</v-icon>Reply
+                    </v-btn>
+                  </template>
+
+                  <v-card>
+                    <v-card-title class="text-h5 grey lighten-2">
+                      <p class="font-weight-normal title">Tulis balasan untuk {{ uc.nama }}</p>
+                    </v-card-title>
+                    <v-card-text>
+                      <v-row justify="start" class="fill-height mt-10">
+                        <v-col>
+                          <v-textarea label="Tulis Ucapan" v-model="formBalasan.ucapan" outlined dense rows="2"></v-textarea>
+                              <v-text-field label="Nama Lengkap" v-model="formBalasan.nama" outlined prepend-inner-icon="mdi-account">
+                              </v-text-field>
+                        </v-col>
+                      </v-row>
+                    </v-card-text>
+                    <v-divider></v-divider>
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn color="primary" text @click="dialog = false, kirimBalasan(id)">
+                        Kirim
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
+                <div v-for="(bls, id) in uc.reply" class="pl-10">
+                  <p class="font-weight-bold mt-5">{{ bls.nama }}</p>
+                  <p class="text-caption text-italic">Reply to {{ uc.nama }}</p>
+                  <p class="font-weight-light">{{ bls.ucapan }}</p>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+          <v-divider></v-divider>
+      </v-container>
+
+      <!-- Page 9 & 10-->
+      <div class="bg-page9">
+        <p class="menuju white--text text-center pt-10">Sampai Jumpa Di Hari Bahagia Kami</p>
+      </div>
+
+      <!-- <v-container class="bg-page10">
+      </v-container> -->
     <audio id="myAudio" ref="audioElm">
       <source src="https://undanganweb.com/wp-content/uploads/2021/02/Mariah-Carey-Thank-God-I-Found-You-Saxophone-Cover-By-Dori-Wirawan.mp3">
               Your browser does not support the audio element.
