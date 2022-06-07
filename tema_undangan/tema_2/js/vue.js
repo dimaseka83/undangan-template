@@ -23,10 +23,10 @@ new Vue({
         nama: '',
         ucapan: '',
       }],
-      formBalasan: [{
-        nama: '',
-        ucapan: '',
-      }],
+      // formBalasan: [{
+      //   nama: '',
+      //   ucapan: '',
+      // }],
       dialog: false,
       dialog2: false,
       dialog3: false,
@@ -57,31 +57,38 @@ new Vue({
     scrollPlay() {
       var audio = this.$refs.audioElm;
       audio.play();
-      this.arrow = true;
+      this.openInvitation = true;
     },
     kirimUcapan() {
-      this.ucapan.push({
-        nama: this.form.nama,
-        ucapan: this.form.ucapan,
-        reply: []
-      });
+      // this.ucapan.push({
+      //   nama: this.form.nama,
+      //   ucapan: this.form.ucapan,
+      //   // reply: []
+      // });
+      axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
+        ref_no: "1",
+        name: this.form.nama,
+        write_as: this.form.nama,
+        sosmed: this.form.nama,
+        comment: this.form.ucapan,
+      })
       this.form = [{
         nama: '',
         ucapan: '',
-        reply: []
+        // reply: []
       }];
     },
 
-    kirimBalasan(id) {
-      this.ucapan[id].reply.push({
-        nama: this.formBalasan.nama,
-        ucapan: this.formBalasan.ucapan,
-      });
-      this.formBalasan = [{
-        nama: '',
-        ucapan: '',
-      }];
-    },
+    // kirimBalasan(id) {
+    //   this.ucapan[id].reply.push({
+    //     nama: this.formBalasan.nama,
+    //     ucapan: this.formBalasan.ucapan,
+    //   });
+    //   this.formBalasan = [{
+    //     nama: '',
+    //     ucapan: '',
+    //   }];
+    // },
 
     showRemaining() {
       const timer = setInterval(() => {

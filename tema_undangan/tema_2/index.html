@@ -31,15 +31,16 @@
         </div>
       </div>
     </v-container>
-
+    <div v-show="openInvitation">
       <!-- Page 1 -->
+      <div id="two">
       <v-container fluid class="bg-page1">
         <div align="center" justify="center">
           <p class="white--text pasangan mt-10">{{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
           <p class="text-caption font-weight-light white--text">The Wedding |{{ dataApi.wedding.tanggal_akad }} |Kudus</p>
         </div>
       </v-container>
-
+      </div>
       <!-- Page 2 -->
       <v-container fluid class="bg-page2">
         <v-card color="grey darken-3" class="my-10 mx-5 rounded-xl">
@@ -62,7 +63,7 @@
           <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab><v-icon>mdi-instagram</v-icon></v-btn>
         </div>
 
-        <v-img :src="'https://merestui.com/'+ dataApi.wedding.profil_pria"></v-img>
+        <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
         <p class="white--text text-center mempelai2 mx-12">{{ dataApi.wedding.nama_panggilan_pria }}</p>
         <p  class="white--text text-center subtitle mx-12 font-weight-light">{{ dataApi.wedding.profil_pria }}</p>
         <p class="white--text text-center subtitle mx-12 font-weight-light">Perumahan Kudus Permai 1-16 Rt.4/Rw.4, Desa garung lor, kaliwungu, kudus.</p>
@@ -355,7 +356,7 @@ silahkan mengirimkannya melalui :</p>
               <div v-for="(uc, id) in ucapan" :key="id">
                 <p class="font-weight-bold mt-5">{{ uc.nama }}</p>
                 <p class="font-weight-light">{{ uc.ucapan }}</p>
-                <v-dialog v-model="dialog2" width="500">
+                <!-- <v-dialog v-model="dialog2" width="500">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn text v-bind="attrs" v-on="on">
                       <v-icon left>mdi-reply</v-icon>Reply
@@ -388,7 +389,7 @@ silahkan mengirimkannya melalui :</p>
                   <p class="font-weight-bold mt-5">{{ bls.nama }}</p>
                   <p class="text-caption text-italic">Reply to {{ uc.nama }}</p>
                   <p class="font-weight-light">{{ bls.ucapan }}</p>
-                </div>
+                </div> -->
               </div>
             </v-col>
           </v-row>
@@ -412,6 +413,7 @@ silahkan mengirimkannya melalui :</p>
       <v-btn fab small color="grey lighten-2" elevation=""><v-icon>mdi-facebook</v-icon></v-btn>
       </div>
       </v-container>
+    </div>
     <audio id="myAudio" ref="audioElm">
       <source src="https://undanganweb.com/wp-content/uploads/2021/02/Mariah-Carey-Thank-God-I-Found-You-Saxophone-Cover-By-Dori-Wirawan.mp3">
               Your browser does not support the audio element.
@@ -426,6 +428,7 @@ silahkan mengirimkannya melalui :</p>
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./js/vue.js"></script>
+<script src="./js/jquery.js"></script>
 </body>
 </html>
 
