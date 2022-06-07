@@ -14,14 +14,16 @@
   <div id="app">
     <v-app>
       <v-main>
-        <!-- Page 1 -->
+        <div v-if="loading"></div>
+        <div v-else>
+                  <!-- Page 1 -->
         <div class="page1">
           <v-container fluid class="bg-page1">
             <v-row align="center" justify="center" class="mr-16">
               <v-img src="/tema_undangan/tema_1/img/img_page1.png" max-width="410" class="mr-16"></v-img>
             </v-row>
             <div class="mt-4" align="center" justify="center">
-              <p class="body-2 text-center font-weight-light text-color">Kepada Bapak/Ibu/Saudara/i</p>
+              <p class="body-2 text-center font-weight-light text-color" v-html="dataApi.wedding.h_dear"></p>
               <p class="text-center font-weight-bold text-color title">namatamu</p>
               <v-btn elevation="8" rounded class="font-weight-medium body-2" @mouseover="arrow = true"
                 @mouseleave="arrow = false" @click="scrollPlay" href="#two">
@@ -119,7 +121,7 @@
               <v-img src="./img/kupu.gif" width="500" class="kupu2"></v-img>
             </v-col>
           </v-row>
-          <v-row align="left" justify="left" class="mt-5 ml-5" v-else>
+          <v-row class="mt-5 ml-5" v-else>
               <v-img src="./img/kupu.gif" max-width="300" class="kupu2"></v-img>
               <v-row>
                 <v-col cols="8">
@@ -743,6 +745,7 @@
             <v-btn color="brown lighten-1" dark class="ml-5"><v-icon>mdi-instagram</v-icon></v-btn>
           </v-row>
         </v-container>
+        </div>
         </div>
         <audio id="audio"
           src="https://cdn.undanganweb.com/link/2022/03/Nuca-Mahalini-Janji-Kita-Lirik-Lagu-Indonesia.mp3"

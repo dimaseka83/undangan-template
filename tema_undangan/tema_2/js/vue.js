@@ -1,62 +1,65 @@
 new Vue({
-    el: '#app',
-    vuetify: new Vuetify(),
-    data() {
-        return {
-            arrow: false,
-            items: [
-          {
-            src: 'https://cdn.undanganweb.com/hi/2022/03/IMG_5846.jpg',
-          },
-          {
-            src: 'https://cdn.undanganweb.com/hi/2022/03/WhatsApp-Image-2021-02-19-at-17.21.43.jpeg',
-          },
-          {
-            src: 'https://cdn.undanganweb.com/hi/2022/03/WhatsApp-Image-2021-02-19-at-17.21.45.jpeg',
-          },
-            ],
-            timeline: [
-                {
-                    tahun: '2015',
-                    judul: 'Awal perkenalan',
-                    subtitle: 'Awal perkenalan, kami satu grup basket di line. Ravi mengirimkan personal chat karena tahu kalau kami berasal dari kota yang sama. Dari situ kami saling mengenal satu sama lain.'
-                },
-                {
-                    tahun: '2016',
-                    judul: 'Awal pertemuan',
-                    subtitle: 'Awal pertemuan kami saat adanya rektor cup di kampus kami. Disitu kami mulai bertambah akrab.'
-                },
-                {
-                    tahun: '2017',
-                    judul: 'Proses Ketuk Pintu',
-                    subtitle: 'Keluarga Ravi dan Ravi datang ke rumah untuk menyampaikan bahwa ingin menjalin hubungan kejenjang yang lebih serius.'
-                },
-                {
-                    tahun: '2021',
-                    judul: 'Momen Spesial',
-                    subtitle: 'Momen spesial kami akan dimulai setelah 5 tahun kami menjalin hubungan, dimana kami akan membangun keluarga kecil kami. Semoga Allah SWT memberikan keberkahan untuk pernikahan kami.'
-                }
-            ],
-                ucapan: [],
-    form: [{
-      nama: '',
-      ucapan: '',
-    }],
-    formBalasan: [{
-      nama: '',
-      ucapan: '',
-    }],
-    dialog: false,
-                    
-        }
-    },
-    methods: {
-        scrollPlay() {
-            var audio = this.$refs.audioElm;
-            audio.play();
-            this.arrow = true;
+  el: '#app',
+  vuetify: new Vuetify(),
+  data() {
+    return {
+      arrow: false,
+      dataApi: [],
+      loading: true,
+      openInvitation: false,
+      items: [{
+          src: 'https://cdn.undanganweb.com/hi/2022/03/IMG_5846.jpg',
         },
-        kirimUcapan() {
+        {
+          src: 'https://cdn.undanganweb.com/hi/2022/03/WhatsApp-Image-2021-02-19-at-17.21.43.jpeg',
+        },
+        {
+          src: 'https://cdn.undanganweb.com/hi/2022/03/WhatsApp-Image-2021-02-19-at-17.21.45.jpeg',
+        },
+      ],
+      timeline: [],
+      ucapan: [],
+      form: [{
+        nama: '',
+        ucapan: '',
+      }],
+      formBalasan: [{
+        nama: '',
+        ucapan: '',
+      }],
+      dialog: false,
+      dialog2: false,
+      dialog3: false,
+      dialog4: false,
+      displayDays: 0,
+      displayHours: 0,
+      displayMinutes: 0,
+      displaySeconds: 0,
+    }
+  },
+  methods: {
+    loadData() {
+      axios.get('https://merestui.com/api/vindirendra').then(response => {
+        this.dataApi = response.data.data;
+        this.loading = false;
+      });
+    },
+    background(){
+      if (this.loading == false) {
+      document.getElementsByClassName('bg-page-cover')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_1 +"')";
+      document.getElementsByClassName('bg-page1')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_2 +"')";
+      document.getElementsByClassName('bg-page4')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_3 +"')";
+      document.getElementsByClassName('bg-page5')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_4 +"')";
+      document.getElementsByClassName('bg-page9')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_5 +"')";
+      }      
+      this.timeline = this.dataApi.stories;
+    },
+    scrollPlay() {
+      var audio = this.$refs.audioElm;
+      audio.play();
+      this.arrow = true;
+    },
+    kirimUcapan() {
       this.ucapan.push({
         nama: this.form.nama,
         ucapan: this.form.ucapan,
@@ -67,9 +70,9 @@ new Vue({
         ucapan: '',
         reply: []
       }];
-        },
-        
-            kirimBalasan(id) {
+    },
+
+    kirimBalasan(id) {
       this.ucapan[id].reply.push({
         nama: this.formBalasan.nama,
         ucapan: this.formBalasan.ucapan,
@@ -79,14 +82,56 @@ new Vue({
         ucapan: '',
       }];
     },
-    },
 
-    mounted() {
-        document.getElementsByClassName('bg-page-cover')[0].style.backgroundImage = "url('https://cdn.undanganweb.com/hi/2022/03/IMG_5830.jpg')";
-        document.getElementsByClassName('bg-page1')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://cdn.undanganweb.com/hi/2022/03/IMG_5871.jpg')";
-        document.getElementsByClassName('bg-page4')[0].style.backgroundImage = "url('https://cdn.undanganweb.com/hi/2022/03/IMG_5870-480x720-1.jpg')";
-        document.getElementsByClassName('bg-page5')[0].style.backgroundImage = "url('./img/black_image2.png'), url('https://cdn.undanganweb.com/hi/2022/03/IMG_5846.jpg')";
-        document.getElementsByClassName('bg-page9')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://cdn.undanganweb.com/hi/2022/03/IMG_5869.jpg')";
+    showRemaining() {
+      const timer = setInterval(() => {
+        const now = new Date();
+        const tanggal = new Date(this.dataApi.wedding.countdown_readable).toString('yyyy-MM-dd');
+        const end = new Date(tanggal);
+        const distance = end.getTime() - now.getTime();
 
+        if (distance < 0) {
+          clearInterval(timer);
+          return;
+        }
+
+        const days = Math.floor(distance / this._days);
+        const hours = Math.floor((distance % this._days) / this._hours);
+        const minutes = Math.floor((distance % this._hours) / this._minutes);
+        const seconds = Math.floor((distance % this._minutes) / this._seconds);
+        this.displayMinutes = minutes < 10 ? '0' + minutes : minutes;
+        this.displaySeconds = seconds < 10 ? '0' + seconds : seconds;
+        this.displayHours = hours < 10 ? '0' + hours : hours;
+        this.displayDays = days < 10 ? '0' + days : days;
+      }, 1000);
     }
+  },
+
+  created() {
+    this.loadData();
+  },
+
+  updated(){
+    this.background();
+  },
+
+  mounted() {
+    this.showRemaining();
+  },
+
+  computed: {
+    totalUcapan() {
+      return this.ucapan.length;
+    },
+    _seconds: () => 1000,
+    _minutes() {
+      return this._seconds * 60;
+    },
+    _hours() {
+      return this._minutes * 60;
+    },
+    _days() {
+      return this._hours * 24;
+    }
+  }
 })

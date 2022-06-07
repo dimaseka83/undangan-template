@@ -2,6 +2,7 @@ new Vue({
   el: '#app',
   vuetify: new Vuetify(),
   data: {
+    loading: true,
     arrow: false,
     openInvitation: false,
     dataApi: [],
@@ -24,6 +25,7 @@ new Vue({
     loadData() {
       axios.get('https://merestui.com/api/vindirendra').then(response => {
         this.dataApi = response.data.data;
+        this.loading = false;
       });
     },
     scrollPlay() {
