@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+.bg-pagecover{
+    background-image: url('https://digition.id/wp-content/uploads/2022/01/Slide7-scaled.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.none{
+    display: none;
+}
+
+.bg-page1{
+    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page2{
+    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
+    height: 170vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-page3{
+    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
+    height: 160vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-page4{
+    background-color: #c9a57d;
+    height: 160vh;
+    margin-top: -5vh;
+}
+
+.bg-page5{
+    background-color: #f4ecdc;
+    height: 70vh;
+}
+
+.bg-page6{
+    background-color: #c9a57d;
+    height: 70vh;
+}
+
+.bg-page7{
+    background-color: #f4ecdc;
+    height: 270vh;
+}
+
+.imageBatas{
+    height: 12vh;
+    margin-top: -20vh;
+    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix11.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.imageBatas2{
+    height: 12vh;
+    margin-top: -10vh;
+    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix11.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.imageBatas3{
+    height: 5vh;
+    margin-top: -10vh;
+    background-image: url('https://digition.id/wp-content/uploads/2022/01/11Y-1.png');
+}
+
+
+.fontMempelai{
+    font-family: 'Vujahday Script', cursive;
+    font-size: 30px;
+    color: #3E2723;
+}
+
+.fontMempelai2{
+    font-family: 'Vujahday Script', cursive;
+    font-size: 35px;
+    color: #3E2723;
+}
+
+.fontPria{
+    font-family: 'Vujahday Script', cursive;
+    font-size: 30px;
+}
+
+.fontTamu{
+    font-family: 'Tiro Gurmukhi', sans-serif;
+    font-size: 22px;
+    color: #3E2723;
+    text-align: center;
+}
+
+.fontwedding{
+    font-family: 'Gentium Plus', serif;
+    font-size: 25px;
+    color: #3E2723;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 5px #5f5e5e;
+}
+
+.fontbahagia{
+    font-family: 'Gentium Plus', serif;
+    font-size: 25px;
+    color: #3E2723;
+    text-align: center;
+}
+
+.fontPertemuan{
+    font-family: 'Allura', cursive;
+    font-size: 25px;
+    color: #3E2723;
+}
+
+.fontSave{
+    font-family: 'Allura', cursive;
+    font-size: 40px;
+    color: #3E2723;
+}
+
+.fontGallery{
+    font-family: 'Allura', cursive;
+    font-size: 30px;
+    color: #3E2723;
+}
+
+.pImage{
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+}
+
+.cardImage{
+    margin-top: 10vh;
+}
+
+.cardImage2{
+    margin-top: 20vh;
+}
+
+.imgCardOver{
+    margin-top: -12vh;
+}
+
+.hr2{
+    width: 30%;
+    margin: auto;
+}
+
+.hr3{
+    width: 40%;
+    margin: auto;
+    color: #333;
+}
+
+.hr4{
+    width: 60%;
+    margin: auto;
+    color: #333;
+}
+
+
+
+/* content fixed */
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+  .main {
+    padding: 16px;
+    margin-bottom: 30px;
+    height: 1500px; /* Used in this example to enable scrolling */
+  }
