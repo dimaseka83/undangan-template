@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Tema 3</title>
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-main>
+                <div class="navbar">
+                    <v-bottom-navigation v-model="value">
+                        <v-btn href="#home" value="home">
+                            <span>Home</span>
+                            <v-icon>mdi-home</v-icon>
+                        </v-btn>
+
+                        <v-btn href="#mempelai">
+                            <span>Couple</span>
+                            <v-icon>mdi-heart</v-icon>
+                        </v-btn>
+
+                        <v-btn href="#tanggal">
+                            <span>Event</span>
+                            <v-icon>mdi-calendar-month</v-icon>
+                        </v-btn>
+
+                        <v-btn href="#dokumentasi">
+                            <span>Gallery</span>
+                            <v-icon>mdi-image</v-icon>
+                        </v-btn>
+
+                        <v-btn href="#chat">
+                            <span>Wishes</span>
+                            <v-icon>mdi-chat-processing</v-icon>
+                        </v-btn>
+                    </v-bottom-navigation>
+                </div>
+
+                <!-- Page 1 -->
+                <v-container fluid class="bg-page1">
+                    <div align="center" justify="center">
+                        <p class="fontWedding text-capitalize mt-16">the wedding of</p>
+                        <p class="fontPasangan text-capitalize mt-1">ari & dea</p>
+                    </div>
+                </v-container>
+                <v-img src="https://digition.id/wp-content/uploads/2022/02/123.png" class="imageBatas"></v-img>
+
+                <!-- Page 2 -->
+                <v-container fluid class="bg-page2">
+                    <p class="fontCounting font-italic mt-16 blue-grey--text">Counting the days</p>
+                    <v-row>
+                        <v-col>
+                          <v-card color="blue-grey" class="">
+                            <v-card-title class="justify-center">
+                              <p class="white--text">00</p>
+                            </v-card-title>
+                            <v-card-text class="text-caption text-center white--text mt-n8">
+                              Hari
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                        <v-col>
+                          <v-card color="blue-grey" class="">
+                            <v-card-title class="justify-center">
+                              <p class="white--text">00</p>
+                            </v-card-title>
+                            <v-card-text class="text-caption text-center white--text mt-n8">
+                              Jam
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                        <v-col>
+                          <v-card color="blue-grey" class="">
+                            <v-card-title class="justify-center">
+                              <p class="white--text">00</p>
+                            </v-card-title>
+                            <v-card-text class="text-caption text-center white--text mt-n8">
+                              Menit
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                        <v-col>
+                          <v-card color="blue-grey" class="">
+                            <v-card-title class="justify-center">
+                              <p class="white--text">00</p>
+                            </v-card-title>
+                            <v-card-text class="text-caption text-center white--text mt-n8">
+                              Detik
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                      </v-row>
+
+                      <p class="font-weight-light text-caption mt-16 text-center">Assalamu'alaikum warahmatullahi wabarakatuh</p>
+                      <p class="font-weight-light text-caption text-center">Bismillahirrahmanirrahim</p>
+                      <p class="font-weight-light text-caption text-center">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan do'a restu pernikahan putra putri kami :</p>
+
+                      <v-card class="mx-4 pb-4" outlined color="transparent" elevation="12">
+                        <div class="d-flex justify-center">
+                        <v-img max-width="200" max-height="250" src="https://digition.id/wp-content/uploads/2022/02/Picture12.png" class="my-8"></v-img>
+                        </div>
+                        <p class="font-weight-light fontPanggilanPria">Ari Hermawan</p>
+                        <p class="font-weight-light text-center subtitle mx-16 gold">Putra Pertama dari Bapak Mempelai Pria & Ibu Mempelai Pria</p>
+                        <div class="d-flex justify-center">
+                          <v-btn fab small dark style="background-color: #A67C00;"><v-icon>mdi-instagram</v-icon></v-btn>
+                        </div>
+                      </v-card>
+                      <div class="text-center fontPanggilanPria gold my-16">&</div>
+                      <v-card class="mx-4 pb-4" outlined color="transparent" elevation="12">
+                        <div class="d-flex justify-center">
+                        <v-img max-width="200" max-height="250" src="https://digition.id/wp-content/uploads/2022/02/Picture13.png" class="my-8"></v-img>
+                        </div>
+                        <p class="font-weight-light fontPanggilanPria">Dea Trihardani</p>
+                        <p class="font-weight-light text-center subtitle mx-16 gold">Putri Kedua dari Bapak Mempelai Wanita & Ibu Mempelai Wanita</p>
+                        <div class="d-flex justify-center">
+                          <v-btn fab small style="background-color: #A67C00;" dark><v-icon>mdi-instagram</v-icon></v-btn>
+                        </div>
+                      </v-card>
+                </v-container>
+
+                <v-img src="https://digition.id/wp-content/uploads/2022/02/123.png" class="imageBatas"></v-img>
+
+                <!-- Page 3 -->
+                <v-container fluid class="bg-page3">
+                  <v-card class="mx-4 my-16 pb-8 rounded-xl" color="transparent" elevation="12">
+                    <p class="font-weight-light mt-10 fontAkad">Akad Nikah</p>
+                    <p class="font-weight-light text-center gold">Selasa,</p>
+                    <p class="font-weight-light mt-n4 text-center gold">22 Februari 2022</p>
+                    <p class="font-weight-light text-center gold">Pukul 09.00 WIB</p>
+                    <p class="font-weight-light text-center gold">Bertempat di :</p>
+                    <p class="font-weight-light mt-n4 text-center gold">Kediaman Mempelai Wanita </p>
+                    <p class="font-weight-light mt-n4 text-center gold">Alamat Akad Nikah</p>
+                    <div class="d-flex justify-center">
+                      <v-btn rounded dark color="blue-grey lighten-1"><v-icon>mdi-magnify-plus-outline</v-icon>Lihat Lokasi</v-btn>
+                    </div>
+                  </v-card>
+
+                  <v-card class="mx-4 my-16 pb-8 rounded-xl" color="transparent" elevation="12">
+                    <p class="font-weight-light mt-10 fontAkad">Resepsi</p>
+                    <p class="font-weight-light text-center gold">Selasa,</p>
+                    <p class="font-weight-light mt-n4 text-center gold">22 Februari 2022</p>
+                    <p class="font-weight-light text-center gold">Pukul 09.00 WIB</p>
+                    <p class="font-weight-light text-center gold">Bertempat di :</p>
+                    <p class="font-weight-light mt-n4 text-center gold">Kediaman Mempelai Wanita </p>
+                    <p class="font-weight-light mt-n4 text-center gold">Alamat Akad Nikah</p>
+                    <div class="d-flex justify-center">
+                      <v-btn rounded dark color="blue-grey lighten-1"><v-icon>mdi-magnify-plus-outline</v-icon>Lihat Lokasi</v-btn>
+                    </div>
+                  </v-card>
+
+                  <v-card outlined class="mx-4 rounded-xl cardBg">
+                    <v-card-title class="justify-center">
+                      <p class="white--text font fontLive">Live Streaming</p>
+                    </v-card-title>
+                    <v-card-title class="justify-center mt-n10">
+                      <v-row>
+                        <hr class="hr1">
+                        <v-icon dark>mdi-bookmark</v-icon>
+                        <hr class="hr1">
+                      </v-row>
+                    </v-card-title>
+                    <v-card-title class="mx-14 font-italic text-caption white--text justify-center text-center">
+                      Rangkaian Acara akan kami
+                      siarkan secara langsung melalui
+                      akun sosial media @digition.id
+                    </v-card-title>
+                    <div class="d-flex justify-center">
+                      <v-btn class="px-16" rounded><v-icon>mdi-instagram</v-icon>Join Live</v-btn>
+                    </div>
+                    <div class="d-flex justify-center">
+                      <v-btn class="px-16 my-8" rounded><v-icon>mdi-youtube</v-icon>Join Live</v-btn>
+                    </div>
+                  </v-card>
+                </v-container>
+                <!-- Page 4 -->
+                <v-container class="bg-page4">
+                  <p class="white--text font-italic fontLive">Love Story</p>
+                  <v-row class="mx-16">
+                    <hr class="hr1">
+                    <v-icon dark small>mdi-heart</v-icon>
+                    <hr class="hr1">
+                  </v-row>
+
+                  <v-row>
+                    <v-col cols="2"></v-col>
+                    <v-col>
+                      <p class="font-weight-light white--text">2022</p>
+                    </v-col>
+                  </v-row>
+                  <v-row class="mt-n7">
+                    <v-col cols="2">
+                      <v-btn fab small><v-icon color="grey">mdi-heart</v-icon></v-btn>
+                    </v-col>
+                    <v-col cols="10">
+                      <v-card color="transparent">
+                        <v-card-title class="font-weight-light font-italic subtitle white--text">
+                          Awal Pertemuan
+                        </v-card-title>
+                        <v-card-text class="font-weight-light text-caption white--text mt-n3">
+                          Pertama kali kami bertemu lalu berkenalan satu sama lain.
+                        </v-card-textc>
+                      </v-card>
+                    </v-col>
+                  </v-row>
+                </v-container>
+                                
+                <!-- Page 5 -->
+                <v-container fluid class="bg-page5">
+                  <p class="white--text font-italic fontLive mt-16">Gallery of Love</p>
+                  <v-row class="mx-16">
+                    <hr class="hr1">
+                    <v-icon dark small>mdi-heart</v-icon>
+                    <hr class="hr1">
+                  </v-row>
+                  <v-img src="https://digition.id/wp-content/uploads/2022/02/54.jpg"></v-img>
+                  <v-row class="mt-1">
+                    <v-col cols="4">
+                      <v-img max-height="200" src="https://digition.id/wp-content/uploads/2022/02/53.jpg"></v-img>
+                    </v-col>
+                    <v-col cols="8">
+                      <v-img max-height="170" src="https://digition.id/wp-content/uploads/2022/02/57-e1645525707331.jpg"></v-img>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="6">
+                      <v-img max-height="200" src="https://digition.id/wp-content/uploads/2022/02/56.jpg"></v-img>
+                    </v-col>
+                    <v-col cols="6">
+                      <v-img max-height="200" src="https://digition.id/wp-content/uploads/2022/02/55-e1647486922720.jpg"></v-img>
+                    </v-col>
+                  </v-row>
+
+                  <p class="font-weight-bold font-italic text-caption white--text text-center mt-16">
+                    " Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu dapat ketenangan hati dan dijadikannya kasih sayang di antara kamu. Sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berpikir. "
+                  </p>
+                  <p class="font-weight-bold font-italic body-2 white--text text-center">Q.S. Ar-Rum:21</p>
+                  <v-row class="mx-16 my-16">
+                    <hr class="hr1">
+                    <v-icon dark small>mdi-heart</v-icon>
+                    <hr class="hr1">
+                  </v-row>
+                  <p class="white--text font-italic fontLive mt-16">Your Wishes</p>
+                  <v-card>
+                    <v-card-title>
+                      <v-icon small>mdi-bird</v-icon>
+                      <p class="text-caption mt-5">{{ totalUcapan }} Ucapan</p>
+                    </v-card-title>
+                    <v-divider></v-divider>
+                    <v-card-text>
+                      <v-text-field label="Nama Anda" v-model="form.nama" solo></v-text-field>
+                      <v-textarea label="Tulis Ucapan & Doa" v-model="form.ucapan" solo :counter="500" :maxlength="500"></v-textarea>
+                      <v-select :items="kehadiran" v-model="form.kehadiran" label="Konfirmasi Kehadiran" solo></v-select>
+                      <v-btn color="brown" @click="kirimUcapan" small dark>Kirim</v-btn>
+                    </v-card-text>
+                    <v-divider></v-divider>
+                    <div v-for="(comment, idx) in ucapan">
+                    <div class="ml-10 mt-5 pb-5">
+                      <p class="text-caption font-weight-bold brown--text">{{ comment.nama }} 
+                        <v-btn v-if="comment.kehadiran == 'Hadir'" x-small color="brown" dark><v-icon left>mdi-checkbox-marked-circle</v-icon> Hadir</v-btn> 
+                        <v-btn v-else x-small color="brown" dark><v-icon left>mdi-checkbox-blank-circle-outline</v-icon> Tidak Hadir</v-btn>
+                      </p>
+                      <p class="text-caption">{{ comment.ucapan }}</p>
+                    </div>
+                  </div>
+                  </v-card>
+                </v-container>
+
+                <!-- Page 6 -->
+                <v-container fluid class="bg-page6">
+                  <p class="font-italic fontGallery2 mt-16">Wedding Gift</p>
+                  <p class="text-caption text-center gold">Kehadiran dan do'a restu dari Bapak/Ibu/Saudara(i) adalah kebahagian yang tak ternilai bagi kami dan keluarga. Namun jika memberi merupakan tanda kasih, semoga hal tersebut dapat menjadi pelengkap kebahagiaan kami</p>
+
+                  <v-card color="transparent" class="mx-6 pb-5 rounded-xl">
+                    <div class="d-flex justify-center">
+                    <v-img max-width="200" max-height="50" src="https://www.yayasansimetri.or.id/wp-content/uploads/2021/03/Logo-BCA-blue-A4.png" class="my-6"></v-img>
+                    </div>
+                    <p class="text-center gold">Nomor Rekening atas nama digition</p>
+                    <p class="text-center gold font-weight-bold title" ref="rekening">3636351</p>
+                    <div class="d-flex justify-center">
+                      <v-btn style="background-color: #A67C00;" small><v-icon>mdi-content-copy</v-icon>Salin</v-btn>
+                    </div>
+                  </v-card>
+
+                  <v-card color="transparent" class="mx-6 pb-5 rounded-xl mt-5">
+                    <div class="d-flex justify-center">
+                    <v-img max-width="200" max-height="50" src="https://www.yayasansimetri.or.id/wp-content/uploads/2021/03/Logo-BCA-blue-A4.png" class="my-6"></v-img>
+                    </div>
+                    <p class="text-center gold">Nomor Rekening atas nama digition</p>
+                    <p class="text-center gold font-weight-bold title" ref="rekening">3636351</p>
+                    <div class="d-flex justify-center">
+                      <v-btn style="background-color: #A67C00;" small><v-icon>mdi-content-copy</v-icon>Salin</v-btn>
+                    </div>
+                  </v-card>
+                </v-container>
+
+                <!-- Page 7 -->
+                <v-container fluid class="bg-page7">
+                  <p class="font-italic fontReservasi mt-16">Reservasi Kehadiran</p>
+                  <v-text-field label="Isikan Nama Lengkap Anda" class="rounded-xl" solo></v-text-field>
+                  <v-text-field label="Jumlah Akan Hadir" class="rounded-xl" solo></v-text-field>
+                  <p class="text-caption font-italic white--text">Konfirmasi Kehadiran</p>
+                  <v-radio-group dark>
+                    <v-radio label="Iya, Saya akan datang"></v-radio>
+                    <v-radio label="Maaf, Saya Tidak Bisa Datang"></v-radio>
+                  </v-radio-group>
+                  <v-btn style="background-color: #A67C00;" dark block>Kirim WhatsApp</v-btn>
+                </v-container>
+
+                <!-- Page 8 -->
+                <v-container fluid class="bg-page8">
+                  <p class="font-italic fontReservasi mt-16">Health Protocol</p>
+                  <p class="text-caption text-center white--text">
+                    Tanpa mengurangi rasa hormat, Kami menghimbau kepada tamu undangan yang akan hadir untuk selalu mematuhi protokol kesehatan yang berlaku. Terima kasih. 
+                  </p>
+                  <v-row>
+                    <v-col>
+                      <div class="d-flex justify-center">
+                      <v-img max-width="80" src="https://digition.id/wp-content/uploads/2021/12/01-14-1.png"></v-img>
+                      </div>
+                      <p class="text-caption text-center white--text mt-2">Cuci Tangan</p>
+                    </v-col>
+                    <v-col>
+                      <div class="d-flex justify-center">
+                      <v-img max-width="80" src="https://digition.id/wp-content/uploads/2021/12/04-15.png"></v-img>
+                      </div>
+                      <p class="text-caption text-center white--text mt-2">Gunakan Masker</p>
+                    </v-col>
+                    <v-col>
+                      <div class="d-flex justify-center">
+                      <v-img max-width="80" src="https://digition.id/wp-content/uploads/2021/12/06-3.png"></v-img>
+                      </div>
+                      <p class="text-caption text-center white--text mt-2">Jaga Jarak</p>
+                    </v-col>
+                  </v-row>
+                  <v-card style="background-color: #807e7d;">
+                    <v-card-text class="font-italic text-caption text-center white--text">
+                      Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai. Atas kehadiran serta doa restu, kami ucapkan terima kasih. 
+                    </v-card-text>
+                  </v-card>
+                </v-container>
+
+                <!-- Page 9 -->
+                <v-container fluid class="bg-page9">
+                  <v-card color="transparent" class="py-1">
+                    <v-img class="rounded-xl mx-16" src="https://digition.id/wp-content/uploads/2022/02/57-e1645525707331.jpg"></v-img>
+                    <v-card-title class="justify-center font-italic brown--text body-2">
+                      Turut berbahagia segenap keluarga besar
+                    </v-card-title>
+                    <v-card-title class="justify-center">
+                      <p class="fontPasangan2 text-capitalize mt-1">ari & dea</p>
+                      <v-row class="mx-16">
+                        <hr class="hr2">
+                        <v-icon color="brown" small>mdi-heart</v-icon>
+                        <hr class="hr2">
+                      </v-row>
+                    </v-card-title>
+                  </v-card>
+                </v-container>
+
+                <!-- Page 10 -->
+                <v-container fluid class="bg-page10">
+                  <p class="text-center white--text text-caption font-italic">Made with love by @digition.id</p>
+                </v-container>
+                <!-- Main Utama -->
+                <div class="none">
+                    <v-container fluid class="bg-pagecover fill-height">
+                        <v-row align="center" justify="center">
+                            <div class="marginCover" align="center" justify="center">
+                                <p class="font-weight-light">Kepada Yth</p>
+                                <p class="font-weight-bold font-italic amber--text title">Nama Tamu</p>
+                                <v-hover v-slot="{ hover }">
+                                    <v-btn class="font-weight-light rounded-xl text-caption"
+                                        :style="{ 'background-color': hover ? '#FFFFFF' : '#A67C00', 'color': hover ? '#A67C00' : 'white' }">
+                                        <v-icon>mdi-email-open-outline</v-icon>Buka Undangan
+                                    </v-btn>
+                                </v-hover>
+                            </div>
+                        </v-row>
+                    </v-container>
+                </div>
+
+            </v-main>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+        integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+
+</html>
