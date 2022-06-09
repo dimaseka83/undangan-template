@@ -5,7 +5,7 @@ new Vue({
         return {
             dataApi: [],
             loading: true,
-            value: 1,
+            value: 'home',
             items: [
               {
                 src: 'https://digition.id/wp-content/uploads/2022/01/107077483-305398767491171-1941002224051595105-n-054ec2eac32ec6ec0469281ae9d35311-1.jpg',
@@ -18,7 +18,7 @@ new Vue({
               },
             ],
               kehadiran: ['Hadir', 'Tidak Hadir'],
-              openInvitation: true,
+              openInvitation: false,
               ucapan: [],
               form: [{
                 nama: '',

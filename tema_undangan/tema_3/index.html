@@ -24,12 +24,12 @@
                 <div v-if="openInvitation">
                   <div class="navbar">
                                 <v-bottom-navigation
-            :value="value"
+            v-model="value"
             color="brown lighten-5"
             background-color="brown lighten-1"
             grow
           >
-          <v-btn href="#home">
+          <v-btn href="#home" value="home">
             <v-icon>mdi-home</v-icon>
           </v-btn>
         
