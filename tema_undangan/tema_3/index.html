@@ -49,29 +49,29 @@
     background-color="brown lighten-1"
     grow
   >
-  <v-btn>
+  <v-btn href="#home">
     <v-icon>mdi-home</v-icon>
   </v-btn>
 
-  <v-btn>
+  <v-btn href="#mempelai">
     <v-icon>mdi-heart</v-icon>
   </v-btn>
 
-    <v-btn>
+    <v-btn href="#tanggal">
       <v-icon>mdi-calendar-month</v-icon>
     </v-btn>
 
-    <v-btn>
+    <v-btn href="#dokumentasi">
       <v-icon>mdi-image</v-icon>
     </v-btn>
 
-    <v-btn>
+    <v-btn href="#chat">
       <v-icon>mdi-chat-processing</v-icon>
     </v-btn>
   </v-bottom-navigation>
           </div>
           <!-- Page 1 -->
-          <v-container fluid class="bg-page1">
+          <v-container fluid class="bg-page1" id="home">
             <v-row align="center" justify="center">
             <div align="center" justify="center">
               <p class="fontwedding text-uppercase">the wedding of</p>
@@ -97,7 +97,7 @@
           </v-row>
           </v-container>
           <!-- Page 2 -->
-          <v-container fluid class="bg-page2">
+          <v-container fluid class="bg-page2" id="mempelai">
             <div align="center" justify="center" class="text-caption text-center my-10">
               <v-col cols="12">
                 <p>Bismillahirrahmanirrahim</p>
@@ -163,7 +163,7 @@
           </v-container>
 
           <!-- Page 3 -->
-          <v-container fluid class="bg-page3">
+          <v-container fluid class="bg-page3" >
             <v-row>
               <v-col cols="2"></v-col>
               <v-col>
@@ -237,7 +237,7 @@
             <p class="text-center pt-10 fontbahagia">Menuju Hari Bahagia</p>
           </v-container>
           <!-- Page 4 -->
-          <v-container fluid class="bg-page4">
+          <v-container fluid class="bg-page4" id="tanggal">
             <p class="fontSave mt-5 text-center white--text">Save the date</p>
             <v-row>
               <v-col>
@@ -367,7 +367,7 @@
           <!-- Page 5 -->
           <v-container fluid class="imageBatas3">
             </v-container>
-          <v-container fluid class="bg-page5">
+          <v-container fluid class="bg-page5" id="dokumentasi">
               <p class="fontGallery text-center">Gallery of love</p>
               <v-carousel hide-delimiters height="250">
                 <v-carousel-item
@@ -422,7 +422,7 @@
             <v-icon color="brown">mdi-heart</v-icon>
             <hr class="hr3">
             </v-row>
-            <div class="fontGallery text-center">Berikan Ucapan</div>
+            <div class="fontGallery text-center" id="chat">Berikan Ucapan</div>
 
             <v-card>
               <v-card-title>
@@ -482,9 +482,14 @@
             <v-img class="mt-10" max-width="200" src="https://digition.id/wp-content/uploads/2022/01/tryyy-e1645592633181.png"></v-img>
             </div>
             <p class="fontMempelai text-center">Dinda & Rey</p>
-            <p class="subtitle brown--text text-center">Atas Kehadiran dan Do'a Restunya, Kami Mengucapkan Terima Kasih.</p>
+            <p class="body-2 brown--text text-center">Atas Kehadiran dan Do'a Restunya, Kami Mengucapkan Terima Kasih.</p>
           </v-container>
-            </v-main>
+
+          <!-- Page 8 -->
+          <v-container fluid class="imageBatas4">
+            <p class="text-center pt-12 fontMadeIn font-weight-bold white--text">Made with <v-icon color="red" small>mdi-heart</v-icon>by digition.id</p>
+          </v-container>
+          </v-main>
         </v-app>
     </div>
 
