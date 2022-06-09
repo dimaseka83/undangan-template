@@ -14,7 +14,12 @@
   <div id="app">
     <v-app>
       <v-main>
-        <div v-if="loading"></div>
+        <div v-if="loading">
+                     <v-progress-circular
+      indeterminate
+      color="primary"
+    ></v-progress-circular>
+        </div>
         <div v-else>
     <!-- Page Cover -->
     <v-container fluid class="bg-page-cover">

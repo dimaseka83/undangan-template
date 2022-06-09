@@ -14,7 +14,14 @@
     <div id="app">
         <v-app>
             <v-main>
-                <div class="navbar">
+              <div v-if="loading">
+                <v-progress-circular
+                indeterminate
+                color="primary"
+              ></v-progress-circular>
+              </div>
+              <div v-else>
+                                <div class="navbar">
                     <v-bottom-navigation v-model="value">
                         <v-btn href="#home" value="home">
                             <span>Home</span>
@@ -46,8 +53,8 @@
                 <!-- Page 1 -->
                 <v-container fluid class="bg-page1">
                     <div align="center" justify="center">
-                        <p class="fontWedding text-capitalize mt-16">the wedding of</p>
-                        <p class="fontPasangan text-capitalize mt-1">ari & dea</p>
+                        <p class="fontWedding text-capitalize mt-16">{{ dataApi.wedding.judul_utama }}</p>
+                        <p class="fontPasangan text-capitalize mt-1">{{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
                     </div>
                 </v-container>
                 <v-img src="https://digition.id/wp-content/uploads/2022/02/123.png" class="imageBatas"></v-img>
@@ -59,7 +66,7 @@
                         <v-col>
                           <v-card color="blue-grey" class="">
                             <v-card-title class="justify-center">
-                              <p class="white--text">00</p>
+                              <p class="white--text">{{ displayDays }}</p>
                             </v-card-title>
                             <v-card-text class="text-caption text-center white--text mt-n8">
                               Hari
@@ -69,7 +76,7 @@
                         <v-col>
                           <v-card color="blue-grey" class="">
                             <v-card-title class="justify-center">
-                              <p class="white--text">00</p>
+                              <p class="white--text">{{ displayHours }}</p>
                             </v-card-title>
                             <v-card-text class="text-caption text-center white--text mt-n8">
                               Jam
@@ -79,7 +86,7 @@
                         <v-col>
                           <v-card color="blue-grey" class="">
                             <v-card-title class="justify-center">
-                              <p class="white--text">00</p>
+                              <p class="white--text">{{ displayMinutes }}</p>
                             </v-card-title>
                             <v-card-text class="text-caption text-center white--text mt-n8">
                               Menit
@@ -89,7 +96,7 @@
                         <v-col>
                           <v-card color="blue-grey" class="">
                             <v-card-title class="justify-center">
-                              <p class="white--text">00</p>
+                              <p class="white--text">{{ displaySeconds }}</p>
                             </v-card-title>
                             <v-card-text class="text-caption text-center white--text mt-n8">
                               Detik
@@ -104,10 +111,10 @@
 
                       <v-card class="mx-4 pb-4" outlined color="transparent" elevation="12">
                         <div class="d-flex justify-center">
-                        <v-img max-width="200" max-height="250" src="https://digition.id/wp-content/uploads/2022/02/Picture12.png" class="my-8"></v-img>
+                        <v-img max-width="200" max-height="250" :src="'https://merestui.com/'+ dataApi.wedding.foto_pria" class="my-8"></v-img>
                         </div>
-                        <p class="font-weight-light fontPanggilanPria">Ari Hermawan</p>
-                        <p class="font-weight-light text-center subtitle mx-16 gold">Putra Pertama dari Bapak Mempelai Pria & Ibu Mempelai Pria</p>
+                        <p class="font-weight-light fontPanggilanPria">{{ dataApi.wedding.nama_lengkap_pria }}</p>
+                        <p class="font-weight-light text-center subtitle mx-16 gold">{{ dataApi.wedding.profil_pria }}</p>
                         <div class="d-flex justify-center">
                           <v-btn fab small dark style="background-color: #A67C00;"><v-icon>mdi-instagram</v-icon></v-btn>
                         </div>
@@ -115,10 +122,10 @@
                       <div class="text-center fontPanggilanPria gold my-16">&</div>
                       <v-card class="mx-4 pb-4" outlined color="transparent" elevation="12">
                         <div class="d-flex justify-center">
-                        <v-img max-width="200" max-height="250" src="https://digition.id/wp-content/uploads/2022/02/Picture13.png" class="my-8"></v-img>
+                        <v-img max-width="200" max-height="250" :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita" class="my-8"></v-img>
                         </div>
-                        <p class="font-weight-light fontPanggilanPria">Dea Trihardani</p>
-                        <p class="font-weight-light text-center subtitle mx-16 gold">Putri Kedua dari Bapak Mempelai Wanita & Ibu Mempelai Wanita</p>
+                        <p class="font-weight-light fontPanggilanPria">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
+                        <p class="font-weight-light text-center subtitle mx-16 gold">{{ dataApi.wedding.profil_wanita }}</p>
                         <div class="d-flex justify-center">
                           <v-btn fab small style="background-color: #A67C00;" dark><v-icon>mdi-instagram</v-icon></v-btn>
                         </div>
@@ -130,28 +137,26 @@
                 <!-- Page 3 -->
                 <v-container fluid class="bg-page3">
                   <v-card class="mx-4 my-16 pb-8 rounded-xl" color="transparent" elevation="12">
-                    <p class="font-weight-light mt-10 fontAkad">Akad Nikah</p>
-                    <p class="font-weight-light text-center gold">Selasa,</p>
-                    <p class="font-weight-light mt-n4 text-center gold">22 Februari 2022</p>
-                    <p class="font-weight-light text-center gold">Pukul 09.00 WIB</p>
+                    <p class="font-weight-light mt-10 fontAkad">{{ dataApi.wedding.judul_akad }}</p>
+                    <p class="font-weight-light text-center gold">{{ getDayOnlyAkad }},</p>
+                    <p class="font-weight-light mt-n4 text-center gold">{{ getTanggalAkad }}</p>
+                    <p class="font-weight-light text-center gold">Pukul {{ dataApi.wedding.waktu_akad }}</p>
                     <p class="font-weight-light text-center gold">Bertempat di :</p>
-                    <p class="font-weight-light mt-n4 text-center gold">Kediaman Mempelai Wanita </p>
-                    <p class="font-weight-light mt-n4 text-center gold">Alamat Akad Nikah</p>
+                    <p class="font-weight-light mt-n4 text-center gold">{{ dataApi.wedding.lokasi_akad }}</p>
                     <div class="d-flex justify-center">
                       <v-btn rounded dark color="blue-grey lighten-1"><v-icon>mdi-magnify-plus-outline</v-icon>Lihat Lokasi</v-btn>
                     </div>
                   </v-card>
 
                   <v-card class="mx-4 my-16 pb-8 rounded-xl" color="transparent" elevation="12">
-                    <p class="font-weight-light mt-10 fontAkad">Resepsi</p>
-                    <p class="font-weight-light text-center gold">Selasa,</p>
-                    <p class="font-weight-light mt-n4 text-center gold">22 Februari 2022</p>
-                    <p class="font-weight-light text-center gold">Pukul 09.00 WIB</p>
+                    <p class="font-weight-light mt-10 fontAkad">{{ dataApi.wedding.judul_resepsi }}</p>
+                    <p class="font-weight-light text-center gold">{{ getDayOnlyResepsi }},</p>
+                    <p class="font-weight-light mt-n4 text-center gold">{{ getTanggalResepsi }}</p>
+                    <p class="font-weight-light text-center gold">Pukul {{ dataApi.wedding.waktu_resepsi }}</p>
                     <p class="font-weight-light text-center gold">Bertempat di :</p>
-                    <p class="font-weight-light mt-n4 text-center gold">Kediaman Mempelai Wanita </p>
-                    <p class="font-weight-light mt-n4 text-center gold">Alamat Akad Nikah</p>
+                    <p class="font-weight-light mt-n4 text-center gold">{{ dataApi.wedding.lokasi_resepsi }} </p>
                     <div class="d-flex justify-center">
-                      <v-btn rounded dark color="blue-grey lighten-1"><v-icon>mdi-magnify-plus-outline</v-icon>Lihat Lokasi</v-btn>
+                      <v-btn rounded dark color="blue-grey lighten-1" @click="openUrl(dataApi.wedding.short_url)"><v-icon>mdi-magnify-plus-outline</v-icon>Lihat Lokasi</v-btn>
                     </div>
                   </v-card>
 
@@ -187,11 +192,11 @@
                     <v-icon dark small>mdi-heart</v-icon>
                     <hr class="hr1">
                   </v-row>
-
-                  <v-row>
+                  <div v-for="(story, idx) in dataApi.stories">
+                                      <v-row>
                     <v-col cols="2"></v-col>
                     <v-col>
-                      <p class="font-weight-light white--text">2022</p>
+                      <p class="font-weight-light white--text">{{ story.tanggal }}</p>
                     </v-col>
                   </v-row>
                   <v-row class="mt-n7">
@@ -201,14 +206,15 @@
                     <v-col cols="10">
                       <v-card color="transparent">
                         <v-card-title class="font-weight-light font-italic subtitle white--text">
-                          Awal Pertemuan
+                          {{ story.judul }}
                         </v-card-title>
                         <v-card-text class="font-weight-light text-caption white--text mt-n3">
-                          Pertama kali kami bertemu lalu berkenalan satu sama lain.
+                          {{ story.cerita }}
                         </v-card-textc>
                       </v-card>
                     </v-col>
                   </v-row>
+                  </div>
                 </v-container>
                                 
                 <!-- Page 5 -->
@@ -219,7 +225,7 @@
                     <v-icon dark small>mdi-heart</v-icon>
                     <hr class="hr1">
                   </v-row>
-                  <v-img src="https://digition.id/wp-content/uploads/2022/02/54.jpg"></v-img>
+                  <v-img max-height="300" :src="'https://merestui.com/'+ dataApi.wedding.gallery_1"></v-img>
                   <v-row class="mt-1">
                     <v-col cols="4">
                       <v-img max-height="200" src="https://digition.id/wp-content/uploads/2022/02/53.jpg"></v-img>
@@ -385,7 +391,11 @@
                         </v-row>
                     </v-container>
                 </div>
-
+                		<audio id="song" loop>
+				<source src="https://digition.id/wp-content/uploads/2022/03/Since-I-found-you-christian-LONG-VERSION.mp3"
+                type="audio/mp3">
+			</audio>  
+              </div>
             </v-main>
         </v-app>
     </div>
