@@ -33,14 +33,14 @@
 
 .bg-page3{
     background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
-    height: 160vh;
+    height: 210vh;
     background-size: cover;
     background-position: center;
 }
 
 .bg-page4{
     background-color: #c9a57d;
-    height: 160vh;
+    height: 180vh;
     margin-top: -5vh;
 }
 
@@ -61,7 +61,7 @@
 
 .imageBatas{
     height: 12vh;
-    margin-top: -20vh;
+    margin-top: -10vh;
     background-image: url('https://digition.id/wp-content/uploads/2022/01/fix11.png');
     background-size: cover;
     background-position: center;
