@@ -6,6 +6,7 @@ new Vue({
       dataApi: [],
       loading: true,
       value: 'home',
+      openInvitation: false,
       ucapan: [],
       form: [{
         nama: '',
@@ -21,6 +22,11 @@ new Vue({
   },
 
   methods: {
+    scrollPlay(){
+      var audio = this.$refs.audioElm;
+      audio.play();
+      this.openInvitation = true;
+  },
     kirimUcapan() {
       this.ucapan.push({
         nama: this.form.nama,
@@ -54,11 +60,37 @@ new Vue({
       this.openInvitation = true;
     },
     background() {
-        document.getElementsByClassName('bg-page1')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_1 +"')";
+      document.getElementsByClassName('bg-page1')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/" + this.dataApi.wedding.gallery_1 + "')";
     },
-              openUrl(url){
-            window.open(url, '_blank');
-          },
+    openUrl(url) {
+      window.open(url, '_blank');
+    },
+
+    copy1() {
+      this.selectText(this.$refs.rekening1);
+      document.execCommand('copy');
+    },
+
+    copy2() {
+      this.selectText(this.$refs.rekening2);
+      document.execCommand('copy');
+    },
+
+    selectText(element) {
+      var range;
+      if (document.selection) {
+        // IE
+        range = document.body.createTextRange();
+        range.moveToElementText(element);
+        range.select();
+      } else if (window.getSelection) {
+        range = document.createRange();
+        range.selectNode(element);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+      }
+    },
+
     showRemaining() {
       const timer = setInterval(() => {
         const now = new Date();
@@ -110,25 +142,45 @@ new Vue({
     _days() {
       return this._hours * 24;
     },
-        getDayOnlyAkad(){
-      if(this.loading == false){
+    getDayOnlyAkad() {
+      if (this.loading == false) {
         return this.dataApi.wedding.tanggal_akad.split(' ')[0];
       }
     },
-        getTanggalAkad(){
-      if(this.loading == false){
+    getTanggalAkad() {
+      if (this.loading == false) {
         return this.dataApi.wedding.tanggal_akad.split(",")[1];
       }
     },
-            getDayOnlyResepsi(){
-      if(this.loading == false){
+    getDayOnlyResepsi() {
+      if (this.loading == false) {
         return this.dataApi.wedding.tanggal_resepsi.split(' ')[0];
       }
     },
-    getTanggalResepsi(){
-      if(this.loading == false){
+    getTanggalResepsi() {
+      if (this.loading == false) {
         return this.dataApi.wedding.tanggal_resepsi.split(",")[1];
       }
     },
+    namaRekening1() {
+      if (this.loading == false) {
+        return this.dataApi.wedding.rek_1.split('-')[2];
+      }
+    },
+    nomorRekening1() {
+      if (this.loading == false) {
+        return this.dataApi.wedding.rek_1.split('-')[1];
+      }
+    },
+    namaRekening2() {
+      if (this.loading == false) {
+        return this.dataApi.wedding.rek_2.split('-')[2];
+      }
+    },
+    nomorRekening2() {
+      if (this.loading == false) {
+        return this.dataApi.wedding.rek_2.split('-')[1];
+      }
+    }
   }
 });

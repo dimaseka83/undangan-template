@@ -14,12 +14,14 @@
     <div id="app">
         <v-app>
             <v-main>
-              <div v-if="loading">
-                <v-progress-circular
-                indeterminate
-                color="primary"
-              ></v-progress-circular>
-              </div>
+              <v-container fluid class="fill-height" v-if="loading">
+                <v-row align="center" justify="center">
+                 <v-progress-circular
+                 indeterminate
+                 color="primary"
+               ></v-progress-circular>
+                </v-row>
+               </v-container>
               <div v-else>
                 <div v-if="openInvitation">
                   <div class="navbar">
