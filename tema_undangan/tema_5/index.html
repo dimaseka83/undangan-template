@@ -20,7 +20,8 @@
                     </v-row>
                   </v-container>
                 <div v-else>
-                    <div class="navbar">
+                    <div v-if="openInvitation">
+                        <div class="navbar">
                         <v-card class="rounded-pill cardNavigation mb-5" style="background-color: #ffffe6;">
                             <v-card-title>
                                 <v-btn href="#home" x-small outlined color="transparent"><v-icon small color="brown">mdi-heart</v-icon></v-btn>
@@ -279,23 +280,27 @@
                             </v-card-text>
                         </v-card>
                     </v-container>
-                    <div class="none">
+                    </div>
+                    <div v-else>
                         <v-container fluid class="bg-pagecover fill-height">
                             <v-row align="center" justify="center">
                                 <div justify="center" align="center">
                                     <p class="font-weight-light text-uppercase">undangan pernikahan</p>
                                     <p class="fontPasangan">Design & Preset</p>
                                     <p class="font-weight-light">Jum'at, 28 April 2023</p>
-                                    <v-btn depressed outlined class="undangan-btn" rounded>buka undangan</v-btn>
+                                    <v-btn depressed outlined class="undangan-btn" @click="scrollPlay" rounded>buka undangan</v-btn>
                                 </div>
                             </v-row>
                         </v-container>
                     </div>
                 </div>
+                          <audio id="song" ref="audioElm">
+            <source src="https://api.our-wedding.link/uploads/e978a250-3802-11ec-a6bc-0bdc9d2e2b1c.mp3"
+              type="audio/mp3">
+          </audio>
             </v-main>
         </v-app>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
