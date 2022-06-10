@@ -285,17 +285,19 @@
                   <v-btn color="brown" @click="kirimUcapan" small dark>Kirim</v-btn>
                 </v-card-text>
                 <v-divider></v-divider>
-                <div v-for="(comment, idx) in ucapan">
-                  <div class="ml-10 mt-5 pb-5">
-                    <p class="text-caption font-weight-bold brown--text">{{ comment.nama }}
-                      <v-btn v-if="comment.kehadiran == 'Hadir'" x-small color="brown" dark>
-                        <v-icon left>mdi-checkbox-marked-circle</v-icon> Hadir
-                      </v-btn>
-                      <v-btn v-else x-small color="brown" dark>
-                        <v-icon left>mdi-checkbox-blank-circle-outline</v-icon> Tidak Hadir
-                      </v-btn>
-                    </p>
-                    <p class="text-caption">{{ comment.ucapan }}</p>
+                <div class="overflowAuto" v-if="ucapan.length > 0">
+                  <div v-for="(comment, idx) in ucapan">
+                    <div class="ml-10 mt-5 pb-5">
+                      <p class="text-caption font-weight-bold brown--text">{{ comment.nama }}
+                        <v-btn v-if="comment.kehadiran == 'Hadir'" x-small color="brown" dark>
+                          <v-icon left>mdi-checkbox-marked-circle</v-icon> Hadir
+                        </v-btn>
+                        <v-btn v-else x-small color="brown" dark>
+                          <v-icon left>mdi-checkbox-blank-circle-outline</v-icon> Tidak Hadir
+                        </v-btn>
+                      </p>
+                      <p class="text-caption">{{ comment.ucapan }}</p>
+                    </div>
                   </div>
                 </div>
               </v-card>

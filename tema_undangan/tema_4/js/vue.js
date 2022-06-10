@@ -22,11 +22,6 @@ new Vue({
   },
 
   methods: {
-    scrollPlay(){
-      var audio = this.$refs.audioElm;
-      audio.play();
-      this.openInvitation = true;
-  },
     kirimUcapan() {
       this.ucapan.push({
         nama: this.form.nama,

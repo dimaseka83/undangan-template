@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Tema 5</title>
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-main>
+                <v-container fluid class="fill-height" v-if="loading">
+                    <v-row align="center" justify="center">
+                      <v-progress-circular indeterminate color="primary"></v-progress-circular>
+                    </v-row>
+                  </v-container>
+                <div v-else>
+                    <div class="navbar">
+                        <v-card class="rounded-pill cardNavigation mb-5" style="background-color: #ffffe6;">
+                            <v-card-title>
+                                <v-btn href="#home" x-small outlined color="transparent"><v-icon small color="brown">mdi-heart</v-icon></v-btn>
+                                <v-btn href="#image" x-small outlined color="transparent"><v-icon small color="brown">mdi-image-multiple</v-icon></v-btn>
+                                <v-btn href="#calendar" x-small outlined color="transparent"><v-icon small color="brown">mdi-calendar-blank</v-icon></v-btn>
+                                <v-btn href="#map" x-small outlined color="transparent"><v-icon small color="brown">mdi-map</v-icon></v-btn>
+                                <v-btn href="#chat" x-small outlined color="transparent"><v-icon small color="brown">mdi-square-edit-outline</v-icon></v-btn>
+                            </v-card-title>
+                        </v-card>
+                      </div>
+    
+                    <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_1"></v-img>
+                    <v-container fluid class="bg-page1">
+                        <div class="d-flex justify-center">
+                            <v-img class="mt-5" max-width="200" max-height="200"
+                                src="https://api.our-wedding.link/uploads/assets/quotes_decor_flower_minimalist.webp">
+                            </v-img>
+                        </div>
+                        <p class="text-center mx-4 mt-5 font-italic body-2 white--text">{{ dataApi.wedding.kata_mutiara }}</p>
+                    </v-container>
+    
+                    <v-container fluid class="bg-page2" id="home">
+                        <p class="mx-16 mt-5 text-center fontPasangan">Calon Pengantin</p>
+                        <div class="d-flex justify-center">
+                            <v-img max-width="300" max-height="300" src="https://api.our-wedding.link/uploads/assets/couple_decor_23.webp">
+                                <div class="d-flex justify-center">
+                                    <v-img class="rounded-circle mt-13" max-width="200" max-height="200"
+                                    :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita">
+                                    </v-img>
+                                </div>
+                            </v-img>
+                        </div>
+    
+                        <p class="body-1 text-center black--text font-weight-bold"><v-icon color="black">mdi-instagram</v-icon> {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+                        <p class="mt-5 text-center font-weight-bold fontPasangan">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
+                        <p class="font-weight-light text-center mx-16">{{ dataApi.wedding.profil_wanita }}</p>
+                        <p class="text-h4 text-center font-weight-bold">&</p>
+    
+                        <div class="d-flex justify-center">
+                            <v-img max-width="300" max-height="300" src="https://api.our-wedding.link/uploads/assets/couple_decor_23.webp">
+                                <div class="d-flex justify-center">
+                                    <v-img class="rounded-circle mt-13" max-width="200" max-height="200"
+                                    :src="'https://merestui.com/'+ dataApi.wedding.foto_pria">
+                                    </v-img>
+                                </div>
+                            </v-img>
+                        </div>
+    
+                        <p class="body-1 text-center black--text font-weight-bold"><v-icon color="black">mdi-instagram</v-icon> {{ dataApi.wedding.nama_panggilan_pria }}</p>
+                        <p class="mt-5 text-center font-weight-bold fontPasangan">{{ dataApi.wedding.nama_lengkap_pria }}</p>
+                        <p class="font-weight-light text-center mx-16">{{ dataApi.wedding.profil_pria }}</p>
+    
+                        <v-card color="white">
+                            <v-card-title class="justify-center">
+                                <v-card color="brown lighten-4" width="100%">
+                                    <v-card-title class="justify-center">
+                                        <p class="mt-5 text-center font-weight-bold blue-grey--text text-center fontPasangan">Our Love Journey</p>
+                                    </v-card-title>
+     
+                                    <v-slide-group
+                                      v-model="model"
+                                      class="pa-4"
+                                      center-active
+                                      show-arrows
+                                    >
+                                      <v-slide-item
+                                        v-for="(n, i) in dataApi.stories"
+                                        :key="i"
+                                        v-slot="{ active, toggle }"
+                                      >
+                                      <v-card color="transparent" outlined>
+                                        <v-img max-width="100" class="rounded-circle mr-2 " :src="n.photo"></v-img>
+                                        <v-title class="justify-center">
+                                            <p class="font-weight-bold text-center mt-5">{{ n.tanggal }}</p>
+                                        </v-title>
+                                      </v-card>
+                                      </v-slide-item>
+                                    </v-slide-group>
+                                </v-card>
+                            </v-card-title>
+                        </v-card>
+                    </v-container>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/uAbwbHtQ8S4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+                    <v-container fluid class="bg-page3" id="image">
+                        <p class="mt-8 text-center mx-16 fontPasangan">Moment yang berbahagia</p>
+                        <p class="font-weight-light text-center mx-8">"Menciptakan kenangan adalah hadiah yang tak ternilai harganya. Kenangan akan bertahan seumur hidup; benda-benda hanya dalam waktu singkat."</p>
+                    </v-container>
+    
+                    <v-carousel cycle height="600" hide-delimiters hide-delimiter-background
+                    show-arrows-on-hover>
+                    <v-carousel-item
+                    v-for="(item,i) in items"
+                    :key="i"
+                    :src="item.src"
+                    reverse-transition="fade-transition"
+                    transition="fade-transition"
+                  ></v-carousel-item>
+                    </v-carousel>
+    
+                    <v-container fluid class="bg-page4" id="calendar">
+                        <p class="mt-8 text-center white--text fontPasangan">Acara Akan Diselenggarakan</p>
+                        <div justify="center" align="center" class="white--text">
+                            <div class="text-uppercase">
+                                <p class="text-h3">{{ displayDays }}</p>
+                                <p class="mt-n4 title font-weight-bold">Hari</p>
+                            </div>
+                            <v-row class="mx-8">
+                                <v-col>
+                                    <div class="text-uppercase">
+                                        <p class="text-h4">{{ displayHours }}</p>
+                                        <p class="mt-n4 title font-weight-bold">Jam</p>
+                                    </div>
+                                </v-col>
+                                <v-col>
+                                    <div class="text-uppercase">
+                                        <p class="text-h4">{{ displayMinutes }}</p>
+                                        <p class="mt-n4 title font-weight-bold">Menit</p>
+                                    </div>
+                                </v-col>
+                                <v-col>
+                                    <div class="text-uppercase">
+                                        <p class="text-h4">{{ displaySeconds }}</p>
+                                        <p class="mt-n4 title font-weight-bold">Detik</p>
+                                    </div>
+                                </v-col>
+                            </v-row>
+                            <p class="font-weight-light white--text">{{ dataApi.wedding.tanggal_akad }}</p>
+                            <v-btn class="py-5 mb-5" small rounded><v-icon>mdi-calendar</v-icon> Simpan acara ke kalender</v-btn>
+                            <v-btn class="py-5" small rounded><v-icon>mdi-bell-outline</v-icon> Aktifkan Notifikasi</v-btn>
+                        </div>
+                    </v-container>
+    
+                    <v-container fluid class="bg-page5">
+                        <v-card class="mt-16 pb-5">
+                            <v-card-title class="justify-center body-1">
+                                <span class="font-weight-bold">{{ totalKehadiran }} tamu</span><span class="font-weight-light">merespon akan datang. kirim konfirmasi.</span>
+                            </v-card-title>
+                            <v-divider></v-divider>
+                            <div class="d-flex justify-center mt-2">
+                                <v-dialog
+                                v-model="dialog1"
+                                width="500"
+                              >
+                                <template v-slot:activator="{ on, attrs }">
+                                  <v-btn large
+                                    color="teal"
+                                    dark
+                                    v-bind="attrs"
+                                    v-on="on"
+                                  >
+                                    <v-icon>mdi-checkbook</v-icon> Konfirmasi Kehadiran
+                                  </v-btn>
+                                </template>
+                          
+                                <v-card>
+                                  <v-card-title class="text-h5 grey lighten-2">
+                                    Konfirmasi Kehadiran
+                                  </v-card-title>
+                                  <v-divider></v-divider>
+                                  <v-card-title class="justify-center">
+                                      <div align="center" class="justify">
+                                            <v-img max-width="200" src="./img/letter.svg"></v-img>
+                                      </div>
+                                  </v-card-title>
+                                  <v-card-title>
+                                    <v-text-field solo label="Nama Lengkap" v-model="formKehadiran.nama"></v-text-field>
+                                    <p>konfirmasi kehadiran</p>
+                                    <v-radio-group class="mt-n5" v-model="formKehadiran.hadir">
+                                        <v-radio label="Ya, saya akan datang" value="Ya"></v-radio>
+                                        <v-radio label="Maaf, Sepertinya tidak bisa" value="Tidak"></v-radio>
+                                    </v-radio-group>
+                                    <v-btn rounded block color="primary" @click="kirimKehadiran"><v-icon>mdi-upload</v-icon>Kirim respon</v-btn>
+                                  </v-card-title>
+                                </v-card>
+                              </v-dialog>
+                            </div>
+                        </v-card>
+    
+                        <v-card color="blue-grey" class="mt-10" id="map">
+                            <v-card-title>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.0352746954477!2d116.08382660000001!3d-8.592606899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbf81035b3f41%3A0xa505d3993d2970c8!2sLombok%20Vaganza%20Hotel!5e0!3m2!1sen!2sid!4v1654849762135!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </v-card-title>
+                        </v-card>
+    
+                        <p class="font-weight-light text-center body-2 mt-10">
+                            {{ dataApi.wedding.lokasi_resepsi }}
+                        </p>
+    
+                        <div class="d-flex justify-center mt-10">
+                            <v-btn depressed outlined rounded @click="openUrl(dataApi.wedding.short_url)" class="lokasi-btn">lihat lokasi</v-btn>
+                        </div>
+    
+                    </v-container>
+    
+                    <v-container fluid class="bg-page6" >
+                        <v-card color="transparent" class="pb-5">
+                            <v-card-title class="justify-center">
+                                <p class="mt-8 text-center fontPasangan">{{ dataApi.wedding.judul_akad }}</p>
+                            </v-card-title>
+                            <v-card-text>
+                                <p class="font-weight-light text-center">{{ dataApi.wedding.tanggal_akad }}</p>
+                                <p class="font-weight-light text-center"><v-icon color="black">mdi-clock-outline</v-icon> pukul {{ dataApi.wedding.waktu_akad }}</p>
+                            </v-card-text>
+                            <v-card-title class="justify-center">
+                                <p class="mt-8 text-center fontPasangan">Resepsi</p>
+                            </v-card-title>
+                            <v-card-text>
+                                <p class="font-weight-light text-center">{{ dataApi.wedding.judul_resepsi }}</p>
+                                <p class="font-weight-light text-center"><v-icon color="black">mdi-clock-outline</v-icon> pukul {{ dataApi.wedding.waktu_resepsi }}</p>
+                            </v-card-text>
+                            <v-card-title class="justify-center mt-n5">
+                                <v-btn depressed outlined rounded class="lokasi-btn" @click="openUrl(dataApi.wedding.short_url)">lihat lokasi</v-btn>
+                            </v-card-title>
+                        </v-card>
+                        <p class="font-weight-light mx-16 text-center mt-10">
+                            {{ dataApi.wedding.informasi_tamu }}
+                        </p>
+                        <p class="font-weight-bold text-center mt-16">Turut mengundang:</p>
+                        <div class="text-center">
+                            <p>Keluarga Besar Bapak Sujono</p>
+                        <p>Keluarga Besar PT Emence</p>
+                        <p>Teman Teman SMKN 1</p>
+                        </div>
+                    </v-container>
+    
+                    <v-container fluid class="bg-page7" id="chat">
+                        <p class="mt-8 text-center fontPasangan">Kirim Ucapan</p>
+                        <div class="overflowAuto">
+                            <div v-for="(n, i) in ucapan" :key="i">
+                            <v-row>
+                                <v-col cols="2"><v-btn fab elevation="" color="primary"> {{ n.front }}</v-btn></v-col>
+                                <v-col cols="10">
+                                    <v-card class="rounded-xl">
+                                        <v-card-title class="font-weight-bold text-caption">
+                                            {{ n.nama }}
+                                        </v-card-title>
+                                        <v-card-text class="font-weight-light text-caption">
+                                            {{ n.comment }}
+                                        </v-card-text>
+                                    </v-card>
+                                </v-col>
+                            </v-row>
+                        </div>
+                        </div>
+                        <v-card class="mt-10" color="transparent">
+                            <v-card-title class="body-2 font-weight-bold">
+                                Kirim Ucapan:
+                            </v-card-title>
+                            <v-card-text>
+                                <v-text-field label="Nama Lengkap" v-model="form.nama" outlined></v-text-field>
+                                <v-text-field label="Alamat" outlined v-model="form.alamat"></v-text-field>
+                                <v-file-input label="Bagikan momentmu" dense outlined></v-file-input>
+                                <v-textarea label="hal yang indah untuk pasangan" outlined v-model="form.comment"></v-textarea>
+                                <v-btn color="blue-grey" @click="kirimUcapan" dark block rounded>Kirim Sekarang</v-btn>
+                            </v-card-text>
+                        </v-card>
+                    </v-container>
+                    <div class="none">
+                        <v-container fluid class="bg-pagecover fill-height">
+                            <v-row align="center" justify="center">
+                                <div justify="center" align="center">
+                                    <p class="font-weight-light text-uppercase">undangan pernikahan</p>
+                                    <p class="fontPasangan">Design & Preset</p>
+                                    <p class="font-weight-light">Jum'at, 28 April 2023</p>
+                                    <v-btn depressed outlined class="undangan-btn" rounded>buka undangan</v-btn>
+                                </div>
+                            </v-row>
+                        </v-container>
+                    </div>
+                </div>
+            </v-main>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+        integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+
+</html>

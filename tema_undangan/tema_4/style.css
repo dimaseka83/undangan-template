@@ -7,6 +7,13 @@
     display: none;
 }
 
+.overflowAuto {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 20vh;
+}
+
+
 .gold{
     color: #A67C00;
 }
