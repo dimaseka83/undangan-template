@@ -132,6 +132,9 @@ new Vue({
         return this.dataApi.comments.length;
       }
     },
+    displayDesktop() {
+      return this.$vuetify.breakpoint.width >= 500
+    },
     _seconds: () => 1000,
     _minutes() {
       return this._seconds * 60;

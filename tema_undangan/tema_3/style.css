@@ -21,21 +21,112 @@
     height: 20vh;
     width: 100%;
 }
+/* Mobile */
 
-.bg-page1{
-    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
-    height: 80vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@media screen and (max-width: 500px){
+    .bg-page1{
+        background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
+        height: 80vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page2{
+        background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
+        height: 170vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page4{
+        background-color: #c9a57d;
+        height: 180vh;
+        margin-top: -5vh;
+    }
+
+    .bg-page5{
+        background-color: #f4ecdc;
+        height: 70vh;
+    }
+
+    .pImage{
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+    }
+
+    .fontGallery{
+        font-family: 'Allura', cursive;
+        font-size: 30px;
+        color: #3E2723;
+    }
+    
+    .fontProtokol{
+        font-family: 'Allura', cursive;
+        font-size: 30px;
+        color: #3E2723;
+    }
+
+    .bg-page7{
+        background-color: #f4ecdc;
+        height: 270vh;
+    }
+    
 }
+/* Desktop */
 
-.bg-page2{
-    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
-    height: 170vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@media screen and (min-width: 501px){
+    .bg-page1{
+        background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
+        height: 85vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page2{
+        background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page4{
+        background-color: #c9a57d;
+        height: 100vh;
+        margin-top: -5vh;
+    }
+
+    .bg-page5{
+        background-color: #f4ecdc;
+        height: 70vh;
+    }
+    
+    .pImage{
+        font-family: 'Great Vibes', cursive;
+        font-size: 50px;
+    }
+
+    .fontGallery{
+        font-family: 'Allura', cursive;
+        font-size: 30px;
+        color: #3E2723;
+    }
+    
+    .fontProtokol{
+        font-family: 'Allura', cursive;
+        font-size: 50px;
+        color: #3E2723;
+    }
+
+    .bg-page7{
+        background-color: #f4ecdc;
+        height: 300vh;
+    }
+    
+
 }
 
 .bg-page3{
@@ -45,26 +136,13 @@
     background-position: center;
 }
 
-.bg-page4{
-    background-color: #c9a57d;
-    height: 180vh;
-    margin-top: -5vh;
-}
-
-.bg-page5{
-    background-color: #f4ecdc;
-    height: 70vh;
-}
 
 .bg-page6{
     background-color: #c9a57d;
     height: 70vh;
 }
 
-.bg-page7{
-    background-color: #f4ecdc;
-    height: 270vh;
-}
+
 
 .imageBatas{
     height: 12vh;
@@ -152,23 +230,12 @@
     color: #3E2723;
 }
 
-.fontGallery{
-    font-family: 'Allura', cursive;
-    font-size: 30px;
-    color: #3E2723;
-}
 
 .fontMadeIn{
     font-family: 'Gentium Plus', serif;
     font-size: 12px;
     color: #3E2723;
     text-align: center;
-}
-
-
-.pImage{
-    font-family: 'Great Vibes', cursive;
-    font-size: 30px;
 }
 
 .cardImage{

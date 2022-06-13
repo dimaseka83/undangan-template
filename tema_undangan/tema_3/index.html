@@ -46,7 +46,21 @@
             </div>
             <!-- Page 1 -->
             <v-container fluid class="bg-page1" id="home">
-              <v-row align="center" justify="center">
+              <div align="center" justify="center" v-if="displayDesktop">
+                <div align="center" justify="center">
+                  <p class="fontwedding text-uppercase mt-16">{{ dataApi.wedding.judul_utama }}</p>
+                  <v-img max-width="350" max-height="350" :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
+                  </v-img>
+
+                  <p class="fontMempelai2 mt-16">{{ dataApi.wedding.nama_panggilan_wanita }} &
+                    {{ dataApi.wedding.nama_panggilan_pria }}</p>
+                  <v-btn x-large color="brown" class="font-weight-medium" small dark>save the date</v-btn>
+                  <v-img max-width="350" max-height="350"
+                  src="https://digition.id/wp-content/uploads/2022/01/pngwing.com_-300x150.png">
+                </v-img>
+                </div>
+              </div>
+              <v-row align="center" justify="center" v-else>
                 <div align="center" justify="center">
                   <p class="fontwedding text-uppercase">{{ dataApi.wedding.judul_utama }}</p>
                 </div>
@@ -72,72 +86,137 @@
             </v-container>
             <!-- Page 2 -->
             <v-container fluid class="bg-page2" id="mempelai">
-              <div align="center" justify="center" class="text-caption text-center my-10">
+              <div align="center" justify="center" class=" text-center my-10" :class="[ displayDesktop ? 'font-weight-medium' : 'text-caption']">
                 <v-col cols="12">
                   <p>Bismillahirrahmanirrahim</p>
                   <p>Maha Suci Allah SWT yang telah menciptakan makhlukNya berpasang-pasangan. Ya Allah, perkenankan dan
                     Ridhoilah pernikahan putra-putri kami</p>
                 </v-col>
+              </div> 
+
+              <v-row align="center" justify="center" v-if="displayDesktop" style="margin-top: 15vh;">
+                <v-col cols="6">
+                 <div class="d-flex justify-end">
+                  <v-card width="400" color="brown lighten-3" class="pb-5">
+                    <div class="d-flex justify-center">
+                      <v-img max-width="200" max-height="200" class="imgCardOver rounded-circle"
+                        :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
+                    </div>
+                    <div class="text-center" justify="center">
+                      <p class="fontPria white--text mt-5">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
+                    </div>
+    
+                    <v-row class="mt-2 mx-16">
+                      <hr class="hr2">
+                      <v-icon>mdi-heart</v-icon>
+                      <hr class="hr2">
+                    </v-row>
+    
+                    <v-row justify="center" align="center">
+                      <v-col cols="5" class="text-center white--text">
+                        <span class="font-weight-bold">Putri dari</span>
+                        <p class="text-caption">{{ dataApi.wedding.profil_wanita }}</p>
+                      </v-col>
+                    </v-row>
+    
+                    <div class="d-flex justify-center">
+                      <v-btn color="brown" fab small dark>
+                        <v-icon>mdi-instagram</v-icon>
+                      </v-btn>
+                    </div>
+                  </v-card>
+                 </div>
+                </v-col>
+                <v-col cols="6">
+                                    <v-card width="400" color="brown lighten-3" class="pb-5">
+                    <div class="d-flex justify-center">
+                      <v-img max-width="200" max-height="200" class="imgCardOver rounded-circle"
+                        :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
+                    </div>
+                    <div class="text-center" justify="center">
+                      <p class="fontPria white--text mt-5">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
+                    </div>
+    
+                    <v-row class="mt-2 mx-16">
+                      <hr class="hr2">
+                      <v-icon>mdi-heart</v-icon>
+                      <hr class="hr2">
+                    </v-row>
+    
+                    <v-row justify="center" align="center">
+                      <v-col cols="5" class="text-center white--text">
+                        <span class="font-weight-bold">Putri dari</span>
+                        <p class="text-caption">{{ dataApi.wedding.profil_wanita }}</p>
+                      </v-col>
+                    </v-row>
+    
+                    <div class="d-flex justify-center">
+                      <v-btn color="brown" fab small dark>
+                        <v-icon>mdi-instagram</v-icon>
+                      </v-btn>
+                    </div>
+                  </v-card>
+                </v-col>
+              </v-row>
+              <div v-else>
+                <v-card width="400" color="brown lighten-3" class="cardImage pb-5" elevation="12">
+                  <div class="d-flex justify-center">
+                    <v-img max-width="200" max-height="200" class="imgCardOver rounded-circle"
+                      :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
+                  </div>
+                  <div class="text-center" justify="center">
+                    <p class="fontPria white--text mt-5">{{ dataApi.wedding.nama_lengkap_pria }}</p>
+                  </div>
+  
+                  <v-row class="mt-2 mx-16">
+                    <hr class="hr2">
+                    <v-icon>mdi-heart</v-icon>
+                    <hr class="hr2">
+                  </v-row>
+  
+                  <v-row justify="center" align="center">
+                    <v-col cols="5" class="text-center white--text">
+                      <span class="font-weight-bold">Putra dari</span>
+                      <p class="text-caption">{{ dataApi.wedding.profil_pria }}</p>
+                    </v-col>
+                  </v-row>
+  
+                  <div class="d-flex justify-center">
+                    <v-btn color="brown" fab small dark>
+                      <v-icon>mdi-instagram</v-icon>
+                    </v-btn>
+                  </div>
+                </v-card>
+  
+                <v-card width="400" color="brown lighten-3" class="cardImage2 pb-5" elevation="12">
+                  <div class="d-flex justify-center">
+                    <v-img max-width="200" max-height="200" class="imgCardOver rounded-circle"
+                      :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
+                  </div>
+                  <div class="text-center" justify="center">
+                    <p class="fontPria white--text mt-5">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
+                  </div>
+  
+                  <v-row class="mt-2 mx-16">
+                    <hr class="hr2">
+                    <v-icon>mdi-heart</v-icon>
+                    <hr class="hr2">
+                  </v-row>
+  
+                  <v-row justify="center" align="center">
+                    <v-col cols="5" class="text-center white--text">
+                      <span class="font-weight-bold">Putri dari</span>
+                      <p class="text-caption">{{ dataApi.wedding.profil_wanita }}</p>
+                    </v-col>
+                  </v-row>
+  
+                  <div class="d-flex justify-center">
+                    <v-btn color="brown" fab small dark>
+                      <v-icon>mdi-instagram</v-icon>
+                    </v-btn>
+                  </div>
+                </v-card>
               </div>
-
-
-              <v-card width="400" color="brown lighten-3" class="cardImage pb-5" elevation="12">
-                <div class="d-flex justify-center">
-                  <v-img max-width="200" max-height="200" class="imgCardOver"
-                    :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
-                </div>
-                <div class="text-center" justify="center">
-                  <p class="fontPria white--text mt-5">{{ dataApi.wedding.nama_lengkap_pria }}</p>
-                </div>
-
-                <v-row class="mt-2 mx-16">
-                  <hr class="hr2">
-                  <v-icon>mdi-heart</v-icon>
-                  <hr class="hr2">
-                </v-row>
-
-                <v-row justify="center" align="center">
-                  <v-col cols="5" class="text-center white--text">
-                    <span class="font-weight-bold">Putra dari</span>
-                    <p class="text-caption">{{ dataApi.wedding.profil_pria }}</p>
-                  </v-col>
-                </v-row>
-
-                <div class="d-flex justify-center">
-                  <v-btn color="brown" fab small dark>
-                    <v-icon>mdi-instagram</v-icon>
-                  </v-btn>
-                </div>
-              </v-card>
-
-              <v-card width="400" color="brown lighten-3" class="cardImage2 pb-5" elevation="12">
-                <div class="d-flex justify-center">
-                  <v-img max-width="200" max-height="200" class="imgCardOver"
-                    :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
-                </div>
-                <div class="text-center" justify="center">
-                  <p class="fontPria white--text mt-5">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
-                </div>
-
-                <v-row class="mt-2 mx-16">
-                  <hr class="hr2">
-                  <v-icon>mdi-heart</v-icon>
-                  <hr class="hr2">
-                </v-row>
-
-                <v-row justify="center" align="center">
-                  <v-col cols="5" class="text-center white--text">
-                    <span class="font-weight-bold">Putri dari</span>
-                    <p class="text-caption">{{ dataApi.wedding.profil_wanita }}</p>
-                  </v-col>
-                </v-row>
-
-                <div class="d-flex justify-center">
-                  <v-btn color="brown" fab small dark>
-                    <v-icon>mdi-instagram</v-icon>
-                  </v-btn>
-                </div>
-              </v-card>
             </v-container>
             <v-container fluid class="imageBatas">
               <p class="pImage text-center pt-8">Our Love Story</p>
@@ -146,32 +225,80 @@
             <!-- Page 3 -->
             <v-container fluid class="bg-page3">
               <div v-for="(story, idx) in dataApi.stories">
-                <v-row>
-                  <v-col cols="2"></v-col>
-                  <v-col>
-                    <p class="font-weight-light">{{ story.tanggal }}</p>
-                  </v-col>
-                </v-row>
-                <v-row class="mt-n7">
-                  <v-col cols="2">
-                    <v-btn fab color="brown darken-1" dark small>
-                      <v-icon>mdi-heart</v-icon>
-                    </v-btn>
-                  </v-col>
-                  <v-col cols="10">
-                    <v-card color="brown lighten-5">
-                      <v-card-title class="fontPertemuan font-weight-bold">
-                        {{ story.judul }}
-                      </v-card-title>
-                      <v-img class="mx-5"
-                        src="https://digition.id/wp-content/uploads/2022/01/107077483-305398767491171-1941002224051595105-n-054ec2eac32ec6ec0469281ae9d35311.jpg">
-                      </v-img>
-                      <v-card-text class="font-weight-light subtitle">
-                        {{ story.cerita }}
-                        </v-card-textc>
-                    </v-card>
-                  </v-col>
-                </v-row>
+                  <div v-if="displayDesktop">
+                    <v-row v-if="idx % 2 == 0">
+                      <v-col></v-col>
+                      <v-col>
+                        <div class="d-flex">
+                          <p class="font-weight-light mr-2 mt-2">{{ story.tanggal }}</p>
+                        <v-btn fab color="brown darken-1 mr-2" dark small>
+                          <v-icon>mdi-heart</v-icon>
+                        </v-btn>
+                        <v-card color="brown lighten-5">
+                          <v-card-title class="fontPertemuan font-weight-bold">
+                            {{ story.judul }}
+                          </v-card-title>
+                          <v-img class="mx-5" max-height="400"
+                            :src="story.photo">
+                          </v-img>
+                          <v-card-text class="font-weight-light subtitle">
+                            {{ story.cerita }}
+                            </v-card-textc>
+                        </v-card>
+                        </div>
+                      </v-col>
+                    </v-row>
+                    <v-row v-else>
+                      <v-col>
+                        <div class="d-flex">
+                        <v-card color="brown lighten-5">
+                          <v-card-title class="fontPertemuan font-weight-bold">
+                            {{ story.judul }}
+                          </v-card-title>
+                          <v-img class="mx-5" max-height="400"
+                            :src="story.photo">
+                          </v-img>
+                          <v-card-text class="font-weight-light subtitle">
+                            {{ story.cerita }}
+                            </v-card-textc>
+                        </v-card>
+                        <v-btn fab color="brown darken-1 ml-2" dark small>
+                          <v-icon>mdi-heart</v-icon>
+                        </v-btn>
+                        <p class="font-weight-light ml-2 mt-2">{{ story.tanggal }}</p>
+                        </div>
+                      </v-col>
+                      <v-col></v-col>
+                    </v-row>
+                  </div>
+                  <div v-else>
+                    <v-row>
+                      <v-col cols="2"></v-col>
+                      <v-col>
+                        <p class="font-weight-light">{{ story.tanggal }}</p>
+                      </v-col>
+                    </v-row>
+                    <v-row class="mt-n7">
+                      <v-col cols="2">
+                        <v-btn fab color="brown darken-1" dark small>
+                          <v-icon>mdi-heart</v-icon>
+                        </v-btn>
+                      </v-col>
+                      <v-col cols="10">
+                        <v-card color="brown lighten-5">
+                          <v-card-title class="fontPertemuan font-weight-bold">
+                            {{ story.judul }}
+                          </v-card-title>
+                          <v-img class="mx-5"
+                            :src="story.photo">
+                          </v-img>
+                          <v-card-text class="font-weight-light subtitle">
+                            {{ story.cerita }}
+                            </v-card-textc>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </div>
               </div>
 
             </v-container>
@@ -181,7 +308,7 @@
             <!-- Page 4 -->
             <v-container fluid class="bg-page4" id="tanggal">
               <p class="fontSave mt-5 text-center white--text">Save the date</p>
-              <v-row>
+              <v-row :class="[ displayDesktop ? 'mx-16' : '']">
                 <v-col>
                   <v-card color="brown" class="">
                     <v-card-title class="justify-center">
@@ -224,116 +351,216 @@
                 </v-col>
               </v-row>
 
-              <v-card color="brown lighten-5" class="mt-5">
-                <v-card-title class="justify-center">
-                  <p class="font-weight-black text-uppercase brown--text">{{ dataApi.wedding.judul_akad }}</p>
-                </v-card-title>
-                <v-card-title>
-                  <v-row>
-                    <v-col>
-                      <v-card color="brown lighten-4">
-                        <v-card-title class="justify-center">
-                          <v-btn fab color="brown" x-large dark elevation="">
-                            <v-icon>mdi-calendar-month-outline</v-icon>
+              <v-row v-if="displayDesktop">
+                <v-col>
+                  <v-card color="brown lighten-5">
+                    <v-card-title class="justify-center">
+                      <p class="font-weight-black text-uppercase brown--text">{{ dataApi.wedding.judul_akad }}</p>
+                    </v-card-title>
+                    <v-card-title>
+                      <v-row>
+                        <v-col>
+                          <v-card color="brown lighten-4">
+                            <v-card-title class="justify-center">
+                              <v-btn fab color="brown" x-large dark elevation="">
+                                <v-icon>mdi-calendar-month-outline</v-icon>
+                              </v-btn>
+                            </v-card-title>
+                            <v-card-text class="text-center black-text">
+                              <p>{{ getDayOnlyAkad }}</p>
+                              <p class="mt-n3">{{ getTanggalAkad }}</p>
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                        <v-col>
+                          <v-card color="brown lighten-4">
+                            <v-card-title class="justify-center">
+                              <v-btn fab color="brown" x-large dark elevation="">
+                                <v-icon>mdi-clock-outline</v-icon>
+                              </v-btn>
+                            </v-card-title>
+                            <v-card-text class="text-center black-text">
+                              <p>{{ dataApi.wedding.waktu_akad }}</p>
+                              <p class="mt-n3">s/d Selesai</p>
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                      </v-row>
+                    </v-card-title>
+                    <div class="v-card-title">
+                      <v-row align="center" justify="center">
+                        <v-col cols="7" class="text-center brown--text">
+                          <p class="font-weight-black">Lokasi:</p>
+                          <p class="font-weight-light mt-n3">{{ dataApi.wedding.lokasi_akad }}</p>
+                          <v-btn color="brown lighten-3" large class="rounded-lg">
+                            <v-icon>mdi-near-me</v-icon>Lihat Maps
                           </v-btn>
-                        </v-card-title>
-                        <v-card-text class="text-center black-text">
-                          <p>{{ getDayOnlyAkad }}</p>
-                          <p class="mt-n3">{{ getTanggalAkad }}</p>
-                        </v-card-text>
-                      </v-card>
-                    </v-col>
-                    <v-col>
-                      <v-card color="brown lighten-4">
-                        <v-card-title class="justify-center">
-                          <v-btn fab color="brown" x-large dark elevation="">
-                            <v-icon>mdi-clock-outline</v-icon>
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-card>
+                </v-col>
+                <v-col>
+                  <v-card color="brown lighten-5">
+                    <v-card-title class="justify-center">
+                      <p class="font-weight-black text-uppercase brown--text">{{ dataApi.wedding.judul_resepsi }}</p>
+                    </v-card-title>
+                    <v-card-title>
+                      <v-row>
+                        <v-col>
+                          <v-card color="brown lighten-4" height="180">
+                            <v-card-title class="justify-center">
+                              <v-btn fab color="brown" x-large dark elevation="">
+                                <v-icon>mdi-calendar-month-outline</v-icon>
+                              </v-btn>
+                            </v-card-title>
+                            <v-card-text class="text-center black-text">
+                              <p>{{ getDayOnlyResepsi }}</p>
+                              <p class="mt-n3">{{ getTanggalResepsi }}</p>
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                        <v-col>
+                          <v-card color="brown lighten-4" height="180">
+                            <v-card-title class="justify-center">
+                              <v-btn fab color="brown" x-large dark elevation="">
+                                <v-icon>mdi-clock-outline</v-icon>
+                              </v-btn>
+                            </v-card-title>
+                            <v-card-text class="text-center black-text">
+                              <p>{{ dataApi.wedding.waktu_resepsi }}</p>
+                            </v-card-text>
+                          </v-card>
+                        </v-col>
+                      </v-row>
+                    </v-card-title>
+                    <div class="v-card-title">
+                      <v-row align="center" justify="center">
+                        <v-col cols="8" class="text-center brown--text">
+                          <p class="font-weight-black">Lokasi:</p>
+                          <p class="font-weight-light mt-n3">{{ dataApi.wedding.lokasi_resepsi }}</p>
+                          <v-btn color="brown lighten-3" @click="openUrl(dataApi.wedding.short_url)" large
+                            class="rounded-lg">
+                            <v-icon>mdi-near-me</v-icon>Lihat Maps
                           </v-btn>
-                        </v-card-title>
-                        <v-card-text class="text-center black-text">
-                          <p>{{ dataApi.wedding.waktu_akad }}</p>
-                          <p class="mt-n3">s/d Selesai</p>
-                        </v-card-text>
-                      </v-card>
-                    </v-col>
-                  </v-row>
-                </v-card-title>
-                <div class="v-card-title">
-                  <v-row align="center" justify="center">
-                    <v-col cols="7" class="text-center brown--text">
-                      <p class="font-weight-black">Lokasi:</p>
-                      <p class="font-weight-light mt-n3">{{ dataApi.wedding.lokasi_akad }}</p>
-                      <v-btn color="brown lighten-3" large class="rounded-lg">
-                        <v-icon>mdi-near-me</v-icon>Lihat Maps
-                      </v-btn>
-                    </v-col>
-                  </v-row>
-                </div>
-              </v-card>
-
-              <v-card color="brown lighten-5" class="mt-10">
-                <v-card-title class="justify-center">
-                  <p class="font-weight-black text-uppercase brown--text">{{ dataApi.wedding.judul_resepsi }}</p>
-                </v-card-title>
-                <v-card-title>
-                  <v-row>
-                    <v-col>
-                      <v-card color="brown lighten-4" height="200">
-                        <v-card-title class="justify-center">
-                          <v-btn fab color="brown" x-large dark elevation="">
-                            <v-icon>mdi-calendar-month-outline</v-icon>
-                          </v-btn>
-                        </v-card-title>
-                        <v-card-text class="text-center black-text">
-                          <p>{{ getDayOnlyResepsi }}</p>
-                          <p class="mt-n3">{{ getTanggalResepsi }}</p>
-                        </v-card-text>
-                      </v-card>
-                    </v-col>
-                    <v-col>
-                      <v-card color="brown lighten-4" height="200">
-                        <v-card-title class="justify-center">
-                          <v-btn fab color="brown" x-large dark elevation="">
-                            <v-icon>mdi-clock-outline</v-icon>
-                          </v-btn>
-                        </v-card-title>
-                        <v-card-text class="text-center black-text">
-                          <p>{{ dataApi.wedding.waktu_resepsi }}</p>
-                        </v-card-text>
-                      </v-card>
-                    </v-col>
-                  </v-row>
-                </v-card-title>
-                <div class="v-card-title">
-                  <v-row align="center" justify="center">
-                    <v-col cols="7" class="text-center brown--text">
-                      <p class="font-weight-black">Lokasi:</p>
-                      <p class="font-weight-light mt-n3">{{ dataApi.wedding.lokasi_resepsi }}</p>
-                      <v-btn color="brown lighten-3" @click="openUrl(dataApi.wedding.short_url)" large
-                        class="rounded-lg">
-                        <v-icon>mdi-near-me</v-icon>Lihat Maps
-                      </v-btn>
-                    </v-col>
-                  </v-row>
-                </div>
-              </v-card>
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-card>
+                </v-col>
+              </v-row>
+              <div v-else>
+                <v-card color="brown lighten-5" class="mt-5">
+                  <v-card-title class="justify-center">
+                    <p class="font-weight-black text-uppercase brown--text">{{ dataApi.wedding.judul_akad }}</p>
+                  </v-card-title>
+                  <v-card-title>
+                    <v-row>
+                      <v-col>
+                        <v-card color="brown lighten-4">
+                          <v-card-title class="justify-center">
+                            <v-btn fab color="brown" x-large dark elevation="">
+                              <v-icon>mdi-calendar-month-outline</v-icon>
+                            </v-btn>
+                          </v-card-title>
+                          <v-card-text class="text-center black-text">
+                            <p>{{ getDayOnlyAkad }}</p>
+                            <p class="mt-n3">{{ getTanggalAkad }}</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <v-col>
+                        <v-card color="brown lighten-4">
+                          <v-card-title class="justify-center">
+                            <v-btn fab color="brown" x-large dark elevation="">
+                              <v-icon>mdi-clock-outline</v-icon>
+                            </v-btn>
+                          </v-card-title>
+                          <v-card-text class="text-center black-text">
+                            <p>{{ dataApi.wedding.waktu_akad }}</p>
+                            <p class="mt-n3">s/d Selesai</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-card-title>
+                  <div class="v-card-title">
+                    <v-row align="center" justify="center">
+                      <v-col cols="7" class="text-center brown--text">
+                        <p class="font-weight-black">Lokasi:</p>
+                        <p class="font-weight-light mt-n3">{{ dataApi.wedding.lokasi_akad }}</p>
+                        <v-btn color="brown lighten-3" large class="rounded-lg">
+                          <v-icon>mdi-near-me</v-icon>Lihat Maps
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </div>
+                </v-card>
+  
+                <v-card color="brown lighten-5" class="mt-10">
+                  <v-card-title class="justify-center">
+                    <p class="font-weight-black text-uppercase brown--text">{{ dataApi.wedding.judul_resepsi }}</p>
+                  </v-card-title>
+                  <v-card-title>
+                    <v-row>
+                      <v-col>
+                        <v-card color="brown lighten-4" height="200">
+                          <v-card-title class="justify-center">
+                            <v-btn fab color="brown" x-large dark elevation="">
+                              <v-icon>mdi-calendar-month-outline</v-icon>
+                            </v-btn>
+                          </v-card-title>
+                          <v-card-text class="text-center black-text">
+                            <p>{{ getDayOnlyResepsi }}</p>
+                            <p class="mt-n3">{{ getTanggalResepsi }}</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                      <v-col>
+                        <v-card color="brown lighten-4" height="200">
+                          <v-card-title class="justify-center">
+                            <v-btn fab color="brown" x-large dark elevation="">
+                              <v-icon>mdi-clock-outline</v-icon>
+                            </v-btn>
+                          </v-card-title>
+                          <v-card-text class="text-center black-text">
+                            <p>{{ dataApi.wedding.waktu_resepsi }}</p>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-card-title>
+                  <div class="v-card-title">
+                    <v-row align="center" justify="center">
+                      <v-col cols="7" class="text-center brown--text">
+                        <p class="font-weight-black">Lokasi:</p>
+                        <p class="font-weight-light mt-n3">{{ dataApi.wedding.lokasi_resepsi }}</p>
+                        <v-btn color="brown lighten-3" @click="openUrl(dataApi.wedding.short_url)" large
+                          class="rounded-lg">
+                          <v-icon>mdi-near-me</v-icon>Lihat Maps
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </div>
+                </v-card>
+              </div>
             </v-container>
             <!-- Page 5 -->
-            <v-container fluid class="imageBatas3">
+            <v-container fluid class="imageBatas3" v-show="!displayDesktop">
             </v-container>
             <v-container fluid class="bg-page5" id="dokumentasi">
               <p class="fontGallery text-center">Gallery of love</p>
               <v-carousel hide-delimiters height="250">
                 <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
               </v-carousel>
-              <p class="mx-8 mt-8 font-italic text-caption text-center brown--text">“Dan diantara tanda-tanda
+              <p class="mx-8 mt-8 font-italic text-center brown--text" :class="[ displayDesktop ? 'font-weight-medium' : 'text-caption']">“Dan diantara tanda-tanda
                 (kebesaran) – Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
                 cenderung dan merasa tentram kepadanya, dan ia menjadikan diantaramu rasa kasih dan sayang. Sungguh,
                 pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berfikir.” </p>
             </v-container>
 
             <!-- Page 6 -->
-            <v-container fluid class="bg-page6">
+            <v-container fluid class="bg-page6" :class="[ displayDesktop ? 'px-16' : '']">
               <p class="text-center fontPertemuan white--text">Reservasi Kehadiran</p>
               <v-text-field label="Isi Nama Anda" solo></v-text-field>
               <v-text-field label="Jumlah orang yang hadir" solo></v-text-field>
@@ -351,7 +578,7 @@
             </v-container>
 
             <!-- Page 7 -->
-            <v-container fluid class="imageBatas3">
+            <v-container fluid class="imageBatas3" v-show="!displayDesktop">
             </v-container>
             <v-container fluid class="bg-page7">
               <p class="fontGallery text-center">Amplop Digital</p>
@@ -361,7 +588,7 @@
                 kebahagiaan kami
               </p>
 
-              <v-card color="brown lighten-3" class="mx-6 pb-5">
+              <v-card color="brown lighten-3" class="pb-5"  :class="[ displayDesktop ? 'mx-16' : 'mx-6']">
                 <div class="d-flex justify-center">
                   <v-img max-width="200" max-height="200"
                     src="https://www.yayasansimetri.or.id/wp-content/uploads/2021/03/Logo-BCA-blue-A4.png" class="my-6">
@@ -383,7 +610,7 @@
               </v-row>
               <div class="fontGallery text-center" id="chat">Berikan Ucapan</div>
 
-              <v-card>
+              <v-card :class="[ displayDesktop ? 'mx-16' : '']">
                 <v-card-title>
                   <v-icon small>mdi-bird</v-icon>
                   <p class="text-caption mt-5">{{ totalUcapan }} Ucapan</p>
@@ -413,33 +640,36 @@
                 <hr class="hr3">
               </v-row>
 
-              <v-card color="brown lighten-3">
+              <v-card color="brown lighten-3" :class="[ displayDesktop ? 'mx-16 pb-5' : '']">
                 <v-card-title class="justify-center">
-                  <div class="fontGallery">Berikan Ucapan</div>
+                  <div class="fontProtokol" :class="[ displayDesktop ? 'mt-16' : '']">Protokol Kesehatan</div>
                 </v-card-title>
-                <hr class="hr4">
-                <v-card-text class="white--text font-weight-bold text-center">
+                <hr class="hr4" :class="[ displayDesktop ? 'mt-16' : '']">
+                <v-card-text class="white--text font-weight-bold text-center" :class="[ displayDesktop ? 'title mx-16' : '']">
                   Tanpa mengurangi rasa hormat, Kami menghimbau kepada tamu undangan yang akan hadir untuk selalu
                   mematuhi protokol kesehatan yang berlaku. Terima kasih.
                 </v-card-text>
-                <v-row>
+                <v-row :class="[ displayDesktop ? 'mt-16' : '']">
                   <v-col>
                     <div class="d-flex justify-center">
-                      <v-img max-width="80" src="https://digition.id/wp-content/uploads/2021/12/01-14-1.png"></v-img>
+                      <v-img max-width="100" src="https://digition.id/wp-content/uploads/2021/12/01-14-1.png" v-if="displayDesktop"></v-img>
+                      <v-img max-width="80" src="https://digition.id/wp-content/uploads/2021/12/01-14-1.png" v-else></v-img>
                     </div>
-                    <p class="text-caption text-center white--text mt-2">Cuci Tangan</p>
+                    <p class="text-center white--text mt-2" :class="[ displayDesktop ? 'font-weight-light title' : 'text-caption']">Cuci Tangan</p>
                   </v-col>
                   <v-col>
                     <div class="d-flex justify-center">
-                      <v-img max-width="80" src="https://digition.id/wp-content/uploads/2021/12/04-15.png"></v-img>
+                      <v-img max-width="100" src="https://digition.id/wp-content/uploads/2021/12/04-15.png" v-if="displayDesktop"></v-img>
+                      <v-img max-width="80" src="https://digition.id/wp-content/uploads/2021/12/04-15.png" v-else></v-img>
                     </div>
-                    <p class="text-caption text-center white--text mt-2">Gunakan Masker</p>
+                    <p class="text-center white--text mt-2" :class="[ displayDesktop ? 'font-weight-light title' : 'text-caption']">Gunakan Masker</p>
                   </v-col>
                   <v-col>
                     <div class="d-flex justify-center">
-                      <v-img max-width="80" src="https://digition.id/wp-content/uploads/2021/12/06-3.png"></v-img>
+                      <v-img max-width="100" src="https://digition.id/wp-content/uploads/2021/12/06-3.png" v-if="displayDesktop"></v-img>
+                      <v-img max-width="80" src="https://digition.id/wp-content/uploads/2021/12/06-3.png" v-else></v-img>
                     </div>
-                    <p class="text-caption text-center white--text mt-2">Jaga Jarak</p>
+                    <p class="text-center white--text mt-2" :class="[ displayDesktop ? 'font-weight-light title' : 'text-caption']">Jaga Jarak</p>
                   </v-col>
                 </v-row>
               </v-card>
@@ -447,9 +677,9 @@
                 <v-img class="mt-10" max-width="200" max-height="200"
                   :src="'https://merestui.com/'+ dataApi.wedding.gallery_1"></v-img>
               </div>
-              <p class="fontMempelai text-center">{{ dataApi.wedding.nama_panggilan_wanita }} &
+              <p class="fontMempelai text-center"  :class="[ displayDesktop ? 'mt-16' : '']">{{ dataApi.wedding.nama_panggilan_wanita }} &
                 {{ dataApi.wedding.nama_panggilan_pria }}</p>
-              <p class="body-2 brown--text text-center">Atas Kehadiran dan Do'a Restunya, Kami Mengucapkan Terima Kasih.
+              <p class="brown--text text-center" :class="[ displayDesktop ? 'font-weight-medium body-2' : 'body-2']">Atas Kehadiran dan Do'a Restunya, Kami Mengucapkan Terima Kasih.
               </p>
             </v-container>
 
