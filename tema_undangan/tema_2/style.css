@@ -19,6 +19,172 @@
   }
 }
 
+/* Mobile */
+@media screen and (max-width: 500px) {
+  .overflowAuto {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 20vh;
+    width: 100%;
+  }
+
+  .bg-page1{
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* animation: 1s ease-out 0s 1 slideInFromTop; */
+  }
+
+  .bg-page2{
+    background-image: url('https://cdn.undanganweb.com/hi/2022/03/IMG_5871.png');
+    height: 120vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-page3{
+    background-color: #9b9893;
+    height: 210vh;
+    margin-top: -20vh;
+    border-radius: 90%/100px 100px 0 0;
+  }
+
+  .bg-page4{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-page5{
+    height: 200vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  
+.bg-page6{
+  background-image: url('https://cdn.undanganweb.com/hi/2022/03/IMG_5871.png');
+  height: 190vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-page7{
+  background-color: rgba(91,87,78,0.61) !important;
+height: 263vh;
+}
+  
+
+  .pasangan{
+    font-family: 'Island Moments', cursive;
+    font-size: 50px;
+  }
+
+  .mempelai{
+    font-family: 'Island Moments', cursive;
+    font-size: 40px;
+  }
+
+  .mempelai2{
+    font-family: 'Island Moments', cursive;
+    font-size: 30px;
+  }
+
+  .menuju{
+    font-family: 'Island Moments', cursive;
+    font-size: 28px;
+  }
+  
+}
+
+/* Desktop */
+@media screen and (min-width: 501px){
+  .overflowAuto {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 20vh;
+    width: 100%;
+  }
+  
+  .bg-page1{
+    height: 100vh;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    /* animation: 1s ease-out 0s 1 slideInFromTop; */
+  }
+
+  .bg-page2{
+    background-image: url('https://cdn.undanganweb.com/hi/2022/03/IMG_5871.png');
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-page3{
+    background-color: #9b9893;
+    height: 110vh;
+    margin-top: -20vh;
+    border-radius: 90%/100px 100px 0 0;
+  }
+
+  .bg-page4{
+    height: 130vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-page5{
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  
+.bg-page6{
+  background-image: url('https://cdn.undanganweb.com/hi/2022/03/IMG_5871.png');
+  height: 150vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-page7{
+  background-color: rgba(91,87,78,0.61) !important;
+height: 215vh;
+}
+
+  .pasangan{
+    font-family: 'Island Moments', cursive;
+    font-size: 80px;
+  }
+
+  .mempelai{
+  font-family: 'Island Moments', cursive;
+  font-size: 80px;
+}
+
+.mempelai2{
+  font-family: 'Island Moments', cursive;
+  font-size: 50px;
+}
+
+.menuju{
+  font-family: 'Island Moments', cursive;
+  font-size: 40px;
+}
+  
+}
+  
+
 .image1{
     height: 100vh;
     background-size: cover;
@@ -32,12 +198,6 @@
     
 }
 
-.overflowAuto {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 20vh;
-  width: 100%;
-}
 
 .bg-page-cover{
     height: 100vh;
@@ -47,56 +207,7 @@
     /* animation: 1s ease-out 0s 1 slideInFromTop; */
 }
 
-.bg-page1{
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* animation: 1s ease-out 0s 1 slideInFromTop; */
-}
 
-.bg-page2{
-  background-image: url('https://cdn.undanganweb.com/hi/2022/03/IMG_5871.png');
-  height: 120vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.bg-page3{
-  background-color: #9b9893;
-  height: 210vh;
-  margin-top: -20vh;
-  border-radius: 90%/100px 100px 0 0;
-}
-
-.bg-page4{
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.bg-page5{
-  height: 200vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.bg-page6{
-  background-image: url('https://cdn.undanganweb.com/hi/2022/03/IMG_5871.png');
-  height: 190vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.bg-page7{
-    background-color: rgba(91,87,78,0.61) !important;
-  height: 263vh;
-}
 
 .bg-page9{
   height: 100vh;
@@ -121,30 +232,14 @@
   word-spacing: 5px;
 }
 
-.pasangan{
-  font-family: 'Island Moments', cursive;
-  font-size: 50px;
-}
 
-.mempelai{
-  font-family: 'Island Moments', cursive;
-  font-size: 40px;
-}
-
-.mempelai2{
-  font-family: 'Island Moments', cursive;
-  font-size: 30px;
-}
 
 .mempelai3{
   font-family: 'Island Moments', cursive;
   font-size: 50px;
 }
 
-.menuju{
-  font-family: 'Island Moments', cursive;
-  font-size: 28px;
-}
+
 
 
 .cardTitleFont{

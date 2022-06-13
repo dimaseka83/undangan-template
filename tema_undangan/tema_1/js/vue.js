@@ -120,6 +120,14 @@ new Vue({
       }
     },
 
+    comments(){
+      if (this.displayDesktop) {
+        return 'ml-16';
+      }else{
+        return 'ml-2';
+      }
+    },
+
     _seconds: () => 1000,
     _minutes(){
       return this._seconds * 60;

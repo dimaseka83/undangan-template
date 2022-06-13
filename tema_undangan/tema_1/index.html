@@ -23,25 +23,8 @@
           </v-row>
          </v-container>
         <div v-else>
-                  <!-- Page 1 -->
-        <div class="page1">
-          <v-container fluid class="bg-page1">
-            <v-row align="center" justify="center" class="mr-16">
-              <v-img src="/tema_undangan/tema_1/img/img_page1.png" max-width="410" class="mr-16"></v-img>
-            </v-row>
-            <div class="mt-4" align="center" justify="center">
-              <p class="body-2 text-center font-weight-light text-color" v-html="dataApi.wedding.h_dear"></p>
-              <p class="text-center font-weight-bold text-color title">namatamu</p>
-              <v-btn elevation="8" rounded class="font-weight-medium body-2" @mouseover="arrow = true"
-                @mouseleave="arrow = false" @click="scrollPlay" href="#two">
-                Open Invitation <v-icon v-show="arrow">mdi-menu-right</v-icon>
-              </v-btn>
-            </div>
-          </v-container>
-        </div>
-
         <!-- Page 2 -->
-        <div v-show="openInvitation">
+        <div v-if="openInvitation">
         <div id="two">
           <v-container fluid class="bg-page2 pl-16">
             <v-row align="center" justify="center" v-if="displayDesktop">
@@ -438,7 +421,7 @@
 
         <!-- Page 10 -->
         <iframe src="https://www.youtube.com/embed/5k7vGhPJq88" title="YouTube video player"
-          frameborder="0"
+          frameborder="0" width="100%" style="width: 100%;"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
 
@@ -684,16 +667,14 @@
             <v-col cols="10">
               <div class="d-flex ml-15">
                 <div class="mr-auto pl-16 ml-16">{{ totalUcapan }} Reply</div>
-                <div class="pa-2">Newest <v-icon>mdi-arrow-up</v-icon>
-                </div>
               </div>
             </v-col>
           </v-row>
             <v-row class="fill-height" justify="start">
             <v-col>
             <div class="overflowAuto">
-              <div v-for="(uc, id) in dataApi.comments" :key="id">
-                <p class="font-weight-bold mt-5">{{ uc.owner }}</p>
+              <div v-for="(uc, id) in dataApi.comments" :key="id" class="my-5" :class="comments">
+                <p class="font-weight-bold">{{ uc.owner }}</p>
                 <p class="font-weight-light">{{ uc.content }}</p>
               </div>
             </div>
@@ -718,11 +699,31 @@
           </v-row>
         </v-container>
         </div>
+
+                          <!-- Page 1 -->
+                          <div class="page1" v-else>
+                            <v-container fluid class="bg-page1">
+                              <v-row align="center" justify="center" class="mr-16">
+                                <v-img src="/tema_undangan/tema_1/img/img_page1.png" max-width="410" class="mr-16"></v-img>
+                              </v-row>
+                              <div class="mt-4" align="center" justify="center">
+                                <p class="body-2 text-center font-weight-light text-color" v-html="dataApi.wedding.h_dear"></p>
+                                <p class="text-center font-weight-bold text-color title">namatamu</p>
+                                <v-btn elevation="8" rounded class="font-weight-medium body-2" @mouseover="arrow = true"
+                                  @mouseleave="arrow = false" @click="scrollPlay" href="#two">
+                                  Open Invitation <v-icon v-show="arrow">mdi-menu-right</v-icon>
+                                </v-btn>
+                              </div>
+                            </v-container>
+                          </div>
+                  
         <audio id="song" ref="audioElm">
           <source :src="'https://merestui.com'+dataApi.music.music_path"
             type="audio/mp3">
         </audio>
         </div>
+        </div>
+
       </v-main>
     </v-app>
   </div>

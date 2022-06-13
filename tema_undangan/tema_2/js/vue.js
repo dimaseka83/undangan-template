@@ -17,7 +17,6 @@ new Vue({
           src: 'https://cdn.undanganweb.com/hi/2022/03/WhatsApp-Image-2021-02-19-at-17.21.45.jpeg',
         },
       ],
-      timeline: [],
       ucapan: [],
       form: [{
         nama: '',
@@ -47,16 +46,7 @@ new Vue({
       });
       }, 1000);
     },
-    background(){
-      if (this.loading == false) {
-      document.getElementsByClassName('bg-page-cover')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_1 +"')";
-      document.getElementsByClassName('bg-page1')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_2 +"')";
-      document.getElementsByClassName('bg-page4')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_3 +"')";
-      document.getElementsByClassName('bg-page5')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_4 +"')";
-      document.getElementsByClassName('bg-page9')[0].style.backgroundImage = "url('./img/black_image.png'), url('https://merestui.com/"+ this.dataApi.wedding.gallery_5 +"')";
-      }      
-      this.timeline = this.dataApi.stories;
-    },
+
     scrollPlay() {
       var audio = this.$refs.audioElm;
       audio.play();
@@ -96,35 +86,31 @@ new Vue({
     // },
 
     showRemaining() {
-      const timer = setInterval(() => {
-        const now = new Date();
-        const tanggal = new Date(this.dataApi.wedding.countdown_readable).toString('yyyy-MM-dd');
-        const end = new Date(tanggal);
-        const distance = end.getTime() - now.getTime();
-
-        if (distance < 0) {
-          clearInterval(timer);
-          return;
-        }
-
-        const days = Math.floor(distance / this._days);
-        const hours = Math.floor((distance % this._days) / this._hours);
-        const minutes = Math.floor((distance % this._hours) / this._minutes);
-        const seconds = Math.floor((distance % this._minutes) / this._seconds);
-        this.displayMinutes = minutes < 10 ? '0' + minutes : minutes;
-        this.displaySeconds = seconds < 10 ? '0' + seconds : seconds;
-        this.displayHours = hours < 10 ? '0' + hours : hours;
-        this.displayDays = days < 10 ? '0' + days : days;
-      }, 1000);
+        const timer = setInterval(() => {
+          const now = new Date();
+          const tanggal = new Date(this.dataApi.wedding.countdown_readable).toString('yyyy-MM-dd');
+          const end = new Date(tanggal);
+          const distance = end.getTime() - now.getTime();
+  
+          if (distance < 0) {
+            clearInterval(timer);
+            return;
+          }
+  
+          const days = Math.floor(distance / this._days);
+          const hours = Math.floor((distance % this._days) / this._hours);
+          const minutes = Math.floor((distance % this._hours) / this._minutes);
+          const seconds = Math.floor((distance % this._minutes) / this._seconds);
+          this.displayMinutes = minutes < 10 ? '0' + minutes : minutes;
+          this.displaySeconds = seconds < 10 ? '0' + seconds : seconds;
+          this.displayHours = hours < 10 ? '0' + hours : hours;
+          this.displayDays = days < 10 ? '0' + days : days;
+        }, 1000);
     }
   },
 
   created() {
     this.loadData();
-  },
-
-  updated(){
-    this.background();
   },
 
   mounted() {
@@ -136,6 +122,9 @@ new Vue({
       if(this.loading == false){
         return this.dataApi.comments.length;
       }
+    },
+        displayDesktop() {
+      return this.$vuetify.breakpoint.width >= 500
     },
     _seconds: () => 1000,
     _minutes() {
