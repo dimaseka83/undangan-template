@@ -21,9 +21,10 @@ new Vue({
             ],
             ucapan: [],
             form: [{
-                nama: '',
-                alamat: '',
-                comment: '',
+              nama: '',
+              ucapan: '',
+              kehadiran: '',
+              alamat: '',
             }],
             kehadiran: [],
             formKehadiran: [{
@@ -49,32 +50,36 @@ new Vue({
             }];
         },
         kirimUcapan() {
-            this.ucapan.push({
-                front: this.form.nama.charAt(0),
-                nama: this.form.nama,
-                alamat: this.form.alamat,
-                comment: this.form.comment,
-                // reply: []
-            });
-            // axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
-            //   ref_no: "1",
-            //   name: this.form.nama,
-            //   write_as: this.form.nama,
-            //   sosmed: this.form.nama,
-            //   comment: this.form.ucapan,
-            // })
-            this.form = [{
-                nama: '',
-                alamat: '',
-                comment: '',
-                // reply: []
-            }];
-        },
+          // this.ucapan.push({
+          //   nama: this.form.nama,
+          //   ucapan: this.form.ucapan,
+          //   kehadiran: this.form.kehadiran,
+          //   // reply: []
+          // });
+          axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
+            ref_no: "1",
+            name: this.form.nama,
+            write_as: this.form.nama,
+            sosmed: this.form.nama,
+            comment: this.form.ucapan,
+          })
+          this.form = [{
+            nama: '',
+            ucapan: '',
+            kehadiran: '',
+            alamat: '',
+            // reply: []
+          }];
+          this.loadData();
+            },
         loadData() {
+          this.loading = true;
+          setTimeout(() => {
             axios.get('https://merestui.com/api/vindirendra').then(response => {
-              this.dataApi = response.data.data;
-              this.loading = false;
-            });
+            this.dataApi = response.data.data;
+            this.loading = false;
+          });
+          }, 1000);
           },
           scrollPlay() {
             var audio = this.$refs.audioElm;
@@ -121,9 +126,11 @@ new Vue({
           totalKehadiran() {
             return this.kehadiran.length;
             },
-        totalUcapan() {
-            return this.ucapan.length;
-          },
+            totalUcapan() {
+              if(this.loading == false){
+                return this.dataApi.comments.length;
+              }
+            },
           _seconds: () => 1000,
           _minutes() {
             return this._seconds * 60;

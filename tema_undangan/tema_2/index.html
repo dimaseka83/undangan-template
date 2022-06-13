@@ -360,44 +360,12 @@ silahkan mengirimkannya melalui :</p>
 
                           <v-row class="fill-height" justify="start">
             <v-col>
-              <div v-for="(uc, id) in ucapan" :key="id">
-                <p class="font-weight-bold mt-5">{{ uc.nama }}</p>
-                <p class="font-weight-light">{{ uc.ucapan }}</p>
-                <!-- <v-dialog v-model="dialog2" width="500">
-                  <template v-slot:activator="{ on, attrs }">
-                    <v-btn text v-bind="attrs" v-on="on">
-                      <v-icon left>mdi-reply</v-icon>Reply
-                    </v-btn>
-                  </template>
-
-                  <v-card>
-                    <v-card-title class="text-h5 grey lighten-2">
-                      <p class="font-weight-normal title">Tulis balasan untuk {{ uc.nama }}</p>
-                    </v-card-title>
-                    <v-card-text>
-                      <v-row justify="start" class="fill-height mt-10">
-                        <v-col>
-                          <v-textarea label="Tulis Ucapan" v-model="formBalasan.ucapan" outlined dense rows="2"></v-textarea>
-                              <v-text-field label="Nama Lengkap" v-model="formBalasan.nama" outlined prepend-inner-icon="mdi-account">
-                              </v-text-field>
-                        </v-col>
-                      </v-row>
-                    </v-card-text>
-                    <v-divider></v-divider>
-                    <v-card-actions>
-                      <v-spacer></v-spacer>
-                      <v-btn color="primary" text @click="dialog2 = false, kirimBalasan(id)">
-                        Kirim
-                      </v-btn>
-                    </v-card-actions>
-                  </v-card>
-                </v-dialog>
-                <div v-for="(bls, id) in uc.reply" class="pl-10">
-                  <p class="font-weight-bold mt-5">{{ bls.nama }}</p>
-                  <p class="text-caption text-italic">Reply to {{ uc.nama }}</p>
-                  <p class="font-weight-light">{{ bls.ucapan }}</p>
-                </div> -->
+              <div class="overflowAuto">
+              <div v-for="(uc, id) in dataApi.comments" :key="id">
+                <p class="font-weight-bold mt-5">{{ uc.owner }}</p>
+                <p class="font-weight-light">{{ uc.content }}</p>
               </div>
+            </div>
             </v-col>
           </v-row>
           <v-divider></v-divider>
@@ -421,10 +389,10 @@ silahkan mengirimkannya melalui :</p>
       </div>
       </v-container>
     </div>
-    <audio id="myAudio" ref="audioElm">
-      <source src="https://undanganweb.com/wp-content/uploads/2021/02/Mariah-Carey-Thank-God-I-Found-You-Saxophone-Cover-By-Dori-Wirawan.mp3">
-              Your browser does not support the audio element.
-      </audio>
+    <audio id="song" ref="audioElm">
+      <source :src="'https://merestui.com'+dataApi.music.music_path"
+        type="audio/mp3">
+    </audio>
         </div>
       </v-main>
     </v-app>

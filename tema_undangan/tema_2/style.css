@@ -32,6 +32,13 @@
     
 }
 
+.overflowAuto {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 20vh;
+  width: 100%;
+}
+
 .bg-page-cover{
     height: 100vh;
     background-size: cover;

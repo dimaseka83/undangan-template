@@ -442,9 +442,9 @@
                     <v-card class="mt-10" style="border: 2px solid #1976D2; background-color: transparent;">
                         <v-card-title>
                             <div class="overflowAuto">
-                            <div v-for="(i, idx) in ucapan" :key="idx">
-                            <p class="title mx-4">{{ i.nama }}</p>
-                            <p class="text-caption mx-4">{{ i.ucapan }}</p>
+                            <div v-for="(i, idx) in dataApi.comments" :key="idx">
+                            <p class="title mx-4">{{ i.owner }}</p>
+                            <p class="text-caption mx-4">{{ i.content }}</p>
                             <v-divider></v-divider>
                             </div>
                             </div>
@@ -482,7 +482,7 @@
                     </v-container>
                 </div>
                             <audio id="song" ref="audioElm">
-            <source src="https://demo.datengdong.com/uploads/musics/11.mp3"
+            <source :src="'https://merestui.com'+dataApi.music.music_path"
               type="audio/mp3">
           </audio>
                 </div>

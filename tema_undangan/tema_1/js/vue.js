@@ -23,10 +23,13 @@ new Vue({
   },
   methods: {
     loadData() {
-      axios.get('https://merestui.com/api/vindirendra').then(response => {
+      this.loading = true;
+      setTimeout(() => {
+        axios.get('https://merestui.com/api/vindirendra').then(response => {
         this.dataApi = response.data.data;
         this.loading = false;
       });
+      }, 1000);
     },
     scrollPlay() {
       var audio = this.$refs.audioElm;
@@ -34,17 +37,26 @@ new Vue({
       this.openInvitation = true;
     },
     kirimUcapan() {
-      this.ucapan.push({
-        nama: this.form.nama,
-        ucapan: this.form.ucapan,
-        reply: []
-      });
+      // this.ucapan.push({
+      //   nama: this.form.nama,
+      //   ucapan: this.form.ucapan,
+      //   kehadiran: this.form.kehadiran,
+      //   // reply: []
+      // });
+      axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
+        ref_no: "1",
+        name: this.form.nama,
+        write_as: this.form.nama,
+        sosmed: this.form.nama,
+        comment: this.form.ucapan,
+      })
       this.form = [{
         nama: '',
         ucapan: '',
-        reply: []
+        // reply: []
       }];
-    },
+      this.loadData();
+        },
     kirimBalasan(id) {
       this.ucapan[id].reply.push({
         nama: this.formBalasan.nama,
@@ -93,7 +105,9 @@ new Vue({
 
   computed: {
     totalUcapan() {
-      return this.ucapan.length;
+      if(this.loading == false){
+        return this.dataApi.comments.length;
+      }
     },
     displayDesktop() {
       return this.$vuetify.breakpoint.width >= 500
@@ -103,13 +117,6 @@ new Vue({
         return '';
       } else {
         return 'mb-5';
-      }
-    },
-    buttonLoad() {
-      if (this.displayDesktop) {
-        return '';
-      } else {
-        return 'mt-10';
       }
     },
 

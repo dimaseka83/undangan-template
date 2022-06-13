@@ -5,7 +5,7 @@ new Vue({
         return {
             dataApi: [],
             loading: true,
-            openInvitation: true,
+            openInvitation: false,
             kehadiran: ['Hadir', 'Tidak Hadir',],
             dialog: false,
             ucapan: [],
@@ -23,32 +23,36 @@ new Vue({
 
     methods: {
             kirimUcapan() {
-      this.ucapan.push({
-        nama: this.form.nama,
-        ucapan: this.form.ucapan,
-        kehadiran: this.form.kehadiran,
-        // reply: []
-      });
-      // axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
-      //   ref_no: "1",
-      //   name: this.form.nama,
-      //   write_as: this.form.nama,
-      //   sosmed: this.form.nama,
-      //   comment: this.form.ucapan,
-      // })
+      // this.ucapan.push({
+      //   nama: this.form.nama,
+      //   ucapan: this.form.ucapan,
+      //   kehadiran: this.form.kehadiran,
+      //   // reply: []
+      // });
+      axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
+        ref_no: "1",
+        name: this.form.nama,
+        write_as: this.form.nama,
+        sosmed: this.form.nama,
+        comment: this.form.ucapan,
+      })
       this.form = [{
         nama: '',
         ucapan: '',
         kehadiran: '',
         // reply: []
       }];
+      this.loadData();
         },
         
             loadData() {
-      axios.get('https://merestui.com/api/vindirendra').then(response => {
+      this.loading = true;
+      setTimeout(() => {
+        axios.get('https://merestui.com/api/vindirendra').then(response => {
         this.dataApi = response.data.data;
         this.loading = false;
       });
+      }, 1000);
         },
             
                 scrollPlay() {

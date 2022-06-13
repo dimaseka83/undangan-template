@@ -39,10 +39,13 @@ new Vue({
   },
   methods: {
     loadData() {
-      axios.get('https://merestui.com/api/vindirendra').then(response => {
+      this.loading = true;
+      setTimeout(() => {
+        axios.get('https://merestui.com/api/vindirendra').then(response => {
         this.dataApi = response.data.data;
         this.loading = false;
       });
+      }, 1000);
     },
     background(){
       if (this.loading == false) {
@@ -63,6 +66,7 @@ new Vue({
       // this.ucapan.push({
       //   nama: this.form.nama,
       //   ucapan: this.form.ucapan,
+      //   kehadiran: this.form.kehadiran,
       //   // reply: []
       // });
       axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
@@ -77,7 +81,8 @@ new Vue({
         ucapan: '',
         // reply: []
       }];
-    },
+      this.loadData();
+        },
 
     // kirimBalasan(id) {
     //   this.ucapan[id].reply.push({
@@ -128,7 +133,9 @@ new Vue({
 
   computed: {
     totalUcapan() {
-      return this.ucapan.length;
+      if(this.loading == false){
+        return this.dataApi.comments.length;
+      }
     },
     _seconds: () => 1000,
     _minutes() {

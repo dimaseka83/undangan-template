@@ -251,16 +251,16 @@
                     <v-container fluid class="bg-page7" id="chat">
                         <p class="mt-8 text-center fontPasangan">Kirim Ucapan</p>
                         <div class="overflowAuto">
-                            <div v-for="(n, i) in ucapan" :key="i">
+                            <div v-for="(n, i) in dataApi.comments" :key="i">
                             <v-row>
-                                <v-col cols="2"><v-btn fab elevation="" color="primary"> {{ n.front }}</v-btn></v-col>
+                                <v-col cols="2"><v-btn fab elevation="" color="primary"> {{ n.owner.charAt(0) }}</v-btn></v-col>
                                 <v-col cols="10">
                                     <v-card class="rounded-xl">
                                         <v-card-title class="font-weight-bold text-caption">
-                                            {{ n.nama }}
+                                            {{ n.owner }}
                                         </v-card-title>
                                         <v-card-text class="font-weight-light text-caption">
-                                            {{ n.comment }}
+                                            {{ n.content }}
                                         </v-card-text>
                                     </v-card>
                                 </v-col>
@@ -275,7 +275,7 @@
                                 <v-text-field label="Nama Lengkap" v-model="form.nama" outlined></v-text-field>
                                 <v-text-field label="Alamat" outlined v-model="form.alamat"></v-text-field>
                                 <v-file-input label="Bagikan momentmu" dense outlined></v-file-input>
-                                <v-textarea label="hal yang indah untuk pasangan" outlined v-model="form.comment"></v-textarea>
+                                <v-textarea label="hal yang indah untuk pasangan" outlined v-model="form.ucapan"></v-textarea>
                                 <v-btn color="blue-grey" @click="kirimUcapan" dark block rounded>Kirim Sekarang</v-btn>
                             </v-card-text>
                         </v-card>
@@ -293,11 +293,11 @@
                             </v-row>
                         </v-container>
                     </div>
+                    <audio id="song" ref="audioElm">
+                        <source :src="'https://merestui.com'+dataApi.music.music_path"
+                          type="audio/mp3">
+                      </audio>
                 </div>
-                          <audio id="song" ref="audioElm">
-            <source src="https://api.our-wedding.link/uploads/e978a250-3802-11ec-a6bc-0bdc9d2e2b1c.mp3"
-              type="audio/mp3">
-          </audio>
             </v-main>
         </v-app>
     </div>
