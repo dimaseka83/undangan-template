@@ -81,9 +81,9 @@ new Vue({
           });
           }, 1000);
           },
-          scrollPlay() {
+          async scrollPlay() {
             var audio = this.$refs.audioElm;
-            audio.play();
+            await audio.play();
             this.openInvitation = true;
           },
           openUrl(url) {
@@ -111,7 +111,7 @@ new Vue({
               this.displayHours = hours < 10 ? '0' + hours : hours;
               this.displayDays = days < 10 ? '0' + days : days;
             }, 1000);
-          }
+          },
     },
 
     created() {
@@ -120,6 +120,7 @@ new Vue({
     
       mounted() {
         this.showRemaining();
+        window.addEventListener('wheel', this.scrollPlay);
       },
 
       computed: {
