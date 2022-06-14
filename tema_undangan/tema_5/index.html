@@ -23,7 +23,17 @@
                     <div v-if="displayDesktop">
                         <v-row>
                             <v-col cols="7">
-                                <v-img width="855" class="overflowFixed" :src="'https://merestui.com/'+ dataApi.wedding.gallery_1"></v-img>                                    
+                                <v-img width="855" class="overflowFixed" :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
+                                    <div class="navigation">
+                                        <v-card class="rounded-pill cardNavigation pb-10" style="background-color: #ffffe6;">
+                                            <v-btn href="#home" class="py-5" x-small outlined color="transparent"><v-icon small color="brown">mdi-heart</v-icon></v-btn>
+                                                <v-btn href="#image" class="py-5" x-small outlined color="transparent"><v-icon small color="brown">mdi-image-multiple</v-icon></v-btn>
+                                                <v-btn href="#calendar" class="py-5" x-small outlined color="transparent"><v-icon small color="brown">mdi-calendar-blank</v-icon></v-btn>
+                                                <v-btn href="#map" class="py-5" x-small outlined color="transparent"><v-icon small color="brown">mdi-map</v-icon></v-btn>
+                                                <v-btn href="#chat" class="pt-5" x-small outlined color="transparent"><v-icon small color="brown">mdi-square-edit-outline</v-icon></v-btn>
+                                        </v-card>
+                                      </div>
+                                </v-img>                                    
                             </v-col>
                             <v-col cols="5" class="overflowAuto2">
                                 <v-container fluid class="bg-pagecover fill-height">

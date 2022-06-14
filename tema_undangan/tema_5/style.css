@@ -55,6 +55,10 @@
         background-repeat: no-repeat;
         height: 160vh;
     }
+    .cardNavigation{
+        margin-left: 14vh;
+        margin-right: 11vh;
+    }
     
     
 }
@@ -123,6 +127,16 @@
     overflow-y: scroll;
     overflow-x: hidden;
     }
+
+    .cardNavigation{
+        margin-left: 80vh;
+        margin-right: 2vh;
+    }
+    
+    .navigation{
+        margin-top: 50vh;
+        margin-left: 80px;
+    }
 }
     
 
@@ -163,10 +177,6 @@
     font-size: 50px;
 }
 
-.cardNavigation{
-    margin-left: 14vh;
-    margin-right: 11vh;
-}
 
 
 /* content fixed */
