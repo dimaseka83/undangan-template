@@ -3,6 +3,222 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
 
+/* Mobile */
+@media screen and (max-width: 500px){
+    .bg-pagecover{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/00.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .bg-page1{
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page2{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/0.jpg');
+        height: 220vh;
+        margin-top: -10vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page3{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/Picture11.jpg');
+        height: 160vh;
+        margin-top: -10vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+    .bg-page4{
+        background-image: url('./img/black_image.png'), url('https://digition.id/wp-content/uploads/2022/02/53.jpg');
+        height: 130vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page6{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/ddds.jpg');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page9{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/ddds.jpg');
+        height: 60vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    
+    
+    
+    .fontWedding{
+        font-family: 'Nuosu SIL';
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .fontPasangan{
+        font-family: 'Petit Formal Script', cursive;
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+        margin-top: -10vh;
+    }
+
+    .fontCounting{
+        font-family: 'Nuosu SIL';
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .fontLive{
+        font-family: 'Nuosu SIL';
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .fontReservasi{
+        font-family: 'Nuosu SIL';
+        font-size: 25px;
+        color: #fff;
+        text-align: center;
+    }
+    
+
+
+    .hr1{
+        width: 30%;
+        margin: auto;
+        color: #fff;
+    }
+    
+    
+}
+
+/* Desktop */
+@media screen and (min-width: 501px){
+    .bg-pagecover{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/00.jpg');
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    .bg-page1{
+        height: 70vh;
+        background-size: cover;
+        background-position: top;
+    }
+
+    .bg-page2{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/0.jpg');
+        height: 130vh;
+        margin-top: -10vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .bg-page3{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/Picture11.jpg');
+        height: 100vh;
+        margin-top: -10vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page4{
+        background-image: url('./img/black_image.png'), url('https://digition.id/wp-content/uploads/2022/02/53.jpg');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page6{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/ddds.jpg');
+        height: 60vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page9{
+        background-image: url('https://digition.id/wp-content/uploads/2022/02/ddds.jpg');
+        height: 80vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    
+    
+
+
+    .fontWedding{
+        font-family: 'Nuosu SIL';
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+        margin-top: 25vh;
+    }
+
+    .fontPasangan{
+        font-family: 'Petit Formal Script', cursive;
+        font-size: 80px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .fontCounting{
+        font-family: 'Nuosu SIL';
+        font-size: 30px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .fontLive{
+        font-family: 'Nuosu SIL';
+        font-size: 50px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .fontReservasi{
+        font-family: 'Nuosu SIL';
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+    }
+    
+
+    .hr1{
+        width: 40%;
+        margin: auto;
+        color: #fff;
+    }
+
+}
+
 .none{
     display: none;
 }
@@ -23,46 +239,7 @@
     background-color: #A67C00;
 }
 
-.bg-pagecover{
-    background-image: url('https://digition.id/wp-content/uploads/2022/02/00.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
 
-.bg-page1{
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bg-page2{
-    background-image: url('https://digition.id/wp-content/uploads/2022/02/0.jpg');
-    height: 220vh;
-    margin-top: -10vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bg-page3{
-    background-image: url('https://digition.id/wp-content/uploads/2022/02/Picture11.jpg');
-    height: 160vh;
-    margin-top: -10vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bg-page4{
-    background-image: url('./img/black_image.png'), url('https://digition.id/wp-content/uploads/2022/02/53.jpg');
-    height: 130vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 .bg-page5{
     background-color: #807e7d;
@@ -70,13 +247,6 @@
     margin-top: -10vh;
 }
 
-.bg-page6{
-    background-image: url('https://digition.id/wp-content/uploads/2022/02/ddds.jpg');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 .bg-page7{
     background-image: url('./img/black_image.png'),url('https://digition.id/wp-content/uploads/2022/02/56.jpg');
@@ -91,13 +261,6 @@
     height: 70vh;
 }
 
-.bg-page9{
-    background-image: url('https://digition.id/wp-content/uploads/2022/02/ddds.jpg');
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 .bg-page10{
     background-color: #807e7d;
@@ -112,22 +275,6 @@
     margin-top: -5vh;
 }
 
-
-.fontWedding{
-    font-family: 'Nuosu SIL';
-    font-size: 16px;
-    color: #fff;
-    text-align: center;
-}
-
-.fontPasangan{
-    font-family: 'Petit Formal Script', cursive;
-    font-size: 40px;
-    color: #fff;
-    text-align: center;
-    margin-top: -10vh;
-}
-
 .fontPasangan2{
     font-family: 'Petit Formal Script', cursive;
     font-size: 40px;
@@ -136,12 +283,7 @@
     margin-top: -10vh;
 }
 
-.fontCounting{
-    font-family: 'Nuosu SIL';
-    font-size: 25px;
-    color: #fff;
-    text-align: center;
-}
+
 
 .fontPanggilanPria{
     font-family: 'Oleo Script', cursive;
@@ -157,12 +299,7 @@
     text-align: center;
 }
 
-.fontLive{
-    font-family: 'Nuosu SIL';
-    font-size: 25px;
-    color: #fff;
-    text-align: center;
-}
+
 
 .fontGallery2{
     font-family: 'Nuosu SIL';
@@ -171,18 +308,8 @@
     text-align: center;
 }
 
-.fontReservasi{
-    font-family: 'Nuosu SIL';
-    font-size: 25px;
-    color: #fff;
-    text-align: center;
-}
 
-.hr1{
-    width: 30%;
-    margin: auto;
-    color: #fff;
-}
+
 
 .hr2{
     width: 30%;
