@@ -34,8 +34,3 @@ $('a[href*="#"]')
       }
     }
   });
-
-window.addEventListener("wheel", event => {
-  const audio = document.querySelector("audio");
-  audio.play()
-})

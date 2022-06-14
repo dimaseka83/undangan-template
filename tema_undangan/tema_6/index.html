@@ -21,7 +21,7 @@
         </v-container>
                 <div v-else>
                 <div v-if="openInvitation">
-                                        <div class="navbar">
+                    <div class="navbar">
                     <div class="mb-5" justify="center" align="center">
                         <v-dialog v-model="dialog" transition="dialog-bottom-transition" width="500">
                             <template v-slot:activator="{ on, attrs }">
@@ -80,9 +80,9 @@
                 </div>
                 <v-container fluid class="bg-page1 fill-height white--text">
                     <v-row justify="center" align="center">
-                        <v-img max-width="200" src="https://demo.datengdong.com/themes/starlight/images/flower.png">
-                        </v-img>
+                        <v-img max-width="200" src="https://demo.datengdong.com/themes/starlight/images/flower.png" v-if="!displayDesktop"></v-img>
                         <div justify="center" align="center">
+                        <v-img max-width="200" src="https://demo.datengdong.com/themes/starlight/images/flower.png" v-if="displayDesktop"></v-img>
                             <p class="mt-14 font-weight-bold headline text-center">{{ dataApi.wedding.judul_utama }}</p>
                             <p class="fontPasangan">{{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
                             <p class="font-weight-light">{{ dataApi.wedding.tanggal_akad }}</p>
@@ -454,11 +454,11 @@
                 <div v-else>
                     <v-container fluid class="fill-height bg-cover white--text">
                         <v-row justify="center" align="center">
-                            <v-img max-width="200" src="https://demo.datengdong.com/themes/starlight/images/flower.png">
-                            </v-img>
+                            <v-img max-width="200" src="https://demo.datengdong.com/themes/starlight/images/flower.png" v-if="!displayDesktop"></v-img>
                             <div justify="center" align="center" class="mt-12">
-                                <p class="font-weight-light title text-center">Hello, We Are Getting Married</p>
-                                <v-row class="mx-16 font-weight-bold text-h5">
+                            <v-img max-width="250" src="https://demo.datengdong.com/themes/starlight/images/flower.png" v-if="displayDesktop"></v-img>
+                                <p class="font-weight-light title text-center" :class="[ displayDesktop ? 'mt-8' : '']">Hello, We Are Getting Married</p>
+                                <v-row class="mx-16 font-weight-bold" :class="[ displayDesktop ? 'text-h4 mt-8' : 'text-h5']">
                                     <v-col>
                                         <p>{{ dataApi.wedding.tanggal_resepsi.split(' ')[2] }}</p>
                                     </v-col>

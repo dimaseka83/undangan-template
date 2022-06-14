@@ -24,6 +24,9 @@
                         <v-row>
                             <v-col cols="7">
                                 <v-img width="855" class="overflowFixed" :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
+                                    <div class="d-flex justify-end">
+                                        <v-btn fab x-large @click="scrollPlay" class="mt-2 mr-2"><v-icon>mdi-music-note</v-icon></v-btn>
+                                    </div>
                                     <div class="navigation">
                                         <v-card class="rounded-pill cardNavigation pb-10" style="background-color: #ffffe6;">
                                             <v-btn href="#home" class="py-5" x-small outlined color="transparent"><v-icon small color="brown">mdi-heart</v-icon></v-btn>
@@ -111,9 +114,9 @@
                                                     >
                                                     <v-card color="transparent" outlined>
                                                       <v-img max-width="100" class="rounded-circle mr-2 " :src="n.photo"></v-img>
-                                                      <v-title class="justify-center">
+                                                      <v-card-title class="justify-center">
                                                           <p class="font-weight-bold text-center mt-5">{{ n.tanggal }}</p>
-                                                      </v-title>
+                                                      </v-card-title>
                                                     </v-card>
                                                     </v-slide-item>
                                                   </v-slide-group>
@@ -374,9 +377,9 @@
                                           >
                                           <v-card color="transparent" outlined>
                                             <v-img max-width="100" class="rounded-circle mr-2 " :src="n.photo"></v-img>
-                                            <v-title class="justify-center">
+                                            <v-card-title class="justify-center">
                                                 <p class="font-weight-bold text-center mt-5">{{ n.tanggal }}</p>
-                                            </v-title>
+                                            </v-card-title>
                                           </v-card>
                                           </v-slide-item>
                                         </v-slide-group>
