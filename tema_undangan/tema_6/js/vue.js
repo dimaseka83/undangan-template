@@ -4,6 +4,7 @@ new Vue({
     data() {
         return {
             dataApi: [],
+            value: 'home',
             loading: true,
             openInvitation: false,
             kehadiran: ['Hadir', 'Tidak Hadir',],

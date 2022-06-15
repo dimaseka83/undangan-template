@@ -1,6 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
 
+/* Mobile */
+@media screen and (max-width: 500px){
+    .bg-page2 {
+        background-color: #fff;
+        height: 280vh;
+    }
+
+    .bg-page3 {
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        height: 150vh;
+    }
+    .bg-page4 {
+        background-color: #fff;
+        height: 300vh;
+    }
+
+    .bg-page5{
+        background-image: url('./img/orange-image.png'), url('https://demo.datengdong.com/uploads/original/gallery/f92dc892d7faba8c2253a2ccfca156ba6ad908ad.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30vh;
+    }
+    
+    
+    
+
+    .fontPasangan {
+        font-family: 'Satisfy', cursive;
+        font-size: 50px;
+    }
+    
+}
+/* Desktop */
+@media screen and (min-width:501px) {
+    .bg-page2 {
+        background-color: #fff;
+        height: 160vh;
+    }
+
+    .bg-page3 {
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        height: 70vh;
+    }
+
+    .bg-page4 {
+        background-color: #fff;
+        height: 340vh;
+    }
+
+    .bg-page5{
+        background-image: url('./img/orange-image.png'), url('https://demo.datengdong.com/uploads/original/gallery/f92dc892d7faba8c2253a2ccfca156ba6ad908ad.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30vh;
+    }
+    
+    
+    
+    
+    .fontPasangan {
+        font-family: 'Satisfy', cursive;
+        font-size: 70px;
+    }
+    
+}
+
 .none {
     display: none;
 }
@@ -13,45 +85,17 @@
 }
 
 .bg-cover {
-    background-image: url('./img/black_image.png'), url('https://demo.datengdong.com/uploads/original/gallery/1949d9111354e8962623050b26440179f5caddd0.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     height: 100vh;
 }
 
 .bg-page1 {
-    background-image: url('./img/black_image.png'), url('https://demo.datengdong.com/uploads/original/gallery/1949d9111354e8962623050b26440179f5caddd0.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     height: 100vh;
-}
-
-.bg-page2 {
-    background-color: #fff;
-    height: 280vh;
-}
-
-.bg-page3 {
-    background-image: url('./img/orange-image.png'), url('https://demo.datengdong.com/uploads/original/gallery/b764db47f4737e605f7ab557461fb11a0b8834b3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 150vh;
-}
-
-.bg-page4 {
-    background-color: #fff;
-    height: 300vh;
-}
-
-.bg-page5{
-    background-image: url('./img/orange-image.png'), url('https://demo.datengdong.com/uploads/original/gallery/f92dc892d7faba8c2253a2ccfca156ba6ad908ad.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 30vh;
 }
 
 .bg-page6 {
@@ -59,10 +103,6 @@
     height: 160vh;
 }
 
-.fontPasangan {
-    font-family: 'Satisfy', cursive;
-    font-size: 50px;
-}
 
 .fontInformasi {
     font-family: 'Satisfy', cursive;
