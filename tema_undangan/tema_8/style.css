@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+.bg-page1{
+    background-color: #eee;
+    height: 100vh;
+}
+
+
+.fontPage1{
+    font-family: 'Yellowtail', cursive;
+}
