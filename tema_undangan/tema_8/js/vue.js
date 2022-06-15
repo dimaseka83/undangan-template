@@ -5,6 +5,6 @@ new Vue({
     computed: {
         displayDesktop() {
             return this.$vuetify.breakpoint.width >= 500
-          },
+        },
     }
 });
