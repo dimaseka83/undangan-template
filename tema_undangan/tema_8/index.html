@@ -14,36 +14,48 @@
     <div id="app">
         <v-app>
             <v-main>
-                <v-container fluid class="bg-page1 fill-height text-center">
+                <v-container fluid class="fill-height" v-if="loading">
                     <v-row align="center" justify="center">
-                        <v-img max-width="200" src="https://demo.datengdong.com/themes/two/image/just.gif"></v-img>
-                        <div align="center" justify="center">
-                            <h1 class="fontPage1 mt-8 green--text" style="font-size: 30px;">Sunday, 12 Februari 2023</h1>
-                        <p class="fontPage1" style="font-size: 50px;">Romeo & Juliet</p>
-                        <b>we are getting married</b>
-                        <p class="mt-16 font-italic font-weight-light">Kepada Yth</p>
-                        <p class="font-italic font-weight-light">Bapak/Ibu/Saudara/i</p>
-                        <p class="headline green--text">Prof. Supardi MM</p>
-                        <p class="font-italic font-weight-light">di Yogyakarta</p>
-                        </div>
+                        <v-progress-circular indeterminate color="primary"></v-progress-circular>
                     </v-row>
                 </v-container>
-                <v-container fluid>
-                    <div class="text-center">
-                        <h1 class="fontPage1" style="font-size: 45px;">Informasi</h1>
-                        <p class="text-decoration-underline mt-6 font-weight-bold">Protokol Covid 19</p>
-                        <p class="font-weight-light text-caption">Dalam upaya mengurangi penyebaran Covid 19 pada masa
-                            pandemi, kami harapkan kedatangan para tamu undangan agar menjalankan protokol yang berlaku.</p>
+                <div v-else>
+                    <v-container fluid class="bg-page1 fill-height text-center">
+                        <v-row align="center" justify="center">
+                            <v-img max-width="200" src="https://demo.datengdong.com/themes/two/image/just.gif"></v-img>
+                            <div align="center" justify="center">
+                                <h1 class="fontPage1 mt-8 green--text" style="font-size: 30px;">
+                                    {{ dataApi.wedding.tanggal_resepsi }}</h1>
+                                <p class="fontPage1" style="font-size: 50px;">{{ dataApi.wedding.nama_panggilan_pria }}
+                                    & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+                                <b>we are getting married</b>
+                                <p class="mt-16 font-italic font-weight-light">Kepada Yth</p>
+                                <p class="font-italic font-weight-light">Bapak/Ibu/Saudara/i</p>
+                                <p class="headline green--text">Prof. Supardi MM</p>
+                                <p class="font-italic font-weight-light">di Yogyakarta</p>
+                            </div>
+                        </v-row>
+                    </v-container>
+                    <v-container fluid>
+                        <div class="text-center">
+                            <h1 class="fontPage1" style="font-size: 45px;">{{ dataApi.wedding.h_more_info }}</h1>
+                            <p class="text-decoration-underline mt-6 font-weight-bold">Protokol Covid 19</p>
+                            <p class="font-weight-light text-caption">Dalam upaya mengurangi penyebaran Covid 19 pada
+                                masa
+                                pandemi, kami harapkan kedatangan para tamu undangan agar menjalankan protokol yang
+                                berlaku.</p>
                             <v-row justify="center">
                                 <v-col :cols="[displayDesktop ? '2' : '']">
                                     <v-row justify="center" align="center">
-                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/masker.png"></v-img>
+                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/masker.png">
+                                        </v-img>
                                     </v-row>
                                     <p class="text-caption mt-5">Wajib Menggunakan Masker</p>
                                 </v-col>
                                 <v-col :cols="[displayDesktop ? '2' : '']">
                                     <v-row justify="center" align="center">
-                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/distance.png"></v-img>
+                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/distance.png">
+                                        </v-img>
                                     </v-row>
                                     <p class="text-caption mt-5">Saling Menjaga Jarak di Dalam Acara</p>
                                 </v-col>
@@ -51,18 +63,23 @@
                             <v-row justify="center">
                                 <v-col :cols="[displayDesktop ? '2' : '']">
                                     <v-row justify="center" align="center">
-                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/salam.png"></v-img>
+                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/salam.png">
+                                        </v-img>
                                     </v-row>
-                                    <p class="text-caption mt-5">Menggunakan salam namastee sebagai ganti berjabat tangan</p>
+                                    <p class="text-caption mt-5">Menggunakan salam namastee sebagai ganti berjabat
+                                        tangan</p>
                                 </v-col>
                                 <v-col :cols="[displayDesktop ? '2' : '']">
                                     <v-row justify="center" align="center">
-                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/wash.png"></v-img>
+                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/wash.png">
+                                        </v-img>
                                     </v-row>
-                                    <p class="text-caption mt-5">Jaga Kebersihan dengan Mencuci Tangan atau Handsanitizer</p>
+                                    <p class="text-caption mt-5">Jaga Kebersihan dengan Mencuci Tangan atau
+                                        Handsanitizer</p>
                                 </v-col>
                             </v-row>
-                            <p class="font-weight-light text-center">"Tidak ada solusi yang lebih baik bagi dua insan yang saling
+                            <p class="font-weight-light text-center">"Tidak ada solusi yang lebih baik bagi dua insan
+                                yang saling
                                 mencintai di banding pernikahan."</p>
                             <p class="fontPage1 green--text" style="font-size: 30px;">HR. Ibnu Majah</p>
 
@@ -70,16 +87,19 @@
                             <h1 class="fontPage1 mt-16" style="font-size: 50px;">Groom & Bride</h1>
                             <p class="font-italic">Assalamu’alaikum Warahmatullahi
                                 Wabarakatuh</p>
-                            <p :class="[displayDesktop ? 'mx-16' : 'mx-8']">Maha suci Allah SWT yang telah menciptakan makhluk-Nya
+                            <p :class="[displayDesktop ? 'mx-16' : 'mx-8']">Maha suci Allah SWT yang telah menciptakan
+                                makhluk-Nya
                                 berpasang-pasangan. Ya Allah, perkenankanlah kami merangkai kasih sayang yang Kau
                                 ciptakan di antara putra-putri kami: </p>
 
-                            
+
                             <div class="d-flex justify-center mt-16">
-                                <v-img max-width="300" max-height="300" class="rounded-circle" src="https://demo.datengdong.com/uploads/thumbs/couple/lqtjmas1on.png"></v-img>
+                                <v-img max-width="300" max-height="300" class="rounded-circle"
+                                    :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
                             </div>
-                            <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">Romeo Montaque</h1>
-                            <p class="green--text font-weight-bold">Putra dari Pasangan Bambang & Mulyani</p>
+                            <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">
+                                {{ dataApi.wedding.nama_lengkap_pria }}</h1>
+                            <p class="green--text font-weight-bold">{{ dataApi.wedding.profil_pria }}</p>
                             <p> Jl. Majapahit, No 43, Sleman, Yogyakarta</p>
                             <v-btn small dark>
                                 <v-icon>mdi-instagram</v-icon>
@@ -89,10 +109,12 @@
                             </v-btn>
 
                             <div class="d-flex justify-center mt-16">
-                                <v-img max-width="300" max-height="300" class="rounded-circle" src="https://demo.datengdong.com/uploads/thumbs/couple/lqtjmas1on.png"></v-img>
+                                <v-img max-width="300" max-height="300" class="rounded-circle"
+                                    :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
                             </div>
-                            <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">Romeo Montaque</h1>
-                            <p class="green--text font-weight-bold">Putra dari Pasangan Bambang & Mulyani</p>
+                            <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">
+                                {{ dataApi.wedding.nama_lengkap_wanita }}</h1>
+                            <p class="green--text font-weight-bold">{{ dataApi.wedding.profil_wanita }}</p>
                             <p> Jl. Majapahit, No 43, Sleman, Yogyakarta</p>
                             <v-btn small dark>
                                 <v-icon>mdi-instagram</v-icon>
@@ -102,16 +124,19 @@
                             </v-btn>
 
                             <!-- Batas 3 -->
-                            <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">Akad Nikah</h1>
-                            <p class="green--text font-weight-bold">Sunday, 12 February 2023</p>
-                            <p> Pukul 08:00 - 09:00 WIB</p>
-                            <p class="font-weight-bold">Masjid Kampus UGM</p>
-                            <p>Jl. Prof. DR. Drs Notonagoro, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten Sleman, Yogyakarta</p>
+                            <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">
+                                {{ dataApi.wedding.judul_akad }}</h1>
+                            <p class="green--text font-weight-bold">{{ dataApi.wedding.tanggal_akad }}</p>
+                            <p> Pukul {{ dataApi.wedding.waktu_akad }}</p>
+                            <p class="font-weight-bold">{{ dataApi.wedding.lokasi_akad.split('(')[0] }}</p>
+                            <p>Jl. Prof. DR. Drs Notonagoro, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten Sleman,
+                                Yogyakarta</p>
 
-                            <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">Resepsi</h1>
-                            <p class="green--text font-weight-bold">Sunday, 12 February 2023</p>
-                            <p> Pukul 09:00 - 12:00 WIB</p>
-                            <p class="font-weight-bold">Jogja Expo Center</p>
+                            <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">
+                                {{ dataApi.wedding.judul_resepsi }}</h1>
+                            <p class="green--text font-weight-bold">{{ dataApi.wedding.tanggal_akad }}</p>
+                            <p> Pukul {{ dataApi.wedding.waktu_resepsi }}</p>
+                            <p class="font-weight-bold">{{ dataApi.wedding.lokasi_resepsi.split('(')[0] }}</p>
                             <p>Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Bantul, Yogyakarta</p>
 
                             <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">Unduh Mantu</h1>
@@ -126,7 +151,7 @@
                                 <v-btn color="green" dark>Yahoo Calendar</v-btn>
                             </div>
                             <h1 class="fontPage1 mt-16" style="font-size: 50px;">Our Gallery</h1>
-                            <!-- <div v-if="displayDesktop">
+                            <div v-if="displayDesktop">
                                 <v-row justify="center" align="center" class="mx-16">
                                     <v-col>
                                         <v-img max-width="400" max-height="400"
@@ -205,7 +230,7 @@
                                     </v-col>
                                 </v-row>
                                 <v-row>
-                                    <v-col cols="6"> 
+                                    <v-col cols="6">
                                         <v-img max-height="200"
                                             :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
                                         </v-img>
@@ -228,74 +253,82 @@
                                         </v-img>
                                     </v-col>
                                 </v-row>
-                            </div> -->
-                            
-                            <div v-if="displayDesktop" class="d-flex justify-center">
-                                <iframe class="mt-16" width="1000" height="500" src="https://www.youtube.com/embed/hG_yZXiR45k"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
                             </div>
-                            <iframe class="mt-16" width="382" height="240" src="https://www.youtube.com/embed/hG_yZXiR45k"
-                                title="YouTube video player" frameborder="0"
+
+                            <div v-if="displayDesktop" class="d-flex justify-center">
+                                <iframe class="mt-16" width="1000" height="500"
+                                    src="https://www.youtube.com/embed/hG_yZXiR45k" title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <iframe class="mt-16" width="382" height="240"
+                                src="https://www.youtube.com/embed/hG_yZXiR45k" title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen v-else></iframe>
 
-                            <h1 class="fontPage1 my-16" style="font-size: 50px;">Our Gallery</h1>
-                            <div class="text-start" v-for="i in 3" :key="i">
-                                <p class="text-h5">Pertama Kenal</p>
-                                <p class="text-caption green--text">01 January 2020 at Gramedia </p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit distinctio laudantium eveniet minus obcaecati voluptates recusandae sequi asperiores tempore consequatur rem quis quae cupiditate provident ex, blanditiis fuga porro repellendus!</p>
+                            <h1 class="fontPage1 my-16" style="font-size: 50px;">Our Love Story</h1>
+                            <div class="text-start" v-for="(story, i) in dataApi.stories" :key="i">
+                                <p class="text-h5">{{ story.judul }}</p>
+                                <p class="text-caption green--text">{{ story.tanggal }}</p>
+                                <p>{{ story.cerita }}</p>
                             </div>
                             <h1 class="fontPage1 my-16" style="font-size: 50px;">Go To Our Wedding</h1>
                             <v-row justify="center" align="center" class="headline">
                                 <v-col>
-                                    <p class="font-weight-bold">00</p>
+                                    <p class="font-weight-bold">{{ displayDays }}</p>
                                     <p>Days</p>
                                 </v-col>
                                 <v-col>
-                                    <p class="font-weight-bold">00</p>
+                                    <p class="font-weight-bold">{{ displayHours }}</p>
                                     <p>Hours</p>
                                 </v-col>
                             </v-row>
                             <v-row justify="center" align="center" class="headline">
                                 <v-col>
-                                    <p class="font-weight-bold">00</p>
+                                    <p class="font-weight-bold">{{ displayMinutes }}</p>
                                     <p>Minutes</p>
                                 </v-col>
                                 <v-col>
-                                    <p class="font-weight-bold">00</p>
+                                    <p class="font-weight-bold">{{ displaySeconds }}</p>
                                     <p>Seconds</p>
                                 </v-col>
                             </v-row>
                             <h1 class="fontPage1 my-16" style="font-size: 50px;">Map Location</h1>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9092508126523!2d110.40229931535062!3d-7.799432179581609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sen!2sid!4v1655284618974!5m2!1sen!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <v-btn color="green" class="mt-5" dark>Open Google Map</v-btn>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9092508126523!2d110.40229931535062!3d-7.799432179581609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sen!2sid!4v1655284618974!5m2!1sen!2sid"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <v-btn color="green" class="mt-5" @click="openUrl(dataApi.wedding.short_url)" dark>Open
+                                Google Map</v-btn>
                             <h1 class="fontPage1 my-16" style="font-size: 50px;">Guest Book</h1>
 
                             <v-card color="green" class="mt-10">
                                 <v-card-title>
-                                    <v-text-field label="Nama" solo></v-text-field>
-                                    <v-select solo label="Kedatangan" :items="kehadiran"></v-select>
-                                    <v-textarea rows="3" label="Pesan/Doa" solo></v-textarea>
+                                    <v-text-field v-model="form.nama" label="Nama" solo></v-text-field>
+                                    <v-select solo v-model="form.kehadiran" label="Kedatangan" :items="kehadiran">
+                                    </v-select>
+                                    <v-textarea rows="3" v-model="form.ucapan" label="Pesan/Doa" solo></v-textarea>
                                 </v-card-title>
                                 <v-card-title class="justify-center">
-                                    <v-btn color="blue-grey" dark>Kirim </v-btn>
+                                    <v-btn color="blue-grey" @click="kirimUcapan" dark>Kirim </v-btn>
                                 </v-card-title>
                             </v-card>
                             <v-card class="mt-10" style="border: 2px solid green; background-color: transparent;">
-                                <!-- <v-card-title>
+                                <v-card-title class="text-start">
                                     <div class="overflowAuto">
-                                    <div v-for="(i, idx) in dataApi.comments" :key="idx">
-                                    <p class="title mx-4">{{ i.owner }}</p>
-                                    <p class="text-caption mx-4">{{ i.content }}</p>
-                                    <v-divider></v-divider>
+                                        <div v-for="(i, idx) in dataApi.comments" :key="idx">
+                                            <p class="title mx-4">{{ i.owner }}</p>
+                                            <p class="text-caption mx-4">{{ i.content }}</p>
+                                            <v-divider></v-divider>
+                                        </div>
                                     </div>
-                                    </div>
-                                </v-card-title> -->
+                                </v-card-title>
                             </v-card>
                         </div>
-                </v-container>
+                    </v-container>
+                </div>
             </v-main>
         </v-app>
     </div>
