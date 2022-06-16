@@ -20,15 +20,17 @@ new Vue({
     displayHours: 0,
     displayMinutes: 0,
     displaySeconds: 0,
+      asc: false,
+      desc: false,
   },
   methods: {
     loadData() {
       this.loading = true;
       setTimeout(() => {
         axios.get('https://merestui.com/api/vindirendra').then(response => {
-        this.dataApi = response.data.data;
-        this.loading = false;
-      });
+          this.dataApi = response.data.data;
+          this.loading = false;
+        });
       }, 1000);
     },
     scrollPlay() {
@@ -43,7 +45,7 @@ new Vue({
       //   kehadiran: this.form.kehadiran,
       //   // reply: []
       // });
-      axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
+      axios.post('https://merestui.com/api/' + this.dataApi.order.url + '/comment/store', {
         ref_no: "1",
         name: this.form.nama,
         write_as: this.form.nama,
@@ -56,7 +58,7 @@ new Vue({
         // reply: []
       }];
       this.loadData();
-        },
+    },
     kirimBalasan(id) {
       this.ucapan[id].reply.push({
         nama: this.formBalasan.nama,
@@ -82,7 +84,7 @@ new Vue({
           clearInterval(timer);
           return;
         }
-        
+
         const days = Math.floor(distance / this._days);
         const hours = Math.floor((distance % this._days) / this._hours);
         const minutes = Math.floor((distance % this._hours) / this._minutes);
@@ -105,7 +107,7 @@ new Vue({
 
   computed: {
     totalUcapan() {
-      if(this.loading == false){
+      if (this.loading == false) {
         return this.dataApi.comments.length;
       }
     },
@@ -120,24 +122,46 @@ new Vue({
       }
     },
 
-    comments(){
+    comments() {
       if (this.displayDesktop) {
         return 'ml-16';
-      }else{
+      } else {
         return 'ml-2';
       }
     },
 
     _seconds: () => 1000,
-    _minutes(){
+    _minutes() {
       return this._seconds * 60;
     },
-    _hours(){
+    _hours() {
       return this._minutes * 60;
     },
-    _days(){
+    _days() {
       return this._hours * 24;
-    }
-    
+    },
+        sorted() {
+      if (this.asc) {
+          return _.orderBy(this.dataApi.comments, 'created_at', 'asc');
+
+      } else if (this.desc) {
+                  return _.orderBy(this.dataApi.comments, 'created_at', 'desc');
+      }
+      return this.dataApi.comments;
+    },
   },
+
+  watch: {
+    asc(newVal) {
+      if (this.newest.desc && newVal) {
+        this.newest.desc = false;
+      }
+    },
+
+    desc(newVal) {
+      if (this.newest.asc && newVal) {
+        this.newest.asc = false;
+      }
+    }
+  }
 });
