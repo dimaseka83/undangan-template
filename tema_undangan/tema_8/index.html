@@ -22,8 +22,9 @@
                 <div v-else>
                     <v-container fluid class="bg-page1 fill-height text-center">
                         <v-row align="center" justify="center">
-                            <v-img max-width="200" src="https://demo.datengdong.com/themes/two/image/just.gif"></v-img>
+                            <v-img max-width="200" src="https://demo.datengdong.com/themes/two/image/just.gif" v-if="!displayDesktop"></v-img>
                             <div align="center" justify="center">
+                            <v-img max-width="200" src="https://demo.datengdong.com/themes/two/image/just.gif" v-if="displayDesktop"></v-img>
                                 <h1 class="fontPage1 mt-8 green--text" style="font-size: 30px;">
                                     {{ dataApi.wedding.tanggal_resepsi }}</h1>
                                 <p class="fontPage1" style="font-size: 50px;">{{ dataApi.wedding.nama_panggilan_pria }}
@@ -91,37 +92,74 @@
                                 makhluk-Nya
                                 berpasang-pasangan. Ya Allah, perkenankanlah kami merangkai kasih sayang yang Kau
                                 ciptakan di antara putra-putri kami: </p>
-
-
-                            <div class="d-flex justify-center mt-16">
-                                <v-img max-width="300" max-height="300" class="rounded-circle"
-                                    :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
+                            
+                            <div v-if="displayDesktop">
+                                <v-row>
+                                    <v-col>
+                                        <div class="d-flex justify-center mt-16">
+                                            <v-img max-width="300" max-height="300" class="rounded-circle"
+                                                :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
+                                        </div>
+                                        <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">
+                                            {{ dataApi.wedding.nama_lengkap_pria }}</h1>
+                                        <p class="green--text font-weight-bold">{{ dataApi.wedding.profil_pria }}</p>
+                                        <p> Jl. Majapahit, No 43, Sleman, Yogyakarta</p>
+                                        <v-btn small dark>
+                                            <v-icon>mdi-instagram</v-icon>
+                                        </v-btn>
+                                        <v-btn small dark>
+                                            <v-icon>mdi-twitter</v-icon>
+                                        </v-btn>
+                                    </v-col>
+                                    <v-col>
+                                        <div class="d-flex justify-center mt-16">
+                                            <v-img max-width="300" max-height="300" class="rounded-circle"
+                                                :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
+                                        </div>
+                                        <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">
+                                            {{ dataApi.wedding.nama_lengkap_wanita }}</h1>
+                                        <p class="green--text font-weight-bold">{{ dataApi.wedding.profil_wanita }}</p>
+                                        <p> Jl. Majapahit, No 43, Sleman, Yogyakarta</p>
+                                        <v-btn small dark>
+                                            <v-icon>mdi-instagram</v-icon>
+                                        </v-btn>
+                                        <v-btn small dark>
+                                            <v-icon>mdi-twitter</v-icon>
+                                        </v-btn>
+                                    </v-col>
+                                </v-row>
                             </div>
-                            <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">
-                                {{ dataApi.wedding.nama_lengkap_pria }}</h1>
-                            <p class="green--text font-weight-bold">{{ dataApi.wedding.profil_pria }}</p>
-                            <p> Jl. Majapahit, No 43, Sleman, Yogyakarta</p>
-                            <v-btn small dark>
-                                <v-icon>mdi-instagram</v-icon>
-                            </v-btn>
-                            <v-btn small dark>
-                                <v-icon>mdi-twitter</v-icon>
-                            </v-btn>
-
-                            <div class="d-flex justify-center mt-16">
-                                <v-img max-width="300" max-height="300" class="rounded-circle"
-                                    :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
+                            <div v-else>
+                                <div class="d-flex justify-center mt-16">
+                                    <v-img max-width="300" max-height="300" class="rounded-circle"
+                                        :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
+                                </div>
+                                <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">
+                                    {{ dataApi.wedding.nama_lengkap_pria }}</h1>
+                                <p class="green--text font-weight-bold">{{ dataApi.wedding.profil_pria }}</p>
+                                <p> Jl. Majapahit, No 43, Sleman, Yogyakarta</p>
+                                <v-btn small dark>
+                                    <v-icon>mdi-instagram</v-icon>
+                                </v-btn>
+                                <v-btn small dark>
+                                    <v-icon>mdi-twitter</v-icon>
+                                </v-btn>
+    
+                                <div class="d-flex justify-center mt-16">
+                                    <v-img max-width="300" max-height="300" class="rounded-circle"
+                                        :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
+                                </div>
+                                <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">
+                                    {{ dataApi.wedding.nama_lengkap_wanita }}</h1>
+                                <p class="green--text font-weight-bold">{{ dataApi.wedding.profil_wanita }}</p>
+                                <p> Jl. Majapahit, No 43, Sleman, Yogyakarta</p>
+                                <v-btn small dark>
+                                    <v-icon>mdi-instagram</v-icon>
+                                </v-btn>
+                                <v-btn small dark>
+                                    <v-icon>mdi-twitter</v-icon>
+                                </v-btn>
                             </div>
-                            <h1 class="fontPage1 font-weight-light" style="font-size: 30px;">
-                                {{ dataApi.wedding.nama_lengkap_wanita }}</h1>
-                            <p class="green--text font-weight-bold">{{ dataApi.wedding.profil_wanita }}</p>
-                            <p> Jl. Majapahit, No 43, Sleman, Yogyakarta</p>
-                            <v-btn small dark>
-                                <v-icon>mdi-instagram</v-icon>
-                            </v-btn>
-                            <v-btn small dark>
-                                <v-icon>mdi-twitter</v-icon>
-                            </v-btn>
 
                             <!-- Batas 3 -->
                             <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">
@@ -132,24 +170,46 @@
                             <p>Jl. Prof. DR. Drs Notonagoro, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten Sleman,
                                 Yogyakarta</p>
 
-                            <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">
-                                {{ dataApi.wedding.judul_resepsi }}</h1>
-                            <p class="green--text font-weight-bold">{{ dataApi.wedding.tanggal_akad }}</p>
-                            <p> Pukul {{ dataApi.wedding.waktu_resepsi }}</p>
-                            <p class="font-weight-bold">{{ dataApi.wedding.lokasi_resepsi.split('(')[0] }}</p>
-                            <p>Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Bantul, Yogyakarta</p>
-
-                            <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">Unduh Mantu</h1>
-                            <p class="green--text font-weight-bold">Saturday, 20 February 2021</p>
-                            <p> Pukul 09:00 - Selesai</p>
-                            <p class="font-weight-bold">Rumah Bapak Bambang</p>
-                            <p>Gowongan, Jetis, Yogyakarta City, Special Region of Yogyakarta</p>
+                            <div v-if="displayDesktop">
+                                <v-row>
+                                    <v-col>
+                                        <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">
+                                            {{ dataApi.wedding.judul_resepsi }}</h1>
+                                        <p class="green--text font-weight-bold">{{ dataApi.wedding.tanggal_akad }}</p>
+                                        <p> Pukul {{ dataApi.wedding.waktu_resepsi }}</p>
+                                        <p class="font-weight-bold">{{ dataApi.wedding.lokasi_resepsi.split('(')[0] }}</p>
+                                        <p>Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Bantul, Yogyakarta</p>
+                                    </v-col>
+                                    <v-col>
+                                        <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">Unduh Mantu</h1>
+                                        <p class="green--text font-weight-bold">Saturday, 20 February 2021</p>
+                                        <p> Pukul 09:00 - Selesai</p>
+                                        <p class="font-weight-bold">Rumah Bapak Bambang</p>
+                                        <p>Gowongan, Jetis, Yogyakarta City, Special Region of Yogyakarta</p>        
+                                    </v-col>
+                                </v-row>
+                            </div>
+                            <div v-else>
+                                <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">
+                                    {{ dataApi.wedding.judul_resepsi }}</h1>
+                                <p class="green--text font-weight-bold">{{ dataApi.wedding.tanggal_akad }}</p>
+                                <p> Pukul {{ dataApi.wedding.waktu_resepsi }}</p>
+                                <p class="font-weight-bold">{{ dataApi.wedding.lokasi_resepsi.split('(')[0] }}</p>
+                                <p>Jl. Wonocatur, Wonocatur, Banguntapan, Kec. Banguntapan, Bantul, Yogyakarta</p>
+    
+                                <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">Unduh Mantu</h1>
+                                <p class="green--text font-weight-bold">Saturday, 20 February 2021</p>
+                                <p> Pukul 09:00 - Selesai</p>
+                                <p class="font-weight-bold">Rumah Bapak Bambang</p>
+                                <p>Gowongan, Jetis, Yogyakarta City, Special Region of Yogyakarta</p>
+                            </div>
 
                             <p class="text-h5 mt-16">Add to</p>
                             <div class="d-flex justify-center">
                                 <v-btn color="green" class="mr-1" dark>Google Calendar</v-btn>
                                 <v-btn color="green" dark>Yahoo Calendar</v-btn>
                             </div>
+
                             <h1 class="fontPage1 mt-16" style="font-size: 50px;">Our Gallery</h1>
                             <div v-if="displayDesktop">
                                 <v-row justify="center" align="center" class="mx-16">
@@ -269,63 +329,128 @@
                                 allowfullscreen v-else></iframe>
 
                             <h1 class="fontPage1 my-16" style="font-size: 50px;">Our Love Story</h1>
-                            <div class="text-start" v-for="(story, i) in dataApi.stories" :key="i">
+                            <div class="" style="margin: 0 50vh;" v-if="displayDesktop">
+                                <div class="text-start" v-for="(story, i) in dataApi.stories" :key="i">
+                                    <p class="text-h5">{{ story.judul }}</p>
+                                    <p class="text-caption green--text">{{ story.tanggal }}</p>
+                                    <p>{{ story.cerita }}</p>
+                                </div>
+                            </div>
+                            <div class="text-start" v-for="(story, i) in dataApi.stories" :key="i" v-else>
                                 <p class="text-h5">{{ story.judul }}</p>
                                 <p class="text-caption green--text">{{ story.tanggal }}</p>
                                 <p>{{ story.cerita }}</p>
                             </div>
                             <h1 class="fontPage1 my-16" style="font-size: 50px;">Go To Our Wedding</h1>
-                            <v-row justify="center" align="center" class="headline">
-                                <v-col>
+                            <v-row justify="center" class="title" align="center" v-if="displayDesktop">
+                                <v-col cols="2">
                                     <p class="font-weight-bold">{{ displayDays }}</p>
-                                    <p>Days</p>
+                                    <p  class="font-weight-light">Days</p>
                                 </v-col>
-                                <v-col>
+                                <v-col cols="2">
                                     <p class="font-weight-bold">{{ displayHours }}</p>
-                                    <p>Hours</p>
+                                    <p class="font-weight-light">Hours</p>
                                 </v-col>
-                            </v-row>
-                            <v-row justify="center" align="center" class="headline">
-                                <v-col>
+                                <v-col cols="2">
                                     <p class="font-weight-bold">{{ displayMinutes }}</p>
-                                    <p>Minutes</p>
+                                    <p class="font-weight-light">Minutes</p>
                                 </v-col>
-                                <v-col>
+                                <v-col cols="2">
                                     <p class="font-weight-bold">{{ displaySeconds }}</p>
-                                    <p>Seconds</p>
+                                    <p class="font-weight-light">Seconds</p>
                                 </v-col>
                             </v-row>
+                            <div v-else>
+                                <v-row justify="center" align="center" class="headline">
+                                    <v-col>
+                                        <p class="font-weight-bold">{{ displayDays }}</p>
+                                        <p>Days</p>
+                                    </v-col>
+                                    <v-col>
+                                        <p class="font-weight-bold">{{ displayHours }}</p>
+                                        <p>Hours</p>
+                                    </v-col>
+                                </v-row>
+                                <v-row justify="center" align="center" class="headline">
+                                    <v-col>
+                                        <p class="font-weight-bold">{{ displayMinutes }}</p>
+                                        <p>Minutes</p>
+                                    </v-col>
+                                    <v-col>
+                                        <p class="font-weight-bold">{{ displaySeconds }}</p>
+                                        <p>Seconds</p>
+                                    </v-col>
+                                </v-row>
+                            </div>
                             <h1 class="fontPage1 my-16" style="font-size: 50px;">Map Location</h1>
-                            <iframe
+
+                            <div v-if="displayDesktop">
+                            <v-row align="center" justify="center">
+                                <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9092508126523!2d110.40229931535062!3d-7.799432179581609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sen!2sid!4v1655284618974!5m2!1sen!2sid"
+                                width="50%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </v-row>    
+                            </div>
+
+                            <iframe v-else
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9092508126523!2d110.40229931535062!3d-7.799432179581609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a575dd9a1912b%3A0xfe00120aebe7a884!2sGraha%20Pradipta%20Jogja%20Expo%20Center!5e0!3m2!1sen!2sid!4v1655284618974!5m2!1sen!2sid"
                                 width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
                             <v-btn color="green" class="mt-5" @click="openUrl(dataApi.wedding.short_url)" dark>Open
                                 Google Map</v-btn>
                             <h1 class="fontPage1 my-16" style="font-size: 50px;">Guest Book</h1>
 
-                            <v-card color="green" class="mt-10">
-                                <v-card-title>
-                                    <v-text-field v-model="form.nama" label="Nama" solo></v-text-field>
-                                    <v-select solo v-model="form.kehadiran" label="Kedatangan" :items="kehadiran">
-                                    </v-select>
-                                    <v-textarea rows="3" v-model="form.ucapan" label="Pesan/Doa" solo></v-textarea>
-                                </v-card-title>
-                                <v-card-title class="justify-center">
-                                    <v-btn color="blue-grey" @click="kirimUcapan" dark>Kirim </v-btn>
-                                </v-card-title>
-                            </v-card>
-                            <v-card class="mt-10" style="border: 2px solid green; background-color: transparent;">
-                                <v-card-title class="text-start">
-                                    <div class="overflowAuto">
-                                        <div v-for="(i, idx) in dataApi.comments" :key="idx">
-                                            <p class="title mx-4">{{ i.owner }}</p>
-                                            <p class="text-caption mx-4">{{ i.content }}</p>
-                                            <v-divider></v-divider>
+                            <div justify="center" align="center" v-if="displayDesktop">
+                                <v-card width="700" color="green" class="mt-10">
+                                    <v-card-text>
+                                        <v-text-field v-model="form.nama" label="Nama" solo></v-text-field>
+                                        <v-select solo v-model="form.kehadiran" label="Kedatangan" :items="kehadiran">
+                                        </v-select>
+                                        <v-textarea rows="3" v-model="form.ucapan" label="Pesan/Doa" solo></v-textarea>
+                                    </v-card-title>
+                                    <v-card-title class="justify-center">
+                                        <v-btn color="blue-grey" @click="kirimUcapan" dark>Kirim </v-btn>
+                                    </v-card-title>
+                                </v-card>
+                                <v-card width="600" class="mt-10" style="border: 2px solid green; background-color: transparent;">
+                                    <v-card-title class="text-start">
+                                        <div class="overflowAuto">
+                                            <div v-for="(i, idx) in dataApi.comments" :key="idx">
+                                                <p class="title mx-4">{{ i.owner }}</p>
+                                                <p class="text-caption mx-4">{{ i.content }}</p>
+                                                <v-divider></v-divider>
+                                            </div>
                                         </div>
-                                    </div>
-                                </v-card-title>
-                            </v-card>
+                                    </v-card-title>
+                                </v-card>
+                            </div>
+                            <div v-else>
+                                <v-card color="green" class="mt-10">
+                                    <v-card-title>
+                                        <v-text-field v-model="form.nama" label="Nama" solo></v-text-field>
+                                        <v-select solo v-model="form.kehadiran" label="Kedatangan" :items="kehadiran">
+                                        </v-select>
+                                        <v-textarea rows="3" v-model="form.ucapan" label="Pesan/Doa" solo></v-textarea>
+                                    </v-card-title>
+                                    <v-card-title class="justify-center">
+                                        <v-btn color="blue-grey" @click="kirimUcapan" dark>Kirim </v-btn>
+                                    </v-card-title>
+                                </v-card>
+                                <v-card class="mt-10" style="border: 2px solid green; background-color: transparent;">
+                                    <v-card-title class="text-start">
+                                        <div class="overflowAuto">
+                                            <div v-for="(i, idx) in dataApi.comments" :key="idx">
+                                                <p class="title mx-4">{{ i.owner }}</p>
+                                                <p class="text-caption mx-4">{{ i.content }}</p>
+                                                <v-divider></v-divider>
+                                            </div>
+                                        </div>
+                                    </v-card-title>
+                                </v-card>
+                            </div>
                         </div>
                     </v-container>
                 </div>
