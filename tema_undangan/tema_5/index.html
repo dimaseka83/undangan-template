@@ -275,10 +275,11 @@
                                             <v-col cols="2"><v-btn fab elevation="" color="primary"> {{ n.owner.charAt(0) }}</v-btn></v-col>
                                             <v-col cols="10">
                                                 <v-card class="rounded-xl">
-                                                    <v-card-title class="font-weight-bold text-caption">
-                                                        {{ n.owner }}
-                                                    </v-card-title>
-                                                    <v-card-text class="font-weight-light text-caption">
+                                                    <v-card-text>
+                                                        <p class="font-weight-bold body-2">{{ n.owner }} <span class="pl-2 text-caption text--disabled">{{ n.date_only }}</span></p>
+                                                        <p class="text-caption mt-n5 text--disabled">Ditulis oleh {{ n.write_as }}, ({{ n.sosmed }})</p>                                                
+                                                    </v-card-text> 
+                                                    <v-card-text class="mt-n10 font-weight-light text-caption">
                                                         {{ n.content }}
                                                     </v-card-text>
                                                 </v-card>
@@ -539,10 +540,11 @@
                                     <v-col cols="2"><v-btn fab elevation="" color="primary"> {{ n.owner.charAt(0) }}</v-btn></v-col>
                                     <v-col cols="10">
                                         <v-card class="rounded-xl">
-                                            <v-card-title class="font-weight-bold text-caption">
-                                                {{ n.owner }}
-                                            </v-card-title>
-                                            <v-card-text class="font-weight-light text-caption">
+                                            <v-card-text>
+                                                <p class="font-weight-bold body-2">{{ n.owner }} <span class="pl-2 text-caption text--disabled">{{ n.date_only }}</span></p>
+                                                <p class="text-caption mt-n5 text--disabled">Ditulis oleh {{ n.write_as }}, ({{ n.sosmed }})</p>                                                
+                                            </v-card-text> 
+                                            <v-card-text class="mt-n10 font-weight-light text-caption">
                                                 {{ n.content }}
                                             </v-card-text>
                                         </v-card>
@@ -556,8 +558,14 @@
                                 </v-card-title>
                                 <v-card-text>
                                     <v-text-field label="Nama Lengkap" v-model="form.nama" outlined></v-text-field>
-                                    <v-text-field label="Alamat" outlined v-model="form.alamat"></v-text-field>
-                                    <v-file-input label="Bagikan momentmu" dense outlined></v-file-input>
+                                    <v-row>
+                                        <v-col>
+                                            <v-text-field label="Ditulis Oleh" v-model="form.write_as" outlined></v-text-field>
+                                        </v-col>
+                                        <v-col>
+                                            <v-text-field label="Nama Sosmed" v-model="form.sosmed" outlined></v-text-field>
+                                        </v-col>
+                                    </v-row>
                                     <v-textarea label="hal yang indah untuk pasangan" outlined v-model="form.ucapan"></v-textarea>
                                     <v-btn color="blue-grey" @click="kirimUcapan" dark block rounded>Kirim Sekarang</v-btn>
                                 </v-card-text>

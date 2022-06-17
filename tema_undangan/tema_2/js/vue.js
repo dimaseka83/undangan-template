@@ -34,6 +34,8 @@ new Vue({
       displayHours: 0,
       displayMinutes: 0,
       displaySeconds: 0,
+      asc: false,
+      desc: false,
     }
   },
   methods: {
@@ -69,6 +71,8 @@ new Vue({
       this.form = [{
         nama: '',
         ucapan: '',
+        write_as: '',
+        sosmed: '',
         // reply: []
       }];
       this.loadData();
@@ -135,6 +139,29 @@ new Vue({
     },
     _days() {
       return this._hours * 24;
+    },
+    sorted() {
+      if (this.asc) {
+          return _.orderBy(this.dataApi.comments, 'created_at', 'asc');
+
+      } else if (this.desc) {
+                  return _.orderBy(this.dataApi.comments, 'created_at', 'desc');
+      }
+      return this.dataApi.comments;
+    },
+  },
+
+  watch: {
+    asc(newVal) {
+      if (this.newest.desc && newVal) {
+        this.newest.desc = false;
+      }
+    },
+
+    desc(newVal) {
+      if (this.newest.asc && newVal) {
+        this.newest.asc = false;
+      }
     }
   }
 })

@@ -11,9 +11,10 @@ new Vue({
             dialog: false,
             ucapan: [],
             form: [{
-                nama: '',
-                kehadiran: '',
-                ucapan: '',
+              nama: '',
+              write_as: '',
+              sosmed: '',
+              ucapan: '',
             }],
             displayDays: 0,
             displayHours: 0,
@@ -33,14 +34,15 @@ new Vue({
       axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
         ref_no: "1",
         name: this.form.nama,
-        write_as: this.form.nama,
-        sosmed: this.form.nama,
+        write_as: this.form.write_as,
+        sosmed: this.form.sosmed,
         comment: this.form.ucapan,
       })
       this.form = [{
         nama: '',
         ucapan: '',
-        kehadiran: '',
+        write_as: '',
+        sosmed: '',
         // reply: []
       }];
       this.loadData();

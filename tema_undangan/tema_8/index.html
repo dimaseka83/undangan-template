@@ -412,8 +412,14 @@
                                 <v-card width="700" color="green" class="mt-10">
                                     <v-card-text>
                                         <v-text-field v-model="form.nama" label="Nama" solo></v-text-field>
-                                        <v-select solo v-model="form.kehadiran" label="Kedatangan" :items="kehadiran">
-                                        </v-select>
+                                        <v-row>
+                                            <v-col>
+                                                <v-text-field v-model="form.write_as" label="Ditulis Oleh" solo></v-text-field>
+                                            </v-col>
+                                            <v-col>
+                                                <v-text-field v-model="form.sosmed" label="Nama Sosmed" solo></v-text-field>
+                                            </v-col>
+                                        </v-row>
                                         <v-textarea rows="3" v-model="form.ucapan" label="Pesan/Doa" solo></v-textarea>
                                         </v-card-title>
                                         <v-card-title class="justify-center">
@@ -425,9 +431,10 @@
 
                                     <v-card-title class="text-start">
                                         <div class="overflowAuto">
-                                            <div v-for="(i, idx) in sorted" :key="idx">
-                                                <p class="title mx-4">{{ i.owner }}</p>
-                                                <p class="text-caption mx-4">{{ i.content }}</p>
+                                            <div v-for="(i, idx) in dataApi.comments" :key="idx">
+                                                <p class="title mx-4">{{ i.owner }} <span class="pl-2 text-caption text--disabled">{{ i.date_only }}</span></p>
+                                    <p class="text-caption mx-4 mt-n5 text--disabled">Ditulis oleh {{ i.write_as }}, ({{ i.sosmed }})</p>
+                                    <p class="text-caption mx-4">{{ i.content }}</p>
                                                 <v-divider></v-divider>
                                             </div>
                                         </div>
@@ -440,8 +447,14 @@
                                 <v-card color="green" class="mt-10">
                                     <v-card-title>
                                         <v-text-field v-model="form.nama" label="Nama" solo></v-text-field>
-                                        <v-select solo v-model="form.kehadiran" label="Kedatangan" :items="kehadiran">
-                                        </v-select>
+                                        <v-row>
+                                            <v-col>
+                                                <v-text-field v-model="form.write_as" label="Ditulis Oleh" solo></v-text-field>
+                                            </v-col>
+                                            <v-col>
+                                                <v-text-field v-model="form.sosmed" label="Nama Sosmed" solo></v-text-field>
+                                            </v-col>
+                                        </v-row>
                                         <v-textarea rows="3" v-model="form.ucapan" label="Pesan/Doa" solo></v-textarea>
                                     </v-card-title>
                                     <v-card-title class="justify-center">
@@ -452,8 +465,9 @@
                                     <v-card-title class="text-start">
                                         <div class="overflowAuto">
                                             <div v-for="(i, idx) in dataApi.comments" :key="idx">
-                                                <p class="title mx-4">{{ i.owner }}</p>
-                                                <p class="text-caption mx-4">{{ i.content }}</p>
+                                                <p class="title mx-4">{{ i.owner }} <span class="pl-2 text-caption text--disabled">{{ i.date_only }}</span></p>
+                                    <p class="text-caption mx-4 mt-n5 text--disabled">Ditulis oleh {{ i.write_as }}, ({{ i.sosmed }})</p>
+                                    <p class="text-caption mx-4">{{ i.content }}</p>
                                                 <v-divider></v-divider>
                                             </div>
                                         </div>

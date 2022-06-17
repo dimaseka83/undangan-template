@@ -16,486 +16,571 @@
       <v-main>
         <v-container fluid class="fill-height" v-if="loading">
           <v-row align="center" justify="center">
-           <v-progress-circular
-           indeterminate
-           color="primary"
-         ></v-progress-circular>
+            <v-progress-circular indeterminate color="primary"></v-progress-circular>
           </v-row>
-         </v-container>
+        </v-container>
         <div v-else>
 
-    <div v-if="openInvitation">
-      <!-- Page 1 -->
-      <div id="two">
-      <v-container fluid class="bg-page1" :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_2+')'}">
-        <div align="center" justify="center" v-if="displayDesktop">
-          <p class="white--text pasangan" style="margin-top: 70vh;">{{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
-          <p class="text-caption font-weight-light white--text">The Wedding |{{ dataApi.wedding.tanggal_akad }} |Kudus</p>
-        </div>
-        <div align="center" justify="center" v-else>
-          <p class="white--text pasangan mt-10">{{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
-          <p class="text-caption font-weight-light white--text">The Wedding |{{ dataApi.wedding.tanggal_akad }} |Kudus</p>
-        </div>
-      </v-container>
-      </div>
-      <!-- Page 2 -->
-      <v-container fluid class="bg-page2">
-        <v-card color="grey darken-3" class="rounded-xl" :class="[ displayDesktop ? 'mx-16 my-5 pb-10' : 'mx-5 my-10']">
-          <div class="d-flex justify-center">
-            <v-img max-width="70" src="https://cdn.undanganweb.com/hi/2022/03/Asset-1-1.png" class="mt-16"></v-img>
-          </div>
-          <h1 class="white--text text-center font-weight-medium mt-5">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
-          <p class="white--text text-center font-weight-light body-1 mx-5 mt-10 pb-10">{{ dataApi.wedding.kata_mutiara }}</p>
-        </v-card>
-      </v-container>
-
-      <!-- Page 3 -->
-      <v-container fluid class="bg-page3">
-        <p class="white--text text-center mempelai mt-10">Sang Mempelai</p>
-        <div v-if="displayDesktop">
-          <v-row align="center" justify="center">
-            <v-col>
-              <div class="" align="center" justify="center">
-              <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita" max-width="400" max-height="400" class="rounded-circle"></v-img>
-              <p class="white--text text-center mempelai2 mt-12">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
-              <p  class="white--text text-center title mx-16">{{ dataApi.wedding.profil_wanita }}</p>
-              <p class="white--text text-center title">Alamat : Klaling Krajan Rt 05/ Rw 01 No. 66, Jekulo, Kudus</p>
+          <div v-if="openInvitation">
+            <!-- Page 1 -->
+            <div id="two">
+              <v-container fluid class="bg-page1"
+                :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_2+')'}">
+                <div align="center" justify="center" v-if="displayDesktop">
+                  <p class="white--text pasangan" style="margin-top: 70vh;">{{ dataApi.wedding.nama_panggilan_pria }} &
+                    {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+                  <p class="text-caption font-weight-light white--text">The Wedding |{{ dataApi.wedding.tanggal_akad }}
+                    |Kudus</p>
+                </div>
+                <div align="center" justify="center" v-else>
+                  <p class="white--text pasangan mt-10">{{ dataApi.wedding.nama_panggilan_pria }} &
+                    {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+                  <p class="text-caption font-weight-light white--text">The Wedding |{{ dataApi.wedding.tanggal_akad }}
+                    |Kudus</p>
+                </div>
+              </v-container>
             </div>
-            <div class="d-flex justify-center">
-              <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab><v-icon>mdi-instagram</v-icon></v-btn>
+            <!-- Page 2 -->
+            <v-container fluid class="bg-page2">
+              <v-card color="grey darken-3" class="rounded-xl"
+                :class="[ displayDesktop ? 'mx-16 my-5 pb-10' : 'mx-5 my-10']">
+                <div class="d-flex justify-center">
+                  <v-img max-width="70" src="https://cdn.undanganweb.com/hi/2022/03/Asset-1-1.png" class="mt-16">
+                  </v-img>
+                </div>
+                <h1 class="white--text text-center font-weight-medium mt-5">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+                <p class="white--text text-center font-weight-light body-1 mx-5 mt-10 pb-10">
+                  {{ dataApi.wedding.kata_mutiara }}</p>
+              </v-card>
+            </v-container>
+
+            <!-- Page 3 -->
+            <v-container fluid class="bg-page3">
+              <p class="white--text text-center mempelai mt-10">Sang Mempelai</p>
+              <div v-if="displayDesktop">
+                <v-row align="center" justify="center">
+                  <v-col>
+                    <div class="" align="center" justify="center">
+                      <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita" max-width="400"
+                        max-height="400" class="rounded-circle"></v-img>
+                      <p class="white--text text-center mempelai2 mt-12">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
+                      <p class="white--text text-center title mx-16">{{ dataApi.wedding.profil_wanita }}</p>
+                      <p class="white--text text-center title">Alamat : Klaling Krajan Rt 05/ Rw 01 No. 66, Jekulo,
+                        Kudus</p>
+                    </div>
+                    <div class="d-flex justify-center">
+                      <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab>
+                        <v-icon>mdi-instagram</v-icon>
+                      </v-btn>
+                    </div>
+                  </v-col>
+                  <v-col>
+                    <div class="" align="center" justify="center">
+                      <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria" max-width="400" max-height="400"
+                        class="rounded-circle"></v-img>
+                      <p class="white--text text-center mempelai2 mt-12">{{ dataApi.wedding.nama_lengkap_pria }}</p>
+                      <p class="white--text text-center title mx-16">{{ dataApi.wedding.profil_pria }}</p>
+                      <p class="white--text text-center title">Alamat : Klaling Krajan Rt 05/ Rw 01 No. 66, Jekulo,
+                        Kudus</p>
+                    </div>
+                    <div class="d-flex justify-center">
+                      <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab>
+                        <v-icon>mdi-instagram</v-icon>
+                      </v-btn>
+                    </div>
+                  </v-col>
+                </v-row>
+              </div>
+              <div v-else>
+                <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
+                <p class="white--text text-center mempelai2 mx-12">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
+                <p class="white--text text-center subtitle mx-12 font-weight-light">{{ dataApi.wedding.profil_wanita }}
+                </p>
+                <p class="white--text text-center subtitle mx-12 font-weight-light">Alamat : Klaling Krajan Rt 05/ Rw 01
+                  No. 66, Jekulo, Kudus</p>
+                <div class="d-flex justify-center">
+                  <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab>
+                    <v-icon>mdi-instagram</v-icon>
+                  </v-btn>
+                </div>
+
+                <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
+                <p class="white--text text-center mempelai2 mx-12">{{ dataApi.wedding.nama_lengkap_pria }}</p>
+                <p class="white--text text-center subtitle mx-12 font-weight-light">{{ dataApi.wedding.profil_pria }}
+                </p>
+                <p class="white--text text-center subtitle mx-12 font-weight-light">Perumahan Kudus Permai 1-16
+                  Rt.4/Rw.4, Desa garung lor, kaliwungu, kudus.</p>
+                <div class="d-flex justify-center">
+                  <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab>
+                    <v-icon>mdi-instagram</v-icon>
+                  </v-btn>
+                </div>
+              </div>
+            </v-container>
+
+            <!-- Page 4 & 5 -->
+            <div class="bg-page4"
+              :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_3+')'}">
             </div>
-            </v-col>
-            <v-col>
-              <div class="" align="center" justify="center">
-                <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria" max-width="400" max-height="400" class="rounded-circle"></v-img>
-                <p class="white--text text-center mempelai2 mt-12">{{ dataApi.wedding.nama_lengkap_pria }}</p>
-                <p  class="white--text text-center title mx-16">{{ dataApi.wedding.profil_pria }}</p>
-                <p class="white--text text-center title">Alamat : Klaling Krajan Rt 05/ Rw 01 No. 66, Jekulo, Kudus</p>
-              </div>
-              <div class="d-flex justify-center">
-                <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab><v-icon>mdi-instagram</v-icon></v-btn>
-              </div>
-            </v-col>
-          </v-row>
-        </div>
-        <div v-else>
-          <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita"></v-img>
-        <p class="white--text text-center mempelai2 mx-12">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
-        <p  class="white--text text-center subtitle mx-12 font-weight-light">{{ dataApi.wedding.profil_wanita }}</p>
-        <p class="white--text text-center subtitle mx-12 font-weight-light">Alamat : Klaling Krajan Rt 05/ Rw 01 No. 66, Jekulo, Kudus</p>
-        <div class="d-flex justify-center">
-          <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab><v-icon>mdi-instagram</v-icon></v-btn>
-        </div>
+            <v-container fluid class="bg-page5" :class="[displayDesktop ? 'px-16' : '']"
+              :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_4+')'}">
+              <p class="white--text text-center font-weight-light mx-12 mt-5"
+                :class="[displayDesktop ? 'display-1' : 'title']">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ
+              </p>
+              <p class="white--text text-center font-weight-light mx-12 mt-5">Assalamu’alaikum Warahmatullahi
+                Wabarakatuh</p>
+              <p class="white--text text-center font-weight-light mx-8 mt-5">Dengan memohon Rahmat Allah Subhanahu wa
+                Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk
+                hadir di acara pernikahan kami yang akan dilaksanakan pada:</p>
+              <v-card color="blue-grey lighten-5" class="mt-10 mx-10 rounded-xl">
+                <div class="d-flex justify-center">
+                  <v-img max-width="100" src="https://cdn.undanganweb.com/hi/2022/03/shyshsd-1.png" class="mt-10">
+                  </v-img>
+                </div>
+                <p class="brown--text text-center mempelai3 mx-12 font-weight-light">{{ dataApi.wedding.judul_akad }}
+                </p>
+                <p class="brown--text text-center mx-12">{{ dataApi.wedding.tanggal_akad }}</p>
+                <p class="brown--text text-center mx-12 mt-5 pb-5">{{ dataApi.wedding.waktu_akad }}</p>
+              </v-card>
 
-        <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
-        <p class="white--text text-center mempelai2 mx-12">{{ dataApi.wedding.nama_lengkap_pria }}</p>
-        <p  class="white--text text-center subtitle mx-12 font-weight-light">{{ dataApi.wedding.profil_pria }}</p>
-        <p class="white--text text-center subtitle mx-12 font-weight-light">Perumahan Kudus Permai 1-16 Rt.4/Rw.4, Desa garung lor, kaliwungu, kudus.</p>
-        <div class="d-flex justify-center">
-          <v-btn dark color="grey darken-1" class="mt-10" elevation="" fab><v-icon>mdi-instagram</v-icon></v-btn>
-        </div>
-        </div>
-      </v-container>
+              <v-card color="blue-grey lighten-5" class="mt-10 mx-10 rounded-xl">
+                <div class="d-flex justify-center">
+                  <v-img max-width="100" src="https://cdn.undanganweb.com/hi/2022/03/13.png" class="mt-10"></v-img>
+                </div>
+                <p class="brown--text text-center mempelai3 mx-12 font-weight-light">{{ dataApi.wedding.judul_resepsi }}
+                </p>
+                <p class="brown--text text-center mx-12">{{ dataApi.wedding.tanggal_resepsi }}</p>
+                <p class="brown--text text-center mx-12 mt-5 pb-5">{{ dataApi.wedding.waktu_resepsi }}</p>
+              </v-card>
 
-      <!-- Page 4 & 5 -->
-      <div class="bg-page4" :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_3+')'}"></div>
-      <v-container fluid class="bg-page5" :class="[displayDesktop ? 'px-16' : '']" :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_4+')'}">
-        <p class="white--text text-center font-weight-light mx-12 mt-5" :class="[displayDesktop ? 'display-1' : 'title']">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</p>
-        <p class="white--text text-center font-weight-light mx-12 mt-5">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
-        <p class="white--text text-center font-weight-light mx-8 mt-5">Dengan memohon Rahmat Allah Subhanahu wa Ta’ala dan dengan segenap kerendahan hati, perkenankanlah kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami yang akan dilaksanakan pada:</p>
-        <v-card color="blue-grey lighten-5" class="mt-10 mx-10 rounded-xl">
-          <div class="d-flex justify-center">
-            <v-img max-width="100" src="https://cdn.undanganweb.com/hi/2022/03/shyshsd-1.png" class="mt-10"></v-img>
-          </div>
-        <p class="brown--text text-center mempelai3 mx-12 font-weight-light">{{ dataApi.wedding.judul_akad }}</p>
-        <p class="brown--text text-center mx-12">{{ dataApi.wedding.tanggal_akad }}</p>
-        <p class="brown--text text-center mx-12 mt-5 pb-5">{{ dataApi.wedding.waktu_akad }}</p>
-        </v-card>
+              <v-card color="blue-grey lighten-5" class="mt-10 mx-10 rounded-xl">
+                <div class="d-flex justify-center">
+                  <v-img max-width="100"
+                    src="https://cdn.undanganweb.com/hi/2022/03/578-5782294_map-gps-pin-outdoor-outside-comments-icon-lokasi-1-1.png"
+                    class="mt-10"></v-img>
+                </div>
+                <p class="brown--text text-center mempelai3 mx-12 font-weight-light">Lokasi</p>
+                <p class="brown--text text-center mx-4 mt-5 pb-5">{{ dataApi.wedding.lokasi_resepsi }}</p>
+                <div class="d-flex justify-center">
+                  <v-btn @mouseover="arrow = true" color="brown lighten-1" dark @mouseleave="arrow = false"
+                    class="mb-10" :href="dataApi.wedding.short_url">
+                    View Map <v-icon v-show="arrow">mdi-menu-right</v-icon>
+                  </v-btn>
+                </div>
+              </v-card>
+            </v-container>
 
-        <v-card color="blue-grey lighten-5" class="mt-10 mx-10 rounded-xl">
-          <div class="d-flex justify-center">
-            <v-img max-width="100" src="https://cdn.undanganweb.com/hi/2022/03/13.png" class="mt-10"></v-img>
-          </div>
-        <p class="brown--text text-center mempelai3 mx-12 font-weight-light">{{ dataApi.wedding.judul_resepsi }}</p>
-        <p class="brown--text text-center mx-12">{{ dataApi.wedding.tanggal_resepsi }}</p>
-        <p class="brown--text text-center mx-12 mt-5 pb-5">{{ dataApi.wedding.waktu_resepsi }}</p>
-        </v-card>
-
-        <v-card color="blue-grey lighten-5" class="mt-10 mx-10 rounded-xl">
-          <div class="d-flex justify-center">
-            <v-img max-width="100" src="https://cdn.undanganweb.com/hi/2022/03/578-5782294_map-gps-pin-outdoor-outside-comments-icon-lokasi-1-1.png" class="mt-10"></v-img>
-          </div>
-        <p class="brown--text text-center mempelai3 mx-12 font-weight-light">Lokasi</p>
-        <p class="brown--text text-center mx-4 mt-5 pb-5">{{ dataApi.wedding.lokasi_resepsi }}</p>
-        <div class="d-flex justify-center">
-          <v-btn @mouseover="arrow = true" color="brown lighten-1" dark
-          @mouseleave="arrow = false" class="mb-10" :href="dataApi.wedding.short_url">
-          View Map <v-icon v-show="arrow">mdi-menu-right</v-icon></v-btn>
-        </div>
-        </v-card>
-      </v-container>
-
-      <!-- Page 6 -->
-      <v-container fluid class="bg-page6" >
-        <v-card max-height="1000" class="mx-16 mt-5 rounded-xl" v-if="displayDesktop">
-          <v-img max-height="500" src="https://cdn.undanganweb.com/hi/2022/03/IMG_5868.jpg"></v-img>
-          <v-card-title class="justify-center">
-            <p class="brown--text text-center menuju mx-12 font-weight-light">Menuju Hari Bahagia</p>
-          </v-card-title>
-          <v-card-text>
-        <p class="brown--text text-center mx-6 subtitle font-weight-light">Siang dan malam berganti begitu cepat, di antara saat-saat mendebarkan yang belum pernah kami rasakan sebelumnya. Kami nantikan kehadiran para keluarga dan sahabat, untuk menjadi saksi ikrar janji suci kami di hari yang bahagia.</p>
-          </v-card-text>
-          <v-card-text>
-          <v-row class="title brown--text font-weight-medium mx-5 text-center">
-            <v-col>{{ displayDays }}</v-col>
-            <v-col>{{ displayHours }}</v-col>
-            <v-col>{{ displayMinutes }}</v-col>
-            <v-col>{{ displaySeconds }}</v-col>
-          </v-row>  
-          <v-row class="text-caption brown--text font-weight-light mx-5 text-center mt-n2">
-            <v-col>Day</v-col>
-            <v-col>Hrs</v-col>
-            <v-col>Min</v-col>
-            <v-col>Sec</v-col>
-          </v-row>  
-          </v-card-text>
-        </v-card>
-        <v-card class="mx-8 mt-5 rounded-xl" v-else>
-          <v-img src="https://cdn.undanganweb.com/hi/2022/03/IMG_5868.jpg"></v-img>
-          <v-card-title class="justify-center">
-            <p class="brown--text text-center menuju mx-12 font-weight-light">Menuju Hari Bahagia</p>
-          </v-card-title>
-          <v-card-text>
-        <p class="brown--text text-center mx-6 subtitle font-weight-light">Siang dan malam berganti begitu cepat, di antara saat-saat mendebarkan yang belum pernah kami rasakan sebelumnya. Kami nantikan kehadiran para keluarga dan sahabat, untuk menjadi saksi ikrar janji suci kami di hari yang bahagia.</p>
-          </v-card-text>
-          <v-card-text>
-          <v-row class="title brown--text font-weight-medium mx-5 text-center">
-            <v-col>{{ displayDays }}</v-col>
-            <v-col>{{ displayHours }}</v-col>
-            <v-col>{{ displayMinutes }}</v-col>
-            <v-col>{{ displaySeconds }}</v-col>
-          </v-row>  
-          <v-row class="text-caption brown--text font-weight-light mx-5 text-center mt-n2">
-            <v-col>Day</v-col>
-            <v-col>Hrs</v-col>
-            <v-col>Min</v-col>
-            <v-col>Sec</v-col>
-          </v-row>  
-          </v-card-text>
-        </v-card>
-
-        <v-card class="mx-16 mt-5 rounded-xl" v-if="displayDesktop">
-          <v-card-title class="justify-center">
-            <p class="brown--text text-center menuju mx-12 font-weight-light">Virtual Wedding</p>
-          </v-card-title> 
-          <v-card-text>
-        <p class="brown--text text-center mx-6 subtitle font-weight-light">Mengingat pandemi covid-19, kami tidak dapat mengundang seluruh sahabat tercinta kami secara langsung, karena penting bagi kami untuk menjaga semuanya agar tetap aman, jadi selain acara secara langsung, kami juga berencana untuk mempublikasikan pernikahan kami secara virtual melalui zoom dan live instagram yang bisa kamu ikuti melalui link berikut</p>
-          </v-card-text>
-          <v-card-text class="d-flex justify-center">
-            <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark><v-icon left>mdi-instagram</v-icon>Instagram</v-btn>
-          </v-card-text>
-          <v-card-text class="d-flex justify-center">
-            <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark><v-icon left>mdi-play-circle</v-icon>Zoom Live Event</v-btn>
-          </v-card-text>
-        </v-card>
-
-        <v-card class="mx-8 mt-5 rounded-xl" v-else>
-          <v-card-title class="justify-center">
-            <p class="brown--text text-center menuju mx-12 font-weight-light">Virtual Wedding</p>
-          </v-card-title> 
-          <v-card-text>
-        <p class="brown--text text-center mx-6 subtitle font-weight-light">Mengingat pandemi covid-19, kami tidak dapat mengundang seluruh sahabat tercinta kami secara langsung, karena penting bagi kami untuk menjaga semuanya agar tetap aman, jadi selain acara secara langsung, kami juga berencana untuk mempublikasikan pernikahan kami secara virtual melalui zoom dan live instagram yang bisa kamu ikuti melalui link berikut</p>
-          </v-card-text>
-          <v-card-text class="d-flex justify-center">
-            <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark><v-icon left>mdi-instagram</v-icon>Instagram</v-btn>
-          </v-card-text>
-          <v-card-text class="d-flex justify-center">
-            <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark><v-icon left>mdi-play-circle</v-icon>Zoom Live Event</v-btn>
-          </v-card-text>
-        </v-card>
-      </v-container>
-
-      <!-- Page 7 -->
-      <v-container fluid class="bg-page7">
-         <v-carousel
-    cycle
-    height="400"
-    :width="[ displayDesktop ? '80%' : '100%']"
-    hide-delimiter-background
-    show-arrows-on-hover
-  >
-   <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
-    ></v-carousel-item>
-  </v-carousel>
-        <p class="white--text text-center mx-6 mt-16 subtitle font-weight-light">{{ dataApi.wedding.kata_mutiara }}</p>
-        <p class="white--text text-center mx-6 mt-16 title font-weight-light">Perjalanan Cinta Kami</p>
-        <p class="white--text text-center mx-6 subtitle font-weight-light">“Datangnya cinta adalah takdir, dia datang tak pernah terduga”</p>
-        <div class="d-flex justify-center">
-        <v-img max-width="800" src="https://cdn.undanganweb.com/hi/2022/03/IMG_5843.jpg" class="mb-5" v-if="displayDesktop"></v-img>
-        <v-img max-width="300" src="https://cdn.undanganweb.com/hi/2022/03/IMG_5843.jpg" class="mb-5" v-else></v-img>
-        </div>
-         <v-timeline
-        align-top
-        :dense="$vuetify.breakpoint.smAndDown"
-      >
-        <v-timeline-item
-           color="brown"
-          fill-dot
-          large
-          icon="mdi-heart-outline"
-          v-for="(item,i) in dataApi.stories"
-          :key="i"
-        >
-        <v-row class="pt-4" v-if="displayDesktop">  
-          <v-col v-if="i%2 == 0">
-            <p class="pink--text subtitle font-weight-bold">{{ item.tanggal }}</p>
-            <p class="subtitle font-weight-bold">{{ item.judul }}</p>
-            <p class="white--text subtitle font-weight-light ">{{ item.cerita }}</p>
-          </v-col>
-          <v-col v-else>
-            <p class="pink--text subtitle font-weight-bold text-end">{{ item.tanggal }}</p>
-            <p class="subtitle font-weight-bold text-end">{{ item.judul }}</p>
-            <p class="white--text subtitle font-weight-light text-end">{{ item.cerita }}</p>
-          </v-col>
-        </v-row>
-          <v-row class="pt-4" v-else>
-            <v-col>
-              <p class="pink--text subtitle font-weight-bold">{{ item.tanggal }}</p>
-              <p class="subtitle font-weight-bold">{{ item.judul }}</p>
-              <p class="white--text subtitle font-weight-light">{{ item.cerita }}</p>
-            </v-col>
-          </v-row>
-        </v-timeline-item>
-      </v-timeline>
-      </v-container>
-
-      <!-- Page 8 -->
-      <v-container fluid>
-        <v-card dark color="grey" class="rounded-xl mt-10"  :class="[displayDesktop ? 'mx-16' : '']">
-          <v-card-title class="justify-center">
-            <p class="font-weight-medium cardTitleFont heading">Covid19</p>
-          </v-card-title>
-          <v-card-text>
-            <p class="font-weight-light body-1 text-center">Untuk menjaga acara pernikahan ini aman dari resiko penularan Covid-19, mohon simak anjuran berikut sebelum anda hadir ke lokasi:</p>
-            <div class="d-flex justify-center">
-              <v-dialog
-              v-model="dialog4"
-              :width="[displayDesktop ? '800' : '500']"
-              
-            >
-              <template v-slot:activator="{ on, attrs }">
-              <v-btn class="rounded-xl" elevation="" color="grey darken-1" v-bind="attrs" v-on="on"><v-icon left>mdi-folder-upload</v-icon> anjuran terkait covid-19</v-btn>
-              </template>
-        
-              <v-card>
+            <!-- Page 6 -->
+            <v-container fluid class="bg-page6">
+              <v-card max-height="1000" class="mx-16 mt-5 rounded-xl" v-if="displayDesktop">
+                <v-img max-height="500" src="https://cdn.undanganweb.com/hi/2022/03/IMG_5868.jpg"></v-img>
                 <v-card-title class="justify-center">
-                  <p class="font-weight-light text-h4 text-center">
-                    COVID-19
-                  </p>
-                </v-card-title>
-                <v-card-title  class="justify-center">
-                  <p class="font-weight-light body-1 text-center" :class="[displayDesktop ? '' : 'mb-n5']">Protokol Kesehatan Acara Pernikahan</p>
-                </v-card-title>
-                <v-card-title  class="justify-center">
-                  <p class="font-weight-light body-1 text-center " :class="[displayDesktop ? '' : 'mb-n5']">******</p>
+                  <p class="brown--text text-center menuju mx-12 font-weight-light">Menuju Hari Bahagia</p>
                 </v-card-title>
                 <v-card-text>
-                  <v-card color="blue-grey lighten-1">
-                    <v-card-title class="justify-start">
-                      <p class="font-weight-light text-h5 white--text mb-n5">Menggunakan Masker</p>
-                    </v-card-title>
-                    <v-card-text class="text-start subtitle white--text font-weight-light mt-10">
-                      <p>Seluruh peserta acara termasuk keluarga, panitia penyelenggara, dan para tamu undangan diwajibkan untuk mengenakan masker. Untuk itu kami mohon para tamu undangan untuk dapat membawa dan mengenakan masker masing-masing sebelum memasuki ruangan.</p>
-                    </v-card-text>
-                  </v-card>
-
-                  <v-card color="blue-grey lighten-1">
-                    <v-card-text class="text-start subtitle white--text font-weight-light mt-10">
-                      <p>Cuci Tangan & Hand Sanitizer</p>
-                    </v-card-text>
-                  </v-card>
-
-                  <v-card color="blue-grey lighten-1">
-                    <v-card-text class="text-start subtitle white--text font-weight-light mt-10">
-                      <p>Jaga Jarak</p>
-                    </v-card-text>
-                  </v-card>
-                </v-card-text>
-                
-              </v-card>
-            </v-dialog>
-            </div>
-          </v-card-text>
-        </v-card>
-
-        <v-card dark color="grey" class="rounded-xl mt-10" :class="[displayDesktop ? 'mx-16' : '']">
-          <v-card-title class="justify-center">
-            <p class="font-weight-medium cardTitleFont heading">Wedding Gift</p>
-          </v-card-title>
-          <v-card-text>
-            <p class="font-weight-light body-1 text-center">Bagi Keluarga dan Sahabat
-yang ingin mengirimkan hadiah,
-silahkan mengirimkannya melalui :</p>
-            <div class="d-flex justify-center mx-16 mb-5">
-              <v-dialog
-      v-model="dialog"
-      
-      width="500"
-    >
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn large block elevation="" color="grey darken-1"  v-bind="attrs"
-        v-on="on">Transfer</v-btn>
-
-      </template>
-
-      <v-card>
-        <v-card-title class="justify-center">
-          <p class="font-weight-light mt-5 mx-5 text-center text-caption">
-          Silahkan transfer hadiah melalui nomor rekening maupun dompet digital berikut :
-          </p>
-          <v-img src="https://cdn.undanganweb.com/hi/2022/03/BCA_logo_Bank_Central_Asia.png" max-width="100"></v-img>
-        </v-card-title>
-
-        <v-card-text>
-          <p class="font-weight-medium title text-center black--text">{{ dataApi.wedding.rek_2 }}</p>
-        </v-card-text>
-
-        <v-divider></v-divider>
-
-        <v-card-title class="justify-center">
-          <p class="font-weight-light mt-5 mx-5 text-center text-caption">
-          Silahkan transfer hadiah melalui nomor rekening maupun dompet digital berikut :
-          </p>
-          <v-img src="https://logos-download.com/wp-content/uploads/2016/06/Bank_Mandiri_logo_white_bg.png" max-width="100"></v-img>
-        </v-card-title>
-
-        <v-card-text>
-          <p class="font-weight-medium title text-center black--text">{{ dataApi.wedding.rek_1 }}</p>
-        </v-card-text>
-      </v-card>
-              </v-dialog>
-            </div>
-            <div class="d-flex justify-center mx-16">
-              <v-dialog
-              v-model="dialog3"
-              
-              width="500"
-            >
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn large block elevation="" color="grey darken-1"  v-bind="attrs"
-                v-on="on">Kirim</v-btn>
-        
-              </template>
-        
-              <v-card>
-                <v-card-title class="justify-center">
-                  <p class="font-weight-light mt-5 mx-5 text-center text-caption">
-                  Silahkan kirim kado ke alamat berikut :
+                  <p class="brown--text text-center mx-6 subtitle font-weight-light">Siang dan malam berganti begitu
+                    cepat, di antara saat-saat mendebarkan yang belum pernah kami rasakan sebelumnya. Kami nantikan
+                    kehadiran para keluarga dan sahabat, untuk menjadi saksi ikrar janji suci kami di hari yang bahagia.
                   </p>
-                  <p class="font-weight-light mt-5 mx-5 text-center text-h4 mb-n5">Ipung Dede</p>
-                </v-card-title>
-                <div class="d-flex justify-center mt-n16">
-                <v-img max-width="200" src="https://cdn.undanganweb.com/hi/2022/03/—Pngtree—kangaroo-dividing-line-dividing-line_3780548.png"></v-img>
-                </div>
-                <v-card-text class="black-text text-center mt-n16">
-                  <p>Jl. Ramayana, Makassar</p>
-                  <p>Kota Makassar</p>
-                  <p>0895632564563</p>
+                </v-card-text>
+                <v-card-text>
+                  <v-row class="title brown--text font-weight-medium mx-5 text-center">
+                    <v-col>{{ displayDays }}</v-col>
+                    <v-col>{{ displayHours }}</v-col>
+                    <v-col>{{ displayMinutes }}</v-col>
+                    <v-col>{{ displaySeconds }}</v-col>
+                  </v-row>
+                  <v-row class="text-caption brown--text font-weight-light mx-5 text-center mt-n2">
+                    <v-col>Day</v-col>
+                    <v-col>Hrs</v-col>
+                    <v-col>Min</v-col>
+                    <v-col>Sec</v-col>
+                  </v-row>
                 </v-card-text>
               </v-card>
-            </v-dialog>
-            </div>
-          </v-card-text>
-        </v-card>
+              <v-card class="mx-8 mt-5 rounded-xl" v-else>
+                <v-img src="https://cdn.undanganweb.com/hi/2022/03/IMG_5868.jpg"></v-img>
+                <v-card-title class="justify-center">
+                  <p class="brown--text text-center menuju mx-12 font-weight-light">Menuju Hari Bahagia</p>
+                </v-card-title>
+                <v-card-text>
+                  <p class="brown--text text-center mx-6 subtitle font-weight-light">Siang dan malam berganti begitu
+                    cepat, di antara saat-saat mendebarkan yang belum pernah kami rasakan sebelumnya. Kami nantikan
+                    kehadiran para keluarga dan sahabat, untuk menjadi saksi ikrar janji suci kami di hari yang bahagia.
+                  </p>
+                </v-card-text>
+                <v-card-text>
+                  <v-row class="title brown--text font-weight-medium mx-5 text-center">
+                    <v-col>{{ displayDays }}</v-col>
+                    <v-col>{{ displayHours }}</v-col>
+                    <v-col>{{ displayMinutes }}</v-col>
+                    <v-col>{{ displaySeconds }}</v-col>
+                  </v-row>
+                  <v-row class="text-caption brown--text font-weight-light mx-5 text-center mt-n2">
+                    <v-col>Day</v-col>
+                    <v-col>Hrs</v-col>
+                    <v-col>Min</v-col>
+                    <v-col>Sec</v-col>
+                  </v-row>
+                </v-card-text>
+              </v-card>
 
-        <v-card dark color="grey" class="rounded-xl mt-10" :class="[displayDesktop ? 'mx-16' : '']">
-          <v-card-title class="justify-center">
-            <p class="font-weight-medium cardTitleFont heading">Life Moment</p>
-          </v-card-title>
-          <v-card-text>
-            <p class="font-weight-light body-1 text-center">Bantu kami mengabadikan momen-momen bahagia di acara pernikahan kami dengan menandai postingan anda dengan hashtag berikut:</p>
-                        <div class="d-flex justify-center">
-              <v-btn class="rounded-xl font-weight-light" elevation="" color="grey darken-1"><v-icon left>mdi-folder-upload</v-icon> #monicharavi</v-btn>
-            </div>
-          </v-card-text>
-        </v-card>
+              <v-card class="mx-16 mt-5 rounded-xl" v-if="displayDesktop">
+                <v-card-title class="justify-center">
+                  <p class="brown--text text-center menuju mx-12 font-weight-light">Virtual Wedding</p>
+                </v-card-title>
+                <v-card-text>
+                  <p class="brown--text text-center mx-6 subtitle font-weight-light">Mengingat pandemi covid-19, kami
+                    tidak dapat mengundang seluruh sahabat tercinta kami secara langsung, karena penting bagi kami untuk
+                    menjaga semuanya agar tetap aman, jadi selain acara secara langsung, kami juga berencana untuk
+                    mempublikasikan pernikahan kami secara virtual melalui zoom dan live instagram yang bisa kamu ikuti
+                    melalui link berikut</p>
+                </v-card-text>
+                <v-card-text class="d-flex justify-center">
+                  <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark>
+                    <v-icon left>mdi-instagram</v-icon>Instagram
+                  </v-btn>
+                </v-card-text>
+                <v-card-text class="d-flex justify-center">
+                  <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark>
+                    <v-icon left>mdi-play-circle</v-icon>Zoom Live Event
+                  </v-btn>
+                </v-card-text>
+              </v-card>
 
-        <p class="mempelai3 font-weight-light my-16 text-center">Best Wishes</p>
-            <div :class="[displayDesktop ? 'mx-16' : '']">
-              <v-textarea label="Tulis Ucapan" v-model="form.ucapan" outlined dense rows="2"></v-textarea>
-              <v-text-field label="Nama Lengkap" v-model="form.nama" outlined prepend-inner-icon="mdi-account"></v-text-field>
-              <div class="d-flex flex-row-reverse">
-              <v-btn class="mt-5" @click="kirimUcapan">Kirim</v-btn>
+              <v-card class="mx-8 mt-5 rounded-xl" v-else>
+                <v-card-title class="justify-center">
+                  <p class="brown--text text-center menuju mx-12 font-weight-light">Virtual Wedding</p>
+                </v-card-title>
+                <v-card-text>
+                  <p class="brown--text text-center mx-6 subtitle font-weight-light">Mengingat pandemi covid-19, kami
+                    tidak dapat mengundang seluruh sahabat tercinta kami secara langsung, karena penting bagi kami untuk
+                    menjaga semuanya agar tetap aman, jadi selain acara secara langsung, kami juga berencana untuk
+                    mempublikasikan pernikahan kami secara virtual melalui zoom dan live instagram yang bisa kamu ikuti
+                    melalui link berikut</p>
+                </v-card-text>
+                <v-card-text class="d-flex justify-center">
+                  <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark>
+                    <v-icon left>mdi-instagram</v-icon>Instagram
+                  </v-btn>
+                </v-card-text>
+                <v-card-text class="d-flex justify-center">
+                  <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark>
+                    <v-icon left>mdi-play-circle</v-icon>Zoom Live Event
+                  </v-btn>
+                </v-card-text>
+              </v-card>
+            </v-container>
+
+            <!-- Page 7 -->
+            <v-container fluid class="bg-page7">
+              <v-carousel cycle height="400" :width="[ displayDesktop ? '80%' : '100%']" hide-delimiter-background
+                show-arrows-on-hover>
+                <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src" reverse-transition="fade-transition"
+                  transition="fade-transition"></v-carousel-item>
+              </v-carousel>
+              <p class="white--text text-center mx-6 mt-16 subtitle font-weight-light">
+                {{ dataApi.wedding.kata_mutiara }}</p>
+              <p class="white--text text-center mx-6 mt-16 title font-weight-light">Perjalanan Cinta Kami</p>
+              <p class="white--text text-center mx-6 subtitle font-weight-light">“Datangnya cinta adalah takdir, dia
+                datang tak pernah terduga”</p>
+              <div class="d-flex justify-center">
+                <v-img max-width="800" src="https://cdn.undanganweb.com/hi/2022/03/IMG_5843.jpg" class="mb-5"
+                  v-if="displayDesktop"></v-img>
+                <v-img max-width="300" src="https://cdn.undanganweb.com/hi/2022/03/IMG_5843.jpg" class="mb-5" v-else>
+                </v-img>
               </div>
+              <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
+                <v-timeline-item color="brown" fill-dot large icon="mdi-heart-outline"
+                  v-for="(item,i) in dataApi.stories" :key="i">
+                  <v-row class="pt-4" v-if="displayDesktop">
+                    <v-col v-if="i%2 == 0">
+                      <p class="pink--text subtitle font-weight-bold">{{ item.tanggal }}</p>
+                      <p class="subtitle font-weight-bold">{{ item.judul }}</p>
+                      <p class="white--text subtitle font-weight-light ">{{ item.cerita }}</p>
+                    </v-col>
+                    <v-col v-else>
+                      <p class="pink--text subtitle font-weight-bold text-end">{{ item.tanggal }}</p>
+                      <p class="subtitle font-weight-bold text-end">{{ item.judul }}</p>
+                      <p class="white--text subtitle font-weight-light text-end">{{ item.cerita }}</p>
+                    </v-col>
+                  </v-row>
+                  <v-row class="pt-4" v-else>
+                    <v-col>
+                      <p class="pink--text subtitle font-weight-bold">{{ item.tanggal }}</p>
+                      <p class="subtitle font-weight-bold">{{ item.judul }}</p>
+                      <p class="white--text subtitle font-weight-light">{{ item.cerita }}</p>
+                    </v-col>
+                  </v-row>
+                </v-timeline-item>
+              </v-timeline>
+            </v-container>
 
-            <v-row class="fill-height" justify="start">
-            <v-col>
-              <div class="overflowAuto">
-              <div v-for="(uc, id) in dataApi.comments" :key="id">
-                <p class="font-weight-bold mt-5">{{ uc.owner }}</p>
-                <p class="font-weight-light">{{ uc.content }}</p>
+            <!-- Page 8 -->
+            <v-container fluid>
+              <v-card dark color="grey" class="rounded-xl mt-10" :class="[displayDesktop ? 'mx-16' : '']">
+                <v-card-title class="justify-center">
+                  <p class="font-weight-medium cardTitleFont heading">Covid19</p>
+                </v-card-title>
+                <v-card-text>
+                  <p class="font-weight-light body-1 text-center">Untuk menjaga acara pernikahan ini aman dari resiko
+                    penularan Covid-19, mohon simak anjuran berikut sebelum anda hadir ke lokasi:</p>
+                  <div class="d-flex justify-center">
+                    <v-dialog v-model="dialog4" :width="[displayDesktop ? '800' : '500']">
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn class="rounded-xl" elevation="" color="grey darken-1" v-bind="attrs" v-on="on">
+                          <v-icon left>mdi-folder-upload</v-icon> anjuran terkait covid-19
+                        </v-btn>
+                      </template>
+
+                      <v-card>
+                        <v-card-title class="justify-center">
+                          <p class="font-weight-light text-h4 text-center">
+                            COVID-19
+                          </p>
+                        </v-card-title>
+                        <v-card-title class="justify-center">
+                          <p class="font-weight-light body-1 text-center" :class="[displayDesktop ? '' : 'mb-n5']">
+                            Protokol Kesehatan Acara Pernikahan</p>
+                        </v-card-title>
+                        <v-card-title class="justify-center">
+                          <p class="font-weight-light body-1 text-center " :class="[displayDesktop ? '' : 'mb-n5']">
+                            ******</p>
+                        </v-card-title>
+                        <v-card-text>
+                          <v-card color="blue-grey lighten-1">
+                            <v-card-title class="justify-start">
+                              <p class="font-weight-light text-h5 white--text mb-n5">Menggunakan Masker</p>
+                            </v-card-title>
+                            <v-card-text class="text-start subtitle white--text font-weight-light mt-10">
+                              <p>Seluruh peserta acara termasuk keluarga, panitia penyelenggara, dan para tamu undangan
+                                diwajibkan untuk mengenakan masker. Untuk itu kami mohon para tamu undangan untuk dapat
+                                membawa dan mengenakan masker masing-masing sebelum memasuki ruangan.</p>
+                            </v-card-text>
+                          </v-card>
+
+                          <v-card color="blue-grey lighten-1">
+                            <v-card-text class="text-start subtitle white--text font-weight-light mt-10">
+                              <p>Cuci Tangan & Hand Sanitizer</p>
+                            </v-card-text>
+                          </v-card>
+
+                          <v-card color="blue-grey lighten-1">
+                            <v-card-text class="text-start subtitle white--text font-weight-light mt-10">
+                              <p>Jaga Jarak</p>
+                            </v-card-text>
+                          </v-card>
+                        </v-card-text>
+
+                      </v-card>
+                    </v-dialog>
+                  </div>
+                </v-card-text>
+              </v-card>
+
+              <v-card dark color="grey" class="rounded-xl mt-10" :class="[displayDesktop ? 'mx-16' : '']">
+                <v-card-title class="justify-center">
+                  <p class="font-weight-medium cardTitleFont heading">Wedding Gift</p>
+                </v-card-title>
+                <v-card-text>
+                  <p class="font-weight-light body-1 text-center">Bagi Keluarga dan Sahabat
+                    yang ingin mengirimkan hadiah,
+                    silahkan mengirimkannya melalui :</p>
+                  <div class="d-flex justify-center mx-16 mb-5">
+                    <v-dialog v-model="dialog" width="500">
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn large block elevation="" color="grey darken-1" v-bind="attrs" v-on="on">Transfer</v-btn>
+
+                      </template>
+
+                      <v-card>
+                        <v-card-title class="justify-center">
+                          <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                            Silahkan transfer hadiah melalui nomor rekening maupun dompet digital berikut :
+                          </p>
+                          <v-img src="https://cdn.undanganweb.com/hi/2022/03/BCA_logo_Bank_Central_Asia.png"
+                            max-width="100"></v-img>
+                        </v-card-title>
+
+                        <v-card-text>
+                          <p class="font-weight-medium title text-center black--text">{{ dataApi.wedding.rek_2 }}</p>
+                        </v-card-text>
+
+                        <v-divider></v-divider>
+
+                        <v-card-title class="justify-center">
+                          <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                            Silahkan transfer hadiah melalui nomor rekening maupun dompet digital berikut :
+                          </p>
+                          <v-img
+                            src="https://logos-download.com/wp-content/uploads/2016/06/Bank_Mandiri_logo_white_bg.png"
+                            max-width="100"></v-img>
+                        </v-card-title>
+
+                        <v-card-text>
+                          <p class="font-weight-medium title text-center black--text">{{ dataApi.wedding.rek_1 }}</p>
+                        </v-card-text>
+                      </v-card>
+                    </v-dialog>
+                  </div>
+                  <div class="d-flex justify-center mx-16">
+                    <v-dialog v-model="dialog3" width="500">
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn large block elevation="" color="grey darken-1" v-bind="attrs" v-on="on">Kirim</v-btn>
+
+                      </template>
+
+                      <v-card>
+                        <v-card-title class="justify-center">
+                          <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                            Silahkan kirim kado ke alamat berikut :
+                          </p>
+                          <p class="font-weight-light mt-5 mx-5 text-center text-h4 mb-n5">Ipung Dede</p>
+                        </v-card-title>
+                        <div class="d-flex justify-center mt-n16">
+                          <v-img max-width="200"
+                            src="https://cdn.undanganweb.com/hi/2022/03/—Pngtree—kangaroo-dividing-line-dividing-line_3780548.png">
+                          </v-img>
+                        </div>
+                        <v-card-text class="black-text text-center mt-n16">
+                          <p>Jl. Ramayana, Makassar</p>
+                          <p>Kota Makassar</p>
+                          <p>0895632564563</p>
+                        </v-card-text>
+                      </v-card>
+                    </v-dialog>
+                  </div>
+                </v-card-text>
+              </v-card>
+
+              <v-card dark color="grey" class="rounded-xl mt-10" :class="[displayDesktop ? 'mx-16' : '']">
+                <v-card-title class="justify-center">
+                  <p class="font-weight-medium cardTitleFont heading">Life Moment</p>
+                </v-card-title>
+                <v-card-text>
+                  <p class="font-weight-light body-1 text-center">Bantu kami mengabadikan momen-momen bahagia di acara
+                    pernikahan kami dengan menandai postingan anda dengan hashtag berikut:</p>
+                  <div class="d-flex justify-center">
+                    <v-btn class="rounded-xl font-weight-light" elevation="" color="grey darken-1">
+                      <v-icon left>mdi-folder-upload</v-icon> #monicharavi
+                    </v-btn>
+                  </div>
+                </v-card-text>
+              </v-card>
+
+              <p class="mempelai3 font-weight-light my-16 text-center">Best Wishes</p>
+              <div :class="[displayDesktop ? 'mx-16' : '']">
+                <v-textarea label="Tulis Ucapan" v-model="form.ucapan" outlined dense rows="2"></v-textarea>
+                <v-text-field label="Nama Lengkap" v-model="form.nama" outlined prepend-inner-icon="mdi-account">
+                </v-text-field>
+                <div class="d-flex flex-row-reverse">
+                  <v-btn class="mt-5" @click="kirimUcapan">Kirim</v-btn>
+                </div>
+                <v-row class="fill-height mt-10 mx-16" v-if="displayDesktop">
+                  <v-col cols="10">
+                    <div class="d-flex ml-15">
+                      <div class="mr-auto pl-16 ml-16">{{ totalUcapan }} Reply</div>
+                      <div class="pr-16">
+                        <v-btn text @click="asc=!asc">Newest
+                          <v-icon v-if="asc">mdi-arrow-up</v-icon>
+                          <v-icon v-else>mdi-arrow-down</v-icon>
+                        </v-btn>
+                      </div>
+                    </div>
+                  </v-col>
+                </v-row>
+                <v-row v-else class="mt-5">
+                  <v-col cols="12">
+                    <div class="d-flex">
+                      <div class="mr-auto">{{ totalUcapan }} Reply</div>
+                      <div class="">
+                        <v-btn text @click="asc=!asc">Newest
+                          <v-icon v-if="asc">mdi-arrow-up</v-icon>
+                          <v-icon v-else>mdi-arrow-down</v-icon>
+                        </v-btn>
+                      </div>
+                    </div>
+                  </v-col>
+                </v-row>
+                <v-row class="fill-height" justify="start">
+                  <v-col>
+                    <div class="overflowAuto">
+                      <div v-for="(uc, id) in sorted" :key="id" class="my-5" :class="comments">
+                        <p class="font-weight-bold">{{ uc.owner }} <span
+                            class="pl-2 text-caption text--disabled">{{ uc.date_only }}</span></p>
+                        <p class="text-caption mt-n5 text--disabled">Ditulis oleh {{ uc.write_as }}, ({{ uc.sosmed }})
+                        </p>
+                        <p class="font-weight-light">{{ uc.content }}</p>
+                      </div>
+                    </div>
+                  </v-col>
+                </v-row>
+                <v-divider></v-divider>
               </div>
-            </div>
-            </v-col>
-          </v-row>
-          <v-divider></v-divider>
-            </div>
-      </v-container>
+            </v-container>
 
-      <!-- Page 9 & 10-->
-      <div class="bg-page9" :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_5+')'}">
-        <p class="menuju white--text text-center pt-10">Sampai Jumpa Di Hari Bahagia Kami</p>
-      </div>
-      <div class="bg-page10"></div>
-      <v-container fluid class="bg-page11">
-        <p class="footerTitleFont white--text text-center" :class="[displayDesktop ? 'mt-n16' : '']">{{ dataApi.wedding.nama_panggilan_wanita }} & {{ dataApi.wedding.nama_panggilan_pria }}</p>
-        <div class="d-flex justify-center">
-        <v-img src="https://cdn.undanganweb.com/hi/2022/03/Untitled-design-5.png" max-width="400" class="mt-n16" v-if="displayDesktop"></v-img>
-        <v-img src="https://cdn.undanganweb.com/hi/2022/03/Untitled-design-5.png" max-width="200" class="mt-n12" v-else></v-img>
-      </div>
-      <p class="companyNameFont white--text text-center"  :class="[displayDesktop ? 'mt-n16' : '']">&copy; Undangan Web</p>
-      <div class="d-flex justify-center">
-      <v-btn fab small color="grey lighten-2" elevation=""><v-icon>mdi-instagram</v-icon></v-btn>&nbsp;
-      <v-btn fab small color="grey lighten-2" elevation=""><v-icon>mdi-facebook</v-icon></v-btn>
-      </div>
-      </v-container>
-    </div>
-        <!-- Page Cover -->
-        <v-container fluid class="bg-page-cover" :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}" v-else>
-          <div align="center" justify="center">
-            <p class="body-1 font-weight-light white--text mt-14">{{ dataApi.wedding.judul_utama }}</p>
-            <p class="white--text pasangan">{{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
-            <p class="subtitle amber--text mt-n5" v-html="dataApi.wedding.h_dear"></p>
-            <p class="white--text font-weight-medium headline">namatamu</p>
-            <div class="d-flex justify-center">
-              <v-btn elevation="8" rounded class="font-weight-medium body-2" @mouseover="arrow = true"
-              @mouseleave="arrow = false" @click="scrollPlay" href="#two">
-              Open Invitation <v-icon v-show="arrow">mdi-menu-right</v-icon>
-            </v-btn>
+            <!-- Page 9 & 10-->
+            <div class="bg-page9"
+              :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_5+')'}">
+              <p class="menuju white--text text-center pt-10">Sampai Jumpa Di Hari Bahagia Kami</p>
             </div>
+            <div class="bg-page10"></div>
+            <v-container fluid class="bg-page11">
+              <p class="footerTitleFont white--text text-center" :class="[displayDesktop ? 'mt-n16' : '']">
+                {{ dataApi.wedding.nama_panggilan_wanita }} & {{ dataApi.wedding.nama_panggilan_pria }}</p>
+              <div class="d-flex justify-center">
+                <v-img src="https://cdn.undanganweb.com/hi/2022/03/Untitled-design-5.png" max-width="400" class="mt-n16"
+                  v-if="displayDesktop"></v-img>
+                <v-img src="https://cdn.undanganweb.com/hi/2022/03/Untitled-design-5.png" max-width="200" class="mt-n12"
+                  v-else></v-img>
+              </div>
+              <p class="companyNameFont white--text text-center" :class="[displayDesktop ? 'mt-n16' : '']">&copy;
+                Undangan Web</p>
+              <div class="d-flex justify-center">
+                <v-btn fab small color="grey lighten-2" elevation="">
+                  <v-icon>mdi-instagram</v-icon>
+                </v-btn>&nbsp;
+                <v-btn fab small color="grey lighten-2" elevation="">
+                  <v-icon>mdi-facebook</v-icon>
+                </v-btn>
+              </div>
+            </v-container>
           </div>
-        </v-container>
-    <audio id="song" ref="audioElm">
-      <source :src="'https://merestui.com'+dataApi.music.music_path"
-        type="audio/mp3">
-    </audio>
+          <!-- Page Cover -->
+          <v-container fluid class="bg-page-cover"
+            :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}"
+            v-else>
+            <div align="center" justify="center">
+              <p class="body-1 font-weight-light white--text mt-14">{{ dataApi.wedding.judul_utama }}</p>
+              <p class="white--text pasangan">{{ dataApi.wedding.nama_panggilan_pria }} &
+                {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+              <p class="subtitle amber--text mt-n5" v-html="dataApi.wedding.h_dear"></p>
+              <p class="white--text font-weight-medium headline">namatamu</p>
+              <div class="d-flex justify-center">
+                <v-btn elevation="8" rounded class="font-weight-medium body-2" @mouseover="arrow = true"
+                  @mouseleave="arrow = false" @click="scrollPlay" href="#two">
+                  Open Invitation <v-icon v-show="arrow">mdi-menu-right</v-icon>
+                </v-btn>
+              </div>
+            </div>
+          </v-container>
+          <audio id="song" ref="audioElm">
+            <source :src="'https://merestui.com'+dataApi.music.music_path" type="audio/mp3">
+          </audio>
         </div>
       </v-main>
     </v-app>
   </div>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./js/vue.js"></script>
-<script src="./js/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+    integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/vue.js"></script>
+  <script src="./js/jquery.js"></script>
 </body>
-</html>
 
+</html>

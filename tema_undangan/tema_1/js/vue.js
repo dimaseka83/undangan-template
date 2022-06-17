@@ -10,6 +10,8 @@ new Vue({
     form: [{
       nama: '',
       ucapan: '',
+      write_as: '',
+      sosmed: '',
     }],
     formBalasan: [{
       nama: '',
@@ -48,13 +50,15 @@ new Vue({
       axios.post('https://merestui.com/api/' + this.dataApi.order.url + '/comment/store', {
         ref_no: "1",
         name: this.form.nama,
-        write_as: this.form.nama,
-        sosmed: this.form.nama,
+        write_as: this.form.write_as,
+        sosmed: this.form.sosmed,
         comment: this.form.ucapan,
       })
       this.form = [{
         nama: '',
         ucapan: '',
+        write_as: '',
+        sosmed: '',
         // reply: []
       }];
       this.loadData();

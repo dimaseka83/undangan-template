@@ -17,13 +17,13 @@ new Vue({
                 src: 'https://digition.id/wp-content/uploads/2022/01/107378535-390608995231751-2801653375802710009-n-1ec00e7d9d4aa7cf58dc825091bbeb33.jpg',
               },
             ],
-              kehadiran: ['Hadir', 'Tidak Hadir'],
               openInvitation: false,
               ucapan: [],
               form: [{
                 nama: '',
                 ucapan: '',
-                kehadiran: '',
+                write_as: '',
+                sosmed: '',
               }],
 
               displayDays: 0,
@@ -79,14 +79,15 @@ new Vue({
             axios.post('https://merestui.com/api/'+this.dataApi.order.url+'/comment/store',{
               ref_no: "1",
               name: this.form.nama,
-              write_as: this.form.nama,
-              sosmed: this.form.nama,
+              write_as: this.form.write_as,
+              sosmed: this.form.sosmed,
               comment: this.form.ucapan,
             })
             this.form = [{
               nama: '',
               ucapan: '',
-              kehadiran: '',
+              write_as: '',
+              sosmed: '',
               // reply: []
             }];
             this.loadData();

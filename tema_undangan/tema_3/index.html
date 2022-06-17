@@ -618,17 +618,25 @@
                 <v-divider></v-divider>
                 <v-card-text>
                   <v-text-field label="Nama Anda" v-model="form.nama" solo></v-text-field>
+                  <v-row>
+                    <v-col>
+                        <v-text-field label="Ditulis Oleh" v-model="form.write_as" solo></v-text-field>
+                    </v-col>
+                    <v-col>
+                        <v-text-field label="Nama Sosmed" v-model="form.sosmed" solo></v-text-field>
+                    </v-col>
+                  </v-row>
                   <v-textarea label="Tulis Ucapan & Doa" v-model="form.ucapan" solo :counter="500" :maxlength="500">
                   </v-textarea>
-                  <v-select :items="kehadiran" v-model="form.kehadiran" label="Konfirmasi Kehadiran" solo></v-select>
                   <v-btn color="brown" @click="kirimUcapan" small dark>Kirim</v-btn>
                 </v-card-text>
                 <v-divider></v-divider>
                 <div class="overflowAuto">
                   <div v-for="(uc, idx) in dataApi.comments">
                     <div class="ml-10">
-                      <p class="text-caption font-weight-bold brown--text">{{ uc.owner }} </p>
-                      <p class="text-caption">{{ uc.content }}</p>
+                      <p class="font-weight-bold brown--text">{{ uc.owner }}  <span class="pl-2 text-caption text--disabled">{{ uc.date_only }}</span></p>
+                      <p class="text-caption mt-n5 text--disabled">Ditulis oleh {{ uc.write_as }}, ({{ uc.sosmed }})</p>
+                      <p class="">{{ uc.content }}</p>
                     </div>
                   </div>
                 </div>
