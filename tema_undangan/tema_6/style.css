@@ -14,10 +14,6 @@
         background-repeat: no-repeat;
         height: 150vh;
     }
-    .bg-page4 {
-        background-color: #fff;
-        height: 300vh;
-    }
 
     .bg-page5{
         background-image: url('./img/orange-image.png'), url('https://demo.datengdong.com/uploads/original/gallery/f92dc892d7faba8c2253a2ccfca156ba6ad908ad.jpg');
@@ -48,11 +44,6 @@
         background-position: top;
         background-repeat: no-repeat;
         height: 70vh;
-    }
-
-    .bg-page4 {
-        background-color: #fff;
-        height: 340vh;
     }
 
     .bg-page5{

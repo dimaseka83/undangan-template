@@ -468,19 +468,19 @@
     
                         <v-row class="mt-16">
                             <v-col>
-                                <v-btn color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
+                                <v-btn class="text-caption" color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
                             </v-col>
                             <v-col>
-                                <v-btn color="blue-grey" dark>Google Calendar</v-btn>
+                                <v-btn class="text-caption" color="blue-grey" dark>Google Calendar</v-btn>
                             </v-col>
                         </v-row>
                         <v-row justify="center" align="center">
-                            <v-btn color="blue-grey" dark>Yahoo Calendar</v-btn>
+                            <v-btn class="text-caption" color="blue-grey" dark>Yahoo Calendar</v-btn>
                         </v-row>
                     </div>
                 </v-container>
 
-                <v-container fluid class="bg-page4" id="story">
+                <v-container fluid id="story">
                     <v-row justify="center" align="center" class="mt-16">
                         <v-img max-width="150" src="https://demo.datengdong.com/themes/starlight/images/flower-2.png">
                         </v-img>
@@ -497,7 +497,7 @@
                             </v-carousel-item>
                         </v-carousel>
                     </div>
-                    <v-row justify="center" align="center" class="mt-16" id="dokumentasi">
+                    <v-row justify="center" align="center" id="dokumentasi">
                         <v-img max-width="150" src="https://demo.datengdong.com/themes/starlight/images/flower-2.png">
                         </v-img>
                     </v-row>
@@ -608,18 +608,20 @@
                         </v-row>
                     </div>
                     
+                </v-container>
 
-                    <div v-if="displayDesktop" class="d-flex justify-center">
+                                    <div v-if="displayDesktop" class="d-flex justify-center">
                         <iframe class="mt-16" width="1000" height="500" src="https://www.youtube.com/embed/hG_yZXiR45k"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                     </div>
-                    <iframe class="mt-16" width="382" height="240" src="https://www.youtube.com/embed/hG_yZXiR45k"
+                    <iframe class="mt-16" width="100%" height="240" src="https://www.youtube.com/embed/hG_yZXiR45k"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen v-else></iframe>
 
+                <v-container fluid class="bg-page4_1">
                     <v-row justify="center" align="center" class="mt-16">
                         <v-img max-width="150" src="https://demo.datengdong.com/themes/starlight/images/flower-2.png">
                         </v-img>

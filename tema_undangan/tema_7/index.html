@@ -619,7 +619,7 @@
                         </v-carousel>
                     </div>
 
-                    <v-row justify="center" align="center" class="mt-16">
+                    <v-row justify="center" align="center">
                         <v-img max-width="150" src="https://demo.datengdong.com/themes/starlight/images/flower-2.png">
                         </v-img>
                     </v-row>
@@ -707,16 +707,16 @@
                                 </v-card>
                             </v-col>
                         </v-row>
-                        <v-row class="mt-16">
+                        <v-row class="mt-16 mx-auto">
                             <v-col>
-                                <v-btn color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
+                                <v-btn class="text-caption" color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
                             </v-col>
                             <v-col>
-                                <v-btn color="blue-grey" dark>Google Calendar</v-btn>
+                                <v-btn class="text-caption" color="blue-grey" dark>Google Calendar</v-btn>
                             </v-col>
                         </v-row>
                         <v-row justify="center" align="center">
-                            <v-btn color="blue-grey" dark>Yahoo Calendar</v-btn>
+                            <v-btn class="text-caption" color="blue-grey" dark>Yahoo Calendar</v-btn>
                         </v-row>
                     </div>
 
@@ -763,7 +763,7 @@
                         <v-card width="600" class="mt-10" style="border: 2px solid #1976D2; background-color: transparent;">
                             <v-card-title>
                                 <div class="overflowAuto">
-                                <div v-for="(i, idx) in dataApi.comments" :key="idx">
+                                <div v-for="(i, idx) in dataApi.comments" :key="idx" class="text-start">
                                     <p class="title mx-4">{{ i.owner }} <span class="pl-2 text-caption text--disabled">{{ i.date_only }}</span></p>
                                     <p class="text-caption mx-4 mt-n5 text--disabled">Ditulis oleh {{ i.write_as }}, ({{ i.sosmed }})</p>
                                     <p class="text-caption mx-4">{{ i.content }}</p>

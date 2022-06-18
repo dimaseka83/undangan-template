@@ -237,7 +237,7 @@
                   <p class="font-weight-light mt-n4 text-center gold">{{ getTanggalResepsi }}</p>
                   <p class="font-weight-light text-center gold">Pukul {{ dataApi.wedding.waktu_resepsi }}</p>
                   <p class="font-weight-light text-center gold">Bertempat di :</p>
-                  <p class="font-weight-light mt-n4 text-center gold">{{ dataApi.wedding.lokasi_resepsi }} </p>
+                  <p class="font-weight-light mt-n4 text-center mx-5 gold">{{ dataApi.wedding.lokasi_resepsi }} </p>
                   <div class="d-flex justify-center">
                     <v-btn rounded dark color="blue-grey lighten-1" @click="openUrl(dataApi.wedding.short_url)">
                       <v-icon>mdi-magnify-plus-outline</v-icon>Lihat Lokasi
@@ -354,14 +354,9 @@
             <!-- Page 5 -->
             <v-container fluid class="bg-page5" id="dokumentasi">
               <p class="white--text font-italic fontLive mt-16">Gallery of Love</p>
-              <v-row class="mx-16 mb-16" v-if="displayDesktop">
+              <v-row class="mx-16 mb-16">
                 <hr class="hr1">
                 <v-icon dark x-large>mdi-heart</v-icon>
-                <hr class="hr1">
-              </v-row>
-              <v-row class="mx-16" v-else>
-                <hr class="hr1">
-                <v-icon dark small>mdi-heart</v-icon>
                 <hr class="hr1">
               </v-row>
               <div v-if="displayDesktop">
