@@ -5,11 +5,13 @@ new Vue({
         return {
             dataApi: [],
             loading: true,
+            openInvitation: false,
             kehadiran: ['Hadir', 'Tidak Hadir', ],
             displayDays: 0,
             displayHours: 0,
             displayMinutes: 0,
             displaySeconds: 0,
+            dialog: false,
             form: [{
                 nama: '',
                 write_as: '',
@@ -76,7 +78,12 @@ new Vue({
                 this.displayHours = hours < 10 ? '0' + hours : hours;
                 this.displayDays = days < 10 ? '0' + days : days;
             }, 1000);
-        }
+        },
+                        scrollPlay() {
+      var audio = this.$refs.audioElm;
+      audio.play();
+      this.openInvitation = true;
+        },
     },
 
     created() {
@@ -100,5 +107,25 @@ new Vue({
         _days() {
             return this._hours * 24;
         },
+                            namaRekening(){ 
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_1.split('-')[2];
+      }
+    },
+    nomorRekening(){
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_1.split('-')[1];
+      }
+    },
+    namaRekening1(){
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_2.split('-')[2];
+      }
+    },
+    nomorRekening1(){
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_2.split('-')[1];
+      }
+    }
     }
 });

@@ -561,20 +561,21 @@
 
             <!-- Page 6 -->
             <v-container fluid class="bg-page6" :class="[ displayDesktop ? 'px-16' : '']">
-              <p class="text-center fontPertemuan white--text">Reservasi Kehadiran</p>
-              <v-text-field label="Isi Nama Anda" solo></v-text-field>
-              <v-text-field label="Jumlah orang yang hadir" solo></v-text-field>
-              <p class="font-weight-light text-caption">Konfirmasi </p>
-              <v-radio-group class="font-weight-light text-caption">
-                <v-radio label="Iya, Saya Akan Datang"></v-radio>
-                <v-radio label="Maaf, Saya Tidak Bisa Datang"></v-radio>
-              </v-radio-group>
-              <v-hover v-slot="{ hover }">
-                <v-btn class="font-weight-light rounded-lg text-caption" block
-                  :style="{ 'background-color': hover ? '#D7CCC8' : '#5D4037', 'color': hover ? 'black' : 'white' }">
-                  Kirim WhatsApp
-                </v-btn>
-              </v-hover>
+              <p class="text-center fontPertemuan white--text">{{ dataApi.wedding.h_live_streaming }}</p>
+<p class="white--text text-center mx-6 subtitle font-weight-light">Mengingat pandemi covid-19, kami
+                    tidak dapat mengundang seluruh sahabat tercinta kami secara langsung, karena penting bagi kami untuk
+                    menjaga semuanya agar tetap aman, jadi selain acara secara langsung, kami juga berencana untuk
+                    mempublikasikan pernikahan kami secara virtual melalui zoom dan live instagram yang bisa kamu ikuti
+                    melalui link berikut</p>
+                    <div class="d-flex justify-center">
+<v-btn large class="rounded-lg mx-1" color="brown lighten-3">
+                    <v-icon left>mdi-instagram</v-icon>Instagram
+                  </v-btn>
+                  <v-btn large class="rounded-lg" color="brown lighten-3">
+                    <v-icon left>mdi-youtube</v-icon>Youtube
+                  </v-btn>
+                    </div>
+                                        
             </v-container>
 
             <!-- Page 7 -->
@@ -588,7 +589,43 @@
                 kebahagiaan kami
               </p>
 
-              <v-card color="brown lighten-3" class="pb-5"  :class="[ displayDesktop ? 'mx-16' : 'mx-6']">
+              <div v-if="displayDesktop">
+                <v-row>
+                  <v-col><v-card color="brown lighten-3" class="pb-5"  :class="[ displayDesktop ? 'mx-16' : 'mx-6']">
+                <div class="d-flex justify-center">
+                  <v-img width="200" height="200"
+                    src="https://www.yayasansimetri.or.id/wp-content/uploads/2021/03/Logo-BCA-blue-A4.png" class="my-6">
+                  </v-img>
+                </div>
+                <p class="text-center white--text">Nomor Rekening atas nama {{ namaRekening }}</p>
+                <p class="text-center brown--text font-weight-bold title" ref="rekening">{{ nomorRekening }}</p>
+                <div class="d-flex justify-center">
+                  <v-btn color="brown lighten-5" small @click="copy">
+                    <v-icon>mdi-content-copy</v-icon>Salin
+                  </v-btn>
+                </div>
+              </v-card>
+              </v-col>
+                  <v-col>
+                    <v-card color="brown lighten-3" class="pb-5"  :class="[ displayDesktop ? 'mx-16' : 'mx-6']">
+                <div class="d-flex justify-center">
+                  <v-img width="200" height="200"
+                    src="./img/pngegg.png" class="my-6">
+                  </v-img>
+                </div>
+                <p class="text-center white--text">Nomor Rekening atas nama {{ namaRekening1 }}</p>
+                <p class="text-center brown--text font-weight-bold title" ref="rekening1">{{ nomorRekening1 }}</p>
+                <div class="d-flex justify-center">
+                  <v-btn color="brown lighten-5" small @click="copy1">
+                    <v-icon>mdi-content-copy</v-icon>Salin
+                  </v-btn>
+                </div>
+              </v-card>
+                  </v-col>
+                </v-row>
+              </div>
+              <div v-else>
+                <v-card color="brown lighten-3" class="pb-5"  :class="[ displayDesktop ? 'mx-16' : 'mx-6']">
                 <div class="d-flex justify-center">
                   <v-img max-width="200" max-height="200"
                     src="https://www.yayasansimetri.or.id/wp-content/uploads/2021/03/Logo-BCA-blue-A4.png" class="my-6">
@@ -602,6 +639,22 @@
                   </v-btn>
                 </div>
               </v-card>
+
+              <v-card color="brown lighten-3" class="pb-5 mt-16"  :class="[ displayDesktop ? 'mx-16' : 'mx-6']">
+                <div class="d-flex justify-center">
+                  <v-img max-width="200" max-height="200"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Bank_Mandiri_logo_2016.svg/1200px-Bank_Mandiri_logo_2016.svg.png" class="my-6">
+                  </v-img>
+                </div>
+                <p class="text-center white--text">Nomor Rekening atas nama {{ namaRekening }}</p>
+                <p class="text-center brown--text font-weight-bold title" ref="rekening">{{ nomorRekening }}</p>
+                <div class="d-flex justify-center">
+                  <v-btn color="brown lighten-5" small @click="copy">
+                    <v-icon>mdi-content-copy</v-icon>Salin
+                  </v-btn>
+                </div>
+              </v-card>
+              </div>
 
               <v-row class="my-13 mx-16">
                 <hr class="hr3">
@@ -681,6 +734,11 @@
                   </v-col>
                 </v-row>
               </v-card>
+              <p class="cardTitleFont font-weight-bold text-center mt-16">{{ dataApi.wedding.h_qr }}</p>
+              <div align="center" justify="center">
+                <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200"></v-img>
+              <v-btn dark class="my-16" color="brown">Reservasi Tamu</v-btn>
+              </div>
               <div class="d-flex justify-center">
                 <v-img class="mt-10" max-width="200" max-height="200"
                   :src="'https://merestui.com/'+ dataApi.wedding.gallery_1"></v-img>

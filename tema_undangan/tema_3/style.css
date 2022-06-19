@@ -59,6 +59,16 @@
         height: 70vh;
     }
 
+            .bg-page6{
+    background-color: #c9a57d;
+    height: 70vh;
+}
+
+    .bg-page7{
+        background-color: #f4ecdc;
+        height: 370vh;
+    }
+
     .pImage{
         font-family: 'Great Vibes', cursive;
         font-size: 30px;
@@ -76,10 +86,7 @@
         color: #3E2723;
     }
 
-    .bg-page7{
-        background-color: #f4ecdc;
-        height: 270vh;
-    }
+
     
 }
 /* Desktop */
@@ -119,6 +126,17 @@
         background-color: #f4ecdc;
         height: 70vh;
     }
+
+    .bg-page6{
+    background-color: #c9a57d;
+    height: 30vh;
+}
+
+
+    .bg-page7{
+        background-color: #f4ecdc;
+        height: 350vh;
+    }
     
     .pImage{
         font-family: 'Great Vibes', cursive;
@@ -137,20 +155,13 @@
         color: #3E2723;
     }
 
-    .bg-page7{
-        background-color: #f4ecdc;
-        height: 300vh;
-    }
+    
     
 
 }
 
 
 
-.bg-page6{
-    background-color: #c9a57d;
-    height: 70vh;
-}
 
 
 

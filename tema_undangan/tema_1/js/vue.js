@@ -7,6 +7,8 @@ new Vue({
     openInvitation: false,
     dataApi: [],
     ucapan: [],
+    dialog: false,
+    dialog1: false,
     form: [{
       nama: '',
       ucapan: '',

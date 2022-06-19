@@ -22,8 +22,10 @@
         background-repeat: no-repeat;
         height: 30vh;
     }
-    
-    
+    .bg-page6 {
+    background-color: #fff;
+    height: 220vh;
+}
     
 
     .fontPasangan {
@@ -53,6 +55,11 @@
         background-repeat: no-repeat;
         height: 30vh;
     }
+
+    .bg-page6 {
+    background-color: #fff;
+    height: 200vh;
+}
     
     
     
@@ -62,6 +69,10 @@
         font-size: 70px;
     }
     
+}
+
+.lokasi-btn.v-btn--outlined{
+    border: thin solid white;
 }
 
 .none {
@@ -89,10 +100,7 @@
     height: 100vh;
 }
 
-.bg-page6 {
-    background-color: #fff;
-    height: 160vh;
-}
+
 
 
 .fontInformasi {

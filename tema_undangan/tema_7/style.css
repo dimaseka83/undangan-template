@@ -34,6 +34,11 @@
         background-repeat: no-repeat;
         height: 30vh;
     }
+
+        .bg-page6 {
+    background-color: #fff;
+    height: 220vh;
+}
     
 
     .fontAkad {
@@ -79,6 +84,10 @@
         height: 30vh;
     }
     
+        .bg-page6 {
+    background-color: #fff;
+    height: 200vh;
+}
 
     .fontAkad {
         font-family: 'Satisfy', cursive;
@@ -115,11 +124,6 @@
     background-position: top;
     background-repeat: no-repeat;
     height: 100vh;
-}
-
-.bg-page6 {
-    background-color: #fff;
-    height: 160vh;
 }
 
 .fontPasangan {

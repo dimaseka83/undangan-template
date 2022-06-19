@@ -20,6 +20,104 @@
                     </v-row>
                 </v-container>
                 <div v-else>
+                <div v-if="openInvitation">
+                    <div class="navbar">
+                    <div class="mb-5" justify="center" align="center">
+                        <v-dialog v-model="dialog" transition="dialog-bottom-transition" width="500">
+                            <template v-slot:activator="{ on, attrs }">
+                                <v-btn color="white" class="px-8" rounded v-bind="attrs" v-on="on">
+                                    <v-icon>mdi-gift-outline</v-icon> Kirim Hadiah
+                                </v-btn>
+                            </template>
+
+                            <v-card>
+                                                                        <v-card-text>
+                                            <div class="d-flex">
+                                                <p class="mt-5 title">Kirim Hadiah</p>
+                                                              <v-btn icon large color="grey darken-1" class="ml-auto mt-5" @click="dialog = false">
+                            <v-icon>mdi-close</v-icon>
+                          </v-btn>
+                                            </div>
+                                  
+                                        </v-card-text>
+
+                                <v-divider></v-divider>
+
+                                <v-card-text class="justify-center">
+                                    <div align="center">
+                                        <v-icon x-large color="black">mdi-heart-outline</v-icon>
+                                        <p class="font-weight-medium">Kirim Hadiah</p>
+                                        <p class="font-weight-light">Untuk {{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+                                    </div>
+                                </v-card-text>
+                                <v-card-text>
+                                      <v-row>
+                                                <v-col>
+                                                    <p class="font-weight-bold">BCA</p>
+                                                    <p class="mt-n3">{{ nomorRekening }}</p>
+                                                    <p class="mt-n3">a/n {{ namaRekening }}</p>
+                                                </v-col>
+                                                <v-col>
+                                                    <div align="end">
+                                                        <v-img max-width="100"
+                                                            src="https://demo.datengdong.com/images/payment/bca.jpg">
+                                                        </v-img>
+                                                    </div>
+                                                </v-col>
+                                            </v-row>
+                                            <v-divider></v-divider><v-row>
+                                                <v-col>
+                                                    <p class="font-weight-bold">Mandiri</p>
+                                                    <p class="mt-n3">{{ nomorRekening1 }}</p>
+                                                    <p class="mt-n3">a/n {{ namaRekening1 }}</p>
+                                                </v-col>
+                                                <v-col>
+                                                    <div align="end">
+                                                        <v-img max-width="100"
+                                                            src="https://demo.datengdong.com/images/payment/mandiri.jpg">
+                                                        </v-img>
+                                                    </div>
+                                                </v-col>
+                                            </v-row>
+                                    <v-divider></v-divider>
+                                    <v-img src="https://demo.datengdong.com/uploads/original/qris/iao8blunwz.png"></v-img>
+                                    <div class="text-center">OVO</div>
+                                </v-card-text>
+                            </v-card>
+                        </v-dialog>
+                    </div>
+                    <v-bottom-navigation v-model="value" v-if="displayDesktop">
+                        <v-btn href="#home" value="home">
+                          <span>Home</span>
+                          <v-icon>mdi-home</v-icon>
+                        </v-btn>
+        
+                        <v-btn href="#mempelai">
+                          <span>Couple</span>
+                          <v-icon>mdi-heart</v-icon>
+                        </v-btn>
+        
+                        <v-btn href="#event">
+                          <span>Event</span>
+                          <v-icon>mdi-calendar-month</v-icon>
+                        </v-btn>
+
+                        <v-btn href="#story">
+                            <span>Story</span>
+                            <v-icon>mdi-chat</v-icon>
+                          </v-btn>
+        
+                        <v-btn href="#dokumentasi">
+                          <span>Gallery</span>
+                          <v-icon>mdi-image</v-icon>
+                        </v-btn>
+        
+                        <v-btn href="#chat">
+                          <span>Guest Book</span>
+                          <v-icon>mdi-chat-processing</v-icon>
+                        </v-btn>
+                      </v-bottom-navigation>
+                </div>
                     <v-container fluid class="bg-page1 fill-height text-center">
                         <v-row align="center" justify="center">
                             <v-img max-width="200" src="https://demo.datengdong.com/themes/two/image/just.gif"
@@ -39,7 +137,7 @@
                             </div>
                         </v-row>
                     </v-container>
-                    <v-container fluid>
+                    <v-container fluid style="margin-bottom: 10vh;">
                         <div class="text-center">
                             <h1 class="fontPage1" style="font-size: 45px;">{{ dataApi.wedding.h_more_info }}</h1>
                             <p class="text-decoration-underline mt-6 font-weight-bold">Protokol Covid 19</p>
@@ -47,40 +145,6 @@
                                 masa
                                 pandemi, kami harapkan kedatangan para tamu undangan agar menjalankan protokol yang
                                 berlaku.</p>
-                            <!-- <v-row justify="center">
-                                <v-col :cols="[displayDesktop ? '2' : '']">
-                                    <v-row justify="center" align="center">
-                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/masker.png">
-                                        </v-img>
-                                    </v-row>
-                                    <p class="text-caption mt-5">Wajib Menggunakan Masker</p>
-                                </v-col>
-                                <v-col :cols="[displayDesktop ? '2' : '']">
-                                    <v-row justify="center" align="center">
-                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/distance.png">
-                                        </v-img>
-                                    </v-row>
-                                    <p class="text-caption mt-5">Saling Menjaga Jarak di Dalam Acara</p>
-                                </v-col>
-                            </v-row>
-                            <v-row justify="center">
-                                <v-col :cols="[displayDesktop ? '2' : '']">
-                                    <v-row justify="center" align="center">
-                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/salam.png">
-                                        </v-img>
-                                    </v-row>
-                                    <p class="text-caption mt-5">Menggunakan salam namastee sebagai ganti berjabat
-                                        tangan</p>
-                                </v-col>
-                                <v-col :cols="[displayDesktop ? '2' : '']">
-                                    <v-row justify="center" align="center">
-                                        <v-img max-width="100" src="https://datengdong.com/image/protocol/wash.png">
-                                        </v-img>
-                                    </v-row>
-                                    <p class="text-caption mt-5">Jaga Kebersihan dengan Mencuci Tangan atau
-                                        Handsanitizer</p>
-                                </v-col>
-                            </v-row> -->
                             <p class="font-weight-light text-center">"Tidak ada solusi yang lebih baik bagi dua insan
                                 yang saling
                                 mencintai di banding pernikahan."</p>
@@ -185,12 +249,16 @@
                                         </p>
                                     </v-col>
                                     <v-col>
-                                        <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">Unduh
-                                            Mantu</h1>
-                                        <p class="green--text font-weight-bold">Saturday, 20 February 2021</p>
-                                        <p> Pukul 09:00 - Selesai</p>
-                                        <p class="font-weight-bold">Rumah Bapak Bambang</p>
-                                        <p>Gowongan, Jetis, Yogyakarta City, Special Region of Yogyakarta</p>
+                                        <h1 class="fontPage1 font-weight-light mt-16" style="font-size: 30px;">{{ dataApi.wedding.h_live_streaming }}</h1>
+                                        <p class="text-center mx-6 subtitle font-weight-light">
+                                                   Mengingat pandemi covid-19, kami tidak dapat mengundang seluruh sahabat tercinta kami secara langsung, karena penting bagi kami untuk menjaga semuanya agar tetap aman, jadi selain acara secara langsung, kami juga berencana untuk mempublikasikan pernikahan kami secara virtual melalui zoom dan live instagram yang bisa kamu ikuti melalui link berikut</p>
+                                                    <div class="d-flex justify-center">
+                                                    <v-btn depressed outlined rounded >
+                                                    <v-icon left>mdi-instagram</v-icon>Instagram
+                                                </v-btn>
+                                                <v-btn depressed outlined rounded >
+                                                    <v-icon left>mdi-youtube</v-icon>Youtube
+                                                </v-btn></div>
                                     </v-col>
                                 </v-row>
                             </div>
@@ -410,6 +478,12 @@
 
                             <v-btn color="green" class="mt-5" @click="openUrl(dataApi.wedding.short_url)" dark>Open
                                 Google Map</v-btn>
+
+                                 <p class="cardTitleFont font-weight-bold text-center mt-16">{{ dataApi.wedding.h_qr }}</p>
+              <div align="center" justify="center">
+                <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200"></v-img>
+              <v-btn class="my-16" depressed outlined rounded class="lokasi-btn">Reservasi Tamu</v-btn>
+              </div>
                             <h1 class="fontPage1 my-16" style="font-size: 50px;">Guest Book</h1>
 
                             <div justify="center" align="center" v-if="displayDesktop">
@@ -490,6 +564,30 @@
                             </div>
                         </div>
                     </v-container>
+                </div>
+                                    <v-container fluid class="bg-page1 fill-height text-center" v-else>
+                        <v-row align="center" justify="center">
+                            <v-img max-width="200" src="https://demo.datengdong.com/themes/two/image/just.gif"
+                                v-if="!displayDesktop"></v-img>
+                            <div align="center" justify="center">
+                                <v-img max-width="200" src="https://demo.datengdong.com/themes/two/image/just.gif"
+                                    v-if="displayDesktop"></v-img>
+                                <h1 class="fontPage1 mt-8 green--text" style="font-size: 30px;">
+                                    {{ dataApi.wedding.tanggal_resepsi }}</h1>
+                                <p class="fontPage1" style="font-size: 50px;">{{ dataApi.wedding.nama_panggilan_pria }}
+                                    & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+                                <b>we are getting married</b>
+                                <div class="d-flex justify-center mt-5">
+                                <v-btn depressed outlined rounded class="mt-10" @click="scrollPlay">Open Invitation</v-btn>
+                                </div>
+                                
+                            </div>
+                        </v-row>
+                    </v-container>
+                    <audio id="song" ref="audioElm">
+            <source :src="'https://merestui.com'+dataApi.music.music_path"
+              type="audio/mp3">
+          </audio>
                 </div>
             </v-main>
         </v-app>

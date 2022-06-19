@@ -250,7 +250,7 @@
                 <v-card-title class="justify-center">
                   <p class="white--text font fontLive">Live Streaming</p>
                 </v-card-title>
-                <v-card-title class="justify-center mt-n10">
+                <v-card-title class="justify-center" :class="[ displayDesktop ? 'mt-n5' : 'mt-n10']">
                   <v-row>
                     <hr class="hr1">
                     <v-icon dark>mdi-bookmark</v-icon>
@@ -458,7 +458,7 @@
                       <v-card max-height="500" color="transparent" class="mx-6 pb-5 rounded-xl">
                         <div class="d-flex justify-center">
                           <v-img max-width="200" max-height="70"
-                            src="https://bintoroclean.co.id/wp-content/uploads/2017/07/Bank-Mandiri-Logo-Vector-Image.png"
+                            src="./img/pngegg.png"
                             class="my-6"></v-img>
                         </div>
                         <p class="text-center gold">Nomor Rekening atas nama {{ namaRekening1 }}</p>
@@ -491,7 +491,7 @@
                   <v-card color="transparent" class="mx-6 pb-5 rounded-xl">
                     <div class="d-flex justify-center">
                       <v-img max-width="200" max-height="70"
-                        src="https://bintoroclean.co.id/wp-content/uploads/2017/07/Bank-Mandiri-Logo-Vector-Image.png"
+                        src="./img/pngegg.png"
                         class="my-6"></v-img>
                     </div>
                     <p class="text-center gold">Nomor Rekening atas nama {{ namaRekening1 }}</p>
@@ -573,6 +573,11 @@
 
             <!-- Page 9 -->
             <v-container fluid class="bg-page9">
+                            <p class="cardTitleFont font-weight-bold text-center mt-16">{{ dataApi.wedding.h_qr }}</p>
+              <div align="center" justify="center">
+                <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200"></v-img>
+              <v-btn dark class="my-16" style="background-color: #A67C00;">Reservasi Tamu</v-btn>
+              </div>
               <v-row align="center" justify="center" v-if="displayDesktop">
                 <v-col cols="6">
                   <v-card color="pink lighten-4" class="pb-4">
@@ -599,6 +604,8 @@
                   </v-card>
                 </v-col>
               </v-row>
+
+
               
               <v-card color="transparent" class="py-1" v-else>
                 <v-img class="rounded-xl mx-16" max-width="300" max-height="200"

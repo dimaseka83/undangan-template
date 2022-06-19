@@ -227,7 +227,7 @@
 
               <v-card class="mx-16 mt-5 rounded-xl" v-if="displayDesktop">
                 <v-card-title class="justify-center">
-                  <p class="brown--text text-center menuju mx-12 font-weight-light">Virtual Wedding</p>
+                  <p class="brown--text text-center menuju mx-12 font-weight-light">{{ dataApi.wedding.h_live_streaming }}</p>
                 </v-card-title>
                 <v-card-text>
                   <p class="brown--text text-center mx-6 subtitle font-weight-light">Mengingat pandemi covid-19, kami
@@ -237,20 +237,18 @@
                     melalui link berikut</p>
                 </v-card-text>
                 <v-card-text class="d-flex justify-center">
-                  <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark>
+                    <v-btn large class="rounded-lg mx-1" color="blue-grey lighten-1" dark>
                     <v-icon left>mdi-instagram</v-icon>Instagram
                   </v-btn>
-                </v-card-text>
-                <v-card-text class="d-flex justify-center">
                   <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark>
-                    <v-icon left>mdi-play-circle</v-icon>Zoom Live Event
+                    <v-icon left>mdi-youtube</v-icon>Youtube
                   </v-btn>
                 </v-card-text>
               </v-card>
 
               <v-card class="mx-8 mt-5 rounded-xl" v-else>
                 <v-card-title class="justify-center">
-                  <p class="brown--text text-center menuju mx-12 font-weight-light">Virtual Wedding</p>
+                  <p class="brown--text text-center menuju mx-12 font-weight-light">{{ dataApi.wedding.h_live_streaming }}</p>
                 </v-card-title>
                 <v-card-text>
                   <p class="brown--text text-center mx-6 subtitle font-weight-light">Mengingat pandemi covid-19, kami
@@ -260,13 +258,13 @@
                     melalui link berikut</p>
                 </v-card-text>
                 <v-card-text class="d-flex justify-center">
-                  <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark>
+                  <v-btn large class="rounded-lg mx-1" color="blue-grey lighten-1" dark>
                     <v-icon left>mdi-instagram</v-icon>Instagram
                   </v-btn>
                 </v-card-text>
                 <v-card-text class="d-flex justify-center">
                   <v-btn large class="rounded-lg" color="blue-grey lighten-1" dark>
-                    <v-icon left>mdi-play-circle</v-icon>Zoom Live Event
+                    <v-icon left>mdi-youtube</v-icon>Youtube
                   </v-btn>
                 </v-card-text>
               </v-card>
@@ -390,10 +388,15 @@
                     <v-dialog v-model="dialog" width="500">
                       <template v-slot:activator="{ on, attrs }">
                         <v-btn large block elevation="" color="grey darken-1" v-bind="attrs" v-on="on">Transfer</v-btn>
-
                       </template>
 
                       <v-card>
+                        <d-flex class="d-flex justify-end">
+                          <v-btn icon large color="grey darken-1" @click="dialog = false">
+                            <v-icon>mdi-close</v-icon>
+                          </v-btn>
+                        </d-flex>
+                        <v-divider></v-divider>
                         <v-card-title class="justify-center">
                           <p class="font-weight-light mt-5 mx-5 text-center text-caption">
                             Silahkan transfer hadiah melalui nomor rekening maupun dompet digital berikut :
@@ -467,7 +470,11 @@
                   </div>
                 </v-card-text>
               </v-card>
-
+<p class="cardTitleFont font-weight-bold text-center mt-16">{{ dataApi.wedding.h_qr }}</p>
+              <div align="center" justify="center">
+                <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200"></v-img>
+              <v-btn dark class="my-16" color="grey darken-1">Reservasi Tamu</v-btn>
+              </div>
               <p class="mempelai3 font-weight-light my-16 text-center">Best Wishes</p>
               <div :class="[displayDesktop ? 'mx-16' : '']">
                 <v-textarea label="Tulis Ucapan" v-model="form.ucapan" outlined dense rows="2"></v-textarea>
