@@ -95,6 +95,10 @@ new Vue({
               // reply: []
             }];
             this.loadData();
+                        setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('chat').scrollIntoView();
+            }, 2000);
               },
 
           openUrl(url){

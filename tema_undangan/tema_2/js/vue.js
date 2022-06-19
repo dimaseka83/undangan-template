@@ -19,8 +19,10 @@ new Vue({
       ],
       ucapan: [],
       form: [{
-        nama: '',
-        ucapan: '',
+      nama: '',
+      ucapan: '',
+      write_as: '',
+      sosmed: '',
       }],
       // formBalasan: [{
       //   nama: '',
@@ -76,6 +78,10 @@ new Vue({
         // reply: []
       }];
       this.loadData();
+                  setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('guestBook').scrollIntoView();
+            }, 2000);
         },
 
     // kirimBalasan(id) {

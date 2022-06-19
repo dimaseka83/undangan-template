@@ -64,6 +64,10 @@ new Vue({
         // reply: []
       }];
       this.loadData();
+                  setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('guestBook').scrollIntoView();
+            }, 2000);
     },
     kirimBalasan(id) {
       this.ucapan[id].reply.push({

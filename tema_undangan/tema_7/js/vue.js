@@ -45,7 +45,11 @@ new Vue({
         sosmed: '',
         // reply: []
       }];
-      this.loadData();
+        this.loadData();
+                    setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('guestBook').scrollIntoView();
+            }, 2000);
         },
         
             loadData() {

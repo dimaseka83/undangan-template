@@ -6,7 +6,7 @@ new Vue({
             dataApi: [],
             loading: true,
             openInvitation: false,
-            kehadiran: ['Hadir', 'Tidak Hadir', ],
+            kehadiran: ['Hadir', 'Tidak Hadir',],
             displayDays: 0,
             displayHours: 0,
             displayMinutes: 0,
@@ -44,6 +44,10 @@ new Vue({
                 // reply: []
             }];
             this.loadData();
+            setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('guestBook').scrollIntoView();
+            }, 2000);
         },
         loadData() {
             this.loading = true;
@@ -79,10 +83,10 @@ new Vue({
                 this.displayDays = days < 10 ? '0' + days : days;
             }, 1000);
         },
-                        scrollPlay() {
-      var audio = this.$refs.audioElm;
-      audio.play();
-      this.openInvitation = true;
+        scrollPlay() {
+            var audio = this.$refs.audioElm;
+            audio.play();
+            this.openInvitation = true;
         },
     },
 
@@ -107,25 +111,25 @@ new Vue({
         _days() {
             return this._hours * 24;
         },
-                            namaRekening(){ 
-      if(this.loading == false){
-        return this.dataApi.wedding.rek_1.split('-')[2];
-      }
+        namaRekening() {
+            if (this.loading == false) {
+                return this.dataApi.wedding.rek_1.split('-')[2];
+            }
+        },
+        nomorRekening() {
+            if (this.loading == false) {
+                return this.dataApi.wedding.rek_1.split('-')[1];
+            }
+        },
+        namaRekening1() {
+            if (this.loading == false) {
+                return this.dataApi.wedding.rek_2.split('-')[2];
+            }
+        },
+        nomorRekening1() {
+            if (this.loading == false) {
+                return this.dataApi.wedding.rek_2.split('-')[1];
+            }
+        }
     },
-    nomorRekening(){
-      if(this.loading == false){
-        return this.dataApi.wedding.rek_1.split('-')[1];
-      }
-    },
-    namaRekening1(){
-      if(this.loading == false){
-        return this.dataApi.wedding.rek_2.split('-')[2];
-      }
-    },
-    nomorRekening1(){
-      if(this.loading == false){
-        return this.dataApi.wedding.rek_2.split('-')[1];
-      }
-    }
-    }
 });

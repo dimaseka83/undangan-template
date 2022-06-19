@@ -475,14 +475,46 @@
                 <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200"></v-img>
               <v-btn dark class="my-16" color="grey darken-1">Reservasi Tamu</v-btn>
               </div>
-              <p class="mempelai3 font-weight-light my-16 text-center">Best Wishes</p>
+              <p class="mempelai3 font-weight-light my-16 text-center" id="guestBook">Best Wishes</p>
               <div :class="[displayDesktop ? 'mx-16' : '']">
+              <v-row justify="center" class="fill-height mt-10 mx-16" v-if="displayDesktop">
+                <v-col cols="12">
+                  <v-textarea label="Tulis Ucapan" v-model="form.ucapan" outlined dense rows="2"></v-textarea>
+                  <v-row>
+                    <v-col>
+                      <v-text-field label="Ditulis Oleh" v-model="form.write_as" outlined prepend-inner-icon="mdi-pencil"></v-text-field>
+                    </v-col>
+                    <v-col>
+                      <v-text-field label="Nama Sosmed" v-model="form.sosmed" outlined prepend-inner-icon="mdi-instagram"></v-text-field>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col>
+                      <v-text-field label="Nama Lengkap" v-model="form.nama" outlined prepend-inner-icon="mdi-account">
+                      </v-text-field>
+                    </v-col>
+                    <v-col class="d-flex flex-row-reverse">
+                      <v-btn class="mt-5" @click="kirimUcapan">Kirim</v-btn>
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
+              <div v-else>
                 <v-textarea label="Tulis Ucapan" v-model="form.ucapan" outlined dense rows="2"></v-textarea>
+                <v-row>
+                  <v-col>
+                      <v-text-field label="Ditulis Oleh" v-model="form.write_as" outlined prepend-inner-icon="mdi-pencil"></v-text-field>
+                  </v-col>
+                  <v-col>
+                      <v-text-field label="Nama Sosmed" v-model="form.sosmed" outlined prepend-inner-icon="mdi-instagram"></v-text-field>
+                  </v-col>
+                </v-row>
                 <v-text-field label="Nama Lengkap" v-model="form.nama" outlined prepend-inner-icon="mdi-account">
                 </v-text-field>
                 <div class="d-flex flex-row-reverse">
                   <v-btn class="mt-5" @click="kirimUcapan">Kirim</v-btn>
                 </div>
+              </div>
                 <v-row class="fill-height mt-10 mx-16" v-if="displayDesktop">
                   <v-col cols="10">
                     <div class="d-flex ml-15">
