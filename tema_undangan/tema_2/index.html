@@ -471,6 +471,14 @@
               <p class="mempelai3 font-weight-light my-16 text-center">Best Wishes</p>
               <div :class="[displayDesktop ? 'mx-16' : '']">
                 <v-textarea label="Tulis Ucapan" v-model="form.ucapan" outlined dense rows="2"></v-textarea>
+                <v-row>
+                  <v-col>
+                    <v-text-field label="Ditulis Oleh" v-model="form.write_as" outlined prepend-inner-icon="mdi-pencil"></v-text-field>
+                  </v-col>
+                  <v-col>
+                    <v-text-field label="Nama Sosmed" v-model="form.sosmed" outlined prepend-inner-icon="mdi-instagram"></v-text-field>
+                  </v-col>
+                </v-row>
                 <v-text-field label="Nama Lengkap" v-model="form.nama" outlined prepend-inner-icon="mdi-account">
                 </v-text-field>
                 <div class="d-flex flex-row-reverse">
