@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&family=Viaoda+Libre&display=swap');
+
+.bg-pagecover{
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.bg-page1{
+    background-image: url('./img/black_image.png'), url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/upload/invitation/1649776186_bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.bg-page2{
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 180vh;
+}
+
+.bg-page3{
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+}
+
+.bg-page4{
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.bg-page5{
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+}
+
+.bg-page6{
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200vh;
+}
+
+.fotoPasangan{
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: #583e29;
+    box-sizing: border-box;
+    -webkit-clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.fotoPasangan img{
+    position: absolute;
+    top: 2px; /* equal to border thickness */
+    left: 2px; /* equal to border thickness */
+    width: 246px; /* container height - (border thickness * 2) */
+    height: 246px; /* container height - (border thickness * 2) */
+    -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.detailbg{
+    width: 100%;
+z-index: 1;
+-webkit-clip-path: polygon(13% 0, 86% 0, 100% 50%, 87% 100%, 14% 100%, 0% 50%);
+clip-path: polygon(13% 0, 86% 0, 100% 50%, 87% 100%, 14% 100%, 0% 50%);
+background-color: #583e29;
+}
+.detailbg .detail{
+z-index: 1;
+-webkit-clip-path: polygon(13% 0, 86% 0, 100% 50%, 87% 100%, 14% 100%, 0% 50%);
+clip-path: polygon(13% 0, 86% 0, 100% 50%, 87% 100%, 14% 100%, 0% 50%);
+background-color: white;
+}
+
+.flowerlaki{
+    margin-left: -25vh;
+    margin-top: -35vh;
+}
+
+.flowerdoa{
+    margin-left: 27vh;
+    margin-top: -20vh;
+}
+
+.fontMarried{
+    font-family: 'Viaoda Libre', sans-serif;
+    color: #583e29;;
+}
+
+.fontPasangan{
+    font-family: 'Rouge Script', cursive;
+}
+
+.overflowAuto {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 60vh;
+    width: 100%;
+}
+
+/* content fixed */
+
+.navbar {
+    overflow: hidden;
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+  }

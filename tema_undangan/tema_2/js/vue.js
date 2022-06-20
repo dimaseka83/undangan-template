@@ -19,10 +19,17 @@ new Vue({
       ],
       ucapan: [],
       form: [{
+<<<<<<< HEAD
         nama: '',
         ucapan: '',
         write_as: '',
         sosmed: '',
+=======
+      nama: '',
+      ucapan: '',
+      write_as: '',
+      sosmed: '',
+>>>>>>> 85e3ad2f75c2fa56221dc0c445d340c391bf5cdd
       }],
       // formBalasan: [{
       //   nama: '',
@@ -78,6 +85,10 @@ new Vue({
         // reply: []
       }];
       this.loadData();
+                  setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('guestBook').scrollIntoView();
+            }, 2000);
         },
 
     // kirimBalasan(id) {

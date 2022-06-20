@@ -343,21 +343,20 @@
                   <div class="d-flex flex-row-reverse">
                     <v-card width="500" height="550" class="rounded-xl py-15" color="brown lighten-1" dark>
                       <v-card-title class="justify-center">
-                        <h2 class="font-weight-medium">
-                          RSVP
+                        <h2 class="titlePage3">
+                          {{ dataApi.wedding.h_live_streaming }}
                         </h2>
                       </v-card-title>
                       <v-card-text class="text-center white--text px-16">
-                        <p>Bantu kami mempersiapkan jamuan yang hangat untuk anda semua dengan mengirimkan konfirmasi
-                          kehadiran melalui form berikut ini</p>
-                        <v-text-field label="Nama"></v-text-field>
-                        <p class="text-start">Apakah Kamu Akan Hadir ?</p>
-                        <v-radio-group v-model="radio">
-                          <v-radio label="Hadir"></v-radio>
-                          <v-radio label="Tidak Hadir"></v-radio>
-                        </v-radio-group>
-                        <v-select></v-select>
-                        <v-btn block rounded color="brown darken-3">Submit</v-btn>
+                        <p>Mengingat pandemi covid-19, kami tidak dapat mengundang seluruh sahabat tercinta kami secara langsung, karena penting bagi kami untuk menjaga semuanya agar tetap aman, jadi selain acara secara langsung, kami juga berencana untuk mempublikasikan pernikahan kami secara virtual melalui zoom dan live instagram yang bisa kamu ikuti melalui link berikut</p>
+                        <div class="d-flex justify-center">
+                           <v-btn class="mx-auto" rounded color="brown darken-3">
+                        <v-icon left>mdi-youtube</v-icon>Youtube
+                      </v-btn>
+                           <v-btn rounded color="brown darken-3">
+                        <v-icon left>mdi-instagram</v-icon>Instagram
+                      </v-btn>
+                        </div>
                       </v-card-text>
                     </v-card>
                   </div>
@@ -371,12 +370,83 @@
                     </v-card-title>
                     <v-card-text class="text-center white--text px-16 pt-10">
                       <p>Bagi Keluarga dan Sahabat yang ingin mengirimkan hadiah, silahkan mengirimkannya melalui :</p>
-                      <v-btn rounded color="brown darken-3" :class="buttonGift">
+                                          <v-dialog v-model="dialog" width="500">
+                      <template v-slot:activator="{ on, attrs }">
+                                              <v-btn rounded color="brown darken-3" v-bind="attrs" v-on="on">
                         <v-icon left>mdi-card-account-details</v-icon>Transfer
                       </v-btn>
-                      <v-btn rounded color="brown darken-3">
+                      </template>
+
+                      <v-card>
+                        <d-flex class="d-flex justify-end">
+                          <v-btn icon large color="grey darken-1" @click="dialog = false">
+                            <v-icon>mdi-close</v-icon>
+                          </v-btn>
+                        </d-flex>
+                        <v-divider></v-divider>
+                        <v-card-title class="justify-center">
+                          <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                            Silahkan transfer hadiah melalui nomor rekening maupun dompet digital berikut :
+                          </p>
+                          <v-img src="https://cdn.undanganweb.com/hi/2022/03/BCA_logo_Bank_Central_Asia.png"
+                            max-width="100"></v-img>
+                        </v-card-title>
+
+                        <v-card-text>
+                          <p class="font-weight-medium title text-center black--text">{{ dataApi.wedding.rek_2 }}</p>
+                        </v-card-text>
+
+                        <v-divider></v-divider>
+
+                        <v-card-title class="justify-center">
+                          <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                            Silahkan transfer hadiah melalui nomor rekening maupun dompet digital berikut :
+                          </p>
+                          <v-img
+                            src="https://logos-download.com/wp-content/uploads/2016/06/Bank_Mandiri_logo_white_bg.png"
+                            max-width="100"></v-img>
+                        </v-card-title>
+
+                        <v-card-text>
+                          <p class="font-weight-medium title text-center black--text">{{ dataApi.wedding.rek_1 }}</p>
+                        </v-card-text>
+                      </v-card>
+                    </v-dialog>
+                                        <v-dialog v-model="dialog1" width="500">
+                                          
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn rounded color="brown darken-3" v-bind="attrs" v-on="on">
                         <v-icon left>mdi-card-account-details</v-icon>Kirim
                       </v-btn>
+
+                      </template>
+
+                      <v-card>
+                        <d-flex class="d-flex justify-end">
+                          <v-btn icon large color="grey darken-1" @click="dialog1 = false">
+                            <v-icon>mdi-close</v-icon>
+                          </v-btn>
+                        </d-flex>
+                        <v-divider></v-divider>
+                        <v-card-title class="justify-center">
+                          <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                            Silahkan kirim kado ke alamat berikut :
+                          </p>
+                          <p class="font-weight-light mt-5 mx-5 text-center text-h4 mb-n5">Ipung Dede</p>
+                        </v-card-title>
+                        <div class="d-flex justify-center mt-n16">
+                          <v-img max-width="200"
+                            src="https://cdn.undanganweb.com/hi/2022/03/—Pngtree—kangaroo-dividing-line-dividing-line_3780548.png">
+                          </v-img>
+                        </div>
+                        <v-card-text class="black-text text-center mt-n16">
+                          <p>Jl. Ramayana, Makassar</p>
+                          <p>Kota Makassar</p>
+                          <p>0895632564563</p>
+                        </v-card-text>
+                      </v-card>
+                    </v-dialog>
+                      
                     </v-card-text>
                   </v-card>
                 </v-col>
@@ -656,7 +726,12 @@
 
             <!-- Page 13 -->
             <v-container fluid class="px-5 mb-5">
-              <p class="titlePage8 font-weight-bold text-center">Best Wishes</p>
+              <p class="titlePage8 font-weight-bold text-center">{{ dataApi.wedding.h_qr }}</p>
+              <div align="center" justify="center">
+                <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200"></v-img>
+              <v-btn dark class="my-16" color="brown darken-3">Reservasi Tamu</v-btn>
+              </div>
+              <p class="titlePage8 font-weight-bold text-center" id="guestBook">Best Wishes</p>
               <v-divider class="hr4"></v-divider>
               <v-row justify="center" class="fill-height mt-10 mx-16" v-if="displayDesktop">
                 <v-col cols="12">

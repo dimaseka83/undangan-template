@@ -31,9 +31,15 @@
                             </template>
 
                             <v-card>
-                                <v-card-title>
-                                    Kirim Hadiah
-                                </v-card-title>
+                                                                        <v-card-text>
+                                            <div class="d-flex">
+                                                <p class="mt-5 title">Kirim Hadiah</p>
+                                                              <v-btn icon large color="grey darken-1" class="ml-auto mt-5" @click="dialog = false">
+                            <v-icon>mdi-close</v-icon>
+                          </v-btn>
+                                            </div>
+                                  
+                                        </v-card-text>
 
                                 <v-divider></v-divider>
 
@@ -41,35 +47,38 @@
                                     <div align="center">
                                         <v-icon x-large color="black">mdi-heart-outline</v-icon>
                                         <p class="font-weight-medium">Kirim Hadiah</p>
-                                        <p class="font-weight-light">Untuk Romeo & Juliet</p>
+                                        <p class="font-weight-light">Untuk {{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
                                     </div>
                                 </v-card-text>
                                 <v-card-text>
-                                    <v-row>
-                                        <v-col>
-                                            <p class="font-weight-bold">BCA</p>
-                                            <p class="mt-n3">1234</p>
-                                            <p class="mt-n3">a/n Romeo</p>
-                                        </v-col>
-                                        <v-col>
-                                            <div align="end">
-                                                <v-img max-width="100" src="https://demo.datengdong.com/images/payment/bca.jpg"></v-img>
-                                            </div>
-                                        </v-col>
-                                    </v-row>
-                                    <v-divider></v-divider>
-                                    <v-row>
-                                        <v-col>
-                                            <p class="font-weight-bold">Alamat</p>
-                                            <p class="mt-n3">a/n Juliet</p>
-                                            <p class="mt-n3">Jl Lorem Ipsum</p>
-                                        </v-col>
-                                        <v-col>
-                                            <div align="end">
-                                                <v-img max-width="100" src="https://demo.datengdong.com/images/payment/alamat.jpg"></v-img>
-                                            </div>
-                                        </v-col>
-                                    </v-row>
+                                      <v-row>
+                                                <v-col>
+                                                    <p class="font-weight-bold">BCA</p>
+                                                    <p class="mt-n3">{{ nomorRekening }}</p>
+                                                    <p class="mt-n3">a/n {{ namaRekening }}</p>
+                                                </v-col>
+                                                <v-col>
+                                                    <div align="end">
+                                                        <v-img max-width="100"
+                                                            src="https://demo.datengdong.com/images/payment/bca.jpg">
+                                                        </v-img>
+                                                    </div>
+                                                </v-col>
+                                            </v-row>
+                                            <v-divider></v-divider><v-row>
+                                                <v-col>
+                                                    <p class="font-weight-bold">Mandiri</p>
+                                                    <p class="mt-n3">{{ nomorRekening1 }}</p>
+                                                    <p class="mt-n3">a/n {{ namaRekening1 }}</p>
+                                                </v-col>
+                                                <v-col>
+                                                    <div align="end">
+                                                        <v-img max-width="100"
+                                                            src="https://demo.datengdong.com/images/payment/mandiri.jpg">
+                                                        </v-img>
+                                                    </div>
+                                                </v-col>
+                                            </v-row>
                                     <v-divider></v-divider>
                                     <v-img src="https://demo.datengdong.com/uploads/original/qris/iao8blunwz.png"></v-img>
                                     <div class="text-center">OVO</div>
@@ -334,37 +343,25 @@
                             <v-col>
                                 <v-card class="mt-2" style="border: 2px solid white; background-color: transparent;">
                                     <v-card-title class="white--text fontAkad justify-center mt-5">
-                                        Unduh Mantu
-                                    </v-card-title>
-                                    <v-card-text class="white--text">
-                                        <v-row justify="center">
-                                            <v-col>
-                                                <p class="text-center mt-2">
-                                                    09:00-12:00 WIB
-                                                </p>
-                                            </v-col>
-                                            <v-col>
-                                                <v-divider dark vertical></v-divider>
-                                            </v-col>
-                                            <v-col class="ml-n16">
-                                                <v-row justify="center" class="mt-2">February</v-row>
-                                                <v-row justify="center" class="font-weight-bold headline"> 12</v-row>
-                                                <v-row justify="center">2023 </v-row>
-                                            </v-col>
-                                            <v-col>
-                                                <v-divider dark vertical></v-divider>
-                                            </v-col>
-                                            <v-col class="ml-n16">
-                                                <p class="text-center mt-2">
-                                                    Rumah Bapak Bambang
-                                                </p>
-                                            </v-col>
-                                        </v-row>
-                                    </v-card-text>
-                                    <v-card-text>
-                                        <p class="font-weight-light white--text font-italic text-center">Gowongan, Jetis, Yogyakarta
-                                            City, Special Region of Yogyakarta </p>
-                                    </v-card-text>
+                                                {{ dataApi.wedding.h_live_streaming }}
+                                            </v-card-title>
+                                            <v-card-text>
+                                                <p class="white--text text-center mx-6 subtitle font-weight-light">
+                                                    Mengingat
+                                                    pandemi covid-19,
+                                                    kami juga berencana untuk
+                                                    mempublikasikan pernikahan kami secara virtual melalui zoom dan live
+                                                    instagram yang bisa kamu ikuti
+                                                    melalui link berikut</p>
+                                            </v-card-text>
+                                            <v-card-text class="d-flex justify-center">
+                                                <v-btn depressed outlined rounded class="lokasi-btn" dark>
+                                                    <v-icon left>mdi-instagram</v-icon>Instagram
+                                                </v-btn>
+                                                <v-btn depressed outlined rounded class="lokasi-btn" dark>
+                                                    <v-icon left>mdi-youtube</v-icon>Youtube
+                                                </v-btn>
+                                            </v-card-text>
                                 </v-card>
                             </v-col>
                         </v-row>
@@ -443,38 +440,26 @@
                             </v-card-text>
                         </v-card>
                         <v-card class="mt-2" style="border: 2px solid white; background-color: transparent;">
-                            <v-card-title class="white--text fontAkad justify-center mt-5">
-                                Unduh Mantu
-                            </v-card-title>
-                            <v-card-text class="white--text">
-                                <v-row justify="center">
-                                    <v-col>
-                                        <p class="text-center mt-2">
-                                            09:00-12:00 WIB
-                                        </p>
-                                    </v-col>
-                                    <v-col>
-                                        <v-divider dark vertical></v-divider>
-                                    </v-col>
-                                    <v-col class="ml-n16">
-                                        <v-row justify="center" class="mt-2">February</v-row>
-                                        <v-row justify="center" class="font-weight-bold headline"> 12</v-row>
-                                        <v-row justify="center">2023 </v-row>
-                                    </v-col>
-                                    <v-col>
-                                        <v-divider dark vertical></v-divider>
-                                    </v-col>
-                                    <v-col class="ml-n16">
-                                        <p class="text-center mt-2">
-                                            Rumah Bapak Bambang
-                                        </p>
-                                    </v-col>
-                                </v-row>
-                            </v-card-text>
-                            <v-card-text>
-                                <p class="font-weight-light white--text font-italic text-center">Gowongan, Jetis, Yogyakarta
-                                    City, Special Region of Yogyakarta </p>
-                            </v-card-text>
+                           <v-card-title class="white--text fontAkad justify-center mt-5">
+                                                {{ dataApi.wedding.h_live_streaming }}
+                                            </v-card-title>
+                                            <v-card-text>
+                                                <p class="white--text text-center mx-6 subtitle font-weight-light">
+                                                    Mengingat
+                                                    pandemi covid-19,
+                                                    kami juga berencana untuk
+                                                    mempublikasikan pernikahan kami secara virtual melalui zoom dan live
+                                                    instagram yang bisa kamu ikuti
+                                                    melalui link berikut</p>
+                                            </v-card-text>
+                                            <v-card-text class="d-flex justify-center">
+                                                <v-btn depressed outlined rounded class="lokasi-btn" dark>
+                                                    <v-icon left>mdi-instagram</v-icon>Instagram
+                                                </v-btn>
+                                                <v-btn depressed outlined rounded class="lokasi-btn" dark>
+                                                    <v-icon left>mdi-youtube</v-icon>Youtube
+                                                </v-btn>
+                                            </v-card-text>
                         </v-card>
                     </div>
                 </v-container>
@@ -619,7 +604,7 @@
                         </v-carousel>
                     </div>
 
-                    <v-row justify="center" align="center" class="mt-16">
+                    <v-row justify="center" align="center">
                         <v-img max-width="150" src="https://demo.datengdong.com/themes/starlight/images/flower-2.png">
                         </v-img>
                     </v-row>
@@ -707,16 +692,16 @@
                                 </v-card>
                             </v-col>
                         </v-row>
-                        <v-row class="mt-16">
+                        <v-row class="mt-16 mx-auto">
                             <v-col>
-                                <v-btn color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
+                                <v-btn class="text-caption" color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
                             </v-col>
                             <v-col>
-                                <v-btn color="blue-grey" dark>Google Calendar</v-btn>
+                                <v-btn class="text-caption" color="blue-grey" dark>Google Calendar</v-btn>
                             </v-col>
                         </v-row>
                         <v-row justify="center" align="center">
-                            <v-btn color="blue-grey" dark>Yahoo Calendar</v-btn>
+                            <v-btn class="text-caption" color="blue-grey" dark>Yahoo Calendar</v-btn>
                         </v-row>
                     </div>
 
@@ -735,7 +720,12 @@
                 </v-container>
 
                 <v-container fluid class="bg-page6" id="chat">
-                    <div align="center" class="mt-16">
+                    <p class="cardTitleFont font-weight-bold text-center mt-16">{{ dataApi.wedding.h_qr }}</p>
+              <div align="center" justify="center">
+                <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200"></v-img>
+              <v-btn class="my-16" depressed outlined rounded class="lokasi-btn">Reservasi Tamu</v-btn>
+              </div>
+                    <div align="center" class="mt-16" id="guestBook">
                         <p class="fontLove blue--text">Guest Book</p>
                     </div>
                     <v-row justify="center" align="center">
@@ -763,7 +753,7 @@
                         <v-card width="600" class="mt-10" style="border: 2px solid #1976D2; background-color: transparent;">
                             <v-card-title>
                                 <div class="overflowAuto">
-                                <div v-for="(i, idx) in dataApi.comments" :key="idx">
+                                <div v-for="(i, idx) in dataApi.comments" :key="idx" class="text-start">
                                     <p class="title mx-4">{{ i.owner }} <span class="pl-2 text-caption text--disabled">{{ i.date_only }}</span></p>
                                     <p class="text-caption mx-4 mt-n5 text--disabled">Ditulis oleh {{ i.write_as }}, ({{ i.sosmed }})</p>
                                     <p class="text-caption mx-4">{{ i.content }}</p>

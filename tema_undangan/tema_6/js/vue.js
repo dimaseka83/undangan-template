@@ -46,6 +46,10 @@ new Vue({
           // reply: []
         }];
         this.loadData();
+                    setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('guestBook').scrollIntoView();
+            }, 2000);
           },
         
             loadData() {
@@ -135,7 +139,27 @@ new Vue({
         if (this.loading == false) {
             return this.dataApi.wedding.tanggal_akad.split(' ')[3];
         }
-            }
+      },
+            namaRekening(){ 
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_1.split('-')[2];
+      }
+    },
+    nomorRekening(){
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_1.split('-')[1];
+      }
+    },
+    namaRekening1(){
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_2.split('-')[2];
+      }
+    },
+    nomorRekening1(){
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_2.split('-')[1];
+      }
+    }
       }
 
 });

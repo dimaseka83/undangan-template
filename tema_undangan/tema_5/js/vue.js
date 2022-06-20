@@ -8,7 +8,8 @@ new Vue({
             openInvitation: false,
             model: null,
             value: 'home',
-            dialog1: false,
+          dialog1: false,
+            dialog2: false,
             items: [{
                     src: 'https://cdn-uploads.our-wedding.link/77fc2e10-e551-11ec-9e09-07dc600cff5c.webp',
                 },
@@ -71,6 +72,10 @@ new Vue({
             // reply: []
           }];
           this.loadData();
+                      setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('chat').scrollIntoView();
+            }, 2000);
             },
         loadData() {
           this.loading = true;

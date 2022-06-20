@@ -4,14 +4,14 @@ new Vue({
     data() {
         return {
             dataApi: [],
-            loading: true,
+            dialog: false,
+            dialog1: false,
             openInvitation: false,
-            kehadiran: ['Hadir', 'Tidak Hadir',],
+            loading: true,
             displayDays: 0,
             displayHours: 0,
             displayMinutes: 0,
             displaySeconds: 0,
-            dialog: false,
             form: [{
                 nama: '',
                 write_as: '',
@@ -46,7 +46,7 @@ new Vue({
             this.loadData();
             setTimeout(() => {
                 this.scrollPlay();
-                document.getElementById('guestBook').scrollIntoView();
+                document.getElementById('rsvp').scrollIntoView();
             }, 2000);
         },
         loadData() {
@@ -97,6 +97,7 @@ new Vue({
     mounted() {
         this.showRemaining();
     },
+
     computed: {
         displayDesktop() {
             return this.$vuetify.breakpoint.width >= 500
@@ -111,25 +112,5 @@ new Vue({
         _days() {
             return this._hours * 24;
         },
-        namaRekening() {
-            if (this.loading == false) {
-                return this.dataApi.wedding.rek_1.split('-')[2];
-            }
-        },
-        nomorRekening() {
-            if (this.loading == false) {
-                return this.dataApi.wedding.rek_1.split('-')[1];
-            }
-        },
-        namaRekening1() {
-            if (this.loading == false) {
-                return this.dataApi.wedding.rek_2.split('-')[2];
-            }
-        },
-        nomorRekening1() {
-            if (this.loading == false) {
-                return this.dataApi.wedding.rek_2.split('-')[1];
-            }
-        }
     },
 });

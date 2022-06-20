@@ -46,7 +46,7 @@
 
   .bg-page3{
     background-color: #9b9893;
-    height: 210vh;
+    height: 255vh;
     margin-top: -20vh;
     border-radius: 90%/100px 100px 0 0;
   }
@@ -59,7 +59,7 @@
   }
 
   .bg-page5{
-    height: 200vh;
+    height: 210vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -46,6 +46,10 @@ new Vue({
         copy(){
             this.selectText(this.$refs.rekening);
             document.execCommand('copy');
+      },
+        copy1(){
+            this.selectText(this.$refs.rekening1);
+            document.execCommand('copy');
         },
 
         scrollPlay(){
@@ -91,6 +95,10 @@ new Vue({
               // reply: []
             }];
             this.loadData();
+                        setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('chat').scrollIntoView();
+            }, 2000);
               },
 
           openUrl(url){
@@ -174,6 +182,16 @@ new Vue({
     nomorRekening(){
       if(this.loading == false){
         return this.dataApi.wedding.rek_1.split('-')[1];
+      }
+    },
+    namaRekening1(){
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_2.split('-')[2];
+      }
+    },
+    nomorRekening1(){
+      if(this.loading == false){
+        return this.dataApi.wedding.rek_2.split('-')[1];
       }
     }
   }

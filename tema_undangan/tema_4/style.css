@@ -47,6 +47,12 @@
         background-repeat: no-repeat;
     }
 
+    .bg-page5{
+    background-color: #807e7d;
+    height: 250vh;
+    margin-top: -10vh;
+}
+
     .bg-page6{
         background-image: url('https://digition.id/wp-content/uploads/2022/02/ddds.jpg');
         height: 100vh;
@@ -154,6 +160,12 @@
         background-repeat: no-repeat;
     }
 
+    .bg-page5{
+    background-color: #807e7d;
+    height: 230vh;
+    margin-top: -10vh;
+}
+
     .bg-page6{
         background-image: url('https://digition.id/wp-content/uploads/2022/02/ddds.jpg');
         height: 60vh;
@@ -164,7 +176,7 @@
 
     .bg-page9{
         background-image: url('https://digition.id/wp-content/uploads/2022/02/ddds.jpg');
-        height: 80vh;
+        height: 130vh;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -241,11 +253,7 @@
 
 
 
-.bg-page5{
-    background-color: #807e7d;
-    height: 230vh;
-    margin-top: -10vh;
-}
+
 
 
 .bg-page7{

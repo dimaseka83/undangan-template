@@ -40,6 +40,14 @@
         background-repeat: no-repeat;
     }
 
+    .bg-page3{
+    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
+    height: 250vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
     .bg-page4{
         background-color: #c9a57d;
         height: 180vh;
@@ -49,6 +57,16 @@
     .bg-page5{
         background-color: #f4ecdc;
         height: 70vh;
+    }
+
+            .bg-page6{
+    background-color: #c9a57d;
+    height: 70vh;
+}
+
+    .bg-page7{
+        background-color: #f4ecdc;
+        height: 370vh;
     }
 
     .pImage{
@@ -68,10 +86,7 @@
         color: #3E2723;
     }
 
-    .bg-page7{
-        background-color: #f4ecdc;
-        height: 270vh;
-    }
+
     
 }
 /* Desktop */
@@ -93,6 +108,14 @@
         background-repeat: no-repeat;
     }
 
+    .bg-page3{
+    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
+    height: 210vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
     .bg-page4{
         background-color: #c9a57d;
         height: 100vh;
@@ -102,6 +125,17 @@
     .bg-page5{
         background-color: #f4ecdc;
         height: 70vh;
+    }
+
+    .bg-page6{
+    background-color: #c9a57d;
+    height: 30vh;
+}
+
+
+    .bg-page7{
+        background-color: #f4ecdc;
+        height: 350vh;
     }
     
     .pImage{
@@ -121,26 +155,13 @@
         color: #3E2723;
     }
 
-    .bg-page7{
-        background-color: #f4ecdc;
-        height: 300vh;
-    }
+    
     
 
 }
 
-.bg-page3{
-    background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
-    height: 210vh;
-    background-size: cover;
-    background-position: center;
-}
 
 
-.bg-page6{
-    background-color: #c9a57d;
-    height: 70vh;
-}
 
 
 

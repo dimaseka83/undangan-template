@@ -16,3 +16,16 @@
     height: 60vh;
     width: 100%;
 }
+
+
+/* content fixed */
+
+.navbar {
+    overflow: hidden;
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+  }
+

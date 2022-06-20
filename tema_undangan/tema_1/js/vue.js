@@ -7,6 +7,8 @@ new Vue({
     openInvitation: false,
     dataApi: [],
     ucapan: [],
+    dialog: false,
+    dialog1: false,
     form: [{
       nama: '',
       ucapan: '',
@@ -62,6 +64,10 @@ new Vue({
         // reply: []
       }];
       this.loadData();
+                  setTimeout(() => {
+                this.scrollPlay();
+                document.getElementById('guestBook').scrollIntoView();
+            }, 2000);
     },
     kirimBalasan(id) {
       this.ucapan[id].reply.push({
