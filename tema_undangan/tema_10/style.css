@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 
+@media screen and (min-width: 413px) {
+    #app{
+        margin: 0px 20%
+    }
+}
+
 .bg-pagecover{
     background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
     background-size: cover;
@@ -14,7 +20,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 102vh;
+    height: 91vh;
 }
 .bg-page2{
     background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
@@ -28,7 +34,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 232vh;
+    height: 208vh;
 }
 
 .bg-page4{
@@ -44,7 +50,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 185vh;
+    height: 245vh;
 }
 
 .bg-page6{

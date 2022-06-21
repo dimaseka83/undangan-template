@@ -14,7 +14,13 @@
     <div id="app">
         <v-app>
             <v-main>
-                <div v-if="openInvitation">
+                <v-container fluid class="fill-height" v-if="loading">
+                    <v-row align="center" justify="center">
+                      <v-progress-circular indeterminate color="primary"></v-progress-circular>
+                    </v-row>
+                  </v-container>
+                <div v-else>
+<div v-if="openInvitation">
                     <div class="navbar mb-5">
                         <div class="d-flex justify-end">
                             <v-dialog
@@ -27,7 +33,7 @@
       <v-card>
         <v-card-text>
             <div class="d-flex">
-                <p class="mt-5 title">Scan QR Code</p>
+                <p class="mt-5 title">{{ dataApi.wedding.h_qr }}</p>
                 <v-btn icon large color="grey darken-1" class="ml-auto mt-5"
                     @click="dialog1 = false">
                     <v-icon>mdi-close</v-icon>
@@ -46,7 +52,8 @@
                         </div>
                         <v-card color="transparent" class="mx-10">
                             <div class="d-flex justify-center">
-                                <v-card color="brown" width="40" height="40" class="mr-2">
+                                <a href="#home">
+                                    <v-card color="brown" width="40" height="40" class="mr-2">
                                     <div class="d-flex justify-center pt-1">
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px"
@@ -83,7 +90,9 @@
                                         </svg>
                                     </div>
                                 </v-card>
-                                <v-card color="brown" width="40" height="40" class="mr-2">
+                                </a>
+                                <a href="#couple">
+                                                                    <v-card color="brown" width="40" height="40" class="mr-2">
                                     <div class="d-flex justify-center pt-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" width="30" height="30"
                                             viewBox="0 0 512 512" width="512">
@@ -101,7 +110,9 @@
                                         </svg>
                                     </div>
                                 </v-card>
-                                <v-card color="brown" width="40" height="40" class="mr-2">
+                                </a>
+                                <a href="#event">
+                                    <v-card color="brown" width="40" height="40" class="mr-2">
                                     <div class="d-flex justify-center pt-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px"
@@ -156,7 +167,9 @@
                                         </svg>
                                     </div>
                                 </v-card>
-                                <v-card color="brown" width="40" height="40" class="mr-2">
+                                </a>
+                                <a href="#gallery">
+                                                                    <v-card color="brown" width="40" height="40" class="mr-2">
                                     <div class="d-flex justify-center pt-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px"
@@ -193,7 +206,9 @@
                                         </svg>
                                     </div>
                                 </v-card>
-                                <v-card color="brown" width="40" height="40" class="mr-2">
+                                </a>
+                                <a href="#story">
+                                                                    <v-card color="brown" width="40" height="40" class="mr-2">
                                     <div class="d-flex justify-center pt-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px"
@@ -230,6 +245,8 @@
                                         </svg>
                                     </div>
                                 </v-card>
+                                </a>
+                                <a href="#chat">
                                 <v-card color="brown" width="40" height="40" class="mr-2">
                                     <div class="d-flex justify-center pt-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
@@ -268,7 +285,9 @@
                                         </svg>
                                     </div>
                                 </v-card>
-                                <v-card color="brown" width="40" height="40" class="mr-2">
+                                </a>
+                                <a href="#gift">
+                                                                    <v-card color="brown" width="40" height="40" class="mr-2">
                                     <div class="d-flex justify-center pt-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px"
@@ -299,52 +318,54 @@
                                         </svg>
                                     </div>
                                 </v-card>
+                                </a>
+
                             </div>
                         </v-card>
                     </div>
                     <!-- Page 1 -->
-                    <section class="bg-page1">
+                    <section class="bg-page1" id="home">
                         <v-img src="https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac.png">
                         </v-img>
                         <v-container fluid class="text-center brown--text">
-                            <h2 class="title text-uppercase">the wedding of</h2>
+                            <h2 class="title text-uppercase">{{ dataApi.wedding.judul_utama }}</h2>
                             <div align="center" justify="center">
-                                <v-card width="200" color="brown">
-                                    <v-img width="190"
-                                        src="https://foreverr.id/wp-content/uploads/the-wedding-of-ana-ankih/8c7dd922ad47494fc02c388e12c00eac-4.jpg">
+                                <v-card width="200" height="210" color="brown">
+                                    <v-img width="190" height="206"
+                                        :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
                                     </v-img>
                                 </v-card>
-                                <h1 class="fontElsie" style="font-size: 40px;">Miftah & Laila</h1>
+                                <h1 class="fontElsie" style="font-size: 40px;">{{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</h1>
                                 <p class="body-2 mx-16">Kami akan menikah, dan kami ingin Anda menjadi bagian dari hari
                                     istimewa kami!</p>
                                 <v-row class="font-weight-bold">
                                     <v-col>
                                         <v-card color="brown" dark>
-                                            <p>00</p>
+                                            <p>{{ displayDays }}</p>
                                             <p>Hari</p>
                                         </v-card>
                                     </v-col>
                                     <v-col>
                                         <v-card color="brown" dark>
-                                            <p>00</p>
+                                            <p>{{ displayHours }}</p>
                                             <p>Jam</p>
                                         </v-card>
                                     </v-col>
                                     <v-col>
                                         <v-card color="brown" dark>
-                                            <p>00</p>
+                                            <p>{{ displayMinutes }}</p>
                                             <p>Menit</p>
                                         </v-card>
                                     </v-col>
                                     <v-col>
                                         <v-card color="brown" dark>
-                                            <p>00</p>
+                                            <p>{{ displaySeconds }}</p>
                                             <p>Detik</p>
                                         </v-card>
                                     </v-col>
                                 </v-row>
                             </div>
-                            <p class="font-weight-bold">Minggu, 23 Agustus 2021</p>
+                            <p class="font-weight-bold">{{ dataApi.wedding.tanggal_akad }}</p>
                         </v-container>
                         <div>
                             <v-img
@@ -371,7 +392,7 @@
                         </div>
                     </section>
                     <!-- Page 2 -->
-                    <section class="bg-page2 mt-10">
+                    <section class="bg-page2 mt-10" id="couple">
                         <v-img src="https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac.png">
                         </v-img>
                         <v-container fluid class="text-center brown--text body-2">
@@ -395,11 +416,11 @@
                             <div align="center" justify="center">
                                 <v-card width="150" height="170" color="brown">
                                     <v-img width="146" height="166"
-                                        src="https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-2.jpg">
+                                        :src="'https://merestui.com/'+ dataApi.wedding.foto_pria">
                                     </v-img>
                                 </v-card>
-                                <div class="fontElsie mt-10" style="font-size: 30px; font-weight: bold;">Miftahul </div>
-                                <p class="mx-16 mt-5">Putri dari Bapak Teguh Setijono, S.E., M.M & Ibu Sri Wahyuni</p>
+                                <div class="fontElsie mt-10" style="font-size: 30px; font-weight: bold;">{{ dataApi.wedding.nama_panggilan_pria }} </div>
+                                <p class="mx-16 mt-5">{{ dataApi.wedding.profil_pria }}</p>
                             </div>
                             <v-row class="my-10">
                                 <hr class="hr2">
@@ -410,11 +431,11 @@
                             <div align="center" justify="center">
                                 <v-card width="150" height="170" color="brown">
                                     <v-img width="146" height="166"
-                                        src="https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-2.jpg">
+                                        :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita">
                                     </v-img>
                                 </v-card>
-                                <div class="fontElsie mt-10" style="font-size: 30px; font-weight: bold;">Miftahul </div>
-                                <p class="mx-16 mt-5">Putri dari Bapak Teguh Setijono, S.E., M.M & Ibu Sri Wahyuni</p>
+                                <div class="fontElsie mt-10" style="font-size: 30px; font-weight: bold;">{{ dataApi.wedding.nama_panggilan_wanita }}</div>
+                                <p class="mx-16 mt-5">{{ dataApi.wedding.profil_wanita }}</p>
                             </div>
 
                         </v-container>
@@ -443,7 +464,7 @@
                         </div>
                     </section>
                     <!-- Page 3 -->
-                    <section class="bg-page3 mt-5">
+                    <section class="bg-page3 mt-5" id="event">
                         <v-img src="https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac.png">
                         </v-img>
                         <v-container fluid class="text-center brown--text body-2">
@@ -489,33 +510,29 @@
                                     </svg>
                                 </v-card-title>
                                 <v-card-title class="justify-center">
-                                    <p class="fontElsie" style="font-size: 30px;">Akad Nikah</p>
+                                    <p class="fontElsie" style="font-size: 30px;">{{ dataApi.wedding.judul_akad }}</p>
                                 </v-card-title>
                                 <v-card-title class="fontYeseva">
                                     <v-row class="mt-n10">
-                                        <v-col cols="4" class="mr-n5">Minggu</v-col>
+                                        <v-col cols="4" class="mr-n5">{{ dataApi.wedding.tanggal_akad.split(',')[0] }}</v-col>
                                         <v-col cols="1">
                                             <v-divider vertical></v-divider>
                                         </v-col>
                                         <v-col cols="3">
-                                            <p>27</p>
-                                            <p class="mt-n5">2022</p>
+                                            <p>{{ dataApi.wedding.tanggal_akad.split(' ')[2] }}</p>
+                                            <p class="mt-n5">{{ dataApi.wedding.tanggal_akad.split(' ')[1] }}</p>
                                         </v-col>
                                         <v-col cols="1" class="ml-n5">
                                             <v-divider vertical></v-divider>
                                         </v-col>
-                                        <v-col cols="4">Februari</v-col>
+                                        <v-col cols="4">{{ dataApi.wedding.tanggal_akad.split(' ')[3] }}</v-col>
                                     </v-row>
                                 </v-card-title>
                                 <v-card-text class="justify-center body-1">
-                                    <p>Pukul 09.00 WIB</p>
+                                    <p>Pukul {{ dataApi.wedding.waktu_akad }}</p>
                                     <p class="mt-n3">Alamat</p>
-                                    <p class="mt-n3 mx-5">Jl Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Excepturi obcaecati quod, nostrum molestias magni ullam dignissimos natus
-                                        sapiente
-                                        voluptate, modi placeat. Dolorem quod ipsa sint suscipit facere consequatur
-                                        voluptates vero.</p>
-                                    <v-btn color="white" light small rounded>
+                                    <p class="mt-n3 mx-5"> {{ dataApi.wedding.lokasi_akad }}</p>
+                                    <v-btn @click="openUrl(dataApi.wedding.short_url)" color="white" light small rounded>
                                         <v-icon>mdi-magnify-plus-outline</v-icon> Lihat Maps
                                     </v-btn>
                                 </v-card-text>
@@ -553,33 +570,29 @@
                                     </svg>
                                 </v-card-title>
                                 <v-card-title class="justify-center">
-                                    <p class="fontElsie" style="font-size: 30px;">Akad Nikah</p>
+                                    <p class="fontElsie" style="font-size: 30px;">{{ dataApi.wedding.judul_resepsi }}</p>
                                 </v-card-title>
                                 <v-card-title class="fontYeseva">
                                     <v-row class="mt-n10">
-                                        <v-col cols="4" class="mr-n5">Minggu</v-col>
+                                        <v-col cols="4" class="mr-n5">{{ dataApi.wedding.tanggal_resepsi.split(' ')[0] }}</v-col>
                                         <v-col cols="1">
                                             <v-divider vertical></v-divider>
                                         </v-col>
                                         <v-col cols="3">
-                                            <p>27</p>
-                                            <p class="mt-n5">2022</p>
+                                            <p>{{ dataApi.wedding.tanggal_resepsi.split(' ')[1] }}</p>
+                                            <p class="mt-n5">{{ dataApi.wedding.tanggal_resepsi.split(' ')[3] }}</p>
                                         </v-col>
                                         <v-col cols="1" class="ml-n5">
                                             <v-divider vertical></v-divider>
                                         </v-col>
-                                        <v-col cols="4">Februari</v-col>
+                                        <v-col cols="4">{{ dataApi.wedding.tanggal_resepsi.split(' ')[2] }}</v-col>
                                     </v-row>
                                 </v-card-title>
                                 <v-card-text class="justify-center body-1">
-                                    <p>Pukul 09.00 WIB</p>
+                                    <p>Pukul {{ dataApi.wedding.waktu_resepsi }}</p>
                                     <p class="mt-n3">Alamat</p>
-                                    <p class="mt-n3 mx-5">Jl Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Excepturi obcaecati quod, nostrum molestias magni ullam dignissimos natus
-                                        sapiente
-                                        voluptate, modi placeat. Dolorem quod ipsa sint suscipit facere consequatur
-                                        voluptates vero.</p>
-                                    <v-btn color="white" light small rounded>
+                                    <p class="mt-n3 mx-5">{{ dataApi.wedding.lokasi_resepsi }}</p>
+                                    <v-btn @click="openUrl(dataApi.wedding.short_url)" color="white" light small rounded>
                                         <v-icon>mdi-magnify-plus-outline</v-icon> Lihat Maps
                                     </v-btn>
                                 </v-card-text>
@@ -614,7 +627,7 @@
                                     </svg>
                                 </v-card-title>
                                 <v-card-title class="justify-center">
-                                    <p class="fontElsie" style="font-size: 20px;">Live Streaming</p>
+                                    <p class="fontElsie" style="font-size: 20px;">{{ dataApi.wedding.h_live_streaming }}</p>
                                     <p class="text-caption mx-5">Temui kami secara virtual untuk menyaksikan acara
                                         pernikahan kami yang insyaaAllah akan disiarkan langsung melalui akun instagram
                                         atau
@@ -655,7 +668,7 @@
                         </div>
                     </section>
                     <!-- Page 4 -->
-                    <section class="bg-page4 mt-10">
+                    <section class="bg-page4 mt-10" id="gallery">
                         <v-img src="https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac.png">
                         </v-img>
                         <v-container fluid class="text-center brown--text body-2">
@@ -695,14 +708,14 @@
                         </div>
                     </section>
                     <!-- Page 5 -->
-                    <section class="bg-page5 mt-5">
+                    <section class="bg-page5 mt-5" id="story">
                         <v-img src="https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac.png">
                         </v-img>
                         <v-container fluid class="text-center brown--text body-2">
                             <p class="fontElsie mt-16" style="font-size: 30px;">Our Love Story</p>
 
                             <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
-                                <v-timeline-item color="brown" fill-dot large icon="mdi-heart-outline" v-for="i in 3"
+                                <v-timeline-item color="brown" fill-dot large icon="mdi-heart-outline" v-for="(story, i) in dataApi.stories" :key="i"
                                     :key="i">
                                     <v-row class="pt-4">
                                         <v-col>
@@ -710,17 +723,17 @@
                                                 <v-card-title>
                                                     <v-card>
                                                         <v-img width="300" height="200"
-                                                            src="https://via.placeholder.com/512"></v-img>
+                                                            :src="story.photo"></v-img>
                                                     </v-card>
                                                 </v-card-title>
                                                 <v-card-title>
-                                                    <p class="text-caption font-weight-bold mt-n5">2015</p>
+                                                    <p class="text-caption font-weight-bold mt-n5">{{ story.tanggal }}</p>
                                                 </v-card-title>
                                                 <v-card-title>
-                                                    <p class="body-1 font-weight-bold mt-n10">Judul</p>
+                                                    <p class="body-1 font-weight-bold mt-n10">{{ story.judul }}</p>
                                                 </v-card-title>
                                                 <v-card-title>
-                                                    <p class="body-1 font-weight-light mt-n10">Cerita</p>
+                                                    <p class="text-caption text-start font-weight-light mt-n10">{{ story.cerita }}</p>
                                                 </v-card-title>
                                             </v-card>
                                         </v-col>
@@ -753,7 +766,7 @@
                         </div>
                     </section>
                     <!-- Page 6 -->
-                    <section class="bg-page6 mt-5">
+                    <section class="bg-page6 mt-5" id="chat">
                         <v-img src="https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac.png">
                         </v-img>
                         <v-container fluid class="text-center brown--text body-2">
@@ -761,7 +774,7 @@
                             <v-card style="border: 1px solid brown;">
                                 <v-card-title class="justify-center">
                                     <v-icon color="brown">mdi-email-open-outline</v-icon><span
-                                        class="font-weight-bold body-1">0 Ucapan</span>
+                                        class="font-weight-bold body-1">{{ totalUcapan }} Ucapan</span>
                                 </v-card-title>
                                 <v-divider></v-divider>
                                 <v-card-text>
@@ -779,27 +792,27 @@
                                     <v-textarea rows="3" v-model="form.ucapan" label="Pesan/Doa" solo></v-textarea>
                                 </v-card-text>
                                 <v-card-title>
-                                    <v-btn color="brown" dark>Kirim </v-btn>
+                                    <v-btn color="brown" @click="kirimUcapan" dark>Kirim </v-btn>
                                 </v-card-title>
                             </v-card>
                             <v-card class="mt-10" style="border: 2px solid brown; background-color: transparent;">
 
                                 <v-card-title class="text-start">
                                     <div class="overflowAuto">
-                                        <div v-for="i in 10" :key="idx">
-                                            <p class="title mx-4"> i.owner <span
+                                        <div v-for="(i, idx) in dataApi.comments" :key="idx" :key="idx">
+                                            <p class="title mx-4"> {{ i.owner }} <span
                                                     class="pl-2 text-caption text--disabled">
-                                                    i.date_only </span>
+                                                    {{ i.date_only }} </span>
                                             </p>
                                             <p class="text-caption mx-4 mt-n5 text--disabled">Ditulis oleh
-                                                i.write_as , ( i.sosmed )</p>
-                                            <p class="text-caption mx-4">i.content </p>
+                                                {{ i.write_as }} , ( {{ i.sosmed }} )</p>
+                                            <p class="text-caption mx-4">{{ i.content }} </p>
                                             <v-divider></v-divider>
                                         </div>
                                     </div>
                                 </v-card-title>
                             </v-card>
-                            <v-card color="brown" dark class="mt-5 pb-5">
+                            <v-card color="brown" dark class="mt-5 pb-5" id="gift">
                                 <v-card-title class="justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         class="mt-10" id="Capa_1" x="0px" y="0px" viewBox="0 0 352.752 352.752"
@@ -830,7 +843,7 @@
                                     </svg>
                                 </v-card-title>
                                 <v-card-title class="justify-center">
-                                    Kirim Hadiah
+                                    {{ dataApi.wedding.h_send_money }}
                                 </v-card-title>
                                 <v-card-text class="font-weight-light text-caption">
                                     Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi
@@ -862,15 +875,15 @@
                                             <div align="center">
                                                 <v-icon x-large color="black">mdi-heart-outline</v-icon>
                                                 <p class="font-weight-medium">Kirim Hadiah</p>
-                                                <!-- <p class="font-weight-light">Untuk {{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p> -->
+                                                <p class="font-weight-light">Untuk {{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</p>
                                             </div>
                                         </v-card-text>
                                         <v-card-text>
                                             <v-row>
                                                 <v-col>
                                                     <p class="font-weight-bold">BCA</p>
-                                                    <!-- <p class="mt-n3">{{ nomorRekening }}</p> -->
-                                                    <!-- <p class="mt-n3">a/n {{ namaRekening }}</p> -->
+                                                    <p class="mt-n3">{{ nomorRekening }}</p>
+                                                    <p class="mt-n3">a/n {{ namaRekening }}</p>
                                                 </v-col>
                                                 <v-col>
                                                     <div align="end">
@@ -884,8 +897,8 @@
                                             <v-row>
                                                 <v-col>
                                                     <p class="font-weight-bold">Mandiri</p>
-                                                    <!-- <p class="mt-n3">{{ nomorRekening1 }}</p> -->
-                                                    <!-- <p class="mt-n3">a/n {{ namaRekening1 }}</p> -->
+                                                    <p class="mt-n3">{{ nomorRekening1 }}</p>
+                                                    <p class="mt-n3">a/n {{ namaRekening1 }}</p>
                                                 </v-col>
                                                 <v-col>
                                                     <div align="end">
@@ -910,12 +923,12 @@
                             <div class="d-flex justify-center">
                                 <v-card width="150" height="170" color="brown">
                                     <v-img width="146" height="166"
-                                        src="https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-2.jpg">
+                                        :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
                                     </v-img>
                                 </v-card>
                             </div>
                             <p class="body-2 mt-10">Kami yang Berbahagia.</p>
-                            <h1 class="fontElsie" style="font-size: 40px;">Miftah & Laila</h1>
+                            <h1 class="fontElsie" style="font-size: 40px;">{{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</h1>
                         </v-container>
                         <div>
                             <v-img
@@ -949,18 +962,18 @@
                     <v-container fluid class="text-center brown--text">
                         <h2 class="title text-uppercase">the wedding of</h2>
                         <div align="center" justify="center">
-                            <v-card width="200" color="brown">
-                                <v-img width="190"
-                                    src="https://foreverr.id/wp-content/uploads/the-wedding-of-ana-ankih/8c7dd922ad47494fc02c388e12c00eac-4.jpg">
+                            <v-card width="200"  color="brown">
+                                <v-img width="190" 
+                                    :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
                                 </v-img>
                             </v-card>
-                            <h1 class="fontElsie" style="font-size: 40px;">Miftah & Laila</h1>
+                            <h1 class="fontElsie" style="font-size: 40px;">{{ dataApi.wedding.nama_panggilan_pria }} & {{ dataApi.wedding.nama_panggilan_wanita }}</h1>
                             <div class="body-2 mx-16">
                                 <p>Kepada Yth.</p>
                                 <p class="mt-n5">Bpk/Ibu/Saudara/i</p>
                                 <p class="title font-weight-bold">Nama Tamu</p>
                                 <p class="mt-n3">di Tempat</p>
-                                <v-btn color="brown" rounded dark>
+                                <v-btn @click="scrollPlay" color="brown" rounded dark>
                                     <v-icon>mdi-book-open-outline</v-icon>Buka Undangan
                                 </v-btn>
                             </div>
@@ -988,8 +1001,13 @@
                                 </v-img>
                             </div>
                         </v-img>
-                    </div>
+                    </div>                    
                 </section>
+                <audio id="song" ref="audioElm">
+            <source :src="'https://merestui.com'+dataApi.music.music_path"
+              type="audio/mp3">
+          </audio>
+                </div>
             </v-main>
         </v-app>
     </div>
