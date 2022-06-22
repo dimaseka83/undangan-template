@@ -21,7 +21,7 @@
                 </v-container>
                 <div v-else>
                     <div v-if="openInvitation">
-                        <div class="navbar" :class="[displayDesktop ? '': 'mb-5']">
+                        <div class="navbar" :class="[displayDesktop ? 'mb-2': 'mb-5']">
                             <div class="d-flex justify-end">
                                 <v-dialog v-model="dialog1" transition="dialog-bottom-transition" width="500">
                                     <template v-slot:activator="{ on, attrs }">
