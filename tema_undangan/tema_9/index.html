@@ -21,8 +21,8 @@
                 </v-container>
                 <div v-else>
                     <div v-if="openInvitation">
-                        <div class="navbar mb-5" v-if="!displayDesktop">
-                            <v-row class="ml-2">
+                        <div class="navbar" :class="[displayDesktop ? '': 'mb-5']">
+                            <v-row class="ml-2" v-if="!displayDesktop">
                                 <v-col class="mr-n5">
                                     <a href="#bridgeroom">
                                         <v-img width="60" src="https://kadio.id/images/icon/mobile/1.svg"></v-img>
@@ -49,6 +49,25 @@
                                     </a>
                                 </v-col>
                             </v-row>
+                            <div class="navigation" v-else>
+                                <a href="#bridgeroom" >
+                                    <v-img width="60" class="mb-5" src="https://kadio.id/images/icon/mobile/1.svg"></v-img>
+                                </a>
+                                <a href="#event" >
+                                    <v-img width="60" class="mb-5" src="https://kadio.id/images/icon/mobile/2.svg"></v-img>
+                                </a>
+                                <a href="#story" >
+                                    <v-img width="60" class="mb-5" src="https://kadio.id/images/icon/mobile/3.svg"></v-img>
+                                </a>
+                                <a href="#galery" >
+                                    <v-img width="60" class="mb-5" src="https://kadio.id/images/icon/mobile/4.svg"></v-img>
+                                </a>
+                                <a href="#rsvp">
+                                    <v-img width="60" class="mb-5" src="https://kadio.id/images/icon/mobile/5.svg"></v-img>
+                                </a>
+                            </v-col>
+                            </div>
+                        </div>
                         </div>
                         <!-- Page 1 -->
                         <v-container fluid class="bg-page1 fill-height" id="bridgeroom">

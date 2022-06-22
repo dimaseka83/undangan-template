@@ -6,7 +6,7 @@ new Vue({
             dataApi: [],
             dialog: false,
             dialog1: false,
-            openInvitation: false,
+            openInvitation: true,
             loading: true,
             displayDays: 0,
             displayHours: 0,

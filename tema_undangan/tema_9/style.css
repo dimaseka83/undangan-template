@@ -69,6 +69,15 @@
         margin-left: 27vh;
         margin-top: -20vh;
     }
+
+    .navbar {
+        overflow: hidden;
+        background-color: transparent;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+      }
 }
 
 /* Desktop */
@@ -154,6 +163,25 @@
     clip-path: polygon(13% 0, 86% 0, 100% 50%, 87% 100%, 14% 100%, 0% 50%);
     background-color: white;
     }
+
+    .navbar {
+        overflow: hidden;
+        background-color: transparent;
+        position: fixed;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .cardNavigation{
+        margin-left: 80vh;
+        margin-right: 2vh;
+    }
+    
+    .navigation{
+        margin-top: 30vh;
+        margin-left: 150vh;
+    }
 }
 
 
@@ -223,11 +251,3 @@ background-color: white;
 
 /* content fixed */
 
-.navbar {
-    overflow: hidden;
-    background-color: transparent;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-  }
