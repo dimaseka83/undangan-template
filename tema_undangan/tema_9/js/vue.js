@@ -88,6 +88,7 @@ new Vue({
             audio.play();
             this.openInvitation = true;
         },
+
     },
 
     created() {
