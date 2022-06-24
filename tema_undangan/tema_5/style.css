@@ -12,7 +12,7 @@
 
     .bg-page2{
         background-color: #ffffe6;
-        height: 220vh;
+        height: 250vh;
     }
 
     .bg-page3{
@@ -20,7 +20,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 50vh;
+        height: 100vh;
         margin-top: -5vh;
     }
 
@@ -56,15 +56,87 @@
         height: 160vh;
     }
     .cardNavigation{
+        margin-left: 10vh;
+        margin-right: 11vh;
+    }
+    
+    .v-carousel{
+        max-width: 100%;
+        max-height: 500px;
+        margin-top: 10vh;
+     }
+
+    
+}
+
+
+/* Mobile  400px*/
+@media screen and (max-width: 400px) {
+    .bg-pagecover{
+        background-image: url('https://cdn-uploads.our-wedding.link/3555e600-f65f-11eb-ac04-7b83682bd801.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .bg-page2{
+        background-color: #ffffe6;
+        height: 250vh;
+    }
+
+    .bg-page3{
+        background-image: url('./img/bg-img.png'), url('https://images.ctfassets.net/q40z6pfqje6o/3LtK6YN6dXZlCncHHdLFH3/224ff250008085fab0134a9a92eb182c/5698719-ai.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 50vh;
+        margin-top: -5vh;
+    }
+
+    .bg-page4{
+        background-image:  url('https://images.ctfassets.net/q40z6pfqje6o/U9PTJJXcez5lw0NVL16H6/51bb5917e53b18242e62f2e14017b62e/New_Project__5_.png'), url('./img/bg-img2.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 85vh;
+        margin-top: -5vh;
+    }
+
+    .bg-page5{
+        background-color: #ffffe6;
+        height: 180vh;
+    }
+    
+    
+
+    .bg-page6{
+        background-image:  url('https://images.ctfassets.net/q40z6pfqje6o/01QcYN53sWodwqR7gvquz5/f2901a8caa319c2919353d49c86d5770/New_Project__9_.png'), url('./img/bg-img.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 260vh;
+    }
+    
+    .bg-page7{
+        background-image:  url('https://images.ctfassets.net/q40z6pfqje6o/2rvAyhhIJ74iEzdioDn7zI/a2b461f702e9cb403fce85bb90aed3b7/Polygon-1s-1141px.svg'), url('./img/bg-img.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 160vh;
+    }
+    .cardNavigation{
         margin-left: 13vh;
         margin-right: 11vh;
     }
+
+    
     
     
 }
 
-/* Desktop */
-@media screen and (min-width: 501px) {
+/* Desktop HDPi*/
+@media screen and (max-width: 1440px) {
     .bg-pagecover{
         background-image: url('https://cdn-uploads.our-wedding.link/3555e600-f65f-11eb-ac04-7b83682bd801.webp');
         background-size: cover;
@@ -117,8 +189,6 @@
         height: 160vh;
     }
     
-    
-
     .overflowFixed{
         position: fixed;
       }
@@ -136,6 +206,97 @@
     .navigation{
         margin-top: 10vh;
         margin-left: 80px;
+    }
+
+    .widthImg{
+        width: 855px;
+    }
+}
+
+/* Desktop HD*/
+@media screen and (max-width: 1280px) {
+    .bg-pagecover{
+        background-image: url('https://cdn-uploads.our-wedding.link/3555e600-f65f-11eb-ac04-7b83682bd801.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .bg-page2{
+        background-color: #ffffe6;
+        height: 230vh;
+    }
+
+    .bg-page3{
+        background-image: url('./img/bg-img.png'), url('https://images.ctfassets.net/q40z6pfqje6o/3LtK6YN6dXZlCncHHdLFH3/224ff250008085fab0134a9a92eb182c/5698719-ai.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30vh;
+        margin-top: -5vh;
+    }
+
+    .bg-page4{
+        background-image:  url('https://images.ctfassets.net/q40z6pfqje6o/U9PTJJXcez5lw0NVL16H6/51bb5917e53b18242e62f2e14017b62e/New_Project__5_.png'), url('./img/bg-img2.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 90vh;
+        margin-top: -5vh;
+    }
+
+    .bg-page5{
+        background-color: #ffffe6;
+        height: 160vh;
+    }
+
+    .bg-page6{
+        background-image:  url('https://images.ctfassets.net/q40z6pfqje6o/01QcYN53sWodwqR7gvquz5/f2901a8caa319c2919353d49c86d5770/New_Project__9_.png'), url('./img/bg-img.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 180vh;
+    }
+    
+    .bg-page7{
+        background-image:  url('https://images.ctfassets.net/q40z6pfqje6o/2rvAyhhIJ74iEzdioDn7zI/a2b461f702e9cb403fce85bb90aed3b7/Polygon-1s-1141px.svg'), url('./img/bg-img.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 160vh;
+    }
+
+    .overflowFixed{
+        position: fixed;
+      }
+        .overflowAuto2 {
+            width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 5vh;
+    }
+
+    .cardNavigation{
+        margin-left: 80vh;
+        margin-right: 2vh;
+    }
+    
+    .navigation{
+        margin-top: 10vh;
+        margin-left: 21vh;
+    }
+
+    .widthImg{
+        width: 780px;
+    }
+    .v-carousel{
+        max-width: 100%;
+    }
+
+    .carouselImage{
+        margin-left: 5vh;
+        max-width: 50px;
     }
 }
     
