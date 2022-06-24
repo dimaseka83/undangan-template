@@ -103,7 +103,7 @@ height: 263vh;
 }
 
 /* Desktop */
-@media screen and (min-width: 501px){
+@media screen and (min-width: 501px) and (max-width: 768px) {
   .overflowAuto {
     overflow-y: scroll;
     overflow-x: hidden;
