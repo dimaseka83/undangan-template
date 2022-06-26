@@ -699,14 +699,14 @@
                         </v-row>
                         <v-row class="mt-16 mx-auto">
                             <v-col>
-                                <v-btn class="text-caption" color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
+                                <v-btn x-small class="text-caption" color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
                             </v-col>
                             <v-col>
-                                <v-btn class="text-caption" color="blue-grey" dark>Google Calendar</v-btn>
+                                <v-btn x-small class="text-caption" color="blue-grey" dark>Google Calendar</v-btn>
                             </v-col>
                         </v-row>
                         <v-row justify="center" align="center">
-                            <v-btn class="text-caption" color="blue-grey" dark>Yahoo Calendar</v-btn>
+                            <v-btn x-small class="text-caption" color="blue-grey" dark>Yahoo Calendar</v-btn>
                         </v-row>
                     </div>
 
@@ -755,7 +755,7 @@
                                 <v-btn color="blue-grey" @click="kirimUcapan" dark>Kirim </v-btn>
                             </v-card-title>
                         </v-card>
-                        <v-card width="600" class="mt-10" style="border: 2px solid #1976D2; background-color: transparent;">
+                        <v-card width="600" class="mt-10 marginCard" style="border: 2px solid #1976D2; background-color: transparent;">
                             <v-card-title>
                                 <div class="overflowAuto">
                                 <div v-for="(i, idx) in dataApi.comments" :key="idx" class="text-start">
@@ -786,7 +786,7 @@
                                 <v-btn color="blue-grey" @click="kirimUcapan" dark>Kirim </v-btn>
                             </v-card-title>
                         </v-card>
-                        <v-card class="mt-10" style="border: 2px solid #1976D2; background-color: transparent;">
+                        <v-card class="my-10 " style="border: 2px solid #1976D2; background-color: transparent;">
                             <v-card-title>
                                 <div class="overflowAuto">
                                 <div v-for="(i, idx) in dataApi.comments" :key="idx">

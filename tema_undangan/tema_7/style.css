@@ -1,9 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+/* Mobile 400px*/
+@media screen and (min-width: 400px){
+    .bg-page2 {
+        background-color: #fff;
+        height: 80vh;
+    }
 
-/* Mobile */
-@media screen and (max-width: 500px){
+    .bg-page2_1 {
+        background-color: #eef8ff;
+    }
+
+    .bg-page3 {
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        height: 150vh;
+    }
+
+    .bg-page4 {
+        background-color: #fff;
+        height: 350vh;
+    }
+    
+
+    .bg-page5{
+        background-image: url('./img/blue_img.png'), url('https://demo.datengdong.com/uploads/original/gallery/f92dc892d7faba8c2253a2ccfca156ba6ad908ad.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30vh;
+    }
+
+        .bg-page6 {
+    background-color: #fff;
+    height: 220vh;
+}
+    
+
+    .fontAkad {
+        font-family: 'Satisfy', cursive;
+        font-size: 30px;
+    }
+
+    .fontLove {
+        font-family: 'Satisfy', cursive;
+        font-size: 40px;
+    }
+}
+
+/* Mobile 500px*/
+@media screen and (min-width: 500px){
     .bg-page2 {
         background-color: #fff;
         height: 80vh;
@@ -51,8 +99,63 @@
         font-size: 40px;
     }
 }
-/* Desktop */
-@media screen and (min-width:501px) {
+/* Desktop HD*/
+@media screen and (min-width:1280px) {
+    .bg-page2 {
+        background-color: #fff;
+        height: 70vh;
+    }
+
+    .bg-page2_1 {
+        background-color: #eef8ff;
+        height: 130vh;
+    }
+
+    .bg-page3 {
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .bg-page4 {
+        background-color: #fff;
+        height: 600vh;
+    }
+    
+
+    .bg-page5{
+        background-image: url('./img/blue_img.png'), url('https://demo.datengdong.com/uploads/original/gallery/f92dc892d7faba8c2253a2ccfca156ba6ad908ad.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 30vh;
+    }
+    
+        .bg-page6 {
+    background-color: #fff;
+    height: 200vh;
+}
+
+    .fontAkad {
+        font-family: 'Satisfy', cursive;
+        font-size: 40px;
+    }
+
+    .fontLove {
+        font-family: 'Satisfy', cursive;
+        font-size: 50px;
+    }
+
+    .marginCard{
+        margin-bottom: 20vh;
+    }
+    
+    
+}
+
+/* Desktop HD*/
+@media screen and (min-width:1440px) {
     .bg-page2 {
         background-color: #fff;
         height: 70vh;
@@ -98,6 +201,12 @@
         font-family: 'Satisfy', cursive;
         font-size: 50px;
     }
+
+
+    .marginCard{
+        margin-bottom: 20vh;
+    }
+    
     
     
 }
