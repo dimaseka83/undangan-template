@@ -138,6 +138,11 @@
                         </div>
                         <v-container id="home" fluid class="bg-page1 fill-height white--text"
                             :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                            <div class="snowflakes" aria-hidden="true" >
+                                <div class="snowflake" v-for="i in 10" :key="i">
+                                ★
+                                </div>
+                            </div>
                             <v-row justify="center" align="center">
                                 <v-img max-width="200"
                                     src="https://demo.datengdong.com/themes/starlight/images/flower.png"
@@ -161,7 +166,7 @@
                             </v-row>
                         </v-container>
                         <v-img class="mt-n5" src="https://demo.datengdong.com/themes/starlight/images/mask.png"></v-img>
-                        <v-container fluid class="bg-page2 text-center mt-16">
+                        <v-container fluid class="bg-page2 text-center mt-16"> 
                             <p class="fontInformasi">{{ dataApi.wedding.h_more_info }}</p>
                             <p class="text-decoration-underline">Protokol Covid 19</p>
                             <p class="font-weight-light text-caption">Dalam upaya mengurangi penyebaran Covid 19 pada
@@ -538,11 +543,11 @@
                             </v-row>
                             <div align="center">
                                 <p class="fontLove orange--text">Our Love Story</p>
-                                <v-carousel class="mt-16" :class="[displayDesktop ? 'px-16' : '']" cycle height="400"
+                                <v-carousel :class="[displayDesktop ? 'px-16' : 'mt-16']" cycle height="400"
                                     hide-delimiter-background show-arrows-on-hover>
                                     <v-carousel-item v-for="(story, i) in dataApi.stories" :key="i">
                                         <v-sheet color="transparent" height="100%">
-                                            <p class="font-weight-bold">{{ story.judul }}</p>
+                                            <p class="font-weight-bold carouselSpace">{{ story.judul }}</p>
                                             <p class="text-caption mx-4">{{ story.cerita }}</p>
                                             <p class="grey--text text-caption">{{ story.tanggal }}</p>
                                         </v-sheet>
@@ -805,7 +810,7 @@
                                         <v-btn color="blue-grey" @click="kirimUcapan" dark>Kirim </v-btn>
                                     </v-card-title>
                                 </v-card>
-                                <v-card width="600" class="mt-10"
+                                <v-card width="600" class="mt-10 marginCard"
                                     style="border: 2px solid orange; background-color: transparent;">
                                     <v-card-title>
                                         <div class="overflowAuto">

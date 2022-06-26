@@ -119,6 +119,11 @@
                       </v-bottom-navigation>
                 </div>
                 <v-container id="home" fluid class="bg-page1 fill-height white--text" :style="{'background-image': 'url(./img/blue_img.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                    <div class="snowflakes" aria-hidden="true" >
+                                <div class="snowflake" v-for="i in 10" :key="i">
+                                ❅
+                                </div>
+                            </div>
                     <v-row justify="center" align="center">
                         <v-img max-width="200" src="https://demo.datengdong.com/themes/winterblue/images/flower.png" v-if="!displayDesktop"></v-img>
                         <div justify="center" align="center">
