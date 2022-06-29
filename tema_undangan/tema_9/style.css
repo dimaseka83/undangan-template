@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rouge+Script&family=Viaoda+Libre&display=swap');
 
-/* Mobile */
-@media screen  and (max-width: 500px){
+/* Mobile 500px*/
+@media screen  and (max-width: 400px){
     .bg-page2{
         background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
         background-size: cover;
@@ -24,7 +24,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 150vh;
+        height: 500vh;
     }
 
     
@@ -33,7 +33,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 200vh;
+    height: 250vh;
 }
 
 
@@ -78,10 +78,98 @@
         width: 100%;
         z-index: 1;
       }
+
+      .imgCoverbg1{
+        max-width: 400px;
+        margin-left: -5vh;
+        margin-top: -40vh;
+      }
+
 }
 
-/* Desktop */
-@media screen  and (min-width: 501px){
+/* Mobile 500px*/
+@media screen  and (max-width: 500px){
+    .bg-page2{
+        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 180vh;
+    }
+
+    .bg-page3{
+        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 150vh;
+    }
+
+    .bg-page5{
+        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 300vh;
+    }
+
+    
+.bg-page6{
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250vh;
+}
+
+
+    
+    
+    .fotoPasangan{
+        display: inline-block;
+        position: relative;
+        width: 250px;
+        height: 250px;
+        background: #583e29;
+        box-sizing: border-box;
+        -webkit-clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+    
+    .fotoPasangan img{
+        position: absolute;
+        top: 2px; /* equal to border thickness */
+        left: 2px; /* equal to border thickness */
+        width: 246px; /* container height - (border thickness * 2) */
+        height: 246px; /* container height - (border thickness * 2) */
+        -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+
+    .flowerlaki{
+        margin-left: -25vh;
+        margin-top: -35vh;
+    }
+
+    .flowerdoa{
+        margin-left: 27vh;
+        margin-top: -20vh;
+    }
+
+    .navbar {
+        overflow: hidden;
+        background-color: transparent;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+
+}
+
+/* Desktop HDPi*/
+@media screen  and (min-width: 1440px){
     .bg-page2{
         background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
         background-size: cover;
@@ -179,8 +267,115 @@
     }
     
     .navigation{
-        margin-top: 30vh;
-        margin-left: 150vh;
+          position: fixed;
+        right: 0;
+        top: 50%;
+        width: 5em;
+        margin-top: -2.5em;
+    }
+}
+
+/* Desktop HD*/
+@media screen  and (min-width: 1280px){
+    .bg-page2{
+        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-page3{
+        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .bg-page5{
+        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    
+.bg-page6{
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+    
+    
+    .fotoPasangan{
+        display: inline-block;
+        position: relative;
+        width: 260px;
+        height: 230px;
+        background: #583e29;
+        box-sizing: border-box;
+        -webkit-clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+    
+    .fotoPasangan img{
+        position: absolute;
+        top: 2px; /* equal to border thickness */
+        left: 2px; /* equal to border thickness */
+        width: 256px; /* container height - (border thickness * 2) */
+        height: 226px; /* container height - (border thickness * 2) */
+        -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+
+    .flowerlaki{
+        margin-left: -22vh;
+        margin-top: -28vh;
+    }
+
+    .flowerdoa{
+        margin-left: 60vh;
+        margin-top: -20vh;
+    }
+
+    .detailbgcard{
+        width: 60%;
+    z-index: 1;
+    -webkit-clip-path: polygon(13% 0, 86% 0, 100% 50%, 87% 100%, 14% 100%, 0% 50%);
+    clip-path: polygon(13% 0, 86% 0, 100% 50%, 87% 100%, 14% 100%, 0% 50%);
+    background-color: #583e29;
+    }
+    .detailbgcard .detailcard{
+    z-index: 1;
+    padding: 10vh 15vh;
+    -webkit-clip-path: polygon(13% 0, 86% 0, 100% 50%, 87% 100%, 14% 100%, 0% 50%);
+    clip-path: polygon(13% 0, 86% 0, 100% 50%, 87% 100%, 14% 100%, 0% 50%);
+    background-color: white;
+    }
+
+    .navbar {
+        overflow: hidden;
+        background-color: transparent;
+        position: fixed;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .cardNavigation{
+        margin-left: 80vh;
+        margin-right: 2vh;
+    }
+    
+    .navigation{
+          position: fixed;
+        right: 0;
+        top: 50%;
+        width: 5em;
+        margin-top: -2.5em;
     }
 }
 
@@ -210,7 +405,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80vh;
 }
 
 
@@ -251,3 +445,30 @@ background-color: white;
 
 /* content fixed */
 
+  /* Snow */
+.intro,
+.intro a{
+  color:#fff;
+}
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%{-webkit-transform:translateX(0px);transform:translateX(0px)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}100%{-webkit-transform:translateX(0px);transform:translateX(0px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}
+/* Demo Purpose Only*/
+.demo {
+  font-family: 'Raleway', sans-serif;
+	color:#fff;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+.demo a{
+  font-family: 'Raleway', sans-serif;
+color: #000;		
+}

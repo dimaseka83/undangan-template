@@ -71,6 +71,11 @@
                         </div>
                         <!-- Page 1 -->
                         <v-container fluid class="bg-page1 fill-height" id="bridgeroom">
+                            <div class="snowflakes" aria-hidden="true" >
+                                <div class="snowflake" v-for="i in 10" :key="i">
+                                ●
+                                </div>
+                            </div>
                             <v-row align="center" justify="center" class="text-center" v-if="displayDesktop">
                                 <v-img max-width="650"
                                     src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/cover-frame.png">
@@ -117,7 +122,7 @@
                                 </v-img>
                             </v-row>
 
-                            <v-img
+                            <v-img class="imgCoverbg1"
                                 src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/cover-frame.png"
                                 v-else>
                                 <v-img width="200"
@@ -126,14 +131,14 @@
                                 <div justify="center" align="center" class="fontMarried">
                                     <p class="brown--text" style="font-size: 20px; margin-top: -30vh;">We are getting
                                         married</p>
-                                    <p class="fontPasangan brown--text" style="font-size: 80px;">
+                                    <p class="fontPasangan brown--text" style="font-size: 60px;">
                                         {{ dataApi.wedding.nama_panggilan_pria }} &
                                         {{ dataApi.wedding.nama_panggilan_wanita }}</p>
                                     <p class="brown--text" style="font-size: 25px;">{{ dataApi.wedding.tanggal_akad }}
                                     </p>
                                     <p class="brown--text mt-n5" style="font-size: 20px;">-Save the Date-</p>
-                                    <v-row>
-                                        <v-col>
+                                    <v-row class="mx-5">
+                                        <v-col >
                                             <v-card color="white">
                                                 <v-card-text>
                                                     <p class="title">{{ displayDays }}</p>
@@ -399,8 +404,8 @@
                         <div align="center" justify="center">
                             <p class="fontPasangan mt-16" style="font-size: 60px;">Our Love Story</p>
                         
-                            <v-sheet
-                            class="mx-auto"
+                            <v-sheet v-if="displayDesktop"
+                             color="transparent"
                           >
                             <v-slide-group
                               multiple
@@ -409,8 +414,9 @@
                               <v-slide-item
                               v-for="(story, i) in dataApi.stories" :key="i"
                               >
-                              <v-card max-width="500" style="border: 1px solid brown; background-color: transparent;" 
+                              <v-card width="600" style="border: 1px solid brown; background-color: transparent;" 
                               class="rounded-xl mx-10 mt-10">
+                              <v-img max-height="200" :src="story.photo"></v-img>
                               <v-card-title class="fontPasangan" style="font-size: 30px;">
                                   {{ story.judul }}
                               </v-card-title>
@@ -423,14 +429,14 @@
                               </v-slide-item>
                             </v-slide-group>
                           </v-sheet>
-
-                        <v-carousel v-else class="text-start" cycle height="400" hide-delimiter-background
-                                show-arrows-on-hover>
-                                <v-carousel-item v-for="(story, i) in dataApi.stories" :key="i">
+                        <v-carousel v-else class="text-start" cycle hide-delimiter-background
+                                show-arrows-on-hover height="750">
+                                <v-carousel-item v-for="(story, i) in dataApi.stories" :key="i" >
                                     <v-sheet color="transparent">
                                         <v-card style="border: 1px solid brown; background-color: transparent;" 
                                             class="rounded-xl mx-10 mt-10">
-                                            <v-card-title class="fontPasangan" style="font-size: 30px;">
+                                            <v-img max-height="200" :src="story.photo"></v-img>
+                                            <v-card-title class="fontPasangan" style="font-size: 25px;">
                                                 {{ story.judul }}
                                             </v-card-title>
                                             <v-card-text>
@@ -442,10 +448,11 @@
                                     </v-sheet>
                                 </v-carousel-item>
                             </v-carousel>
+
                         </div>
                     </v-container>
                     <!-- Page 5 -->
-                    <v-container fluid class="bg-page5" id="galery">
+                    <v-container fluid class="bg-page5" id="galery" >
                         <div align="center" justify="center">
                             <p class="fontPasangan mt-16" style="font-size: 60px;">Photo Gallery</p>
                             <div v-if="displayDesktop">
@@ -759,7 +766,7 @@
                                 </div>
                             </v-card>
                         </div>
-                        <v-card color="blue-grey lighten-5" class="rounded-xl mb-16" v-else>
+                        <v-card color="blue-grey lighten-5" class="rounded-xl" v-else>
                             <v-card-title class="fontPasangan" style="font-size: 30px;">
                                 Doa & Ucapan dari undangan
                             </v-card-title>

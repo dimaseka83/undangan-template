@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-/* Desktop HDPi*/
+/* Desktop */
 @media screen and (max-width: 1440px) {
     #app{
         width: 412px;
@@ -73,7 +73,6 @@
 
 }
 
-/* Desktop HD*/
 @media screen and (max-width: 1280px) {
     #app{
         width: 412px;
@@ -123,7 +122,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 262vh;
+        height: 255vh;
     }
     
     .bg-page6{
@@ -145,7 +144,6 @@
   }
 
 }
-
 /* Mobile */
 @media screen and (max-width: 412px) {
     .bg-pagecover{
@@ -161,21 +159,21 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 105vh;
+        height: 97vh;
     }
     .bg-page2{
         background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 160vh;
+        height: 145vh;
     }
     .bg-page3{
         background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 240vh;
+        height: 216vh;
     }
     
     .bg-page4{
@@ -183,7 +181,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 120vh;
+        height: 110vh;
     }
     
     .bg-page5{
@@ -199,7 +197,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 300vh;
+        height: 270vh;
     }
 
     /* content fixed */
@@ -240,23 +238,18 @@
 }
 
 .animation1 {
-    position: relative;
-    animation: MyDiv1 2s infinite ease-in-out;
-    animation-direction: alternate-reverse;
-  }
-  
-  @keyframes MyDiv1 {
-    0%   {left: 0px; top: 0px;}
-    100%  {left: 20px; top: 0px;}
-  }
+  position: relative;
+  animation: MyDiv 3s ease-in-out infinite;
+  animation-direction: alternate-reverse;
+}
 
-  .animation2 {
-    position: relative;
-    animation: MyDiv2 1s infinite ease-out;
-    animation-direction: alternate-reverse;
-  }
-  
-  @keyframes MyDiv2 {
-    0%   {left: 0px; top: 0px;}
-    100%  {left: 20px; top: 0px;}
-  }
+.animation2 {
+  position: relative;
+  animation: MyDiv 3s ease-in-out infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes MyDiv {
+  0%   {left: 0px; top: 0px;}
+  100%  {left: 30px; top: 0px;}
+}
