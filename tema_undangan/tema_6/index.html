@@ -136,37 +136,41 @@
                                 </v-btn>
                             </v-bottom-navigation>
                         </div>
-                        <v-container id="home" fluid class="bg-page1 fill-height white--text"
-                            :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
-                            <div class="snowflakes" aria-hidden="true" >
-                                <div class="snowflake" v-for="i in 10" :key="i">
-                                ★
+                        <v-content class="bg-page1" :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                            <v-container id="home" fluid class="fill-height white--text">
+                                <div class="snowflakes" aria-hidden="true" >
+                                    <div class="snowflake" v-for="i in 10" :key="i">
+                                    ★
+                                    </div>
                                 </div>
-                            </div>
-                            <v-row justify="center" align="center">
-                                <v-img max-width="200"
-                                    src="https://demo.datengdong.com/themes/starlight/images/flower.png"
-                                    v-if="!displayDesktop"></v-img>
-                                <div justify="center" align="center">
+                                <v-row justify="center" align="center">
                                     <v-img max-width="200"
                                         src="https://demo.datengdong.com/themes/starlight/images/flower.png"
-                                        v-if="displayDesktop"></v-img>
-                                    <p class="mt-14 font-weight-bold headline text-center">
-                                        {{ dataApi.wedding.judul_utama }}</p>
-                                    <p class="fontPasangan">{{ dataApi.wedding.nama_panggilan_pria }} &
-                                        {{ dataApi.wedding.nama_panggilan_wanita }}</p>
-                                    <p class="font-weight-light">{{ dataApi.wedding.tanggal_akad }}</p>
+                                        v-if="!displayDesktop"></v-img>
+                                    <div justify="center" align="center">
+                                        <v-img max-width="200"
+                                            src="https://demo.datengdong.com/themes/starlight/images/flower.png"
+                                            v-if="displayDesktop"></v-img>
+                                        <p class="mt-14 font-weight-bold headline text-center">
+                                            {{ dataApi.wedding.judul_utama }}</p>
+                                        <p class="fontPasangan">{{ dataApi.wedding.nama_panggilan_pria }} &
+                                            {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+                                        <p class="font-weight-light">{{ dataApi.wedding.tanggal_akad }}</p>
 
-                                    <p class="font-weight-light mt-16 px-16 mx-16 font-italic"
-                                        v-html="dataApi.wedding.h_dear">
-                                    </p>
-                                    <p class="font-weight-bold title">Nama Tamu</p>
-                                    <p class="font-weight-light px-16 mx-16">di Yogyakarta</p>
-                                </div>
-                            </v-row>
-                        </v-container>
+                                        <p class="font-weight-light mt-16 px-16 mx-16 font-italic"
+                                            v-html="dataApi.wedding.h_dear">
+                                        </p>
+                                        <p class="font-weight-bold title">Nama Tamu</p>
+                                        <p class="font-weight-light px-16 mx-16">di Yogyakarta</p>
+                                    </div>
+                                </v-row>
+                            </v-container>
+                        </v-content>
+
                         <v-img class="mt-n5" src="https://demo.datengdong.com/themes/starlight/images/mask.png"></v-img>
-                        <v-container fluid class="bg-page2 text-center mt-16"> 
+
+                        <v-content class="bg-page2">
+                        <v-container fluid class="text-center mt-16"> 
                             <p class="fontInformasi">{{ dataApi.wedding.h_more_info }}</p>
                             <p class="text-decoration-underline">Protokol Covid 19</p>
                             <p class="font-weight-light text-caption">Dalam upaya mengurangi penyebaran Covid 19 pada
@@ -307,10 +311,10 @@
                                 </v-btn>
                             </div>
                         </v-container>
+                        </v-content>
 
-
-                        <v-container fluid class="bg-page3" id="event"
-                            :style="{'background-image': 'url(./img/orange-image.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                        <v-content class="bg-page3" :style="{'background-image': 'url(./img/orange-image.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                        <v-container fluid id="event">
                             <div v-if="displayDesktop">
                                 <v-row class="mx-16" justify="center" align="center">
                                     <v-col>
@@ -511,7 +515,7 @@
                                                     melalui link berikut</p>
                                             </v-card-text>
                                             <v-card-text class="d-flex justify-center">
-                                                <v-btn depressed outlined rounded class="lokasi-btn" dark>
+                                                <v-btn depressed outlined rounded class="lokasi-btn mr-1" dark>
                                                     <v-icon left>mdi-instagram</v-icon>Instagram
                                                 </v-btn>
                                                 <v-btn depressed outlined rounded class="lokasi-btn" dark>
@@ -522,18 +526,19 @@
 
                                 <v-row class="mt-16">
                                     <v-col>
-                                        <v-btn class="text-caption" color="blue-grey"
+                                        <v-btn class="body-2" color="blue-grey"
                                             @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
                                     </v-col>
                                     <v-col>
-                                        <v-btn class="text-caption" color="blue-grey" dark>Google Calendar</v-btn>
+                                        <v-btn class="body-2" color="blue-grey" dark>Google Calendar</v-btn>
                                     </v-col>
                                 </v-row>
-                                <v-row justify="center" align="center">
-                                    <v-btn class="text-caption" color="blue-grey" dark>Yahoo Calendar</v-btn>
+                                <v-row justify="center" align="center" class="mb-2">
+                                    <v-btn class="body-2" color="blue-grey" dark>Yahoo Calendar</v-btn>
                                 </v-row>
                             </div>
                         </v-container>
+                        </v-content>
 
                         <v-container fluid id="story">
                             <v-row justify="center" align="center" class="mt-16">
@@ -847,7 +852,7 @@
                                         <v-btn color="blue-grey" @click="kirimUcapan" dark>Kirim </v-btn>
                                     </v-card-title>
                                 </v-card>
-                                <v-card class="mt-10" style="border: 2px solid orange; background-color: transparent;">
+                                <v-card class="my-14" style="border: 2px solid orange; background-color: transparent;">
                                     <v-card-title>
                                         <div class="overflowAuto">
                                             <div v-for="(i, idx) in dataApi.comments" :key="idx">
@@ -866,8 +871,8 @@
                         </v-container>
                     </div>
                     <div v-else>
-                        <v-container fluid class="fill-height bg-cover white--text"
-                            :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                        <v-content class="bg-cover" :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                        <v-container fluid class="fill-height white--text">
                             <v-row justify="center" align="center">
                                 <v-img max-width="200"
                                     src="https://demo.datengdong.com/themes/starlight/images/flower.png"
@@ -884,17 +889,17 @@
                                             <p>{{ dataApi.wedding.tanggal_resepsi.split(' ')[2] }}</p>
                                         </v-col>
                                         <v-col>
-                                            <p>|</p>
+                                            <p class="ml-n5">|</p>
                                         </v-col>
                                         <v-col>
-                                            <p class="mt-n2 display-2 font-weight-bold">
+                                            <p class="mt-n2 ml-n5 display-2 font-weight-bold">
                                                 {{ dataApi.wedding.tanggal_resepsi.split(' ')[1] }}</p>
                                         </v-col>
                                         <v-col>
-                                            <p>|</p>
+                                            <p class="ml-n5">|</p>
                                         </v-col>
                                         <v-col>
-                                            <p>{{  dataApi.wedding.tanggal_resepsi.split(' ')[3] }}</p>
+                                            <p class="ml-n5">{{  dataApi.wedding.tanggal_resepsi.split(' ')[3] }}</p>
                                         </v-col>
                                     </v-row>
                                     <v-btn color="blue-grey" class="mt-10" @click="scrollPlay" dark>Open Invitation
@@ -902,6 +907,7 @@
                                 </div>
                             </v-row>
                         </v-container>
+                        </v-content>
                     </div>
                     <audio id="song" ref="audioElm">
                         <source :src="'https://merestui.com'+dataApi.music.music_path" type="audio/mp3">

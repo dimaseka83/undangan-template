@@ -3,28 +3,34 @@
 
 
 /* Mobile 400px*/
-@media screen and (max-width: 400px){
+@media screen and (max-width: 600px){
     .bg-page2 {
         background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     .bg-page3 {
-        background-size: cover;
-        background-position: top;
         background-repeat: no-repeat;
-        height: 150vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     .bg-page5{
-        background-image: url('./img/orange-image.png'), url('https://demo.datengdong.com/uploads/original/gallery/f92dc892d7faba8c2253a2ccfca156ba6ad908ad.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 30vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     .bg-page6 {
     background-color: #fff;
-    height: 220vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
     
 
