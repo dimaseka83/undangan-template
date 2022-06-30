@@ -108,7 +108,7 @@ new Vue({
     },
     computed: {
         displayDesktop() {
-            return this.$vuetify.breakpoint.width >= 500
+            return this.$vuetify.breakpoint.width >= 600
         },
         _seconds: () => 1000,
         _minutes() {

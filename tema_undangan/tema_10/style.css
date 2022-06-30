@@ -8,57 +8,50 @@
     }
 
     .bg-pagecover{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 100vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     
     .bg-page1{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 80vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     .bg-page2{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 120vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     .bg-page3{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 180vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     
     .bg-page4{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 93vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     
     .bg-page5{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 210vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     
     .bg-page6{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 240vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     /* content fixed */
@@ -80,59 +73,51 @@
     }
 
     .bg-pagecover{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 120vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     
     .bg-page1{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 100vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     .bg-page2{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 150vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     .bg-page3{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 225vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     
     .bg-page4{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 115vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     
     .bg-page5{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 255vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
     
     .bg-page6{
-        background-image: url('https://foreverr.id/wp-content/uploads/uw028/8c7dd922ad47494fc02c388e12c00eac-scaled.jpg');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 280vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
-
     /* content fixed */
 
 .navbar {
