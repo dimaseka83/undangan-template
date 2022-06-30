@@ -22,6 +22,9 @@
         <div v-else>
           <div v-if="openInvitation">
             <div class="navbar">
+              <div class="d-flex justify-end mb-5 mr-2">
+                <v-btn fab elevation="" @click="playMe"><v-icon v-if="isPlay">mdi-play</v-icon> <v-icon v-else>mdi-pause</v-icon></v-btn>
+              </div>
               <v-bottom-navigation v-model="value">
                 <v-btn href="#home" value="home">
                   <span>Home</span>

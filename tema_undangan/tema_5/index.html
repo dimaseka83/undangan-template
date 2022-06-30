@@ -26,9 +26,7 @@
                                 <v-img class="overflowFixed widthImg"
                                     :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
                                     <div class="d-flex justify-end">
-                                        <v-btn fab x-large @click="scrollPlay" class="mt-2 mr-2">
-                                            <v-icon>mdi-music-note</v-icon>
-                                        </v-btn>
+                                    <v-btn fab x-large elevation="" class="mt-2 mr-2" @click="playMe"><v-icon v-if="isPlay">mdi-play</v-icon> <v-icon v-else>mdi-pause</v-icon></v-btn>
                                     </div>
                                     <div class="d-flex justify-end">
                                         <v-dialog v-model="dialog" width="500">
@@ -401,6 +399,9 @@
                     <div v-else>
                         <div v-if="openInvitation">
                             <div class="navbar">
+                                <div class="d-flex justify-end mr-2">
+                                    <v-btn fab elevation="" @click="playMe"><v-icon v-if="isPlay">mdi-play</v-icon> <v-icon v-else>mdi-pause</v-icon></v-btn>
+                                </div>
                                 <div class="d-flex justify-center">
                                     <v-card class="rounded-pill mb-5" style="background-color: #ffffe6;">
                                         <v-card-title class="d-flex justify-center">

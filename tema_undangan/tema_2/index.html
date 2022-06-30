@@ -23,6 +23,11 @@
 
           <div v-if="openInvitation">
             <!-- Page 1 -->
+            <div class="navbar">
+              <div class="mb-5 mr-2" justify="end">
+                <v-btn fab elevation="" @click="playMe"><v-icon v-if="isPlay">mdi-play</v-icon> <v-icon v-else>mdi-pause</v-icon></v-btn>
+              </div>
+            </div>
             <div id="two">
               <v-container fluid class="bg-page1"
                 :style="{'background-image': 'url(./img/black_image.png), url(https://merestui.com/'+dataApi.wedding.gallery_2+')'}">

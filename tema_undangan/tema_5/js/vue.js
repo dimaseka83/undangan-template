@@ -36,10 +36,20 @@ new Vue({
             displayHours: 0,
             displayMinutes: 0,
             displaySeconds: 0,
+            isPlay: true,
         }
     },
 
     methods: {
+      playMe(){
+        this.isPlay = !this.isPlay;
+        let audio = this.$refs.audioElm;
+        if(this.isPlay){
+          audio.play();
+        }else{
+          audio.pause();
+        }
+      },
         kirimKehadiran(){
             this.kehadiran.push({
                 nama: this.formKehadiran.nama,

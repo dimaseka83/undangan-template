@@ -352,3 +352,15 @@ height: 215vh;
   font-family: 'Island Moments', cursive;
   font-size: 28px;
 }
+
+    /* content fixed */
+
+    .navbar {
+      overflow: hidden;
+      background-color: transparent;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    

@@ -22,6 +22,9 @@
                 <div v-else>
                     <div v-if="openInvitation">
                         <div class="navbar" :class="[displayDesktop ? '': 'mb-5']">
+                            <div class="d-flex justify-end mb-5 mr-2">
+                                <v-btn fab elevation="" @click="playMe"><v-icon v-if="isPlay">mdi-play</v-icon> <v-icon v-else>mdi-pause</v-icon></v-btn>
+                              </div>
                             <v-row class="ml-2" v-if="!displayDesktop">
                                 <v-col class="mr-n5">
                                     <a href="#bridgeroom">
@@ -50,6 +53,7 @@
                                 </v-col>
                             </v-row>
                             <div class="navigation" v-else>
+
                                 <a href="#bridgeroom" >
                                     <v-img width="60" class="mb-5" src="https://kadio.id/images/icon/mobile/1.svg"></v-img>
                                 </a>
@@ -65,7 +69,9 @@
                                 <a href="#rsvp">
                                     <v-img width="60" class="mb-5" src="https://kadio.id/images/icon/mobile/5.svg"></v-img>
                                 </a>
-                            </v-col>
+                                <div class="d-flex justify-end mb-5 mr-2">
+                                    <v-btn fab elevation="" @click="playMe"><v-icon v-if="isPlay">mdi-play</v-icon> <v-icon v-else>mdi-pause</v-icon></v-btn>
+                                  </div>
                             </div>
                         </div>
                         <!-- Page 1 -->

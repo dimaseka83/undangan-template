@@ -29,6 +29,8 @@ new Vue({
             displayHours: 0,
             displayMinutes: 0,
             displaySeconds: 0,
+            isPlay: true,
+
         }
   },
     methods: {
@@ -98,6 +100,15 @@ new Vue({
             audio.play();
             this.openInvitation = true;
         },
+        playMe(){
+            this.isPlay = !this.isPlay;
+            let audio = this.$refs.audioElm;
+            if(this.isPlay){
+              audio.play();
+            }else{
+              audio.pause();
+            }
+          }
     },
     created() {
         this.loadData();

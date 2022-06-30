@@ -30,6 +30,8 @@ new Vue({
               displayHours: 0,
               displayMinutes: 0,
               displaySeconds: 0,
+      isPlay: true,
+
         }
     },
 
@@ -125,6 +127,15 @@ new Vue({
               this.displayHours = hours < 10 ? '0' + hours : hours;
               this.displayDays = days < 10 ? '0' + days : days;
             }, 1000);
+          },
+          playMe(){
+            this.isPlay = !this.isPlay;
+            let audio = this.$refs.audioElm;
+            if(this.isPlay){
+              audio.play();
+            }else{
+              audio.pause();
+            }
           }
   },
 

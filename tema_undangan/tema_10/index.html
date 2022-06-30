@@ -22,6 +22,9 @@
                 <div v-else>
                     <div v-if="openInvitation">
                         <div class="navbar" :class="[displayDesktop ? 'mb-2': 'mb-5']">
+                            <div class="d-flex justify-end mb-5 mr-2">
+                                <v-btn small fab  color="brown" elevation="" @click="playMe"><v-icon color="white" v-if="isPlay">mdi-play</v-icon> <v-icon color="white" v-else>mdi-pause</v-icon></v-btn>
+                              </div>
                             <div class="d-flex justify-end">
                                 <v-dialog v-model="dialog1" transition="dialog-bottom-transition" width="500">
                                     <template v-slot:activator="{ on, attrs }">

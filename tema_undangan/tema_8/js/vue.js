@@ -18,6 +18,8 @@ new Vue({
                 sosmed: '',
                 ucapan: '',
             }],
+            isPlay: true,
+
         }
     },
 
@@ -88,6 +90,15 @@ new Vue({
             audio.play();
             this.openInvitation = true;
         },
+        playMe(){
+            this.isPlay = !this.isPlay;
+            let audio = this.$refs.audioElm;
+            if(this.isPlay){
+              audio.play();
+            }else{
+              audio.pause();
+            }
+          }
     },
 
     created() {
