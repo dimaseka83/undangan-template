@@ -118,7 +118,7 @@
     }
 
     .cardNavigation{
-        margin-left: 80vh;
+        margin-left: 10vh;
         margin-right: 2vh;
     }
     
@@ -128,7 +128,7 @@
     }
 
     .widthImg{
-        width: 855px;
+        width: 900px;
     }
 }
 
@@ -197,7 +197,7 @@
     }
 
     .cardNavigation{
-        margin-left: 80vh;
+        margin-left: 92%;
         margin-right: 2vh;
     }
     
@@ -207,7 +207,7 @@
     }
 
     .widthImg{
-        width: 780px;
+        width: 61%;
     }
     .v-carousel{
         max-width: 100%;
