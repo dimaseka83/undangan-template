@@ -70,7 +70,8 @@
                         </div>
                         </div>
                         <!-- Page 1 -->
-                        <v-container fluid class="bg-page1 fill-height" id="bridgeroom">
+                        <v-content class="bg-page1" style="background-image: url('./img/black_image.png'), url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/upload/invitation/1649776186_bg2.jpg');">
+                        <v-container fluid class=" fill-height" id="bridgeroom">
                             <div class="snowflakes" aria-hidden="true" >
                                 <div class="snowflake" v-for="i in 10" :key="i">
                                 ●
@@ -137,7 +138,7 @@
                                     <p class="brown--text" style="font-size: 25px;">{{ dataApi.wedding.tanggal_akad }}
                                     </p>
                                     <p class="brown--text mt-n5" style="font-size: 20px;">-Save the Date-</p>
-                                    <v-row class="mx-5">
+                                    <v-row class="">
                                         <v-col >
                                             <v-card color="white">
                                                 <v-card-text>
@@ -177,77 +178,81 @@
                                     {{ dataApi.wedding.nama_panggilan_wanita.charAt(0) }}</p>
                             </v-img>
                         </v-container>
+                        </v-content>
 
                         <!-- Page 2 -->
-                        <v-container fluid class="bg-page2 text-center fontMarried">
-                            <p class="fontPasangan mt-16" style="font-size: 60px;">Mempelai</p>
-                            <p :style="[displayDesktop ? {'font-size': '25px' } : '{}']">
-                                {{ dataApi.wedding.kata_mutiara }}</p>
-                            <div v-if="displayDesktop">
-                                <v-row justify="center">
-                                    <v-col cols="4">
-                                        <!-- Laki - laki -->
-                                        <div justify="center" align="center">
-                                            <div class="fotoPasangan mt-10">
-                                                <img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria" />
-                                            </div>
-                                            <v-img width="100" class="flowerlaki"
-                                                src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/bride-flower-1.png">
-                                            </v-img>
-                                        </div>
-                                        <p class="fontPasangan mt-16" :class="[displayDesktop ? 'pt-16' : '']" style="font-size: 50px;">
-                                            {{ dataApi.wedding.nama_panggilan_pria }}</p>
-                                        <p class="font-weight-bold title">{{ dataApi.wedding.nama_lengkap_pria }}</p>
-                                        <p class="font-weight-light mx-16">{{ dataApi.wedding.profil_pria }}</p>
-                                    </v-col>
-                                    <v-col cols="4">
-                                        <!-- Perempuan -->
-                                        <div justify="center" align="center">
-                                            <div class="fotoPasangan mt-10">
-                                                <img :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita" />
-                                            </div>
-                                            <v-img width="100" class="flowerlaki"
-                                                src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/bride-flower-1.png">
-                                            </v-img>
-                                        </div>
-                                        <p class="fontPasangan mt-16" :class="[displayDesktop ? 'pt-16' : '']" style="font-size: 50px;">
-                                            {{ dataApi.wedding.nama_panggilan_wanita }}</p>
-                                        <p class="font-weight-bold title">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
-                                        <p class="font-weight-light mx-16">{{ dataApi.wedding.profil_wanita }}</p>
+                        <v-content class="bg-page2" style="background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');">
+                            <v-container fluid class=" text-center fontMarried">
+                                    <p class="fontPasangan mt-16" style="font-size: 60px;">Mempelai</p>
+                                    <p :style="[displayDesktop ? {'font-size': '25px' } : '{}']">
+                                        {{ dataApi.wedding.kata_mutiara }}</p>
+                                    <div v-if="displayDesktop">
+                                        <v-row justify="center">
+                                            <v-col cols="4">
+                                                <!-- Laki - laki -->
+                                                <div justify="center" align="center">
+                                                    <div class="fotoPasangan mt-10">
+                                                        <img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria" />
+                                                    </div>
+                                                    <v-img width="100" class="flowerlaki"
+                                                        src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/bride-flower-1.png">
+                                                    </v-img>
+                                                </div>
+                                                <p class="fontPasangan mt-16" :class="[displayDesktop ? 'pt-16' : '']" style="font-size: 50px;">
+                                                    {{ dataApi.wedding.nama_panggilan_pria }}</p>
+                                                <p class="font-weight-bold title">{{ dataApi.wedding.nama_lengkap_pria }}</p>
+                                                <p class="font-weight-light mx-16">{{ dataApi.wedding.profil_pria }}</p>
+                                            </v-col>
+                                            <v-col cols="4">
+                                                <!-- Perempuan -->
+                                                <div justify="center" align="center">
+                                                    <div class="fotoPasangan mt-10">
+                                                        <img :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita" />
+                                                    </div>
+                                                    <v-img width="100" class="flowerlaki"
+                                                        src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/bride-flower-1.png">
+                                                    </v-img>
+                                                </div>
+                                                <p class="fontPasangan mt-16" :class="[displayDesktop ? 'pt-16' : '']" style="font-size: 50px;">
+                                                    {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+                                                <p class="font-weight-bold title">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
+                                                <p class="font-weight-light mx-16">{{ dataApi.wedding.profil_wanita }}</p>
+                                    </div>
+                            <div v-else>
+                                <!-- Laki - laki -->
+                                <div justify="center" align="center">
+                                    <div class="fotoPasangan mt-10">
+                                        <img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria" />
+                                    </div>
+                                    <v-img width="100" class="flowerlaki"
+                                        src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/bride-flower-1.png">
+                                    </v-img>
+                                </div>
+                                <p class="fontPasangan mt-16" style="font-size: 50px;">{{ dataApi.wedding.nama_panggilan_pria }}
+                                </p>
+                                <p class="font-weight-bold title">{{ dataApi.wedding.nama_lengkap_pria }}</p>
+                                <p class="font-weight-light mx-16">{{ dataApi.wedding.profil_pria }}</p>
+                                <!-- Perempuan -->
+                                <div justify="center" align="center">
+                                    <div class="fotoPasangan mt-10">
+                                        <img :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita" />
+                                    </div>
+                                    <v-img width="100" class="flowerlaki"
+                                        src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/bride-flower-1.png">
+                                    </v-img>
+                                </div>
+                                <p class="fontPasangan mt-16" style="font-size: 50px;">
+                                    {{ dataApi.wedding.nama_panggilan_wanita }}</p>
+                                <p class="font-weight-bold title">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
+                                <p class="font-weight-light mx-16">{{ dataApi.wedding.profil_wanita }}</p>
                             </div>
-                    <div v-else>
-                        <!-- Laki - laki -->
-                        <div justify="center" align="center">
-                            <div class="fotoPasangan mt-10">
-                                <img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria" />
-                            </div>
-                            <v-img width="100" class="flowerlaki"
-                                src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/bride-flower-1.png">
-                            </v-img>
-                        </div>
-                        <p class="fontPasangan mt-16" style="font-size: 50px;">{{ dataApi.wedding.nama_panggilan_pria }}
-                        </p>
-                        <p class="font-weight-bold title">{{ dataApi.wedding.nama_lengkap_pria }}</p>
-                        <p class="font-weight-light mx-16">{{ dataApi.wedding.profil_pria }}</p>
-                        <!-- Perempuan -->
-                        <div justify="center" align="center">
-                            <div class="fotoPasangan mt-10">
-                                <img :src="'https://merestui.com/'+ dataApi.wedding.foto_wanita" />
-                            </div>
-                            <v-img width="100" class="flowerlaki"
-                                src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/bride-flower-1.png">
-                            </v-img>
-                        </div>
-                        <p class="fontPasangan mt-16" style="font-size: 50px;">
-                            {{ dataApi.wedding.nama_panggilan_wanita }}</p>
-                        <p class="font-weight-bold title">{{ dataApi.wedding.nama_lengkap_wanita }}</p>
-                        <p class="font-weight-light mx-16">{{ dataApi.wedding.profil_wanita }}</p>
-                    </div>
 
-                    </v-container>
+                            </v-container>
+                        </v-content>
 
                     <!-- Page 3 -->
-                    <v-container fluid class="bg-page3 fontMarried" id="event">
+                    <v-content class="bg-page3" style="background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');">
+                    <v-container fluid class=" fontMarried" id="event">
                         <div align="center" justify="center">
                             <p class="fontPasangan mt-16" style="font-size: 60px;">Detail Acara</p>
                             <div v-if="displayDesktop">
@@ -399,8 +404,10 @@
                             </div>
                         </div>
                     </v-container>
+                    </v-content>
                     <!-- Page 4 -->
-                    <v-container fluid class="bg-page4 fontMarried" id="story">
+                    <v-content class="bg-page4" style="background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');">
+                    <v-container fluid class="fontMarried" id="story">
                         <div align="center" justify="center">
                             <p class="fontPasangan mt-16" style="font-size: 60px;">Our Love Story</p>
                         
@@ -451,8 +458,10 @@
 
                         </div>
                     </v-container>
+                    </v-content>
                     <!-- Page 5 -->
-                    <v-container fluid class="bg-page5" id="galery" >
+                    <v-content class="bg-page5" style="background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');" id="galery">
+                    <v-container fluid >
                         <div align="center" justify="center">
                             <p class="fontPasangan mt-16" style="font-size: 60px;">Photo Gallery</p>
                             <div v-if="displayDesktop">
@@ -586,169 +595,189 @@
 
                         </div>
                     </v-container>
+                </v-content>
                     <!-- Page 6 -->
-                    <v-container fluid class="bg-page6">
-                        <div align="center" justify="center">
-                            <p class="cardTitleFont font-weight-bold text-center mt-16">QR Code</p>
+                    <v-content class="bg-page6" style="background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');">
+                        <v-container fluid >
                             <div align="center" justify="center">
-                                <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200">
-                                </v-img>
-                                <v-btn class="my-16" depressed outlined rounded class="lokasi-btn">Reservasi Tamu
-                                </v-btn>
-                            </div>
-                            <p class="fontPasangan mt-16" style="font-size: 60px;" id="rsvp">Doa & Ucapan</p>
-                            <div class="detailbgcard" v-if="displayDesktop">
-                                <div class="detailcard">
-                                    <v-text-field v-model="form.nama" label="Nama"></v-text-field>
-                                    <v-row>
-                                        <v-col>
-                                            <v-text-field v-model="form.write_as" label="Ditulis Oleh"></v-text-field>
-                                        </v-col>
-                                        <v-col>
-                                            <v-text-field v-model="form.sosmed" label="Nama Sosmed"></v-text-field>
-                                        </v-col>
-                                    </v-row>
-                                    <v-textarea v-model="form.ucapan" label="Pesan Untuk Mempelai"></v-textarea>
-                                    <v-btn @click="kirimUcapan" block color="brown" dark class="mb-5">Kirim</v-btn>
-                                    <div>
-                                        <v-dialog v-model="dialog" width="500">
-                                            <template v-slot:activator="{ on, attrs }">
-                                                <v-btn block color="blue-grey" dark v-bind="attrs" v-on="on">
-                                                    kado digital
-                                                </v-btn>
-                                            </template>
-
-                                            <v-card>
-                                                <d-flex class="d-flex justify-end">
-                                                    <v-btn icon large color="grey darken-1" @click="dialog = false">
-                                                        <v-icon>mdi-close</v-icon>
+                                <p class="cardTitleFont font-weight-bold text-center mt-16">QR Code</p>
+                                <div align="center" justify="center">
+                                    <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200">
+                                    </v-img>
+                                    <v-btn class="my-16" depressed outlined rounded class="lokasi-btn">Reservasi Tamu
+                                    </v-btn>
+                                </div>
+                                <p class="fontPasangan mt-16" style="font-size: 60px;" id="rsvp">Doa & Ucapan</p>
+                                <div class="detailbgcard" v-if="displayDesktop">
+                                    <div class="detailcard">
+                                        <v-text-field v-model="form.nama" label="Nama"></v-text-field>
+                                        <v-row>
+                                            <v-col>
+                                                <v-text-field v-model="form.write_as" label="Ditulis Oleh"></v-text-field>
+                                            </v-col>
+                                            <v-col>
+                                                <v-text-field v-model="form.sosmed" label="Nama Sosmed"></v-text-field>
+                                            </v-col>
+                                        </v-row>
+                                        <v-textarea v-model="form.ucapan" label="Pesan Untuk Mempelai"></v-textarea>
+                                        <v-btn @click="kirimUcapan" block color="brown" dark class="mb-5">Kirim</v-btn>
+                                        <div>
+                                            <v-dialog v-model="dialog" width="500">
+                                                <template v-slot:activator="{ on, attrs }">
+                                                    <v-btn block color="blue-grey" dark v-bind="attrs" v-on="on">
+                                                        kado digital
                                                     </v-btn>
-                                                </d-flex>
-                                                <v-divider></v-divider>
-                                                <v-card-title class="justify-center">
-                                                    <p class="font-weight-light mt-5 mx-5 text-center text-caption">
-                                                        Silahkan transfer hadiah melalui nomor rekening maupun dompet
-                                                        digital berikut :
-                                                    </p>
-                                                    <v-img
-                                                        src="https://cdn.undanganweb.com/hi/2022/03/BCA_logo_Bank_Central_Asia.png"
-                                                        max-width="100"></v-img>
-                                                </v-card-title>
+                                                </template>
 
-                                                <v-card-text>
-                                                    <p class="font-weight-medium title text-center black--text">
-                                                        {{ dataApi.wedding.rek_2 }}</p>
-                                                </v-card-text>
+                                                <v-card>
+                                                    <d-flex class="d-flex justify-end">
+                                                        <v-btn icon large color="grey darken-1" @click="dialog = false">
+                                                            <v-icon>mdi-close</v-icon>
+                                                        </v-btn>
+                                                    </d-flex>
+                                                    <v-divider></v-divider>
+                                                    <v-card-title class="justify-center">
+                                                        <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                                                            Silahkan transfer hadiah melalui nomor rekening maupun dompet
+                                                            digital berikut :
+                                                        </p>
+                                                        <v-img
+                                                            src="https://cdn.undanganweb.com/hi/2022/03/BCA_logo_Bank_Central_Asia.png"
+                                                            max-width="100"></v-img>
+                                                    </v-card-title>
 
-                                                <v-divider></v-divider>
+                                                    <v-card-text>
+                                                        <p class="font-weight-medium title text-center black--text">
+                                                            {{ dataApi.wedding.rek_2 }}</p>
+                                                    </v-card-text>
 
-                                                <v-card-title class="justify-center">
-                                                    <p class="font-weight-light mt-5 mx-5 text-center text-caption">
-                                                        Silahkan transfer hadiah melalui nomor rekening maupun dompet
-                                                        digital berikut :
-                                                    </p>
-                                                    <v-img
-                                                        src="https://logos-download.com/wp-content/uploads/2016/06/Bank_Mandiri_logo_white_bg.png"
-                                                        max-width="100"></v-img>
-                                                </v-card-title>
+                                                    <v-divider></v-divider>
 
-                                                <v-card-text>
-                                                    <p class="font-weight-medium title text-center black--text">
-                                                        {{ dataApi.wedding.rek_1 }}</p>
-                                                </v-card-text>
-                                            </v-card>
-                                        </v-dialog>
+                                                    <v-card-title class="justify-center">
+                                                        <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                                                            Silahkan transfer hadiah melalui nomor rekening maupun dompet
+                                                            digital berikut :
+                                                        </p>
+                                                        <v-img
+                                                            src="https://logos-download.com/wp-content/uploads/2016/06/Bank_Mandiri_logo_white_bg.png"
+                                                            max-width="100"></v-img>
+                                                    </v-card-title>
+
+                                                    <v-card-text>
+                                                        <p class="font-weight-medium title text-center black--text">
+                                                            {{ dataApi.wedding.rek_1 }}</p>
+                                                    </v-card-text>
+                                                </v-card>
+                                            </v-dialog>
+                                        </div>
+                                        <div class="fontPasangan text-start" style="font-size: 30px;">
+                                            <p class="mx-1">Atas doa & ucapan bapak/ibu/saudara/i, Kami mengucapkan terima
+                                                kasih.
+                                            </p>
+                                            <p class="mx-1">Salam</p>
+                                            <p class="mx-1" style="font-weight: bold;">Ucok & Butet</p>
+                                        </div>
                                     </div>
-                                    <div class="fontPasangan text-start" style="font-size: 30px;">
+                                </div>
+                                <v-card color="white" class="rounded-xl" v-else>
+                                    <v-card-title>
+                                        <v-text-field v-model="form.nama" label="Nama"></v-text-field>
+                                        <v-row>
+                                            <v-col>
+                                                <v-text-field v-model="form.write_as" label="Ditulis Oleh"></v-text-field>
+                                            </v-col>
+                                            <v-col>
+                                                <v-text-field v-model="form.sosmed" label="Nama Sosmed"></v-text-field>
+                                            </v-col>
+                                        </v-row>
+                                        <v-textarea v-model="form.ucapan" label="Pesan Untuk Mempelai"></v-textarea>
+                                    </v-card-title>
+                                    <v-card-text>
+                                        <v-btn @click="kirimUcapan" block color="brown" dark class="mb-5">Kirim</v-btn>
+                                        <div>
+                                            <v-dialog v-model="dialog" width="500">
+                                                <template v-slot:activator="{ on, attrs }">
+                                                    <v-btn block color="blue-grey" dark v-bind="attrs" v-on="on">
+                                                        kado digital
+                                                    </v-btn>
+                                                </template>
+
+                                                <v-card>
+                                                    <d-flex class="d-flex justify-end">
+                                                        <v-btn icon large color="grey darken-1" @click="dialog = false">
+                                                            <v-icon>mdi-close</v-icon>
+                                                        </v-btn>
+                                                    </d-flex>
+                                                    <v-divider></v-divider>
+                                                    <v-card-title class="justify-center">
+                                                        <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                                                            Silahkan transfer hadiah melalui nomor rekening maupun dompet
+                                                            digital berikut :
+                                                        </p>
+                                                        <v-img
+                                                            src="https://cdn.undanganweb.com/hi/2022/03/BCA_logo_Bank_Central_Asia.png"
+                                                            max-width="100"></v-img>
+                                                    </v-card-title>
+
+                                                    <v-card-text>
+                                                        <p class="font-weight-medium title text-center black--text">
+                                                            {{ dataApi.wedding.rek_2 }}</p>
+                                                    </v-card-text>
+
+                                                    <v-divider></v-divider>
+
+                                                    <v-card-title class="justify-center">
+                                                        <p class="font-weight-light mt-5 mx-5 text-center text-caption">
+                                                            Silahkan transfer hadiah melalui nomor rekening maupun dompet
+                                                            digital berikut :
+                                                        </p>
+                                                        <v-img
+                                                            src="https://logos-download.com/wp-content/uploads/2016/06/Bank_Mandiri_logo_white_bg.png"
+                                                            max-width="100"></v-img>
+                                                    </v-card-title>
+
+                                                    <v-card-text>
+                                                        <p class="font-weight-medium title text-center black--text">
+                                                            {{ dataApi.wedding.rek_1 }}</p>
+                                                    </v-card-text>
+                                                </v-card>
+                                            </v-dialog>
+                                        </div>
+                                    </v-card-text>
+                                    <v-card-title style="font-size: 25px;" class="text-start fontPasangan">
                                         <p class="mx-1">Atas doa & ucapan bapak/ibu/saudara/i, Kami mengucapkan terima
                                             kasih.
                                         </p>
                                         <p class="mx-1">Salam</p>
+                                    </v-card-title>
+                                    <v-card-title style="font-size: 25px;" class="fontPasangan">
                                         <p class="mx-1" style="font-weight: bold;">Ucok & Butet</p>
-                                    </div>
-                                </div>
+                                    </v-card-title>
+                                </v-card>
+                                <v-img width="200" class="flowerdoa"
+                                    src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/rsvp-flower-2.png">
+                                </v-img>
                             </div>
-                            <v-card color="white" class="rounded-xl" v-else>
-                                <v-card-title>
-                                    <v-text-field v-model="form.nama" label="Nama"></v-text-field>
-                                    <v-row>
-                                        <v-col>
-                                            <v-text-field v-model="form.write_as" label="Ditulis Oleh"></v-text-field>
-                                        </v-col>
-                                        <v-col>
-                                            <v-text-field v-model="form.sosmed" label="Nama Sosmed"></v-text-field>
-                                        </v-col>
-                                    </v-row>
-                                    <v-textarea v-model="form.ucapan" label="Pesan Untuk Mempelai"></v-textarea>
-                                </v-card-title>
-                                <v-card-text>
-                                    <v-btn @click="kirimUcapan" block color="brown" dark class="mb-5">Kirim</v-btn>
-                                    <div>
-                                        <v-dialog v-model="dialog" width="500">
-                                            <template v-slot:activator="{ on, attrs }">
-                                                <v-btn block color="blue-grey" dark v-bind="attrs" v-on="on">
-                                                    kado digital
-                                                </v-btn>
-                                            </template>
-
-                                            <v-card>
-                                                <d-flex class="d-flex justify-end">
-                                                    <v-btn icon large color="grey darken-1" @click="dialog = false">
-                                                        <v-icon>mdi-close</v-icon>
-                                                    </v-btn>
-                                                </d-flex>
-                                                <v-divider></v-divider>
-                                                <v-card-title class="justify-center">
-                                                    <p class="font-weight-light mt-5 mx-5 text-center text-caption">
-                                                        Silahkan transfer hadiah melalui nomor rekening maupun dompet
-                                                        digital berikut :
-                                                    </p>
-                                                    <v-img
-                                                        src="https://cdn.undanganweb.com/hi/2022/03/BCA_logo_Bank_Central_Asia.png"
-                                                        max-width="100"></v-img>
-                                                </v-card-title>
-
-                                                <v-card-text>
-                                                    <p class="font-weight-medium title text-center black--text">
-                                                        {{ dataApi.wedding.rek_2 }}</p>
-                                                </v-card-text>
-
-                                                <v-divider></v-divider>
-
-                                                <v-card-title class="justify-center">
-                                                    <p class="font-weight-light mt-5 mx-5 text-center text-caption">
-                                                        Silahkan transfer hadiah melalui nomor rekening maupun dompet
-                                                        digital berikut :
-                                                    </p>
-                                                    <v-img
-                                                        src="https://logos-download.com/wp-content/uploads/2016/06/Bank_Mandiri_logo_white_bg.png"
-                                                        max-width="100"></v-img>
-                                                </v-card-title>
-
-                                                <v-card-text>
-                                                    <p class="font-weight-medium title text-center black--text">
-                                                        {{ dataApi.wedding.rek_1 }}</p>
-                                                </v-card-text>
+                            <div class="d-flex justify-center" v-if="displayDesktop">
+                                <v-card color="blue-grey lighten-5" class="rounded-xl my-16" width="600" >
+                                    <v-card-title class="fontPasangan" style="font-size: 30px;">
+                                        Doa & Ucapan dari undangan
+                                    </v-card-title>
+                                    <div class="overflowAuto">
+                                        <div v-for="(i, idx) in dataApi.comments" :key="idx" class="fontMarried">
+                                            <v-card color="white" class="rounded-xl pb-1 mb-2 mx-5">
+                                                <p class="title mx-4">{{ i.owner }} <span
+                                                        class="pl-2 text-caption text--disabled">{{ i.date_only }}</span>
+                                                </p>
+                                                <p class="text-caption mx-4 mt-n5 text--disabled">Ditulis oleh
+                                                    {{ i.write_as }}, ({{ i.sosmed }})</p>
+                                                <p class="mx-4">{{ i.content }}</p>
                                             </v-card>
-                                        </v-dialog>
+                                        </div>
                                     </div>
-                                </v-card-text>
-                                <v-card-title style="font-size: 25px;" class="text-start fontPasangan">
-                                    <p class="mx-1">Atas doa & ucapan bapak/ibu/saudara/i, Kami mengucapkan terima
-                                        kasih.
-                                    </p>
-                                    <p class="mx-1">Salam</p>
-                                </v-card-title>
-                                <v-card-title style="font-size: 25px;" class="fontPasangan">
-                                    <p class="mx-1" style="font-weight: bold;">Ucok & Butet</p>
-                                </v-card-title>
-                            </v-card>
-                            <v-img width="200" class="flowerdoa"
-                                src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/rsvp-flower-2.png">
-                            </v-img>
-                        </div>
-                        <div class="d-flex justify-center" v-if="displayDesktop">
-                            <v-card color="blue-grey lighten-5" class="rounded-xl my-16" width="600" >
+                                </v-card>
+                            </div>
+                            <v-card color="blue-grey lighten-5" class="rounded-xl mb-16" v-else>
                                 <v-card-title class="fontPasangan" style="font-size: 30px;">
                                     Doa & Ucapan dari undangan
                                 </v-card-title>
@@ -765,25 +794,8 @@
                                     </div>
                                 </div>
                             </v-card>
-                        </div>
-                        <v-card color="blue-grey lighten-5" class="rounded-xl" v-else>
-                            <v-card-title class="fontPasangan" style="font-size: 30px;">
-                                Doa & Ucapan dari undangan
-                            </v-card-title>
-                            <div class="overflowAuto">
-                                <div v-for="(i, idx) in dataApi.comments" :key="idx" class="fontMarried">
-                                    <v-card color="white" class="rounded-xl pb-1 mb-2 mx-5">
-                                        <p class="title mx-4">{{ i.owner }} <span
-                                                class="pl-2 text-caption text--disabled">{{ i.date_only }}</span>
-                                        </p>
-                                        <p class="text-caption mx-4 mt-n5 text--disabled">Ditulis oleh
-                                            {{ i.write_as }}, ({{ i.sosmed }})</p>
-                                        <p class="mx-4">{{ i.content }}</p>
-                                    </v-card>
-                                </div>
-                            </div>
-                        </v-card>
-                    </v-container>
+                        </v-container>
+                    </v-content>
                 </div>
                 <v-container fluid class="bg-pagecover fill-height" v-else>
                     <v-row align="center" justify="center" class="text-center" v-if="displayDesktop">

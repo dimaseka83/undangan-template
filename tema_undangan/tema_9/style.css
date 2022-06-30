@@ -2,38 +2,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Rouge+Script&family=Viaoda+Libre&display=swap');
 
 /* Mobile 500px*/
-@media screen  and (max-width: 400px){
-    .bg-page2{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
-        background-size: cover;
-        background-position: center;
+@media screen  and (max-width: 600px){
+    .bg-page1{
         background-repeat: no-repeat;
-        height: 180vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    .bg-page2{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     .bg-page3{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 150vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
-    .bg-page5{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
-        background-size: cover;
-        background-position: center;
+    .bg-page4{
         background-repeat: no-repeat;
-        height: 500vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+
+    .bg-page5{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     
 .bg-page6{
-    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    height: 250vh;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
@@ -61,94 +72,8 @@
     }
 
     .flowerlaki{
-        margin-left: -25vh;
-        margin-top: -35vh;
-    }
-
-    .flowerdoa{
-        margin-left: 27vh;
-        margin-top: -20vh;
-    }
-
-    .navbar {
-        overflow: hidden;
-        background-color: transparent;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 1;
-      }
-
-      .imgCoverbg1{
-        max-width: 400px;
-        margin-left: -5vh;
+        margin-left: -30vh;
         margin-top: -40vh;
-      }
-
-}
-
-/* Mobile 500px*/
-@media screen  and (max-width: 500px){
-    .bg-page2{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 180vh;
-    }
-
-    .bg-page3{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 150vh;
-    }
-
-    .bg-page5{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 300vh;
-    }
-
-    
-.bg-page6{
-    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 250vh;
-}
-
-
-    
-    
-    .fotoPasangan{
-        display: inline-block;
-        position: relative;
-        width: 250px;
-        height: 250px;
-        background: #583e29;
-        box-sizing: border-box;
-        -webkit-clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-        clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    }
-    
-    .fotoPasangan img{
-        position: absolute;
-        top: 2px; /* equal to border thickness */
-        left: 2px; /* equal to border thickness */
-        width: 246px; /* container height - (border thickness * 2) */
-        height: 246px; /* container height - (border thickness * 2) */
-        -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    }
-
-    .flowerlaki{
-        margin-left: -25vh;
-        margin-top: -35vh;
     }
 
     .flowerdoa{
@@ -170,28 +95,40 @@
 
 /* Desktop HDPi*/
 @media screen  and (min-width: 1440px){
-    .bg-page2{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
-        background-size: cover;
-        background-position: center;
+    .bg-page1{
         background-repeat: no-repeat;
-        height: 100vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    .bg-page2{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     .bg-page3{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 100vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
-    .bg-page5{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
-        background-size: cover;
-        background-position: center;
+    .bg-page4{
         background-repeat: no-repeat;
-        height: 100vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+
+    .bg-page5{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     
@@ -277,26 +214,40 @@
 
 /* Desktop HD*/
 @media screen  and (min-width: 1280px){
-    .bg-page2{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
-        background-size: cover;
-        background-position: center;
+    .bg-page1{
         background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+    .bg-page2{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     .bg-page3{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
-        background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        height: 100vh;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
-    .bg-page5{
-        background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/paper.png');
-        background-size: cover;
-        background-position: center;
+    .bg-page4{
         background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    
+
+    .bg-page5{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     
@@ -389,23 +340,10 @@
     height: 100vh;
 }
 
-.bg-page1{
-    background-image: url('./img/black_image.png'), url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/upload/invitation/1649776186_bg2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
 
 
 
 
-.bg-page4{
-    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 
 
