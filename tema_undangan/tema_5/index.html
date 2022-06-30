@@ -401,25 +401,29 @@
                     <div v-else>
                         <div v-if="openInvitation">
                             <div class="navbar">
-                                <v-card class="rounded-pill cardNavigation mb-5" style="background-color: #ffffe6;">
-                                    <v-card-title>
-                                        <v-btn href="#home" x-small outlined color="transparent">
-                                            <v-icon small color="brown">mdi-heart</v-icon>
-                                        </v-btn>
-                                        <v-btn href="#image" x-small outlined color="transparent">
-                                            <v-icon small color="brown">mdi-image-multiple</v-icon>
-                                        </v-btn>
-                                        <v-btn href="#calendar" x-small outlined color="transparent">
-                                            <v-icon small color="brown">mdi-calendar-blank</v-icon>
-                                        </v-btn>
-                                        <v-btn href="#map" x-small outlined color="transparent">
-                                            <v-icon small color="brown">mdi-map</v-icon>
-                                        </v-btn>
-                                        <v-btn href="#chat" x-small outlined color="transparent">
-                                            <v-icon small color="brown">mdi-square-edit-outline</v-icon>
-                                        </v-btn>
-                                    </v-card-title>
-                                </v-card>
+                                <div class="d-flex justify-center">
+                                    <v-card class="rounded-pill mb-5" style="background-color: #ffffe6;">
+                                        <v-card-title class="d-flex justify-center">
+                                            <div class="d-flex">
+                                                <v-btn href="#home" x-small outlined color="transparent">
+                                                    <v-icon small color="brown">mdi-heart</v-icon>
+                                                </v-btn>
+                                                <v-btn href="#image" x-small outlined color="transparent">
+                                                    <v-icon small color="brown">mdi-image-multiple</v-icon>
+                                                </v-btn>
+                                                <v-btn href="#calendar" x-small outlined color="transparent">
+                                                    <v-icon small color="brown">mdi-calendar-blank</v-icon>
+                                                </v-btn>
+                                                <v-btn href="#map" x-small outlined color="transparent">
+                                                    <v-icon small color="brown">mdi-map</v-icon>
+                                                </v-btn>
+                                                <v-btn href="#chat" x-small outlined color="transparent">
+                                                    <v-icon small color="brown">mdi-square-edit-outline</v-icon>
+                                                </v-btn>
+                                            </div>
+                                        </v-card-title>
+                                    </v-card>
+                                </div>
                             </div>
 
                             <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_1"></v-img>
