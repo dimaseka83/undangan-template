@@ -6,7 +6,7 @@ new Vue({
             dataApi: [],
             loading: true,
             value: 'home',
-            openInvitation: true,
+            openInvitation: false,
             kehadiran: ['Hadir', 'Tidak Hadir',],
             dialog: false,
             ucapan: [],

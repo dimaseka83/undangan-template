@@ -252,10 +252,10 @@
 
     
 .bg-page6{
-    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
@@ -333,10 +333,10 @@
 
 
 .bg-pagecover{
-    background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
     height: 100vh;
 }
 

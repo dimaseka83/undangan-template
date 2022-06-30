@@ -68,7 +68,6 @@
                             </v-col>
                             </div>
                         </div>
-                        </div>
                         <!-- Page 1 -->
                         <v-content class="bg-page1" style="background-image: url('./img/black_image.png'), url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/upload/invitation/1649776186_bg2.jpg');">
                         <v-container fluid class=" fill-height" id="bridgeroom">
@@ -797,7 +796,8 @@
                         </v-container>
                     </v-content>
                 </div>
-                <v-container fluid class="bg-pagecover fill-height" v-else>
+                <v-content class="bg-pagecover" style="background-image: url('https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo4/paper.png');"  v-else>
+                <v-container fluid class=" fill-height">
                     <v-row align="center" justify="center" class="text-center" v-if="displayDesktop">
                         <v-img max-width="650"
                             src="https://s3.ap-southeast-1.amazonaws.com/cdn.kadio.id/images/kdo6/cover-frame.png">
@@ -851,6 +851,7 @@
                         </div>
                     </v-img>
                 </v-container>
+                </v-content>
                 <audio id="song" ref="audioElm">
                     <source :src="'https://merestui.com'+dataApi.music.music_path" type="audio/mp3">
                 </audio>
