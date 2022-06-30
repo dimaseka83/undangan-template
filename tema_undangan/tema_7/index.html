@@ -118,7 +118,8 @@
                         </v-btn>
                       </v-bottom-navigation>
                 </div>
-                <v-container id="home" fluid class="bg-page1 fill-height white--text" :style="{'background-image': 'url(./img/blue_img.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                <v-content class="bg-page1" :style="{'background-image': 'url(./img/blue_img.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                <v-container id="home" fluid class="fill-height white--text" >
                     <div class="snowflakes" aria-hidden="true" >
                                 <div class="snowflake" v-for="i in 10" :key="i">
                                 ❅
@@ -139,8 +140,10 @@
                         </div>
                     </v-row>
                 </v-container>
+                </v-content>
                 <v-img class="mt-n5" src="https://demo.datengdong.com/themes/starlight/images/mask.png"></v-img>
-                <v-container fluid class="bg-page2 text-center mt-16">
+                <v-content class="bg-page2">
+                <v-container fluid class=" text-center mt-16">
                     <p class="fontInformasi">{{ dataApi.wedding.h_more_info }}</p>
                     <p class="text-decoration-underline">Protokol Covid 19</p>
                     <p class="font-weight-light text-caption">Dalam upaya mengurangi penyebaran Covid 19 pada masa
@@ -174,8 +177,10 @@
                         </v-col>
                     </v-row>
                 </v-container>
+                </v-content>
 
-                <v-container fluid class="bg-page2_1 text-center" id="mempelai">
+                <v-content class="bg-page2_1">
+                <v-container fluid class=" text-center" id="mempelai">
                     <div class="d-flex justify-center" v-if="!displayDesktop">
                         <v-img class="mt-16" max-width="150" src="https://demo.datengdong.com/themes/winterblue/images/flower-2.png"></v-img>
                     </div>
@@ -265,8 +270,10 @@
                         </v-btn>
                     </div>
                 </v-container>
+                </v-content>
 
-                <v-container fluid class="bg-page3" id="event" :style="{'background-image': 'url(./img/blue_img.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                <v-content class="bg-page3" :style="{'background-image': 'url(./img/blue_img.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                <v-container fluid  id="event">
                     <div v-if="displayDesktop">
                         <div align="center" justify="center">
                             <v-img max-width="200" src="https://demo.datengdong.com/themes/winterblue/images/flower.png"></v-img>
@@ -360,7 +367,7 @@
                                                     melalui link berikut</p>
                                             </v-card-text>
                                             <v-card-text class="d-flex justify-center">
-                                                <v-btn depressed outlined rounded class="lokasi-btn" dark>
+                                                <v-btn depressed outlined rounded class="lokasi-btn mr-1" dark>
                                                     <v-icon left>mdi-instagram</v-icon>Instagram
                                                 </v-btn>
                                                 <v-btn depressed outlined rounded class="lokasi-btn" dark>
@@ -458,7 +465,7 @@
                                                     melalui link berikut</p>
                                             </v-card-text>
                                             <v-card-text class="d-flex justify-center">
-                                                <v-btn depressed outlined rounded class="lokasi-btn" dark>
+                                                <v-btn depressed outlined rounded class="lokasi-btn mr-1" dark>
                                                     <v-icon left>mdi-instagram</v-icon>Instagram
                                                 </v-btn>
                                                 <v-btn depressed outlined rounded class="lokasi-btn" dark>
@@ -468,8 +475,10 @@
                         </v-card>
                     </div>
                 </v-container>
+                </v-content>
 
-                <v-container fluid class="bg-page4" id="dokumentasi">
+                <v-content class="bg-page4" id="dokumentasi">
+                <v-container fluid>
                     <v-row justify="center" align="center" class="mt-16">
                         <v-img max-width="150" src="https://demo.datengdong.com/themes/starlight/images/flower-2.png">
                         </v-img>
@@ -699,23 +708,23 @@
                         </v-row>
                         <v-row class="mt-16 mx-auto">
                             <v-col>
-                                <v-btn x-small class="text-caption" color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
+                                <v-btn class="text-caption" color="blue-grey" @click="openUrl(dataApi.wedding.short_url)" dark>Open Google Map</v-btn>
                             </v-col>
                             <v-col>
-                                <v-btn x-small class="text-caption" color="blue-grey" dark>Google Calendar</v-btn>
+                                <v-btn class="text-caption" color="blue-grey" dark>Google Calendar</v-btn>
                             </v-col>
                         </v-row>
-                        <v-row justify="center" align="center">
-                            <v-btn x-small class="text-caption" color="blue-grey" dark>Yahoo Calendar</v-btn>
+                        <v-row justify="center" align="center" class="mb-16">
+                            <v-btn class="text-caption" color="blue-grey" dark>Yahoo Calendar</v-btn>
                         </v-row>
                     </div>
-
-
                 </v-container>
+                </v-content>
 
-                <v-container fluid class="bg-page5 fill-height">
+                <v-content class="bg-page5" :style="{'background-image': 'url(./img/blue_img.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                <v-container fluid class="fill-height">
                     <v-row class="white--text" align="center" justify="center">
-                        <p class="font-weight-light text-center">"Tidak ada solusi yang lebih baik bagi dua insan yang saling
+                        <p class="font-weight-light text-center pt-10">"Tidak ada solusi yang lebih baik bagi dua insan yang saling
                             mencintai di banding pernikahan."</p>
                         <p class="text-h5" v-if="!displayDesktop">HR. Ibnu Majah</p>
                     </v-row>
@@ -723,8 +732,10 @@
                         <p class="text-h5">HR. Ibnu Majah</p>
                     </v-row>
                 </v-container>
+                </v-content>
 
-                <v-container fluid class="bg-page6" id="chat">
+                <v-content class="bg-page6">
+                <v-container fluid id="chat">
                     <p class="cardTitleFont font-weight-bold text-center mt-16">{{ dataApi.wedding.h_qr }}</p>
               <div align="center" justify="center">
                 <v-img src="https://cdn-icons-png.flaticon.com/512/241/241528.png" max-width="200"></v-img>
@@ -786,7 +797,7 @@
                                 <v-btn color="blue-grey" @click="kirimUcapan" dark>Kirim </v-btn>
                             </v-card-title>
                         </v-card>
-                        <v-card class="my-10 " style="border: 2px solid #1976D2; background-color: transparent;">
+                        <v-card class="my-14" style="border: 2px solid #1976D2; background-color: transparent;">
                             <v-card-title>
                                 <div class="overflowAuto">
                                 <div v-for="(i, idx) in dataApi.comments" :key="idx">
@@ -800,36 +811,46 @@
                         </v-card>
                     </div>
                 </v-container>
+                </v-content>
                 </div>
                 <div v-else>
-                    <v-container fluid class="fill-height bg-cover white--text" :style="{'background-image': 'url(./img/blue_img.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
-                        <v-row justify="center" align="center">
-            
-                            <v-img max-width="200" src="https://demo.datengdong.com/themes/winterblue/images/flower.png" v-if="!displayDesktop"></v-img>
-                            <div justify="center" align="center" class="mt-12">
-                            <v-img max-width="250" src="https://demo.datengdong.com/themes/winterblue/images/flower.png" v-if="displayDesktop"></v-img>
-                                <p class="font-weight-light title text-center" :class="[ displayDesktop ? 'mt-8' : '']">Hello, We Are Getting Married</p>
-                                <v-row class="mx-16 font-weight-bold" :class="[ displayDesktop ? 'text-h4 mt-8' : 'text-h5']">
-                                    <v-col>
-                                        <p>{{ dataApi.wedding.tanggal_resepsi.split(' ')[2] }}</p>
-                                    </v-col>
-                                    <v-col>
-                                        <p>|</p>
-                                    </v-col>
-                                    <v-col>
-                                        <p class="mt-n2 display-2 font-weight-bold">{{ dataApi.wedding.tanggal_resepsi.split(' ')[1] }}</p>
-                                    </v-col>
-                                    <v-col>
-                                        <p>|</p>
-                                    </v-col>
-                                    <v-col>
-                                        <p>{{  dataApi.wedding.tanggal_resepsi.split(' ')[3] }}</p>
-                                    </v-col>
-                                </v-row>
-                                <v-btn color="blue-grey" class="mt-10" @click="scrollPlay" dark>Open Invitation</v-btn>
-                            </div>
-                        </v-row>
-                    </v-container>
+                    <v-content class="bg-cover" :style="{'background-image': 'url(./img/blue_img.png), url(https://merestui.com/'+dataApi.wedding.gallery_1+')'}">
+                        <v-container fluid class="fill-height white--text">
+                            <v-row justify="center" align="center">
+                                <v-img max-width="200"
+                                    src="https://demo.datengdong.com/themes/starlight/images/flower.png"
+                                    v-if="!displayDesktop"></v-img>
+                                <div justify="center" align="center" class="mt-12">
+                                    <v-img max-width="250"
+                                        src="https://demo.datengdong.com/themes/starlight/images/flower.png"
+                                        v-if="displayDesktop"></v-img>
+                                    <p class="font-weight-light title text-center"
+                                        :class="[ displayDesktop ? 'mt-8' : '']">Hello, We Are Getting Married</p>
+                                    <v-row class="mx-16 font-weight-bold"
+                                        :class="[ displayDesktop ? 'text-h4 mt-8' : 'text-h5']">
+                                        <v-col>
+                                            <p>{{ dataApi.wedding.tanggal_resepsi.split(' ')[2] }}</p>
+                                        </v-col>
+                                        <v-col>
+                                            <p class="ml-n5">|</p>
+                                        </v-col>
+                                        <v-col>
+                                            <p class="mt-n2 ml-n5 display-2 font-weight-bold">
+                                                {{ dataApi.wedding.tanggal_resepsi.split(' ')[1] }}</p>
+                                        </v-col>
+                                        <v-col>
+                                            <p class="ml-n5">|</p>
+                                        </v-col>
+                                        <v-col>
+                                            <p class="ml-n5">{{  dataApi.wedding.tanggal_resepsi.split(' ')[3] }}</p>
+                                        </v-col>
+                                    </v-row>
+                                    <v-btn color="blue-grey" class="mt-10" @click="scrollPlay" dark>Open Invitation
+                                    </v-btn>
+                                </div>
+                            </v-row>
+                        </v-container>
+                        </v-content>
                 </div>
                             <audio id="song" ref="audioElm">
             <source :src="'https://merestui.com'+dataApi.music.music_path"

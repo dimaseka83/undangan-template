@@ -5,7 +5,7 @@ new Vue({
         return {
             dataApi: [],
             loading: true,
-            openInvitation: true,
+            openInvitation: false,
             model: null,
             value: 'home',
           dialog1: false,
