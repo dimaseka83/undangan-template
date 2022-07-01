@@ -33,27 +33,24 @@
     }
 
     .bg-page6{
-    background-image: url('https://via.placeholder.com/512');
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
 }
 
 .bg-page7{
-    background-image: url('/tema_undangan/tema_1/img/page2.png');
-    height: 250vh;
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .bg-page8{
-    background-image: url('/tema_undangan/tema_1/img/page1.png');
-    height: 160vh;
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .bg-page12{
@@ -95,105 +92,6 @@ iframe{
     
 }
 
-/* Desktop */
-@media screen and (min-width: 501px){
-    .overflowAuto {
-        overflow-y: scroll;
-        overflow-x: hidden;
-        height: 20vh;
-        width: 100%;
-      }
-
-    .kupu{
-        margin-top: -85vh;
-    margin-left: -10vh;    
-    }
-
-    .kupu2{
-    margin-top: -50vh;
-    margin-left: 50vh;
-}
-
-.kupu3{
-    margin-top: -50vh;
-    margin-left: 90vh;
-}
-
-    .titlePage2{
-    font-family: 'Pinyon Script', cursive;
-    font-size: 60px;
-    }
-    .text-indent{
-        line-height: 50px;
-    }
-
-    .titlePage3{
-    font-family: 'Pinyon Script', cursive;
-    font-size: 40px;
-    }
-
-    .bg-page6{
-    background-image: url('https://via.placeholder.com/512');
-    height: 120vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bg-page7{
-    background-image: url('/tema_undangan/tema_1/img/page2.png');
-    height: 180vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bg-page8{
-    background-image: url('/tema_undangan/tema_1/img/page1.png');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bg-page12{
-    background-image: url('/tema_undangan/tema_1/img/page1.png');
-    height: 150vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bg-page14{
-    background-image: url('/tema_undangan/tema_1/img/page1.png');
-    height: 140vh;
-    margin-top: -50vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-iframe{
-    width: 1360px;
-    height: 400px;
-}
-
-.hr4{
-    width: 60%;
-    margin: auto;
-}
-
-.image-modif{
-    height: 70vh;
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 100%;
-}
-
-.logo-web{
-    margin-top: 40vh;
-    max-width: 400px;
-}
-}
 
 .bg-page1{
     background-image: url('/tema_undangan/tema_1/img/page1.png');
@@ -204,27 +102,24 @@ iframe{
 }
 
 .bg-page2{
-    background-image: url('/tema_undangan/tema_1/img/page2.png');
-    height: 120vh;
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .bg-page4{
-    background-image: url('/tema_undangan/tema_1/img/page4.png');
-    height: 90vh;
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .bg-page5{
-    background-image: url('/tema_undangan/tema_1/img/page4.png');
-    height: 98vh;
-    background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
@@ -304,6 +199,7 @@ iframe{
     background-image: url('./img/black_image.png');
 }
 
+
     /* content fixed */
 
     .navbar {
@@ -314,4 +210,3 @@ iframe{
         bottom: 0;
         z-index: 1;
       }
-      

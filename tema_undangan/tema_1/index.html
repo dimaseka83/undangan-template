@@ -28,7 +28,8 @@
               </div>
             </div>
             <div id="two">
-              <v-container fluid class="bg-page2 pl-16">
+              <v-content class="bg-page2" style="background-image: url('/tema_undangan/tema_1/img/page2.png');">
+              <v-container fluid class=" pl-16">
                 <v-row align="center" justify="center" v-if="displayDesktop">
                   <v-col cols="4" class="mt-16">
                     <v-card elevation="11" width="500" class="ml-16 rounded-xl" style="border: 3px solid #8D6E63;">
@@ -65,6 +66,7 @@
                   </v-row>
                 </div>
               </v-container>
+            </v-content>
             </div>
 
             <!-- Page 3 -->
@@ -90,7 +92,8 @@
             </v-container>
 
             <!-- Page 4 -->
-            <v-container fluid class="bg-page4 fill-height">
+            <v-content class="bg-page4" style="background-image: url('/tema_undangan/tema_1/img/page4.png');">
+            <v-container fluid class=" fill-height">
               <v-row align="right" justify="right" v-if="displayDesktop">
                 <v-col>
                   <v-row>
@@ -130,21 +133,23 @@
                   </v-col>
                   <v-col>
                     <v-card width="250" elevation="12" style="border: 3px solid #8D6E63;">
-                      <v-img :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
+                      <v-img width="250" :src="'https://merestui.com/'+ dataApi.wedding.foto_pria"></v-img>
                     </v-card>
                   </v-col>
                 </v-row>
               </v-row>
             </v-container>
+            </v-content>
 
             <!-- Page 5 -->
-            <v-container fluid class="bg-page5 fill-height">
+            <v-content class="bg-page5" style="background-image: url('/tema_undangan/tema_1/img/page4.png');">
+            <v-container fluid class="fill-height mt-16">
               <v-row align="center" justify="center" v-if="displayDesktop">
                 <v-col>
                   <v-row>
                     <v-col class="d-flex flex-row-reverse">
-                      <v-card width="300" elevation="12" style="border: 3px solid #8D6E63;">
-                        <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_2"></v-img>
+                      <v-card width="250" elevation="12" style="border: 3px solid #8D6E63;">
+                        <v-img width="250" :src="'https://merestui.com/'+ dataApi.wedding.gallery_2"></v-img>
                       </v-card>
                     </v-col>
                     <v-col class="ml-6">
@@ -166,15 +171,17 @@
                 <v-row>
                   <v-col class="d-flex flex-row-reverse">
                     <v-card width="250" elevation="12" style="border: 3px solid #8D6E63;" class="mr-5">
-                      <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_2"></v-img>
+                      <v-img  width="250" :src="'https://merestui.com/'+ dataApi.wedding.gallery_2"></v-img>
                     </v-card>
                   </v-col>
+                </v-row>
+                <v-row>
                   <v-col class="mr-6">
                     <h5 class="fontName text-end">{{ dataApi.wedding.nama_panggilan_wanita }}</h5>
                     <p class="text-end text-color font-weight-light">{{ dataApi.wedding.profil_wanita }}</p>
                     <p class="text-end text-color font-weight-light">Klaling Krajan Rt 05/ Rw 01 No. 66,</p>
                     <p class="text-end text-color font-weight-light">Jekulo, Kudus</p>
-                    <div class="d-flex flex-row-reverse">
+                    <div class="d-flex flex-row-reverse mb-8">
                       <v-btn small fab dark color="brown darken-2">
                         <v-icon>mdi-instagram</v-icon>
                       </v-btn>
@@ -184,9 +191,11 @@
                 <v-img src="./img/kupu.gif" width="200" class="kupu3"></v-img>
               </v-row>
             </v-container>
+          </v-content>
 
             <!-- Page 6 -->
-            <v-container fluid class="bg-page6 pt-16">
+            <v-content class="bg-page6" style="background-image: url('https://via.placeholder.com/512');">
+            <v-container fluid class="pt-16" style="margin-bottom: 10vh;">
               <v-row align="center" justify="center">
                 <v-card color="brown darken-1">
                   <v-card-text class="text-center">
@@ -225,9 +234,11 @@
                 </v-card>
               </v-row>
             </v-container>
+            </v-content>
 
             <!-- Page 7 -->
-            <v-container fluid class="bg-page7 pt-16">
+            <v-content class="bg-page7" style="background-image: url('/tema_undangan/tema_1/img/page2.png');">
+            <v-container fluid class="pt-16">
               <v-row align="center" justify="center">
                 <v-col md="6">
                   <h5 class="titlePage7 text-center">Assalamu'alaikum Warahmatullahi Wabarakatuh</h5>
@@ -241,7 +252,7 @@
               <v-row>
                 <v-col>
                   <div class="d-flex flex-row-reverse">
-                    <v-card width="600" class="rounded-xl" dark>
+                    <v-card class="rounded-xl" dark>
                       <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
                         <v-card-text class="fill-height cardAkad">
                           <v-row justify="center">
@@ -290,7 +301,7 @@
                   </div>
                 </v-col>
                 <v-col>
-                  <v-card width="600" class="rounded-xl" dark>
+                  <v-card class="rounded-xl" dark>
                     <v-img :src="'https://merestui.com/'+ dataApi.wedding.gallery_1">
                       <v-card-text class="fill-height cardAkad">
                         <v-row justify="center">
@@ -340,9 +351,10 @@
               </v-row>
               <v-img src="./img/kupu.gif" width="500" class="kupu4"></v-img>
             </v-container>
-
+          </v-content>
             <!-- Page 8 -->
-            <v-container fluid class="bg-page8 pt-16">
+            <v-content class="bg-page8" style="background-image: url('/tema_undangan/tema_1/img/page1.png');">
+            <v-container fluid class="pt-16">
               <v-row>
                 <v-col>
                   <div class="d-flex flex-row-reverse">
@@ -457,7 +469,7 @@
                 </v-col>
               </v-row>
             </v-container>
-
+          </v-content>
             <!-- Page 9 -->
             <v-container fluid class="py-16">
               <v-row align="center" justify="center">
