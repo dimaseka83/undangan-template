@@ -180,7 +180,7 @@
 
 /* Desktop HD */
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1920px){
     .bg-page1{
         background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
         height: 85vh;
@@ -199,7 +199,7 @@
 
     .bg-page3{
     background-image: url('https://digition.id/wp-content/uploads/2022/01/fix-background-1-scaled.jpg');
-    height: 210vh;
+    height: 180vh;
     background-size: cover;
     background-position: center;
 }
@@ -207,7 +207,7 @@
 
     .bg-page4{
         background-color: #c9a57d;
-        height: 100vh;
+        height: 80vh;
         margin-top: -5vh;
     }
 
@@ -234,7 +234,7 @@
 
     .fontGallery{
         font-family: 'Allura', cursive;
-        font-size: 30px;
+        font-size: 50px;
         color: #3E2723;
     }
     
@@ -254,6 +254,9 @@
     background-repeat: no-repeat;
 }
 
+.carouselDesktop{
+    height: 50vh;
+}
     
 
 }
@@ -387,7 +390,7 @@
     bottom: 0;
     width: 100%;
     z-index: 1;
-  }
+  } 
   
   .navbar a {
     float: left;

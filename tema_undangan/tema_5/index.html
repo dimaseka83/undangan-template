@@ -207,23 +207,25 @@
                                             </v-card>
                                         </v-card-title>
                                     </v-card>
-                                </v-container>
-                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/uAbwbHtQ8S4"
+                                    <iframe width="100%" height="300" class="mt-16" src="https://www.youtube.com/embed/uAbwbHtQ8S4"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
+                                </v-container>
+
                                 <v-container fluid class="bg-page3" id="image">
                                     <p class="mt-8 text-center mx-16 fontPasangan">Moment yang berbahagia</p>
                                     <p class="font-weight-light text-center mx-8">"Menciptakan kenangan adalah hadiah
                                         yang tak ternilai harganya. Kenangan akan bertahan seumur hidup; benda-benda
                                         hanya dalam waktu singkat."</p>
+                                        <v-carousel cycle height="600" hide-delimiters hide-delimiter-background
+                                        show-arrows-on-hover>
+                                        <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"
+                                            reverse-transition="fade-transition" transition="fade-transition">
+                                        </v-carousel-item>
+                                    </v-carousel>
                                 </v-container>
-                                <v-carousel cycle height="600" hide-delimiters hide-delimiter-background
-                                    show-arrows-on-hover>
-                                    <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"
-                                        reverse-transition="fade-transition" transition="fade-transition">
-                                    </v-carousel-item>
-                                </v-carousel>
+
                                 <v-container fluid class="bg-page4" id="calendar">
                                     <p class="mt-8 text-center white--text fontPasangan">Acara Akan Diselenggarakan</p>
                                     <div justify="center" align="center" class="white--text">

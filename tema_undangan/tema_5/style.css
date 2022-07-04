@@ -55,7 +55,7 @@
 }
 
  /* Desktop HDPi */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1920px) {
     .bg-pagecover{
         background-image: url('https://cdn-uploads.our-wedding.link/3555e600-f65f-11eb-ac04-7b83682bd801.webp');
         background-size: cover;
@@ -144,7 +144,7 @@
 
     .bg-page2{
         background-color: #ffffe6;
-        height: 230vh;
+        height: 180vh;
     }
 
     .bg-page3{
@@ -152,7 +152,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 30vh;
+        height: 80vh;
         margin-top: -5vh;
     }
 
@@ -167,7 +167,7 @@
 
     .bg-page5{
         background-color: #ffffe6;
-        height: 160vh;
+        height: 100vh;
     }
 
     .bg-page6{
@@ -175,7 +175,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 180vh;
+        height: 130vh;
     }
     
     .bg-page7{
@@ -183,7 +183,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 160vh;
+        height: 130vh;
     }
 
     .overflowFixed{

@@ -553,7 +553,10 @@
             </v-container>
             <v-container fluid class="bg-page5" id="dokumentasi">
               <p class="fontGallery text-center">Gallery of love</p>
-              <v-carousel hide-delimiters height="250">
+              <v-carousel hide-delimiters class="carouselDesktop" v-if="displayDesktop">
+                <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
+              </v-carousel>
+              <v-carousel hide-delimiters height="250" v-else>
                 <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
               </v-carousel>
               <p class="mx-8 mt-8 font-italic text-center brown--text" :class="[ displayDesktop ? 'font-weight-medium' : 'text-caption']">“Dan diantara tanda-tanda
@@ -596,8 +599,8 @@
                 <v-row>
                   <v-col><v-card color="brown lighten-3" class="pb-5"  :class="[ displayDesktop ? 'mx-16' : 'mx-6']">
                 <div class="d-flex justify-center">
-                  <v-img width="200" height="200"
-                    src="https://www.yayasansimetri.or.id/wp-content/uploads/2021/03/Logo-BCA-blue-A4.png" class="my-6">
+                  <v-img max-width="200"
+                    src="./img/bca.png" class="my-6">
                   </v-img>
                 </div>
                 <p class="text-center white--text">Nomor Rekening atas nama {{ namaRekening }}</p>
@@ -612,7 +615,7 @@
                   <v-col>
                     <v-card color="brown lighten-3" class="pb-5"  :class="[ displayDesktop ? 'mx-16' : 'mx-6']">
                 <div class="d-flex justify-center">
-                  <v-img width="200" height="200"
+                  <v-img max-width="200"
                     src="./img/pngegg.png" class="my-6">
                   </v-img>
                 </div>
